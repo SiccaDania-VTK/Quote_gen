@@ -202,7 +202,6 @@ Public Class Form1
             TextBox2.Text = words(1)                  'Item no
 
             '---------- terugzetten checkbox controls -----------------
-            'FindControlRecursive(all_check, Me, GetType(CheckBox))
             FindControlRecursive(all_check, Me, GetType(System.Windows.Forms.CheckBox))      'Find the control
             all_check = all_check.OrderBy(Function(x) x.Name).ToList()                  'Alphabetical order
             words = control_words(1).Split(separators, StringSplitOptions.None) 'Split the read file content
@@ -235,4 +234,25 @@ Public Class Form1
         Next
         Return list
     End Function
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click, Button4.Enter, TabPage10.Enter
+        Dim i As Integer
+        Dim k As Integer = 0
+        Dim all_check As New List(Of Control)
+        Dim separators() As String = {";"}
+        Dim separators1() As String = {"BREAK"}
+
+        TextBox4.Clear()
+
+        '-------- find all checkbox controls and save
+        FindControlRecursive(all_check, Me, GetType(System.Windows.Forms.CheckBox))      'Find the control
+        all_check = all_check.OrderBy(Function(x) x.Name).ToList()  'Alphabetical order
+        For i = 0 To all_check.Count - 1
+            Dim grbx As System.Windows.Forms.CheckBox = CType(all_check(i), System.Windows.Forms.CheckBox)
+            If grbx.Checked = True Then
+                TextBox4.Text &= grbx.Text & vbCrLf
+            End If
+        Next
+
+    End Sub
 End Class

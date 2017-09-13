@@ -172,6 +172,7 @@ Partial Class Form1
         Me.TabPage10 = New System.Windows.Forms.TabPage()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.Button4 = New System.Windows.Forms.Button()
         Me.TabPage9.SuspendLayout()
         Me.TabPage8.SuspendLayout()
         Me.GroupBox7.SuspendLayout()
@@ -1857,6 +1858,7 @@ Partial Class Form1
         '
         'TabPage10
         '
+        Me.TabPage10.Controls.Add(Me.Button4)
         Me.TabPage10.Controls.Add(Me.TextBox4)
         Me.TabPage10.Location = New System.Drawing.Point(4, 22)
         Me.TabPage10.Name = "TabPage10"
@@ -1877,6 +1879,15 @@ Partial Class Form1
         'OpenFileDialog1
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
+        '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(464, 61)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(80, 34)
+        Me.Button4.TabIndex = 1
+        Me.Button4.Text = "Button4"
+        Me.Button4.UseVisualStyleBackColor = True
         '
         'Form1
         '
@@ -2063,4 +2074,5 @@ Partial Class Form1
     Friend WithEvents TabPage10 As TabPage
     Friend WithEvents TextBox4 As TextBox
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
+    Friend WithEvents Button4 As Button
 End Class

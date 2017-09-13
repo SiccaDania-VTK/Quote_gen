@@ -143,6 +143,8 @@ Partial Class Form1
         Me.CheckBox20 = New System.Windows.Forms.CheckBox()
         Me.Label22 = New System.Windows.Forms.Label()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -167,6 +169,9 @@ Partial Class Form1
         Me.CheckBox2 = New System.Windows.Forms.CheckBox()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.TabPage10 = New System.Windows.Forms.TabPage()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.TabPage9.SuspendLayout()
         Me.TabPage8.SuspendLayout()
         Me.GroupBox7.SuspendLayout()
@@ -179,6 +184,7 @@ Partial Class Form1
         Me.GroupBox1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
+        Me.TabPage10.SuspendLayout()
         Me.SuspendLayout()
         '
         'TabPage9
@@ -187,7 +193,7 @@ Partial Class Form1
         Me.TabPage9.Location = New System.Drawing.Point(4, 22)
         Me.TabPage9.Name = "TabPage9"
         Me.TabPage9.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage9.Size = New System.Drawing.Size(845, 575)
+        Me.TabPage9.Size = New System.Drawing.Size(899, 575)
         Me.TabPage9.TabIndex = 8
         Me.TabPage9.Text = "About"
         Me.TabPage9.UseVisualStyleBackColor = True
@@ -208,7 +214,7 @@ Partial Class Form1
         Me.TabPage8.Location = New System.Drawing.Point(4, 22)
         Me.TabPage8.Name = "TabPage8"
         Me.TabPage8.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage8.Size = New System.Drawing.Size(845, 575)
+        Me.TabPage8.Size = New System.Drawing.Size(899, 575)
         Me.TabPage8.TabIndex = 7
         Me.TabPage8.Text = "Commercial"
         Me.TabPage8.UseVisualStyleBackColor = True
@@ -696,7 +702,7 @@ Partial Class Form1
         Me.TabPage7.Location = New System.Drawing.Point(4, 22)
         Me.TabPage7.Name = "TabPage7"
         Me.TabPage7.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage7.Size = New System.Drawing.Size(845, 575)
+        Me.TabPage7.Size = New System.Drawing.Size(899, 575)
         Me.TabPage7.TabIndex = 6
         Me.TabPage7.Text = "Other equipment"
         Me.TabPage7.UseVisualStyleBackColor = True
@@ -706,7 +712,7 @@ Partial Class Form1
         Me.TabPage6.Location = New System.Drawing.Point(4, 22)
         Me.TabPage6.Name = "TabPage6"
         Me.TabPage6.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage6.Size = New System.Drawing.Size(845, 575)
+        Me.TabPage6.Size = New System.Drawing.Size(899, 575)
         Me.TabPage6.TabIndex = 5
         Me.TabPage6.Text = "Blower"
         Me.TabPage6.UseVisualStyleBackColor = True
@@ -716,7 +722,7 @@ Partial Class Form1
         Me.TabPage5.Location = New System.Drawing.Point(4, 22)
         Me.TabPage5.Name = "TabPage5"
         Me.TabPage5.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage5.Size = New System.Drawing.Size(845, 575)
+        Me.TabPage5.Size = New System.Drawing.Size(899, 575)
         Me.TabPage5.TabIndex = 4
         Me.TabPage5.Text = "Dryer"
         Me.TabPage5.UseVisualStyleBackColor = True
@@ -726,7 +732,7 @@ Partial Class Form1
         Me.TabPage4.Location = New System.Drawing.Point(4, 22)
         Me.TabPage4.Name = "TabPage4"
         Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage4.Size = New System.Drawing.Size(845, 575)
+        Me.TabPage4.Size = New System.Drawing.Size(899, 575)
         Me.TabPage4.TabIndex = 3
         Me.TabPage4.Text = "Cyclone"
         Me.TabPage4.UseVisualStyleBackColor = True
@@ -736,7 +742,7 @@ Partial Class Form1
         Me.TabPage3.Location = New System.Drawing.Point(4, 22)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage3.Size = New System.Drawing.Size(845, 575)
+        Me.TabPage3.Size = New System.Drawing.Size(899, 575)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Conveyor"
         Me.TabPage3.UseVisualStyleBackColor = True
@@ -1543,6 +1549,8 @@ Partial Class Form1
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.Button3)
+        Me.TabPage1.Controls.Add(Me.Button2)
         Me.TabPage1.Controls.Add(Me.Label11)
         Me.TabPage1.Controls.Add(Me.Label10)
         Me.TabPage1.Controls.Add(Me.Label9)
@@ -1569,10 +1577,28 @@ Partial Class Form1
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(845, 575)
+        Me.TabPage1.Size = New System.Drawing.Size(899, 575)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "General data"
         Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(402, 83)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(107, 35)
+        Me.Button3.TabIndex = 32
+        Me.Button3.Text = "Retrieve Input"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(402, 39)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(107, 35)
+        Me.Button2.TabIndex = 31
+        Me.Button2.Text = "Save Input"
+        Me.Button2.UseVisualStyleBackColor = True
         '
         'Label11
         '
@@ -1766,7 +1792,7 @@ Partial Class Form1
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(34, 354)
+        Me.Button1.Location = New System.Drawing.Point(19, 455)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(319, 42)
         Me.Button1.TabIndex = 11
@@ -1821,12 +1847,36 @@ Partial Class Form1
         Me.TabControl1.Controls.Add(Me.TabPage7)
         Me.TabControl1.Controls.Add(Me.TabPage8)
         Me.TabControl1.Controls.Add(Me.TabPage9)
+        Me.TabControl1.Controls.Add(Me.TabPage10)
         Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TabControl1.Location = New System.Drawing.Point(0, 0)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
         Me.TabControl1.Size = New System.Drawing.Size(907, 601)
         Me.TabControl1.TabIndex = 8
+        '
+        'TabPage10
+        '
+        Me.TabPage10.Controls.Add(Me.TextBox4)
+        Me.TabPage10.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage10.Name = "TabPage10"
+        Me.TabPage10.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage10.Size = New System.Drawing.Size(899, 575)
+        Me.TabPage10.TabIndex = 9
+        Me.TabPage10.Text = "Summary"
+        Me.TabPage10.UseVisualStyleBackColor = True
+        '
+        'TextBox4
+        '
+        Me.TextBox4.Location = New System.Drawing.Point(23, 16)
+        Me.TextBox4.Multiline = True
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(365, 504)
+        Me.TextBox4.TabIndex = 0
+        '
+        'OpenFileDialog1
+        '
+        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         '
         'Form1
         '
@@ -1857,6 +1907,8 @@ Partial Class Form1
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
         Me.TabControl1.ResumeLayout(False)
+        Me.TabPage10.ResumeLayout(False)
+        Me.TabPage10.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -2006,4 +2058,9 @@ Partial Class Form1
     Friend WithEvents CheckBox2 As CheckBox
     Friend WithEvents CheckBox1 As CheckBox
     Friend WithEvents TabControl1 As TabControl
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Button2 As Button
+    Friend WithEvents TabPage10 As TabPage
+    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents OpenFileDialog1 As OpenFileDialog
 End Class

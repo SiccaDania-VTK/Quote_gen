@@ -10,12 +10,10 @@ Imports Microsoft.Office.Interop.Word
 Public Class Form1
     '----------- directory's-----------
     Dim dirpath_Block As String = "N:\Verkoop\Tekst\Quote_text_block\"
-    Dim dirpath_Rap As String = "C:\Temp\"
-    Dim dirpath_Home As String = "C:\Temp\"
+    Dim dirpath_Backup As String = "N:\Verkoop\Aanbiedingen\Quote_gen_backup\"
+    Dim dirpath_Home_GP As String = "C:\Temp\"
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs)
-        '--
-    End Sub
+
     Private Sub Impeller_stress_to_word()
         Dim oWord As Word.Application
         Dim oDoc As Word.Document
@@ -70,39 +68,56 @@ Public Class Form1
         'oPara2.Range.InsertBreak()                               'New page
 
         '===================== inserting blocks========================
-        MessageBox.Show("9999")
         '--- insert block #1
         oPara3 = oDoc.Content.Paragraphs.Add()
-        If CheckBox1.Checked Then oPara3.Range.InsertFile("C:\temp\quote_block_0001.docx")
+        If CheckBox1.Checked Then oPara3.Range.InsertFile(dirpath_Block & "quote_block_0001.docx")
 
         '--- insert block #2
         oPara3 = oDoc.Content.Paragraphs.Add()
-        If CheckBox2.Checked Then oPara3.Range.InsertFile("C:\temp\quote_block_0002.docx")
+        If CheckBox2.Checked Then oPara3.Range.InsertFile(dirpath_Block & "quote_block_0002.docx")
 
         '--- insert block #3
         oPara3 = oDoc.Content.Paragraphs.Add()
-        If CheckBox3.Checked Then oPara3.Range.InsertFile("C:\temp\quote_block_0003.docx")
+        If CheckBox3.Checked Then oPara3.Range.InsertFile(dirpath_Block & "quote_block_0003.docx")
 
-
-        '==================== store final product===============
+        '==================== backup final product===============
         ufilename = "Quote_" & TextBox1.Text & "_" & TextBox2.Text & DateTime.Now.ToString("_yyyy_MM_dd") & ".docx"
 
-        If Directory.Exists(dirpath_Rap) Then
-            ufilename = dirpath_Rap & ufilename
+        If Directory.Exists(dirpath_Backup) Then
+            ufilename = dirpath_Backup & ufilename
         Else
-            ufilename = dirpath_Home & ufilename
+            ufilename = dirpath_Home_GP & ufilename
         End If
-        'oWord.ActiveDocument.SaveAs(ufilename.ToString)
+        oWord.ActiveDocument.SaveAs(ufilename)
     End Sub
 
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
         '---- if path not exist then create one----------
         Try
-            If (Not System.IO.Directory.Exists(dirpath_Home)) Then System.IO.Directory.CreateDirectory(dirpath_Home)
+            If (Not System.IO.Directory.Exists(dirpath_Home_GP)) Then System.IO.Directory.CreateDirectory(dirpath_Home_GP)
             If (Not System.IO.Directory.Exists(dirpath_Block)) Then System.IO.Directory.CreateDirectory(dirpath_Block)
-            If (Not System.IO.Directory.Exists(dirpath_Rap)) Then System.IO.Directory.CreateDirectory(dirpath_Rap)
+            If (Not System.IO.Directory.Exists(dirpath_Backup)) Then System.IO.Directory.CreateDirectory(dirpath_Backup)
         Catch ex As Exception
         End Try
         Impeller_stress_to_word()
+    End Sub
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        TextBox3.Text =
+        "File naming convention" & vbCrLf & vbCrLf &
+        "Text block location is " & vbTab & dirpath_Block.ToString & vbCrLf &
+        "Quote backup location is " & vbTab & dirpath_Backup.ToString & vbCrLf & vbCrLf &
+        "File name General data is " & vbTab & "QG_Gen_GB_001.docx " & vbCrLf &
+        "File name Fan is " & vbTab & vbTab & "QG_fan_GB_001.docx " & vbCrLf &
+        "File name Cyclone is " & vbTab & vbTab & "QG_Cyc_GB_001.docx " & vbCrLf &
+        "File name Dryer is " & vbTab & vbTab & "QG_Dry_GB_001.docx " & vbCrLf &
+        "File name Blower is " & vbTab & vbTab & "QG_Blo_GB_001.docx " & vbCrLf &
+        "File name Othere is " & vbTab & vbTab & "QG_Oth_GB_001.docx " & vbCrLf &
+        "File name Commercial is " & vbTab & "QG_Com_GB_001.docx " & vbCrLf &
+        " "
+    End Sub
+
+    Private Sub TabPage1_Click(sender As Object, e As EventArgs) Handles TabPage1.Click
+
     End Sub
 End Class

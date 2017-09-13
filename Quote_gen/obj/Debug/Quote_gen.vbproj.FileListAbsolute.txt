@@ -1,0 +1,13 @@
+C:\Repos\Quotation_generator\Quote_gen\Quote_gen\bin\Debug\Quote_gen.exe.config
+C:\Repos\Quotation_generator\Quote_gen\Quote_gen\bin\Debug\Quote_gen.exe
+C:\Repos\Quotation_generator\Quote_gen\Quote_gen\bin\Debug\Quote_gen.pdb
+C:\Repos\Quotation_generator\Quote_gen\Quote_gen\bin\Debug\Quote_gen.xml
+C:\Repos\Quotation_generator\Quote_gen\Quote_gen\obj\Debug\Quote_gen.vbprojResolveAssemblyReference.cache
+C:\Repos\Quotation_generator\Quote_gen\Quote_gen\obj\Debug\Quote_gen.Form1.resources
+C:\Repos\Quotation_generator\Quote_gen\Quote_gen\obj\Debug\Quote_gen.Resources.resources
+C:\Repos\Quotation_generator\Quote_gen\Quote_gen\obj\Debug\Quote_gen.vbproj.GenerateResource.Cache
+C:\Repos\Quotation_generator\Quote_gen\Quote_gen\obj\Debug\Quote_gen.vbproj.CoreCompileInputs.cache
+C:\Repos\Quotation_generator\Quote_gen\Quote_gen\obj\Debug\Quote_gen.exe
+C:\Repos\Quotation_generator\Quote_gen\Quote_gen\obj\Debug\Quote_gen.xml
+C:\Repos\Quotation_generator\Quote_gen\Quote_gen\obj\Debug\Quote_gen.pdb
+C:\Repos\Quotation_generator\Quote_gen\Quote_gen\obj\Debug\Quote_gen.vbproj.ResolveComReference.cache

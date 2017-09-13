@@ -14,12 +14,13 @@ Public Class Form1
     Dim dirpath_Home_GP As String = "C:\Temp\"
 
 
-    Private Sub Impeller_stress_to_word()
+    Private Sub Generate_word_doc()
         Dim oWord As Word.Application
         Dim oDoc As Word.Document
         Dim oTable As Word.Table
         Dim oPara1, oPara2, oPara3 As Word.Paragraph
         Dim ufilename As String
+        Dim Name As String
 
         'Start Word and open the document template. 
         oWord = CType(CreateObject("Word.Application"), Word.Application)
@@ -70,15 +71,20 @@ Public Class Form1
         '===================== inserting blocks========================
         '--- insert block #1
         oPara3 = oDoc.Content.Paragraphs.Add()
-        If CheckBox1.Checked Then oPara3.Range.InsertFile(dirpath_Block & "QG_Gen_GB_001.docx")
+        Name  = dirpath_Block & "QG_Gen_GB_001.docx"
+        If CheckBox1.Checked And File.Exists(Name) Then oPara3.Range.InsertFile(Name)
 
         '--- insert block #2
         oPara3 = oDoc.Content.Paragraphs.Add()
-        If CheckBox2.Checked Then oPara3.Range.InsertFile(dirpath_Block & "QG_Gen_GB_002.docx")
+        Name = dirpath_Block & "QG_Gen_GB_002.docx"
+        If CheckBox2.Checked And File.Exists(Name) Then oPara3.Range.InsertFile(Name)
 
         '--- insert block #3
         oPara3 = oDoc.Content.Paragraphs.Add()
-        If CheckBox3.Checked Then oPara3.Range.InsertFile(dirpath_Block & "QG_Gen_GB_003.docx")
+        Name = dirpath_Block & "QG_Gen_GB_003.docx"
+        If CheckBox3.Checked And File.Exists(Name) Then oPara3.Range.InsertFile(Name)
+
+
 
         '==================== backup final product===============
         ufilename = "Quote_" & TextBox1.Text & "_" & TextBox2.Text & DateTime.Now.ToString("_yyyy_MM_dd") & ".docx"
@@ -92,9 +98,8 @@ Public Class Form1
     End Sub
 
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
-
-        Check_directories()
-        Impeller_stress_to_word()
+                Check_directories()
+        Generate_word_doc()
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -109,6 +114,7 @@ Public Class Form1
         "File name Blower is " & vbTab & vbTab & "QG_Blo_GB_001.docx " & vbCrLf &
         "File name Othere is " & vbTab & vbTab & "QG_Oth_GB_001.docx " & vbCrLf &
         "File name Commercial is " & vbTab & "QG_Com_GB_001.docx " & vbCrLf &
+        "File name Documents " & vbTab & "QG_Doc_GB_001.docx " & vbCrLf &
         " "
     End Sub
 

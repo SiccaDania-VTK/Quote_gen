@@ -20,7 +20,9 @@ Public Class Form1
         Dim oTable As Word.Table
         Dim oPara1, oPara2, oPara3 As Word.Paragraph
         Dim ufilename As String
-        Dim Name As String
+        'Dim Name As String
+        Dim pathname, filename As String
+
 
         'Start Word and open the document template. 
         oWord = CType(CreateObject("Word.Application"), Word.Application)
@@ -69,22 +71,41 @@ Public Class Form1
         'oPara2.Range.InsertBreak()                               'New page
 
         '===================== inserting blocks========================
-        '--- insert block #1
-        oPara3 = oDoc.Content.Paragraphs.Add()
-        Name  = dirpath_Block & "QG_Gen_GB_001.docx"
-        If CheckBox1.Checked And File.Exists(Name) Then oPara3.Range.InsertFile(Name)
+        ''--- insert block #1
+        'oPara3 = oDoc.Content.Paragraphs.Add()
+        'Name  = dirpath_Block & "QG_Gen_GB_001.docx"
+        'If CheckBox1.Checked And File.Exists(Name) Then oPara3.Range.InsertFile(Name)
 
-        '--- insert block #2
-        oPara3 = oDoc.Content.Paragraphs.Add()
-        Name = dirpath_Block & "QG_Gen_GB_002.docx"
-        If CheckBox2.Checked And File.Exists(Name) Then oPara3.Range.InsertFile(Name)
+        ''--- insert block #2
+        'oPara3 = oDoc.Content.Paragraphs.Add()
+        'Name = dirpath_Block & "QG_Gen_GB_002.docx"
+        'If CheckBox2.Checked And File.Exists(Name) Then oPara3.Range.InsertFile(Name)
 
-        '--- insert block #3
-        oPara3 = oDoc.Content.Paragraphs.Add()
-        Name = dirpath_Block & "QG_Gen_GB_003.docx"
-        If CheckBox3.Checked And File.Exists(Name) Then oPara3.Range.InsertFile(Name)
+        ''--- insert block #3
+        'oPara3 = oDoc.Content.Paragraphs.Add()
+        'Name = dirpath_Block & "QG_Gen_GB_003.docx"
+        'If CheckBox3.Checked And File.Exists(Name) Then oPara3.Range.InsertFile(Name)
 
 
+        '-------- find ALL checkboxes controls---
+        '---- PRINT in Alphabetical order -------
+        TextBox5.Clear()
+        Dim all_check As New List(Of Control)
+        FindControlRecursive(all_check, Me, GetType(System.Windows.Forms.CheckBox))      'Find the control
+        all_check = all_check.OrderBy(Function(x) x.Name).ToList()  'Alphabetical order
+        For i = 0 To all_check.Count - 1
+            Dim grbx As System.Windows.Forms.CheckBox = CType(all_check(i), System.Windows.Forms.CheckBox)
+            If grbx.Checked = True Then
+                oPara3 = oDoc.Content.Paragraphs.Add()
+                pathname = dirpath_Block & grbx.Text.Substring(0, 4) & ".docx"
+                If File.Exists(pathname) Then
+                    TextBox5.Text &= "OK, file found " & pathname & vbCrLf
+                    oPara3.Range.InsertFile(pathname)
+                Else
+                    TextBox5.Text &= "File not found " & pathname & vbCrLf
+                End If
+            End If
+        Next
 
         '==================== backup final product===============
         ufilename = "Quote_" & TextBox1.Text & "_" & TextBox2.Text & DateTime.Now.ToString("_yyyy_MM_dd") & ".docx"
@@ -94,7 +115,7 @@ Public Class Form1
         Else
             ufilename = dirpath_Home_GP & ufilename
         End If
-        oWord.ActiveDocument.SaveAs(ufilename.ToString)
+        'oWord.ActiveDocument.SaveAs(ufilename.ToString)
     End Sub
 
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
@@ -106,15 +127,10 @@ Public Class Form1
         TextBox3.Text =
         "File naming convention" & vbCrLf & vbCrLf &
         "Text block location is " & vbTab & dirpath_Block.ToString & vbCrLf &
-        "Quote backup location is " & vbTab & dirpath_Backup.ToString & vbCrLf & vbCrLf &
-        "File name General data is " & vbTab & "QG_Gen_GB_001.docx " & vbCrLf &
-        "File name Fan is " & vbTab & vbTab & "QG_fan_GB_001.docx " & vbCrLf &
-        "File name Cyclone is " & vbTab & vbTab & "QG_Cyc_GB_001.docx " & vbCrLf &
-        "File name Dryer is " & vbTab & vbTab & "QG_Dry_GB_001.docx " & vbCrLf &
-        "File name Blower is " & vbTab & vbTab & "QG_Blo_GB_001.docx " & vbCrLf &
-        "File name Othere is " & vbTab & vbTab & "QG_Oth_GB_001.docx " & vbCrLf &
-        "File name Commercial is " & vbTab & "QG_Com_GB_001.docx " & vbCrLf &
-        "File name Documents " & vbTab & "QG_Doc_GB_001.docx " & vbCrLf &
+        "Quote backup location is " & vbTab & dirpath_Backup.ToString & vbCrLf &
+        "  " & vbCrLf &
+        "File-name ate the first 4 character of the checkbox name" & vbCrLf &
+        "Printing squence is determined by the file_name sorted in alphabetical order" & vbCrLf &
         " "
     End Sub
 
@@ -259,6 +275,10 @@ Public Class Form1
                 TextBox4.Text &= grbx.Text & vbCrLf
             End If
         Next
+
+    End Sub
+
+    Private Sub CheckBox22_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox22.CheckedChanged
 
     End Sub
 End Class

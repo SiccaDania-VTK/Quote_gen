@@ -14,14 +14,14 @@
     <framework targetVersion="4.6.1" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="Quote_gen.exe.manifest" size="3465">
+    <dependentAssembly dependencyType="install" codebase="Quote_gen.exe.manifest" size="3464">
       <assemblyIdentity name="Quote_gen.exe" version="1.0.0.5" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>S4T/A3R276YfCCl6nq2xq5cGyFmwOGlI6h9vF7pCLbE=</dsig:DigestValue>
+        <dsig:DigestValue>PUrjP+LX+Ef1VFrFqVINAp+zXI6o5Kya1bT+0Ungqf8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -12,7 +12,7 @@ Public Class Form1
     Dim dirpath_Block As String = "N:\Verkoop\Tekst\Quote_text_block\"
     Dim dirpath_Backup As String = "N:\Verkoop\Aanbiedingen\Quote_gen_backup\"
     Dim dirpath_Home_GP As String = "C:\Temp\"
-
+    ' see https://support.microsoft.com/en-us/help/316383/how-to-automate-word-from-visual-basic--net-to-create-a-new-document
     Private Sub Generate_word_doc()
         Dim oWord As Word.Application
         Dim oDoc As Word.Document
@@ -20,11 +20,27 @@ Public Class Form1
         Dim oPara1, oPara2, oPara3 As Word.Paragraph
         Dim ufilename As String
         Dim pathname As String
+        Dim style1 As String
+
+        '----------- Select Word style -----------------
+        style1 = "N:\VERKOOP\Tekst\Quote_text_block\VTK_Fan_Quote.dotm"
 
         'Start Word and open the document template. 
         oWord = CType(CreateObject("Word.Application"), Word.Application)
         oWord.Visible = True
-        oDoc = oWord.Documents.Add
+
+        If File.Exists(style1) Then
+            oDoc = oWord.Documents.Add(style1.Clone)
+        Else
+            MessageBox.Show("Dam.. Can not find " & style1)
+            oDoc = oWord.Documents.Add
+        End If
+
+        oDoc.PageSetup.TopMargin = 35
+        oDoc.PageSetup.BottomMargin = 20
+        oDoc.PageSetup.RightMargin = 20
+        oDoc.PageSetup.Orientation = Word.WdOrientation.wdOrientPortrait
+        oDoc.PageSetup.PaperSize = Word.WdPaperSize.wdPaperA4
 
         'Insert a paragraph at the beginning of the document. 
         oPara1 = oDoc.Content.Paragraphs.Add()
@@ -269,7 +285,6 @@ Public Class Form1
                 TextBox4.Text &= grbx.Text & vbCrLf
             End If
         Next
-
     End Sub
 
 End Class

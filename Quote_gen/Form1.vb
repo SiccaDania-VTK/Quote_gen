@@ -13,16 +13,13 @@ Public Class Form1
     Dim dirpath_Backup As String = "N:\Verkoop\Aanbiedingen\Quote_gen_backup\"
     Dim dirpath_Home_GP As String = "C:\Temp\"
 
-
     Private Sub Generate_word_doc()
         Dim oWord As Word.Application
         Dim oDoc As Word.Document
         Dim oTable As Word.Table
         Dim oPara1, oPara2, oPara3 As Word.Paragraph
         Dim ufilename As String
-        'Dim Name As String
-        Dim pathname, filename As String
-
+        Dim pathname As String
 
         'Start Word and open the document template. 
         oWord = CType(CreateObject("Word.Application"), Word.Application)
@@ -76,23 +73,16 @@ Public Class Form1
         'Name  = dirpath_Block & "QG_Gen_GB_001.docx"
         'If CheckBox1.Checked And File.Exists(Name) Then oPara3.Range.InsertFile(Name)
 
-        ''--- insert block #2
-        'oPara3 = oDoc.Content.Paragraphs.Add()
-        'Name = dirpath_Block & "QG_Gen_GB_002.docx"
-        'If CheckBox2.Checked And File.Exists(Name) Then oPara3.Range.InsertFile(Name)
 
-        ''--- insert block #3
-        'oPara3 = oDoc.Content.Paragraphs.Add()
-        'Name = dirpath_Block & "QG_Gen_GB_003.docx"
-        'If CheckBox3.Checked And File.Exists(Name) Then oPara3.Range.InsertFile(Name)
-
-
-        '-------- find ALL checkboxes controls---
-        '---- PRINT in Alphabetical order -------
+        '---- find ALL checkboxes controls ---
+        '---- sort in Alphabetical order -------
+        '---- check for checked ----
+        '---- then PRINT 
         TextBox5.Clear()
         Dim all_check As New List(Of Control)
-        FindControlRecursive(all_check, Me, GetType(System.Windows.Forms.CheckBox))      'Find the control
-        all_check = all_check.OrderBy(Function(x) x.Name).ToList()  'Alphabetical order
+        FindControlRecursive(all_check, Me, GetType(System.Windows.Forms.CheckBox))      'Find the controls
+        all_check = all_check.OrderBy(Function(x) x.Text).ToList()  'Alphabetical order
+
         For i = 0 To all_check.Count - 1
             Dim grbx As System.Windows.Forms.CheckBox = CType(all_check(i), System.Windows.Forms.CheckBox)
             If grbx.Checked = True Then
@@ -119,7 +109,7 @@ Public Class Form1
     End Sub
 
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
-                Check_directories()
+        Check_directories()
         Generate_word_doc()
     End Sub
 
@@ -268,7 +258,7 @@ Public Class Form1
 
         '-------- find all checkbox controls and save
         FindControlRecursive(all_check, Me, GetType(System.Windows.Forms.CheckBox))      'Find the control
-        all_check = all_check.OrderBy(Function(x) x.Name).ToList()  'Alphabetical order
+        all_check = all_check.OrderBy(Function(x) x.Text).ToList()  'Alphabetical order
         For i = 0 To all_check.Count - 1
             Dim grbx As System.Windows.Forms.CheckBox = CType(all_check(i), System.Windows.Forms.CheckBox)
             If grbx.Checked = True Then
@@ -278,7 +268,4 @@ Public Class Form1
 
     End Sub
 
-    Private Sub CheckBox22_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox22.CheckedChanged
-
-    End Sub
 End Class

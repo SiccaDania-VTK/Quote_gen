@@ -29,14 +29,14 @@ Public Class Form1
         'Insert a paragraph at the beginning of the document. 
         oPara1 = oDoc.Content.Paragraphs.Add()
         oPara1.Range.Text = "VTK SALES"
-        oPara1.Range.Font.Name = "Arial"
+        oPara1.Range.Font.Name = "Khmer UI"
         oPara1.Range.Font.Size = 16
         oPara1.Range.Font.Bold = CInt(True)
         oPara1.Format.SpaceAfter = 2                '24 pt spacing after paragraph. 
         oPara1.Range.InsertParagraphAfter()
 
         oPara2 = oDoc.Content.Paragraphs.Add(oDoc.Bookmarks.Item("\endofdoc").Range)
-        oPara2.Range.Font.Size = 11
+        oPara2.Range.Font.Size = 10
         oPara2.Format.SpaceAfter = 1
         oPara2.Range.Font.Bold = CInt(False)
         oPara2.Range.Text = "Quotation for customer " & vbCrLf
@@ -46,7 +46,7 @@ Public Class Form1
         'Insert a table, fill it with data and change the column widths.
         oTable = oDoc.Tables.Add(oDoc.Bookmarks.Item("\endofdoc").Range, 5, 2)
         oTable.Range.ParagraphFormat.SpaceAfter = 1
-        oTable.Range.Font.Size = 9
+        oTable.Range.Font.Size = 10
         oTable.Range.Font.Bold = CInt(False)
         oTable.Rows.Item(1).Range.Font.Bold = CInt(True)
 
@@ -122,6 +122,10 @@ Public Class Form1
         "File-name ate the first 4 character of the checkbox name" & vbCrLf &
         "Printing squence is determined by the file_name sorted in alphabetical order" & vbCrLf &
         " "
+        TextBox6.Text =
+        "Quotes use font Khmer UI size 10" & vbCrLf &
+        "New quotes use the local normal.dot with location" & vbCrLf &
+        "C:\\users\(your user name)\appdata\roaming\microsoft\templates.." & vbCrLf
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click

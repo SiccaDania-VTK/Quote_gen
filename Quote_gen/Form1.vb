@@ -287,4 +287,8 @@ Public Class Form1
         Next
     End Sub
 
+    Private Sub GroupBox5_Enter(sender As Object, e As EventArgs) 
+
+    End Sub
+
 End Class

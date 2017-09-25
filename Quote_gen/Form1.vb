@@ -114,7 +114,7 @@ Public Class Form1
         Next
 
 
-        '============ search and replace================
+        '============ search and replace in WORD file================
         Dim s As String = "--"
         s = TextBox7.Text
         oDoc.Content.Find.Execute(FindText:="_Fan_tag_nr", ReplaceWith:=s.ToString, Replace:=Word.WdReplace.wdReplaceAll)
@@ -165,7 +165,7 @@ Public Class Form1
 
         user = Trim(Environment.UserName)         'User name on the screen
         Dim filename As String = "Quote_select_" & TextBox1.Text & "_" & TextBox2.Text & DateTime.Now.ToString("_yyyy_MM_dd_") & user & ".vtkq"
-        Dim all_num, all_combo, all_check, all_radio As New List(Of Control)
+        Dim all_num, all_combo, all_check, all_text As New List(Of Control)
         Dim i As Integer
 
         If String.IsNullOrEmpty(TextBox2.Text) Then
@@ -176,12 +176,21 @@ Public Class Form1
         temp_string &= vbCrLf & "BREAK" & vbCrLf & ";"
 
 
-        '-------- find all checkbox controls and save
+        '-------- find all checkbox controls and save -------
         FindControlRecursive(all_check, Me, GetType(System.Windows.Forms.CheckBox))      'Find the control
         all_check = all_check.OrderBy(Function(x) x.Name).ToList()  'Alphabetical order
         For i = 0 To all_check.Count - 1
             Dim grbx As System.Windows.Forms.CheckBox = CType(all_check(i), System.Windows.Forms.CheckBox)
             temp_string &= grbx.Checked.ToString & ";"
+        Next
+        temp_string &= vbCrLf & "BREAK" & vbCrLf & ";"
+
+        '-------- find all textbox controls and save ----------
+        FindControlRecursive(all_text, Me, GetType(System.Windows.Forms.TextBox))      'Find the control
+        all_text = all_text.OrderBy(Function(x) x.Name).ToList()  'Alphabetical order
+        For i = 0 To all_text.Count - 1
+            Dim grbx As System.Windows.Forms.TextBox = CType(all_text(i), System.Windows.Forms.TextBox)
+            temp_string &= grbx.Text.ToString & ";"
         Next
         temp_string &= vbCrLf & "BREAK" & vbCrLf & ";"
 
@@ -216,7 +225,7 @@ Public Class Form1
         Dim control_words(), words() As String
         Dim i As Integer
         Dim k As Integer = 0
-        Dim all_num, all_combo, all_check, all_radio As New List(Of Control)
+        Dim all_num, all_combo, all_check, all_text As New List(Of Control)
         Dim separators() As String = {";"}
         Dim separators1() As String = {"BREAK"}
 
@@ -251,6 +260,20 @@ Public Class Form1
                     Boolean.TryParse(words(i + 1), grbx.Checked)
                 Else
                     MessageBox.Show("Warning last checkbox not found in file")
+                End If
+            Next
+
+            '---------- terugzetten textbox controls -----------------
+            FindControlRecursive(all_text, Me, GetType(System.Windows.Forms.TextBox))      'Find the control
+            all_text = all_text.OrderBy(Function(x) x.Name).ToList()                  'Alphabetical order
+            words = control_words(2).Split(separators, StringSplitOptions.None) 'Split the read file content
+            For i = 0 To all_text.Count - 1
+                Dim grbx As System.Windows.Forms.TextBox = CType(all_text(i), System.Windows.Forms.TextBox)
+                '--- dit deel voorkomt problemen bij het uitbreiden van het aantal checkboxes--
+                If (i < words.Length - 1) Then
+                    grbx.Text = words(i + 1)
+                Else
+                    MessageBox.Show("Warning last textbox not found in file")
                 End If
             Next
         End If
@@ -292,10 +315,6 @@ Public Class Form1
                 TextBox4.Text &= grbx.Text & vbCrLf
             End If
         Next
-    End Sub
-
-    Private Sub GroupBox5_Enter(sender As Object, e As EventArgs) 
-
     End Sub
 
 End Class

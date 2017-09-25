@@ -174,6 +174,9 @@ Partial Class Form1
         Me.CheckBox21 = New System.Windows.Forms.CheckBox()
         Me.CheckBox20 = New System.Windows.Forms.CheckBox()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.GroupBox25 = New System.Windows.Forms.GroupBox()
+        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.GroupBox11 = New System.Windows.Forms.GroupBox()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.CheckBox2 = New System.Windows.Forms.CheckBox()
@@ -250,6 +253,7 @@ Partial Class Form1
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
+        Me.GroupBox25.SuspendLayout()
         Me.GroupBox11.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage11.SuspendLayout()
@@ -2005,6 +2009,7 @@ Partial Class Form1
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.GroupBox25)
         Me.TabPage1.Controls.Add(Me.GroupBox11)
         Me.TabPage1.Controls.Add(Me.Button3)
         Me.TabPage1.Controls.Add(Me.Button2)
@@ -2020,6 +2025,36 @@ Partial Class Form1
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "General data"
         Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'GroupBox25
+        '
+        Me.GroupBox25.Controls.Add(Me.TextBox7)
+        Me.GroupBox25.Controls.Add(Me.Label3)
+        Me.GroupBox25.Location = New System.Drawing.Point(434, 22)
+        Me.GroupBox25.Name = "GroupBox25"
+        Me.GroupBox25.Size = New System.Drawing.Size(312, 315)
+        Me.GroupBox25.TabIndex = 36
+        Me.GroupBox25.TabStop = False
+        Me.GroupBox25.Text = "Search and replace in Word file"
+        '
+        'TextBox7
+        '
+        Me.TextBox7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox7.Location = New System.Drawing.Point(130, 24)
+        Me.TextBox7.Name = "TextBox7"
+        Me.TextBox7.Size = New System.Drawing.Size(157, 22)
+        Me.TextBox7.TabIndex = 34
+        Me.TextBox7.Text = "kkkkkkkkkk"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(12, 27)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(92, 16)
+        Me.Label3.TabIndex = 35
+        Me.Label3.Text = """_Fan_tag_nr"""
         '
         'GroupBox11
         '
@@ -2144,7 +2179,7 @@ Partial Class Form1
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(402, 83)
+        Me.Button3.Location = New System.Drawing.Point(292, 78)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(107, 35)
         Me.Button3.TabIndex = 32
@@ -2153,7 +2188,7 @@ Partial Class Form1
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(402, 39)
+        Me.Button2.Location = New System.Drawing.Point(292, 37)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(107, 35)
         Me.Button2.TabIndex = 31
@@ -2599,6 +2634,8 @@ Partial Class Form1
         Me.GroupBox1.PerformLayout()
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
+        Me.GroupBox25.ResumeLayout(False)
+        Me.GroupBox25.PerformLayout()
         Me.GroupBox11.ResumeLayout(False)
         Me.GroupBox11.PerformLayout()
         Me.TabControl1.ResumeLayout(False)
@@ -2810,4 +2847,7 @@ Partial Class Form1
     Friend WithEvents CheckBox144 As CheckBox
     Friend WithEvents CheckBox88 As CheckBox
     Friend WithEvents CheckBox141 As CheckBox
+    Friend WithEvents TextBox7 As TextBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents GroupBox25 As GroupBox
 End Class

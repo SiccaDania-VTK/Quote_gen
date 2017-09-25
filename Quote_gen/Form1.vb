@@ -113,6 +113,13 @@ Public Class Form1
             End If
         Next
 
+
+        '============ search and replace================
+        Dim s As String = "--"
+        s = TextBox7.Text
+        oDoc.Content.Find.Execute(FindText:="_Fan_tag_nr", ReplaceWith:=s.ToString, Replace:=Word.WdReplace.wdReplaceAll)
+
+
         '==================== backup final product===============
         ufilename = "Quote_" & TextBox1.Text & "_" & TextBox2.Text & DateTime.Now.ToString("_yyyy_MM_dd") & ".docx"
 

@@ -115,9 +115,27 @@ Public Class Form1
 
 
         '============ search and replace in WORD file================
-        Dim s As String = "--"
-        s = TextBox7.Text
-        oDoc.Content.Find.Execute(FindText:="_Fan_tag_nr", ReplaceWith:=s.ToString, Replace:=Word.WdReplace.wdReplaceAll)
+        Dim find_s As String = ""
+        Dim rep_s As String = ""
+        find_s = Label3.Text
+        rep_s = TextBox7.Text
+        oDoc.Content.Find.Execute(FindText:=find_s.ToString, ReplaceWith:=rep_s.ToString, Replace:=Word.WdReplace.wdReplaceAll)
+
+        find_s = Label4.Text
+        rep_s = TextBox8.Text
+        oDoc.Content.Find.Execute(FindText:=find_s.ToString, ReplaceWith:=rep_s.ToString, Replace:=Word.WdReplace.wdReplaceAll)
+
+        find_s = Label5.Text
+        rep_s = TextBox9.Text
+        oDoc.Content.Find.Execute(FindText:=find_s.ToString, ReplaceWith:=rep_s.ToString, Replace:=Word.WdReplace.wdReplaceAll)
+
+        find_s = Label6.Text
+        rep_s = TextBox10.Text
+        oDoc.Content.Find.Execute(FindText:=find_s.ToString, ReplaceWith:=rep_s.ToString, Replace:=Word.WdReplace.wdReplaceAll)
+
+        find_s = Label7.Text
+        rep_s = TextBox11.Text
+        oDoc.Content.Find.Execute(FindText:=find_s.ToString, ReplaceWith:=rep_s.ToString, Replace:=Word.WdReplace.wdReplaceAll)
 
 
         '==================== backup final product===============
@@ -316,5 +334,6 @@ Public Class Form1
             End If
         Next
     End Sub
+
 
 End Class

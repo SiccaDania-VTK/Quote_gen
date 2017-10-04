@@ -16,8 +16,9 @@ Public Class Form1
     Private Sub Generate_word_doc()
         Dim oWord As Word.Application
         Dim oDoc As Word.Document
-        Dim oTable As Word.Table
-        Dim oPara1, oPara2, oPara3 As Word.Paragraph
+        'Dim oTable As Word.Table
+        'Dim oPara1, oPara2, oPara3 As Word.Paragraph
+        Dim oPara3 As Word.Paragraph
         Dim ufilename As String
         Dim pathname As String
         Dim style1 As String
@@ -35,60 +36,6 @@ Public Class Form1
             MessageBox.Show("Dam.. Can not find " & style1)
             oDoc = oWord.Documents.Add
         End If
-
-        oDoc.PageSetup.TopMargin = 35
-        oDoc.PageSetup.BottomMargin = 20
-        oDoc.PageSetup.RightMargin = 20
-        oDoc.PageSetup.Orientation = Word.WdOrientation.wdOrientPortrait
-        oDoc.PageSetup.PaperSize = Word.WdPaperSize.wdPaperA4
-
-        'Insert a paragraph at the beginning of the document. 
-        oPara1 = oDoc.Content.Paragraphs.Add()
-        oPara1.Range.Text = "VTK SALES"
-        oPara1.Range.Font.Name = "Khmer UI"
-        oPara1.Range.Font.Size = 16
-        oPara1.Range.Font.Bold = CInt(True)
-        oPara1.Format.SpaceAfter = 2                '24 pt spacing after paragraph. 
-        oPara1.Range.InsertParagraphAfter()
-
-        oPara2 = oDoc.Content.Paragraphs.Add(oDoc.Bookmarks.Item("\endofdoc").Range)
-        oPara2.Range.Font.Size = 10
-        oPara2.Format.SpaceAfter = 1
-        oPara2.Range.Font.Bold = CInt(False)
-        oPara2.Range.Text = "Quotation for customer " & vbCrLf
-        oPara2.Range.InsertParagraphAfter()
-
-        '----------------------------------------------
-        'Insert a table, fill it with data and change the column widths.
-        oTable = oDoc.Tables.Add(oDoc.Bookmarks.Item("\endofdoc").Range, 5, 2)
-        oTable.Range.ParagraphFormat.SpaceAfter = 1
-        oTable.Range.Font.Size = 10
-        oTable.Range.Font.Bold = CInt(False)
-        oTable.Rows.Item(1).Range.Font.Bold = CInt(True)
-
-        oTable.Cell(1, 1).Range.Text = "Project Name"
-        oTable.Cell(1, 2).Range.Text = TextBox1.Text
-        oTable.Cell(2, 1).Range.Text = "Project number "
-        oTable.Cell(2, 2).Range.Text = TextBox1.Text
-        oTable.Cell(3, 1).Range.Text = "Author "
-        oTable.Cell(3, 2).Range.Text = Environment.UserName
-        oTable.Cell(4, 1).Range.Text = "Date "
-        oTable.Cell(4, 2).Range.Text = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")
-        oTable.Cell(5, 1).Range.Text = "Fan type"
-        oTable.Cell(5, 2).Range.Text = Label1.Text
-
-        oTable.Columns(1).Width = oWord.InchesToPoints(2.5)   'Change width of columns 1 & 2.
-        oTable.Columns(2).Width = oWord.InchesToPoints(2)
-        oTable.Rows.Item(1).Range.Font.Bold = CInt(True)
-        oDoc.Bookmarks.Item("\endofdoc").Range.InsertParagraphAfter()
-        'oPara2.Range.InsertBreak()                               'New page
-
-        '===================== inserting blocks========================
-        ''--- insert block #1
-        'oPara3 = oDoc.Content.Paragraphs.Add()
-        'Name  = dirpath_Block & "QG_Gen_GB_001.docx"
-        'If CheckBox1.Checked And File.Exists(Name) Then oPara3.Range.InsertFile(Name)
-
 
         '---- find ALL checkboxes controls ---
         '---- sort in Alphabetical order -------
@@ -117,6 +64,11 @@ Public Class Form1
         '============ search and replace in WORD file================
         Dim find_s As String = ""
         Dim rep_s As String = ""
+
+        find_s = Label1.Text
+        rep_s = TextBox1.Text
+        oDoc.Content.Find.Execute(FindText:=find_s.ToString, ReplaceWith:=rep_s.ToString, Replace:=Word.WdReplace.wdReplaceAll)
+
         find_s = Label3.Text
         rep_s = TextBox7.Text
         oDoc.Content.Find.Execute(FindText:=find_s.ToString, ReplaceWith:=rep_s.ToString, Replace:=Word.WdReplace.wdReplaceAll)
@@ -130,11 +82,56 @@ Public Class Form1
         oDoc.Content.Find.Execute(FindText:=find_s.ToString, ReplaceWith:=rep_s.ToString, Replace:=Word.WdReplace.wdReplaceAll)
 
         find_s = Label6.Text
-        rep_s = TextBox10.Text
+        rep_s = TextBox2.Text
         oDoc.Content.Find.Execute(FindText:=find_s.ToString, ReplaceWith:=rep_s.ToString, Replace:=Word.WdReplace.wdReplaceAll)
 
         find_s = Label7.Text
         rep_s = TextBox11.Text
+        oDoc.Content.Find.Execute(FindText:=find_s.ToString, ReplaceWith:=rep_s.ToString, Replace:=Word.WdReplace.wdReplaceAll)
+
+        find_s = Label8.Text
+        rep_s = TextBox12.Text
+        oDoc.Content.Find.Execute(FindText:=find_s.ToString, ReplaceWith:=rep_s.ToString, Replace:=Word.WdReplace.wdReplaceAll)
+
+        find_s = Label9.Text
+        rep_s = TextBox13.Text
+        oDoc.Content.Find.Execute(FindText:=find_s.ToString, ReplaceWith:=rep_s.ToString, Replace:=Word.WdReplace.wdReplaceAll)
+
+        find_s = Label11.Text
+        rep_s = TextBox14.Text
+        oDoc.Content.Find.Execute(FindText:=find_s.ToString, ReplaceWith:=rep_s.ToString, Replace:=Word.WdReplace.wdReplaceAll)
+
+        find_s = Label12.Text
+        rep_s = TextBox15.Text
+        oDoc.Content.Find.Execute(FindText:=find_s.ToString, ReplaceWith:=rep_s.ToString, Replace:=Word.WdReplace.wdReplaceAll)
+
+        ' search and replace Fan tab
+        find_s = Label24.Text
+        rep_s = TextBox24.Text
+        oDoc.Content.Find.Execute(FindText:=find_s.ToString, ReplaceWith:=rep_s.ToString, Replace:=Word.WdReplace.wdReplaceAll)
+
+        find_s = Label25.Text
+        rep_s = TextBox25.Text
+        oDoc.Content.Find.Execute(FindText:=find_s.ToString, ReplaceWith:=rep_s.ToString, Replace:=Word.WdReplace.wdReplaceAll)
+
+        find_s = Label26.Text
+        rep_s = TextBox26.Text
+        oDoc.Content.Find.Execute(FindText:=find_s.ToString, ReplaceWith:=rep_s.ToString, Replace:=Word.WdReplace.wdReplaceAll)
+
+        find_s = Label27.Text
+        rep_s = TextBox27.Text
+        oDoc.Content.Find.Execute(FindText:=find_s.ToString, ReplaceWith:=rep_s.ToString, Replace:=Word.WdReplace.wdReplaceAll)
+
+        find_s = Label21.Text
+        rep_s = ComboBox1.Text
+        oDoc.Content.Find.Execute(FindText:=find_s.ToString, ReplaceWith:=rep_s.ToString, Replace:=Word.WdReplace.wdReplaceAll)
+
+        find_s = Label22.Text
+        rep_s = ComboBox2.Text
+        oDoc.Content.Find.Execute(FindText:=find_s.ToString, ReplaceWith:=rep_s.ToString, Replace:=Word.WdReplace.wdReplaceAll)
+
+        find_s = Label23.Text
+        rep_s = ComboBox3.Text
         oDoc.Content.Find.Execute(FindText:=find_s.ToString, ReplaceWith:=rep_s.ToString, Replace:=Word.WdReplace.wdReplaceAll)
 
 
@@ -334,6 +331,5 @@ Public Class Form1
             End If
         Next
     End Sub
-
 
 End Class

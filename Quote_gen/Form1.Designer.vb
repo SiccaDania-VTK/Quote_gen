@@ -415,12 +415,12 @@ Partial Class Form1
         '
         'TextBox5
         '
-        Me.TextBox5.Dock = System.Windows.Forms.DockStyle.Top
+        Me.TextBox5.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TextBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox5.Location = New System.Drawing.Point(3, 204)
         Me.TextBox5.Multiline = True
         Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(1443, 201)
+        Me.TextBox5.Size = New System.Drawing.Size(1443, 627)
         Me.TextBox5.TabIndex = 1
         Me.TextBox5.Text = "Errors"
         '

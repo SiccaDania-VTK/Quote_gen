@@ -12,9 +12,11 @@ Public Class Form1
     Dim dirpath_Block As String = "N:\Verkoop\Tekst\Quote_text_block\"
     Dim dirpath_Backup As String = "N:\Verkoop\Aanbiedingen\Quote_gen_backup\"
     Dim dirpath_Home_GP As String = "C:\Temp\"
+
+    Public oWord As Word.Application
     ' see https://support.microsoft.com/en-us/help/316383/how-to-automate-word-from-visual-basic--net-to-create-a-new-document
     Private Sub Generate_word_doc()
-        Dim oWord As Word.Application
+        ' Dim oWord As Word.Application
         Dim oDoc As Word.Document
         'Dim oTable As Word.Table
         'Dim oPara1, oPara2, oPara3 As Word.Paragraph
@@ -60,80 +62,32 @@ Public Class Form1
             End If
         Next
 
-
         '============ search and replace in WORD file================
+        'Dim myStoryRange As Range '= oWord.ActiveDocument.Content
+
         Dim find_s As String = ""
         Dim rep_s As String = ""
 
-        find_s = Label1.Text
-        rep_s = TextBox1.Text
-        oDoc.Content.Find.Execute(FindText:=find_s.ToString, ReplaceWith:=rep_s.ToString, Replace:=Word.WdReplace.wdReplaceAll)
+        Find_rep(Label1.Text, TextBox1.Text)
+        Find_rep(Label3.Text, TextBox7.Text)
+        Find_rep(Label4.Text, TextBox8.Text)
+        Find_rep(Label5.Text, TextBox9.Text)
+        Find_rep(Label6.Text, TextBox2.Text)    'Cust name
 
-        find_s = Label3.Text
-        rep_s = TextBox7.Text
-        oDoc.Content.Find.Execute(FindText:=find_s.ToString, ReplaceWith:=rep_s.ToString, Replace:=Word.WdReplace.wdReplaceAll)
+        Find_rep(Label7.Text, TextBox11.Text)
+        Find_rep(Label8.Text, TextBox12.Text)
+        Find_rep(Label9.Text, TextBox13.Text)
+        Find_rep(Label11.Text, TextBox14.Text)
+        Find_rep(Label12.Text, TextBox15.Text)
 
-        find_s = Label4.Text
-        rep_s = TextBox8.Text
-        oDoc.Content.Find.Execute(FindText:=find_s.ToString, ReplaceWith:=rep_s.ToString, Replace:=Word.WdReplace.wdReplaceAll)
+        Find_rep(Label24.Text, TextBox24.Text)
+        Find_rep(Label25.Text, TextBox25.Text)
+        Find_rep(Label26.Text, TextBox26.Text)
+        Find_rep(Label27.Text, TextBox27.Text)
 
-        find_s = Label5.Text
-        rep_s = TextBox9.Text
-        oDoc.Content.Find.Execute(FindText:=find_s.ToString, ReplaceWith:=rep_s.ToString, Replace:=Word.WdReplace.wdReplaceAll)
-
-        find_s = Label6.Text
-        rep_s = TextBox2.Text
-        oDoc.Content.Find.Execute(FindText:=find_s.ToString, ReplaceWith:=rep_s.ToString, Replace:=Word.WdReplace.wdReplaceAll)
-
-        find_s = Label7.Text
-        rep_s = TextBox11.Text
-        oDoc.Content.Find.Execute(FindText:=find_s.ToString, ReplaceWith:=rep_s.ToString, Replace:=Word.WdReplace.wdReplaceAll)
-
-        find_s = Label8.Text
-        rep_s = TextBox12.Text
-        oDoc.Content.Find.Execute(FindText:=find_s.ToString, ReplaceWith:=rep_s.ToString, Replace:=Word.WdReplace.wdReplaceAll)
-
-        find_s = Label9.Text
-        rep_s = TextBox13.Text
-        oDoc.Content.Find.Execute(FindText:=find_s.ToString, ReplaceWith:=rep_s.ToString, Replace:=Word.WdReplace.wdReplaceAll)
-
-        find_s = Label11.Text
-        rep_s = TextBox14.Text
-        oDoc.Content.Find.Execute(FindText:=find_s.ToString, ReplaceWith:=rep_s.ToString, Replace:=Word.WdReplace.wdReplaceAll)
-
-        find_s = Label12.Text
-        rep_s = TextBox15.Text
-        oDoc.Content.Find.Execute(FindText:=find_s.ToString, ReplaceWith:=rep_s.ToString, Replace:=Word.WdReplace.wdReplaceAll)
-
-        ' search and replace Fan tab
-        find_s = Label24.Text
-        rep_s = TextBox24.Text
-        oDoc.Content.Find.Execute(FindText:=find_s.ToString, ReplaceWith:=rep_s.ToString, Replace:=Word.WdReplace.wdReplaceAll)
-
-        find_s = Label25.Text
-        rep_s = TextBox25.Text
-        oDoc.Content.Find.Execute(FindText:=find_s.ToString, ReplaceWith:=rep_s.ToString, Replace:=Word.WdReplace.wdReplaceAll)
-
-        find_s = Label26.Text
-        rep_s = TextBox26.Text
-        oDoc.Content.Find.Execute(FindText:=find_s.ToString, ReplaceWith:=rep_s.ToString, Replace:=Word.WdReplace.wdReplaceAll)
-
-        find_s = Label27.Text
-        rep_s = TextBox27.Text
-        oDoc.Content.Find.Execute(FindText:=find_s.ToString, ReplaceWith:=rep_s.ToString, Replace:=Word.WdReplace.wdReplaceAll)
-
-        find_s = Label21.Text
-        rep_s = ComboBox1.Text
-        oDoc.Content.Find.Execute(FindText:=find_s.ToString, ReplaceWith:=rep_s.ToString, Replace:=Word.WdReplace.wdReplaceAll)
-
-        find_s = Label22.Text
-        rep_s = ComboBox2.Text
-        oDoc.Content.Find.Execute(FindText:=find_s.ToString, ReplaceWith:=rep_s.ToString, Replace:=Word.WdReplace.wdReplaceAll)
-
-        find_s = Label23.Text
-        rep_s = ComboBox3.Text
-        oDoc.Content.Find.Execute(FindText:=find_s.ToString, ReplaceWith:=rep_s.ToString, Replace:=Word.WdReplace.wdReplaceAll)
-
+        Find_rep(Label21.Text, ComboBox1.SelectedText)
+        Find_rep(Label22.Text, ComboBox2.SelectedText)
+        Find_rep(Label23.Text, ComboBox3.SelectedText)
 
         '==================== backup final product===============
         ufilename = "Quote_" & TextBox1.Text & "_" & TextBox2.Text & DateTime.Now.ToString("_yyyy_MM_dd") & ".docx"
@@ -144,6 +98,29 @@ Public Class Form1
             ufilename = dirpath_Home_GP & ufilename
         End If
         'oWord.ActiveDocument.SaveAs(ufilename.ToString)
+    End Sub
+
+    Private Sub Find_rep(find_s As String, rep_s As String)
+        '============ search and replace in WORD file================
+        Dim myStoryRange As Range
+
+        For Each myStoryRange In oWord.ActiveDocument.StoryRanges
+            With myStoryRange.Find
+                .Text = find_s.ToString
+                .Replacement.Text = rep_s.ToString
+                .Wrap = WdFindWrap.wdFindContinue
+                .Execute(Replace:=Word.WdReplace.wdReplaceAll)
+            End With
+            Do While Not (myStoryRange.NextStoryRange Is Nothing)
+                myStoryRange = myStoryRange.NextStoryRange
+                With myStoryRange.Find
+                    .Text = find_s.ToString
+                    .Replacement.Text = rep_s.ToString
+                    .Wrap = WdFindWrap.wdFindContinue
+                    .Execute(Replace:=Word.WdReplace.wdReplaceAll)
+                End With
+            Loop
+        Next myStoryRange
     End Sub
 
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click

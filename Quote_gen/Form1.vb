@@ -43,7 +43,7 @@ Public Class Form1
         '---- sort in Alphabetical order -------
         '---- check for checked ----
         '---- then PRINT 
-        TextBox5.Clear()
+        TextBox05.Clear()
         Dim all_check As New List(Of Control)
         FindControlRecursive(all_check, Me, GetType(System.Windows.Forms.CheckBox))      'Find the controls
         all_check = all_check.OrderBy(Function(x) x.Text).ToList()  'Alphabetical order
@@ -54,10 +54,10 @@ Public Class Form1
                 oPara3 = oDoc.Content.Paragraphs.Add()
                 pathname = dirpath_Block & grbx.Text.Substring(0, 4) & ".docx"
                 If File.Exists(pathname) Then
-                    TextBox5.Text &= "OK, file found " & pathname & vbCrLf
+                    TextBox05.Text &= "OK, file found " & pathname & vbCrLf
                     oPara3.Range.InsertFile(pathname)
                 Else
-                    TextBox5.Text &= "File not found " & pathname & vbCrLf
+                    TextBox05.Text &= "File not found " & pathname & vbCrLf
                 End If
             End If
         Next
@@ -68,11 +68,11 @@ Public Class Form1
         Dim find_s As String = ""
         Dim rep_s As String = ""
 
-        Find_rep(Label1.Text, TextBox1.Text)
-        Find_rep(Label3.Text, TextBox7.Text)
-        Find_rep(Label4.Text, TextBox8.Text)
-        Find_rep(Label5.Text, TextBox9.Text)
-        Find_rep(Label6.Text, TextBox2.Text)    'Cust name
+        Find_rep(Label1.Text, TextBox01.Text)
+        Find_rep(Label3.Text, TextBox07.Text)
+        Find_rep(Label4.Text, TextBox08.Text)
+        Find_rep(Label5.Text, TextBox09.Text)
+        Find_rep(Label6.Text, TextBox02.Text)    'Cust name
 
         Find_rep(Label7.Text, TextBox11.Text)
         Find_rep(Label8.Text, TextBox12.Text)
@@ -85,12 +85,13 @@ Public Class Form1
         Find_rep(Label26.Text, TextBox26.Text)
         Find_rep(Label27.Text, TextBox27.Text)
 
-        Find_rep(Label21.Text, ComboBox1.SelectedText)
-        Find_rep(Label22.Text, ComboBox2.SelectedText)
-        Find_rep(Label23.Text, ComboBox3.SelectedText)
+        MessageBox.Show(ComboBox1.Text)
+        Find_rep(Label21.Text, ComboBox1.Text)
+        Find_rep(Label22.Text, ComboBox2.Text)
+        Find_rep(Label23.Text, ComboBox3.Text)
 
         '==================== backup final product===============
-        ufilename = "Quote_" & TextBox1.Text & "_" & TextBox2.Text & DateTime.Now.ToString("_yyyy_MM_dd") & ".docx"
+        ufilename = "Quote_" & TextBox01.Text & "_" & TextBox02.Text & DateTime.Now.ToString("_yyyy_MM_dd") & ".docx"
 
         If Directory.Exists(dirpath_Backup) Then
             ufilename = dirpath_Backup & ufilename
@@ -129,7 +130,7 @@ Public Class Form1
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        TextBox3.Text =
+        TextBox03.Text =
         "File naming convention" & vbCrLf & vbCrLf &
         "Text block location is " & vbTab & dirpath_Block.ToString & vbCrLf &
         "Quote backup location is " & vbTab & dirpath_Backup.ToString & vbCrLf &
@@ -137,17 +138,17 @@ Public Class Form1
         "File-name ate the first 4 character of the checkbox name" & vbCrLf &
         "Printing squence is determined by the file_name sorted in alphabetical order" & vbCrLf &
         " "
-        TextBox6.Text =
+        TextBox06.Text =
         "Quotes use font Khmer UI size 10" & vbCrLf &
         "New quotes use the local normal.dot with location" & vbCrLf &
         "C:\\users\(your user name)\appdata\roaming\microsoft\templates.." & vbCrLf
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        If TextBox1.Text.Trim.Length > 0 And TextBox2.Text.Trim.Length > 0 Then
+        If TextBox01.Text.Trim.Length > 0 And TextBox02.Text.Trim.Length > 0 Then
             Save_tofile()
         Else
-            MessageBox.Show("Complete Quote and item number")
+            MessageBox.Show("Complete Quote and Customer name")
         End If
     End Sub
     'Save control settings and case_x_conditions to file
@@ -156,17 +157,25 @@ Public Class Form1
         Dim temp_string, user As String
 
         user = Trim(Environment.UserName)         'User name on the screen
-        Dim filename As String = "Quote_select_" & TextBox1.Text & "_" & TextBox2.Text & DateTime.Now.ToString("_yyyy_MM_dd_") & user & ".vtkq"
+        Dim filename As String = "Quote_select_" & TextBox01.Text & "_" & TextBox02.Text & DateTime.Now.ToString("_yyyy_MM_dd_") & user & ".vtkq"
         Dim all_num, all_combo, all_check, all_text As New List(Of Control)
         Dim i As Integer
 
-        If String.IsNullOrEmpty(TextBox2.Text) Then
-            TextBox2.Text = "name"
+        If String.IsNullOrEmpty(TextBox02.Text) Then
+            TextBox02.Text = "name"
         End If
 
-        temp_string = TextBox1.Text & ";" & TextBox2.Text & ";"
+        temp_string = TextBox01.Text & ";" & TextBox02.Text & ";"
         temp_string &= vbCrLf & "BREAK" & vbCrLf & ";"
 
+        '-------- find all combobox controls and save
+        FindControlRecursive(all_combo, Me, GetType(ComboBox))      'Find the control
+        all_combo = all_combo.OrderBy(Function(x) x.Name).ToList()   'Alphabetical order
+        For i = 0 To all_combo.Count - 1
+            Dim grbx As ComboBox = CType(all_combo(i), ComboBox)
+            temp_string &= grbx.SelectedItem.ToString & ";"
+        Next
+        temp_string &= vbCrLf & "BREAK" & vbCrLf & ";"
 
         '-------- find all checkbox controls and save -------
         FindControlRecursive(all_check, Me, GetType(System.Windows.Forms.CheckBox))      'Find the control
@@ -236,15 +245,29 @@ Public Class Form1
 
             control_words = readText.Split(separators1, StringSplitOptions.None) 'Split the read file content
 
-            '----- retrieve case condition-----
+            '----- project data -----
             words = control_words(0).Split(separators, StringSplitOptions.None) 'Split the read file content
-            TextBox1.Text = words(0)                  'Project number
-            TextBox2.Text = words(1)                  'Item no
+            TextBox01.Text = words(0)                  'Project number
+            TextBox02.Text = words(1)                  'Item no
+
+            '---------- terugzetten combobox controls -----------------
+            FindControlRecursive(all_combo, Me, GetType(ComboBox))
+            all_combo = all_combo.OrderBy(Function(x) x.Name).ToList()          'Alphabetical order
+            words = control_words(1).Split(separators, StringSplitOptions.None) 'Split the read file content
+            For i = 0 To all_combo.Count - 1
+                Dim grbx As ComboBox = CType(all_combo(i), ComboBox)
+                '--- dit deel voorkomt problemen bij het uitbreiden van het aantal checkboxes--
+                If (i < words.Length - 1) Then
+                    grbx.SelectedItem = words(i + 1)
+                Else
+                    MessageBox.Show("Warning last combobox not found in file")
+                End If
+            Next
 
             '---------- terugzetten checkbox controls -----------------
             FindControlRecursive(all_check, Me, GetType(System.Windows.Forms.CheckBox))      'Find the control
             all_check = all_check.OrderBy(Function(x) x.Name).ToList()                  'Alphabetical order
-            words = control_words(1).Split(separators, StringSplitOptions.None) 'Split the read file content
+            words = control_words(2).Split(separators, StringSplitOptions.None) 'Split the read file content
             For i = 0 To all_check.Count - 1
                 Dim grbx As System.Windows.Forms.CheckBox = CType(all_check(i), System.Windows.Forms.CheckBox)
                 '--- dit deel voorkomt problemen bij het uitbreiden van het aantal checkboxes--
@@ -258,7 +281,7 @@ Public Class Form1
             '---------- terugzetten textbox controls -----------------
             FindControlRecursive(all_text, Me, GetType(System.Windows.Forms.TextBox))      'Find the control
             all_text = all_text.OrderBy(Function(x) x.Name).ToList()                  'Alphabetical order
-            words = control_words(2).Split(separators, StringSplitOptions.None) 'Split the read file content
+            words = control_words(3).Split(separators, StringSplitOptions.None) 'Split the read file content
             For i = 0 To all_text.Count - 1
                 Dim grbx As System.Windows.Forms.TextBox = CType(all_text(i), System.Windows.Forms.TextBox)
                 '--- dit deel voorkomt problemen bij het uitbreiden van het aantal checkboxes--
@@ -296,7 +319,7 @@ Public Class Form1
         Dim separators() As String = {";"}
         Dim separators1() As String = {"BREAK"}
 
-        TextBox4.Clear()
+        TextBox04.Clear()
 
         '-------- find all checkbox controls and save
         FindControlRecursive(all_check, Me, GetType(System.Windows.Forms.CheckBox))      'Find the control
@@ -304,7 +327,7 @@ Public Class Form1
         For i = 0 To all_check.Count - 1
             Dim grbx As System.Windows.Forms.CheckBox = CType(all_check(i), System.Windows.Forms.CheckBox)
             If grbx.Checked = True Then
-                TextBox4.Text &= grbx.Text & vbCrLf
+                TextBox04.Text &= grbx.Text & vbCrLf
             End If
         Next
     End Sub

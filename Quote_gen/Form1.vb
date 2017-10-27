@@ -85,7 +85,6 @@ Public Class Form1
         Find_rep(Label26.Text, TextBox26.Text)
         Find_rep(Label27.Text, TextBox27.Text)
 
-        MessageBox.Show(ComboBox1.Text)
         Find_rep(Label21.Text, ComboBox1.Text)
         Find_rep(Label22.Text, ComboBox2.Text)
         Find_rep(Label23.Text, ComboBox3.Text)
@@ -332,7 +331,7 @@ Public Class Form1
         Next
     End Sub
 
-    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click, CheckBox179.CheckStateChanged, CheckBox178.CheckStateChanged, CheckBox176.CheckStateChanged, CheckBox175.CheckStateChanged, CheckBox174.CheckStateChanged, CheckBox173.CheckStateChanged, CheckBox26.CheckStateChanged, CheckBox25.CheckStateChanged, CheckBox24.CheckStateChanged, CheckBox23.CheckStateChanged, CheckBox22.CheckStateChanged, CheckBox118.CheckStateChanged, CheckBox201.CheckedChanged, CheckBox200.CheckedChanged, CheckBox199.CheckedChanged, CheckBox198.CheckedChanged, CheckBox197.CheckedChanged, CheckBox196.CheckedChanged, CheckBox195.CheckedChanged, CheckBox194.CheckedChanged, CheckBox88.CheckStateChanged, CheckBox144.CheckStateChanged, CheckBox143.CheckStateChanged, CheckBox141.CheckStateChanged, CheckBox156.CheckedChanged, CheckBox155.CheckedChanged, CheckBox39.CheckedChanged, CheckBox38.CheckedChanged, CheckBox31.CheckedChanged, CheckBox30.CheckedChanged, CheckBox29.CheckedChanged, CheckBox28.CheckedChanged, CheckBox27.CheckedChanged, CheckBox162.CheckedChanged, CheckBox161.CheckedChanged
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click, CheckBox179.CheckStateChanged, CheckBox178.CheckStateChanged, CheckBox176.CheckStateChanged, CheckBox175.CheckStateChanged, CheckBox174.CheckStateChanged, CheckBox173.CheckStateChanged, CheckBox26.CheckStateChanged, CheckBox25.CheckStateChanged, CheckBox24.CheckStateChanged, CheckBox23.CheckStateChanged, CheckBox22.CheckStateChanged, CheckBox118.CheckStateChanged, CheckBox201.CheckedChanged, CheckBox200.CheckedChanged, CheckBox199.CheckedChanged, CheckBox198.CheckedChanged, CheckBox197.CheckedChanged, CheckBox196.CheckedChanged, CheckBox195.CheckedChanged, CheckBox194.CheckedChanged, CheckBox88.CheckStateChanged, CheckBox144.CheckStateChanged, CheckBox143.CheckStateChanged, CheckBox141.CheckStateChanged, CheckBox156.CheckedChanged, CheckBox155.CheckedChanged, CheckBox39.CheckedChanged, CheckBox38.CheckedChanged, CheckBox31.CheckedChanged, CheckBox30.CheckedChanged, CheckBox29.CheckedChanged, CheckBox162.CheckedChanged, CheckBox161.CheckedChanged, CheckBox167.CheckedChanged, CheckBox160.CheckedChanged, CheckBox213.CheckedChanged, CheckBox183.CheckedChanged, CheckBox11.CheckedChanged
         Check_combinations()
     End Sub
     Private Sub Check_combinations()
@@ -409,6 +408,47 @@ Public Class Form1
             End If
         Next
         GroupBox32.BackColor = CType(IIf(no_checked > 1 Or no_checked = 0, Color.Red, SystemColors.Window), Color)
+
+        '---------- Groupbox 34 (VSD)---------------
+        no_checked = 0
+        For Each kctrl In GroupBox34.Controls
+            If (kctrl.GetType() Is GetType(System.Windows.Forms.CheckBox)) Then
+                Dim grbx As System.Windows.Forms.CheckBox = CType(kctrl, System.Windows.Forms.CheckBox)
+                If grbx.Checked Then no_checked += 1
+            End If
+        Next
+        GroupBox34.BackColor = CType(IIf(no_checked > 1, Color.Red, SystemColors.Window), Color)
+
+        '---------- Groupbox 40 (Motor efficiency)---------------
+        no_checked = 0
+        For Each kctrl In GroupBox40.Controls
+            If (kctrl.GetType() Is GetType(System.Windows.Forms.CheckBox)) Then
+                Dim grbx As System.Windows.Forms.CheckBox = CType(kctrl, System.Windows.Forms.CheckBox)
+                If grbx.Checked Then no_checked += 1
+            End If
+        Next
+        GroupBox40.BackColor = CType(IIf(no_checked > 1, Color.Red, SystemColors.Window), Color)
+
+        '---------- Groupbox 42 (Vib sensor)---------------
+        no_checked = 0
+        For Each kctrl In GroupBox42.Controls
+            If (kctrl.GetType() Is GetType(System.Windows.Forms.CheckBox)) Then
+                Dim grbx As System.Windows.Forms.CheckBox = CType(kctrl, System.Windows.Forms.CheckBox)
+                If grbx.Checked Then no_checked += 1
+            End If
+        Next
+        GroupBox42.BackColor = CType(IIf(no_checked > 1, Color.Red, SystemColors.Window), Color)
+
+
+        '---------- Groupbox 44 (Electrical)---------------
+        no_checked = 0
+        For Each kctrl In GroupBox44.Controls
+            If (kctrl.GetType() Is GetType(System.Windows.Forms.CheckBox)) Then
+                Dim grbx As System.Windows.Forms.CheckBox = CType(kctrl, System.Windows.Forms.CheckBox)
+                If grbx.Checked Then no_checked += 1
+            End If
+        Next
+        GroupBox44.BackColor = CType(IIf(no_checked > 1, Color.Red, SystemColors.Window), Color)
 
     End Sub
 End Class

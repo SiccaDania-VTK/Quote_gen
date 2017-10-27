@@ -350,6 +350,7 @@ Partial Class Form1
         Me.Button4 = New System.Windows.Forms.Button()
         Me.TextBox04 = New System.Windows.Forms.TextBox()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.Button5 = New System.Windows.Forms.Button()
         Me.TabPage9.SuspendLayout()
         Me.TabPage8.SuspendLayout()
         Me.GroupBox7.SuspendLayout()
@@ -1095,6 +1096,8 @@ Partial Class Form1
         '
         'TabPage2
         '
+        Me.TabPage2.Controls.Add(Me.GroupBox33)
+        Me.TabPage2.Controls.Add(Me.Button5)
         Me.TabPage2.Controls.Add(Me.GroupBox2)
         Me.TabPage2.Controls.Add(Me.GroupBox8)
         Me.TabPage2.Controls.Add(Me.GroupBox32)
@@ -1603,7 +1606,6 @@ Partial Class Form1
         '
         'GroupBox32
         '
-        Me.GroupBox32.Controls.Add(Me.GroupBox33)
         Me.GroupBox32.Controls.Add(Me.CheckBox199)
         Me.GroupBox32.Controls.Add(Me.CheckBox197)
         Me.GroupBox32.Controls.Add(Me.CheckBox194)
@@ -1614,7 +1616,7 @@ Partial Class Form1
         Me.GroupBox32.Controls.Add(Me.CheckBox201)
         Me.GroupBox32.Location = New System.Drawing.Point(601, 373)
         Me.GroupBox32.Name = "GroupBox32"
-        Me.GroupBox32.Size = New System.Drawing.Size(276, 456)
+        Me.GroupBox32.Size = New System.Drawing.Size(276, 194)
         Me.GroupBox32.TabIndex = 68
         Me.GroupBox32.TabStop = False
         Me.GroupBox32.Text = "Electric motor "
@@ -1632,8 +1634,7 @@ Partial Class Form1
         Me.GroupBox33.Controls.Add(Me.CheckBox191)
         Me.GroupBox33.Controls.Add(Me.CheckBox189)
         Me.GroupBox33.Controls.Add(Me.CheckBox190)
-        Me.GroupBox33.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.GroupBox33.Location = New System.Drawing.Point(3, 195)
+        Me.GroupBox33.Location = New System.Drawing.Point(606, 568)
         Me.GroupBox33.Name = "GroupBox33"
         Me.GroupBox33.Size = New System.Drawing.Size(270, 258)
         Me.GroupBox33.TabIndex = 68
@@ -2068,7 +2069,9 @@ Partial Class Form1
         'GroupBox12
         '
         Me.GroupBox12.Controls.Add(Me.GroupBox30)
+        Me.GroupBox12.Controls.Add(Me.GroupBox24)
         Me.GroupBox12.Controls.Add(Me.GroupBox29)
+        Me.GroupBox12.Controls.Add(Me.GroupBox20)
         Me.GroupBox12.Controls.Add(Me.CheckBox87)
         Me.GroupBox12.Controls.Add(Me.CheckBox89)
         Me.GroupBox12.Controls.Add(Me.GroupBox23)
@@ -2093,7 +2096,7 @@ Partial Class Form1
         Me.GroupBox30.Size = New System.Drawing.Size(281, 82)
         Me.GroupBox30.TabIndex = 67
         Me.GroupBox30.TabStop = False
-        Me.GroupBox30.Text = "Machinguards"
+        Me.GroupBox30.Text = "Coupling Guards"
         '
         'CheckBox176
         '
@@ -2298,7 +2301,6 @@ Partial Class Form1
         'GroupBox3
         '
         Me.GroupBox3.Controls.Add(Me.CheckBox118)
-        Me.GroupBox3.Controls.Add(Me.GroupBox24)
         Me.GroupBox3.Controls.Add(Me.CheckBox22)
         Me.GroupBox3.Controls.Add(Me.CheckBox23)
         Me.GroupBox3.Controls.Add(Me.CheckBox26)
@@ -2306,7 +2308,7 @@ Partial Class Form1
         Me.GroupBox3.Controls.Add(Me.CheckBox25)
         Me.GroupBox3.Location = New System.Drawing.Point(293, 32)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(282, 463)
+        Me.GroupBox3.Size = New System.Drawing.Size(282, 156)
         Me.GroupBox3.TabIndex = 58
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Bearings"
@@ -2337,10 +2339,9 @@ Partial Class Form1
         Me.GroupBox24.Controls.Add(Me.CheckBox125)
         Me.GroupBox24.Controls.Add(Me.CheckBox120)
         Me.GroupBox24.Controls.Add(Me.CheckBox126)
-        Me.GroupBox24.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.GroupBox24.Location = New System.Drawing.Point(3, 155)
+        Me.GroupBox24.Location = New System.Drawing.Point(296, 194)
         Me.GroupBox24.Name = "GroupBox24"
-        Me.GroupBox24.Size = New System.Drawing.Size(276, 305)
+        Me.GroupBox24.Size = New System.Drawing.Size(276, 307)
         Me.GroupBox24.TabIndex = 63
         Me.GroupBox24.TabStop = False
         Me.GroupBox24.Text = "Bearing Options"
@@ -2549,7 +2550,7 @@ Partial Class Form1
         '
         Me.GroupBox5.Controls.Add(Me.CheckBox132)
         Me.GroupBox5.Controls.Add(Me.GroupBox22)
-        Me.GroupBox5.Location = New System.Drawing.Point(-1, 310)
+        Me.GroupBox5.Location = New System.Drawing.Point(2, 310)
         Me.GroupBox5.Name = "GroupBox5"
         Me.GroupBox5.Size = New System.Drawing.Size(288, 194)
         Me.GroupBox5.TabIndex = 65
@@ -2656,11 +2657,10 @@ Partial Class Form1
         Me.GroupBox19.Controls.Add(Me.CheckBox143)
         Me.GroupBox19.Controls.Add(Me.CheckBox144)
         Me.GroupBox19.Controls.Add(Me.CheckBox88)
-        Me.GroupBox19.Controls.Add(Me.GroupBox20)
         Me.GroupBox19.Controls.Add(Me.CheckBox141)
         Me.GroupBox19.Location = New System.Drawing.Point(2, 36)
         Me.GroupBox19.Name = "GroupBox19"
-        Me.GroupBox19.Size = New System.Drawing.Size(285, 214)
+        Me.GroupBox19.Size = New System.Drawing.Size(285, 110)
         Me.GroupBox19.TabIndex = 62
         Me.GroupBox19.TabStop = False
         Me.GroupBox19.Text = "Casing"
@@ -2705,10 +2705,9 @@ Partial Class Form1
         Me.GroupBox20.Controls.Add(Me.CheckBox145)
         Me.GroupBox20.Controls.Add(Me.CheckBox146)
         Me.GroupBox20.Controls.Add(Me.CheckBox147)
-        Me.GroupBox20.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.GroupBox20.Location = New System.Drawing.Point(3, 105)
+        Me.GroupBox20.Location = New System.Drawing.Point(2, 146)
         Me.GroupBox20.Name = "GroupBox20"
-        Me.GroupBox20.Size = New System.Drawing.Size(279, 106)
+        Me.GroupBox20.Size = New System.Drawing.Size(285, 106)
         Me.GroupBox20.TabIndex = 62
         Me.GroupBox20.TabStop = False
         Me.GroupBox20.Text = "Options"
@@ -2811,9 +2810,9 @@ Partial Class Form1
         Me.CheckBox156.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox156.Location = New System.Drawing.Point(17, 14)
         Me.CheckBox156.Name = "CheckBox156"
-        Me.CheckBox156.Size = New System.Drawing.Size(182, 22)
+        Me.CheckBox156.Size = New System.Drawing.Size(256, 22)
         Me.CheckBox156.TabIndex = 59
-        Me.CheckBox156.Text = "F045, Backward curved"
+        Me.CheckBox156.Text = "F045, Backward curved, plate vane"
         Me.CheckBox156.UseVisualStyleBackColor = True
         '
         'GroupBox4
@@ -2930,7 +2929,7 @@ Partial Class Form1
         Me.CheckBox31.Name = "CheckBox31"
         Me.CheckBox31.Size = New System.Drawing.Size(167, 22)
         Me.CheckBox31.TabIndex = 52
-        Me.CheckBox31.Text = "F130, JB, segragated"
+        Me.CheckBox31.Text = "F130, JB, segregated"
         Me.CheckBox31.UseVisualStyleBackColor = True
         '
         'GroupBox1
@@ -4173,6 +4172,16 @@ Partial Class Form1
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         '
+        'Button5
+        '
+        Me.Button5.Location = New System.Drawing.Point(885, 794)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(203, 23)
+        Me.Button5.TabIndex = 69
+        Me.Button5.Text = "Check Combinations"
+        Me.Button5.UseVisualStyleBackColor = True
+        Me.Button5.Visible = False
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -4602,4 +4611,5 @@ Partial Class Form1
     Friend WithEvents Label27 As Label
     Friend WithEvents TextBox26 As TextBox
     Friend WithEvents Label26 As Label
+    Friend WithEvents Button5 As Button
 End Class

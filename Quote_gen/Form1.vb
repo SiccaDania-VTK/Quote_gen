@@ -332,4 +332,83 @@ Public Class Form1
         Next
     End Sub
 
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click, CheckBox179.CheckStateChanged, CheckBox178.CheckStateChanged, CheckBox176.CheckStateChanged, CheckBox175.CheckStateChanged, CheckBox174.CheckStateChanged, CheckBox173.CheckStateChanged, CheckBox26.CheckStateChanged, CheckBox25.CheckStateChanged, CheckBox24.CheckStateChanged, CheckBox23.CheckStateChanged, CheckBox22.CheckStateChanged, CheckBox118.CheckStateChanged, CheckBox201.CheckedChanged, CheckBox200.CheckedChanged, CheckBox199.CheckedChanged, CheckBox198.CheckedChanged, CheckBox197.CheckedChanged, CheckBox196.CheckedChanged, CheckBox195.CheckedChanged, CheckBox194.CheckedChanged, CheckBox88.CheckStateChanged, CheckBox144.CheckStateChanged, CheckBox143.CheckStateChanged, CheckBox141.CheckStateChanged, CheckBox156.CheckedChanged, CheckBox155.CheckedChanged, CheckBox39.CheckedChanged, CheckBox38.CheckedChanged, CheckBox31.CheckedChanged, CheckBox30.CheckedChanged, CheckBox29.CheckedChanged, CheckBox28.CheckedChanged, CheckBox27.CheckedChanged, CheckBox162.CheckedChanged, CheckBox161.CheckedChanged
+        Check_combinations()
+    End Sub
+    Private Sub Check_combinations()
+        Dim no_checked As Integer = 0
+        Dim kctrl As System.Windows.Forms.Control
+
+        '---------- Groupbox 3 (Bearings)---------------
+        no_checked = 0
+        For Each kctrl In GroupBox3.Controls
+            If (kctrl.GetType() Is GetType(System.Windows.Forms.CheckBox)) Then
+                Dim grbx As System.Windows.Forms.CheckBox = CType(kctrl, System.Windows.Forms.CheckBox)
+                If grbx.Checked Then no_checked += 1
+            End If
+        Next
+        GroupBox3.BackColor = CType(IIf(no_checked > 1 Or no_checked = 0, Color.Red, SystemColors.Window), Color)
+
+        '---------- Groupbox 4 (Electrical)---------------
+        no_checked = 0
+        For Each kctrl In GroupBox4.Controls
+            If (kctrl.GetType() Is GetType(System.Windows.Forms.CheckBox)) Then
+                Dim grbx As System.Windows.Forms.CheckBox = CType(kctrl, System.Windows.Forms.CheckBox)
+                If grbx.Checked Then no_checked += 1
+            End If
+        Next
+        GroupBox4.BackColor = CType(IIf(no_checked > 1, Color.Red, SystemColors.Window), Color)
+
+
+        '---------- Groupbox 19 (Casing)---------------
+        no_checked = 0
+        For Each kctrl In GroupBox19.Controls
+            If (kctrl.GetType() Is GetType(System.Windows.Forms.CheckBox)) Then
+                Dim grbx As System.Windows.Forms.CheckBox = CType(kctrl, System.Windows.Forms.CheckBox)
+                If grbx.Checked Then no_checked += 1
+            End If
+        Next
+        GroupBox19.BackColor = CType(IIf(no_checked > 1 Or no_checked = 0, Color.Red, SystemColors.Window), Color)
+
+        '---------- Groupbox 21 (Vane type)---------------
+        no_checked = 0
+        For Each kctrl In GroupBox21.Controls
+            If (kctrl.GetType() Is GetType(System.Windows.Forms.CheckBox)) Then
+                Dim grbx As System.Windows.Forms.CheckBox = CType(kctrl, System.Windows.Forms.CheckBox)
+                If grbx.Checked Then no_checked += 1
+            End If
+        Next
+        GroupBox21.BackColor = CType(IIf(no_checked > 1 Or no_checked = 0, Color.Red, SystemColors.Window), Color)
+
+        '---------- Groupbox 29 (Coupling)---------------
+        no_checked = 0
+        For Each kctrl In GroupBox29.Controls
+            If (kctrl.GetType() Is GetType(System.Windows.Forms.CheckBox)) Then
+                Dim grbx As System.Windows.Forms.CheckBox = CType(kctrl, System.Windows.Forms.CheckBox)
+                If grbx.Checked Then no_checked += 1
+            End If
+        Next
+        GroupBox29.BackColor = CType(IIf(no_checked > 1 Or no_checked = 0, Color.Red, SystemColors.Window), Color)
+
+        '---------- Groupbox 30 (Coupling guard)---------------
+        no_checked = 0
+        For Each kctrl In GroupBox30.Controls
+            If (kctrl.GetType() Is GetType(System.Windows.Forms.CheckBox)) Then
+                Dim grbx As System.Windows.Forms.CheckBox = CType(kctrl, System.Windows.Forms.CheckBox)
+                If grbx.checked Then no_checked += 1
+            End If
+        Next
+        GroupBox30.BackColor = CType(IIf(no_checked > 1 Or no_checked = 0, Color.Red, SystemColors.Window), Color)
+
+        '---------- Groupbox 32 (Motor)---------------
+        no_checked = 0
+        For Each kctrl In GroupBox32.Controls
+            If (kctrl.GetType() Is GetType(System.Windows.Forms.CheckBox)) Then
+                Dim grbx As System.Windows.Forms.CheckBox = CType(kctrl, System.Windows.Forms.CheckBox)
+                If grbx.Checked Then no_checked += 1
+            End If
+        Next
+        GroupBox32.BackColor = CType(IIf(no_checked > 1 Or no_checked = 0, Color.Red, SystemColors.Window), Color)
+
+    End Sub
 End Class

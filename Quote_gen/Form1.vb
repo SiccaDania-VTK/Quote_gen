@@ -15,6 +15,7 @@ Public Class Form1
 
     Public oWord As Word.Application
     ' see https://support.microsoft.com/en-us/help/316383/how-to-automate-word-from-visual-basic--net-to-create-a-new-document
+
     Private Sub Generate_word_doc()
         Dim oDoc As Word.Document
         Dim oPara3 As Word.Paragraph
@@ -138,16 +139,48 @@ Public Class Form1
         "Quotes use font Khmer UI size 10" & vbCrLf &
         "New quotes use the local normal.dot with location" & vbCrLf &
         "C:\\users\(your user name)\appdata\roaming\microsoft\templates.." & vbCrLf
+
+        TextBox1.Text =
+        "Cyclone" & vbTab & vbTab & "1100" & vbCrLf &
+        "Filter" & vbTab & vbTab & "1500" & vbCrLf &
+        "Heater" & vbTab & vbTab & "2100" & vbCrLf &
+        "Demper" & vbTab & vbTab & "2700" & vbCrLf &
+        "Ringduct" & vbTab & vbTab & "3000" & vbCrLf &
+        "Piping" & vbTab & vbTab & "3100" & vbCrLf &
+        "Supports" & vbTab & vbTab & "3500" & vbCrLf &
+        "Valve" & vbTab & vbTab & "3600" & vbCrLf
+
+        TextBox2.Text =
+        "Fan" & vbTab & vbTab & "4000" & vbCrLf &
+        "Conveyor" & vbTab & vbTab & "4400" & vbCrLf &
+        "Dewatering screw" & vbTab & "4500" & vbCrLf &
+        "Mixer" & vbTab & vbTab & "5600" & vbCrLf &
+        "Inwerprad" & vbTab & vbTab & "6000" & vbCrLf &
+        "Disintegrator" & vbTab & "6100" & vbCrLf &
+        "Sluice" & vbTab & vbTab & "6200" & vbCrLf &
+        "Flap valve" & vbTab & "6300" & vbCrLf &
+        "Metal trap" & vbTab & vbTab & "6400" & vbCrLf &
+        "Mill" & vbTab & vbTab & "6500" & vbCrLf &
+        "Sieve" & vbTab & vbTab & "6600" & vbCrLf &
+        "Pump" & vbTab & vbTab & "7000" & vbCrLf
+
+        TextBox3.Text =
+        "Hopper" & vbTab & vbTab & "5900" & vbCrLf &
+        "Tank" & vbTab & vbTab & "7100" & vbCrLf &
+        "Struc. steel" & vbTab & "8000" & vbCrLf &
+        "Others" & vbTab & vbTab & "9000" & vbCrLf
+
+
         ComboBox1.SelectedIndex = 2     'Zone 2
         ComboBox2.SelectedIndex = 1     'IIB
         ComboBox3.SelectedIndex = 2     'T3
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        If TextBox01.Text.Trim.Length > 0 And TextBox02.Text.Trim.Length > 0 Then
+        If TextBox01.Text.Trim.Length > 0 And TextBox07.Text.Trim.Length > 0 Then
             Save_tofile()
         Else
-            MessageBox.Show("Complete Quote and Customer name")
+            MessageBox.Show("Complete Quote number and Customer tag" & vbCrLf & "Then the file can be saved")
         End If
     End Sub
     'Save control settings and case_x_conditions to file
@@ -156,7 +189,7 @@ Public Class Form1
         Dim temp_string, user As String
 
         user = Trim(Environment.UserName)         'User name on the screen
-        Dim filename As String = "Quote_select_" & TextBox01.Text & "_" & TextBox02.Text & DateTime.Now.ToString("_yyyy_MM_dd_") & user & ".vtkq"
+        Dim filename As String = "Quote_select_" & TextBox01.Text & "_" & TextBox07.Text & DateTime.Now.ToString("_yyyy_MM_dd_") & user & ".vtkq"
         Dim all_num, all_combo, all_check, all_text As New List(Of Control)
         Dim i As Integer
 

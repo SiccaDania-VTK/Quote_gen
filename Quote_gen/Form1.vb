@@ -138,6 +138,9 @@ Public Class Form1
         "Quotes use font Khmer UI size 10" & vbCrLf &
         "New quotes use the local normal.dot with location" & vbCrLf &
         "C:\\users\(your user name)\appdata\roaming\microsoft\templates.." & vbCrLf
+        ComboBox1.SelectedIndex = 2     'Zone 2
+        ComboBox2.SelectedIndex = 1     'IIB
+        ComboBox3.SelectedIndex = 2     'T3
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
@@ -165,13 +168,14 @@ Public Class Form1
         temp_string &= vbCrLf & "BREAK" & vbCrLf & ";"
 
         '-------- find all combobox controls and save
-        FindControlRecursive(all_combo, Me, GetType(ComboBox))      'Find the control
+        FindControlRecursive(all_combo, Me, GetType(System.Windows.Forms.ComboBox))      'Find the control
         all_combo = all_combo.OrderBy(Function(x) x.Name).ToList()   'Alphabetical order
         For i = 0 To all_combo.Count - 1
-            Dim grbx As ComboBox = CType(all_combo(i), ComboBox)
+            Dim grbx As System.Windows.Forms.ComboBox = CType(all_combo(i), System.Windows.Forms.ComboBox)
             temp_string &= grbx.SelectedItem.ToString & ";"
         Next
         temp_string &= vbCrLf & "BREAK" & vbCrLf & ";"
+
 
         '-------- find all checkbox controls and save -------
         FindControlRecursive(all_check, Me, GetType(System.Windows.Forms.CheckBox))      'Find the control
@@ -201,7 +205,7 @@ Public Class Form1
                 End If
             End If
         Catch ex As Exception
-            MessageBox.Show("Line 5062, " & ex.Message)  ' Show the exception's message.
+            MessageBox.Show("Line 204, " & ex.Message)  ' Show the exception's message.
         End Try
     End Sub
     Private Sub Check_directories()
@@ -211,6 +215,7 @@ Public Class Form1
             If (Not System.IO.Directory.Exists(dirpath_Block)) Then System.IO.Directory.CreateDirectory(dirpath_Block)
             If (Not System.IO.Directory.Exists(dirpath_Backup)) Then System.IO.Directory.CreateDirectory(dirpath_Backup)
         Catch ex As Exception
+            MessageBox.Show("Line 214, " & ex.Message)  ' Show the exception's message.
         End Try
     End Sub
 

@@ -232,6 +232,8 @@ Partial Class Form1
         Me.CheckBox30 = New System.Windows.Forms.CheckBox()
         Me.CheckBox31 = New System.Windows.Forms.CheckBox()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.GroupBox49 = New System.Windows.Forms.GroupBox()
         Me.TextBox01 = New System.Windows.Forms.TextBox()
@@ -367,8 +369,7 @@ Partial Class Form1
         Me.Button4 = New System.Windows.Forms.Button()
         Me.TextBox04 = New System.Windows.Forms.TextBox()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
         Me.TabPage9.SuspendLayout()
         Me.TabPage8.SuspendLayout()
         Me.GroupBox7.SuspendLayout()
@@ -2863,6 +2864,7 @@ Partial Class Form1
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.ProgressBar1)
         Me.TabPage1.Controls.Add(Me.TextBox3)
         Me.TabPage1.Controls.Add(Me.TextBox2)
         Me.TabPage1.Controls.Add(Me.TextBox1)
@@ -2879,6 +2881,24 @@ Partial Class Form1
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "General data"
         Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Location = New System.Drawing.Point(747, 372)
+        Me.TextBox3.Multiline = True
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(156, 77)
+        Me.TextBox3.TabIndex = 40
+        Me.TextBox3.Text = "T numbers"
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(747, 176)
+        Me.TextBox2.Multiline = True
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(156, 184)
+        Me.TextBox2.TabIndex = 39
+        Me.TextBox2.Text = "T numbers"
         '
         'TextBox1
         '
@@ -4392,23 +4412,13 @@ Partial Class Form1
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         '
-        'TextBox2
+        'ProgressBar1
         '
-        Me.TextBox2.Location = New System.Drawing.Point(747, 176)
-        Me.TextBox2.Multiline = True
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(156, 184)
-        Me.TextBox2.TabIndex = 39
-        Me.TextBox2.Text = "T numbers"
-        '
-        'TextBox3
-        '
-        Me.TextBox3.Location = New System.Drawing.Point(747, 372)
-        Me.TextBox3.Multiline = True
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(156, 77)
-        Me.TextBox3.TabIndex = 40
-        Me.TextBox3.Text = "T numbers"
+        Me.ProgressBar1.Location = New System.Drawing.Point(480, 560)
+        Me.ProgressBar1.Name = "ProgressBar1"
+        Me.ProgressBar1.Size = New System.Drawing.Size(235, 23)
+        Me.ProgressBar1.TabIndex = 41
+        Me.ProgressBar1.Visible = False
         '
         'Form1
         '
@@ -4883,4 +4893,5 @@ Partial Class Form1
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents ProgressBar1 As ProgressBar
 End Class

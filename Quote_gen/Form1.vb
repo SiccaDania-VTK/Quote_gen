@@ -28,7 +28,9 @@ Public Class Form1
 
         'Start Word and open the document template. 
         oWord = CType(CreateObject("Word.Application"), Word.Application)
-        oWord.Visible = True
+        oWord.Visible = False
+        oWord.ScreenUpdating = False
+        ProgressBar1.Visible = True
 
         If File.Exists(style1) Then
             oDoc = oWord.Documents.Add(style1.Clone)
@@ -47,6 +49,8 @@ Public Class Form1
         all_check = all_check.OrderBy(Function(x) x.Text).ToList()  'Alphabetical order
 
         For i = 0 To all_check.Count - 1
+            If ProgressBar1.Value > 99 Then ProgressBar1.Value = 1
+            ProgressBar1.Value += 1
             Dim grbx As System.Windows.Forms.CheckBox = CType(all_check(i), System.Windows.Forms.CheckBox)
             If grbx.Checked = True Then
                 oPara3 = oDoc.Content.Paragraphs.Add()
@@ -95,6 +99,9 @@ Public Class Form1
         Else
             ufilename = dirpath_Home_GP & ufilename
         End If
+        ProgressBar1.Visible = False
+        oWord.Visible = True
+        oWord.ScreenUpdating = True
         'oWord.ActiveDocument.SaveAs(ufilename.ToString)
     End Sub
 

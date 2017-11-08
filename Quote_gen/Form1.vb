@@ -110,6 +110,7 @@ Public Class Form1
         Find_rep(Label53.Text, NumericUpDown3.Value.ToString)
         Find_rep(Label51.Text, NumericUpDown4.Value.ToString)
         Find_rep(Label50.Text, NumericUpDown5.Value.ToString)
+        Find_rep(Label39.Text, NumericUpDown8.Value.ToString)   'Inspect doors
         Find_rep(Label46.Text, ComboBox8.Text)                  'Make drive
         Find_rep(Label45.Text, NumericUpDown6.Value.ToString)   'Speed
         Find_rep(Label38.Text, NumericUpDown2.Value.ToString)   'Flight thick
@@ -473,11 +474,13 @@ Public Class Form1
         ComboBox4.Items.Clear()
         ComboBox5.Items.Clear()
         ComboBox6.Items.Clear()
+        ComboBox10.Items.Clear()
 
         '-------Fill combobox, zone------------------
         For hh = 0 To atex_zone.Length - 1                'Fill combobox 
             ComboBox1.Items.Add(atex_zone(hh))
             ComboBox4.Items.Add(atex_zone(hh))
+            ComboBox10.Items.Add(atex_zone(hh))
         Next hh
 
         '-------Fill combobox, temp------------------
@@ -492,11 +495,12 @@ Public Class Form1
             ComboBox6.Items.Add(atex_group(hh))
         Next hh
 
-        ComboBox1.SelectedIndex = 1     'Zone
+        ComboBox1.SelectedIndex = 2     'Zone
         ComboBox3.SelectedIndex = 2     'Temp
         ComboBox2.SelectedIndex = 1     'group
 
         ComboBox4.SelectedIndex = 4     'Zone dust
+        ComboBox10.SelectedIndex = 5    'Zone dust
         ComboBox5.SelectedIndex = 2     'Temp
         ComboBox6.SelectedIndex = 1     'group
     End Sub

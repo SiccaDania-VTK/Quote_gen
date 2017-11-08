@@ -78,7 +78,76 @@ Partial Class Form1
         Me.CheckBox97 = New System.Windows.Forms.CheckBox()
         Me.CheckBox98 = New System.Windows.Forms.CheckBox()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.GroupBox58 = New System.Windows.Forms.GroupBox()
+        Me.ComboBox4 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox5 = New System.Windows.Forms.ComboBox()
+        Me.Label36 = New System.Windows.Forms.Label()
+        Me.Label33 = New System.Windows.Forms.Label()
+        Me.ComboBox6 = New System.Windows.Forms.ComboBox()
+        Me.Label35 = New System.Windows.Forms.Label()
+        Me.GroupBox62 = New System.Windows.Forms.GroupBox()
+        Me.CheckBox249 = New System.Windows.Forms.CheckBox()
+        Me.GroupBox61 = New System.Windows.Forms.GroupBox()
+        Me.CheckBox246 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox247 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox248 = New System.Windows.Forms.CheckBox()
+        Me.GroupBox60 = New System.Windows.Forms.GroupBox()
+        Me.CheckBox243 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox244 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox245 = New System.Windows.Forms.CheckBox()
+        Me.GroupBox59 = New System.Windows.Forms.GroupBox()
+        Me.Label37 = New System.Windows.Forms.Label()
+        Me.Label45 = New System.Windows.Forms.Label()
+        Me.Label46 = New System.Windows.Forms.Label()
+        Me.Label49 = New System.Windows.Forms.Label()
+        Me.Label50 = New System.Windows.Forms.Label()
+        Me.Label51 = New System.Windows.Forms.Label()
+        Me.Label53 = New System.Windows.Forms.Label()
+        Me.GroupBox57 = New System.Windows.Forms.GroupBox()
+        Me.CheckBox241 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox240 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox233 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox234 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox235 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox236 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox237 = New System.Windows.Forms.CheckBox()
+        Me.GroupBox56 = New System.Windows.Forms.GroupBox()
+        Me.CheckBox229 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox230 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox231 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox232 = New System.Windows.Forms.CheckBox()
+        Me.GroupBox55 = New System.Windows.Forms.GroupBox()
+        Me.ComboBox7 = New System.Windows.Forms.ComboBox()
+        Me.Label28 = New System.Windows.Forms.Label()
+        Me.Label29 = New System.Windows.Forms.Label()
+        Me.Label31 = New System.Windows.Forms.Label()
+        Me.Label32 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label44 = New System.Windows.Forms.Label()
+        Me.Label41 = New System.Windows.Forms.Label()
+        Me.Label43 = New System.Windows.Forms.Label()
+        Me.GroupBox54 = New System.Windows.Forms.GroupBox()
+        Me.CheckBox27 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox125 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox126 = New System.Windows.Forms.CheckBox()
+        Me.GroupBox53 = New System.Windows.Forms.GroupBox()
+        Me.CheckBox220 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox222 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox226 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox227 = New System.Windows.Forms.CheckBox()
+        Me.GroupBox52 = New System.Windows.Forms.GroupBox()
+        Me.CheckBox224 = New System.Windows.Forms.CheckBox()
+        Me.GroupBox51 = New System.Windows.Forms.GroupBox()
+        Me.CheckBox154 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox158 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox185 = New System.Windows.Forms.CheckBox()
+        Me.GroupBox50 = New System.Windows.Forms.GroupBox()
+        Me.CheckBox228 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox242 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox28 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox122 = New System.Windows.Forms.CheckBox()
         Me.GroupBox13 = New System.Windows.Forms.GroupBox()
+        Me.CheckBox7 = New System.Windows.Forms.CheckBox()
         Me.CheckBox91 = New System.Windows.Forms.CheckBox()
         Me.CheckBox92 = New System.Windows.Forms.CheckBox()
         Me.CheckBox93 = New System.Windows.Forms.CheckBox()
@@ -232,6 +301,7 @@ Partial Class Form1
         Me.CheckBox30 = New System.Windows.Forms.CheckBox()
         Me.CheckBox31 = New System.Windows.Forms.CheckBox()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
@@ -369,7 +439,26 @@ Partial Class Form1
         Me.Button4 = New System.Windows.Forms.Button()
         Me.TextBox04 = New System.Windows.Forms.TextBox()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
-        Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
+        Me.ComboBox8 = New System.Windows.Forms.ComboBox()
+        Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
+        Me.CheckBox238 = New System.Windows.Forms.CheckBox()
+        Me.NumericUpDown2 = New System.Windows.Forms.NumericUpDown()
+        Me.Label30 = New System.Windows.Forms.Label()
+        Me.Label38 = New System.Windows.Forms.Label()
+        Me.NumericUpDown3 = New System.Windows.Forms.NumericUpDown()
+        Me.NumericUpDown4 = New System.Windows.Forms.NumericUpDown()
+        Me.NumericUpDown5 = New System.Windows.Forms.NumericUpDown()
+        Me.ComboBox9 = New System.Windows.Forms.ComboBox()
+        Me.NumericUpDown6 = New System.Windows.Forms.NumericUpDown()
+        Me.NumericUpDown7 = New System.Windows.Forms.NumericUpDown()
+        Me.GroupBox63 = New System.Windows.Forms.GroupBox()
+        Me.CheckBox239 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox250 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox251 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox252 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox253 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox254 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox255 = New System.Windows.Forms.CheckBox()
         Me.TabPage9.SuspendLayout()
         Me.TabPage8.SuspendLayout()
         Me.GroupBox7.SuspendLayout()
@@ -383,6 +472,19 @@ Partial Class Form1
         Me.TabPage4.SuspendLayout()
         Me.GroupBox14.SuspendLayout()
         Me.TabPage3.SuspendLayout()
+        Me.GroupBox58.SuspendLayout()
+        Me.GroupBox62.SuspendLayout()
+        Me.GroupBox61.SuspendLayout()
+        Me.GroupBox60.SuspendLayout()
+        Me.GroupBox59.SuspendLayout()
+        Me.GroupBox57.SuspendLayout()
+        Me.GroupBox56.SuspendLayout()
+        Me.GroupBox55.SuspendLayout()
+        Me.GroupBox54.SuspendLayout()
+        Me.GroupBox53.SuspendLayout()
+        Me.GroupBox52.SuspendLayout()
+        Me.GroupBox51.SuspendLayout()
+        Me.GroupBox50.SuspendLayout()
         Me.GroupBox13.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         Me.GroupBox48.SuspendLayout()
@@ -432,6 +534,14 @@ Partial Class Form1
         Me.GroupBox10.SuspendLayout()
         Me.GroupBox9.SuspendLayout()
         Me.TabPage10.SuspendLayout()
+        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.NumericUpDown2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.NumericUpDown3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.NumericUpDown4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.NumericUpDown5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.NumericUpDown6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.NumericUpDown7, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox63.SuspendLayout()
         Me.SuspendLayout()
         '
         'TabPage9
@@ -1060,27 +1170,826 @@ Partial Class Form1
         '
         'TabPage3
         '
+        Me.TabPage3.Controls.Add(Me.GroupBox63)
+        Me.TabPage3.Controls.Add(Me.GroupBox58)
+        Me.TabPage3.Controls.Add(Me.GroupBox62)
+        Me.TabPage3.Controls.Add(Me.GroupBox61)
+        Me.TabPage3.Controls.Add(Me.GroupBox60)
+        Me.TabPage3.Controls.Add(Me.GroupBox59)
+        Me.TabPage3.Controls.Add(Me.GroupBox57)
+        Me.TabPage3.Controls.Add(Me.GroupBox56)
+        Me.TabPage3.Controls.Add(Me.GroupBox55)
+        Me.TabPage3.Controls.Add(Me.GroupBox54)
+        Me.TabPage3.Controls.Add(Me.GroupBox53)
+        Me.TabPage3.Controls.Add(Me.GroupBox52)
+        Me.TabPage3.Controls.Add(Me.GroupBox51)
+        Me.TabPage3.Controls.Add(Me.GroupBox50)
         Me.TabPage3.Controls.Add(Me.GroupBox13)
         Me.TabPage3.Location = New System.Drawing.Point(4, 22)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage3.Size = New System.Drawing.Size(1449, 834)
         Me.TabPage3.TabIndex = 2
-        Me.TabPage3.Text = "Screw Conv."
+        Me.TabPage3.Text = "Screw Conveyor"
         Me.TabPage3.UseVisualStyleBackColor = True
+        '
+        'GroupBox58
+        '
+        Me.GroupBox58.Controls.Add(Me.ComboBox4)
+        Me.GroupBox58.Controls.Add(Me.ComboBox5)
+        Me.GroupBox58.Controls.Add(Me.Label36)
+        Me.GroupBox58.Controls.Add(Me.Label33)
+        Me.GroupBox58.Controls.Add(Me.ComboBox6)
+        Me.GroupBox58.Controls.Add(Me.Label35)
+        Me.GroupBox58.Location = New System.Drawing.Point(883, 18)
+        Me.GroupBox58.Name = "GroupBox58"
+        Me.GroupBox58.Size = New System.Drawing.Size(318, 116)
+        Me.GroupBox58.TabIndex = 84
+        Me.GroupBox58.TabStop = False
+        Me.GroupBox58.Text = "ATEX data"
+        '
+        'ComboBox4
+        '
+        Me.ComboBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox4.FormattingEnabled = True
+        Me.ComboBox4.Items.AddRange(New Object() {"0", "1", "2", "20", "21", "22"})
+        Me.ComboBox4.Location = New System.Drawing.Point(169, 19)
+        Me.ComboBox4.Name = "ComboBox4"
+        Me.ComboBox4.Size = New System.Drawing.Size(100, 23)
+        Me.ComboBox4.TabIndex = 47
+        '
+        'ComboBox5
+        '
+        Me.ComboBox5.AutoCompleteCustomSource.AddRange(New String() {"T1", "T2", "T3", "T4", "T5", "T6"})
+        Me.ComboBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox5.FormattingEnabled = True
+        Me.ComboBox5.Items.AddRange(New Object() {"T1", "T2", "T3", "T4", "T5", "T6"})
+        Me.ComboBox5.Location = New System.Drawing.Point(170, 78)
+        Me.ComboBox5.Name = "ComboBox5"
+        Me.ComboBox5.Size = New System.Drawing.Size(99, 23)
+        Me.ComboBox5.TabIndex = 51
+        '
+        'Label36
+        '
+        Me.Label36.AutoSize = True
+        Me.Label36.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label36.Location = New System.Drawing.Point(13, 49)
+        Me.Label36.Name = "Label36"
+        Me.Label36.Size = New System.Drawing.Size(68, 16)
+        Me.Label36.TabIndex = 48
+        Me.Label36.Text = "_S_Group"
+        '
+        'Label33
+        '
+        Me.Label33.AutoSize = True
+        Me.Label33.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label33.Location = New System.Drawing.Point(13, 77)
+        Me.Label33.Name = "Label33"
+        Me.Label33.Size = New System.Drawing.Size(108, 16)
+        Me.Label33.TabIndex = 53
+        Me.Label33.Text = "_S_Temp_Class"
+        '
+        'ComboBox6
+        '
+        Me.ComboBox6.AutoCompleteCustomSource.AddRange(New String() {"IIA", "IIB", "IIC"})
+        Me.ComboBox6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox6.FormattingEnabled = True
+        Me.ComboBox6.Items.AddRange(New Object() {"IIA", "IIB", "IIC"})
+        Me.ComboBox6.Location = New System.Drawing.Point(169, 48)
+        Me.ComboBox6.Name = "ComboBox6"
+        Me.ComboBox6.Size = New System.Drawing.Size(100, 23)
+        Me.ComboBox6.TabIndex = 49
+        '
+        'Label35
+        '
+        Me.Label35.AutoSize = True
+        Me.Label35.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label35.Location = New System.Drawing.Point(13, 27)
+        Me.Label35.Name = "Label35"
+        Me.Label35.Size = New System.Drawing.Size(105, 16)
+        Me.Label35.TabIndex = 52
+        Me.Label35.Text = "_S_Zone_inside"
+        '
+        'GroupBox62
+        '
+        Me.GroupBox62.Controls.Add(Me.CheckBox249)
+        Me.GroupBox62.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox62.Location = New System.Drawing.Point(8, 346)
+        Me.GroupBox62.Name = "GroupBox62"
+        Me.GroupBox62.Size = New System.Drawing.Size(258, 56)
+        Me.GroupBox62.TabIndex = 83
+        Me.GroupBox62.TabStop = False
+        Me.GroupBox62.Text = "ATEX"
+        '
+        'CheckBox249
+        '
+        Me.CheckBox249.AutoSize = True
+        Me.CheckBox249.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox249.Location = New System.Drawing.Point(12, 19)
+        Me.CheckBox249.Name = "CheckBox249"
+        Me.CheckBox249.Size = New System.Drawing.Size(111, 22)
+        Me.CheckBox249.TabIndex = 42
+        Me.CheckBox249.Text = "S044, ATEX "
+        Me.CheckBox249.UseVisualStyleBackColor = True
+        '
+        'GroupBox61
+        '
+        Me.GroupBox61.Controls.Add(Me.CheckBox246)
+        Me.GroupBox61.Controls.Add(Me.CheckBox247)
+        Me.GroupBox61.Controls.Add(Me.CheckBox248)
+        Me.GroupBox61.Location = New System.Drawing.Point(574, 157)
+        Me.GroupBox61.Name = "GroupBox61"
+        Me.GroupBox61.Size = New System.Drawing.Size(258, 111)
+        Me.GroupBox61.TabIndex = 61
+        Me.GroupBox61.TabStop = False
+        Me.GroupBox61.Text = "Instruments"
+        '
+        'CheckBox246
+        '
+        Me.CheckBox246.AutoSize = True
+        Me.CheckBox246.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox246.Location = New System.Drawing.Point(11, 19)
+        Me.CheckBox246.Name = "CheckBox246"
+        Me.CheckBox246.Size = New System.Drawing.Size(149, 22)
+        Me.CheckBox246.TabIndex = 22
+        Me.CheckBox246.Text = "S250, Rev counter"
+        Me.CheckBox246.UseVisualStyleBackColor = True
+        '
+        'CheckBox247
+        '
+        Me.CheckBox247.AutoSize = True
+        Me.CheckBox247.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox247.Location = New System.Drawing.Point(11, 41)
+        Me.CheckBox247.Name = "CheckBox247"
+        Me.CheckBox247.Size = New System.Drawing.Size(168, 22)
+        Me.CheckBox247.TabIndex = 23
+        Me.CheckBox247.Text = "S251, PT100 element"
+        Me.CheckBox247.UseVisualStyleBackColor = True
+        '
+        'CheckBox248
+        '
+        Me.CheckBox248.AutoSize = True
+        Me.CheckBox248.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox248.Location = New System.Drawing.Point(11, 63)
+        Me.CheckBox248.Name = "CheckBox248"
+        Me.CheckBox248.Size = New System.Drawing.Size(149, 22)
+        Me.CheckBox248.TabIndex = 24
+        Me.CheckBox248.Text = "S252, Level switch"
+        Me.CheckBox248.UseVisualStyleBackColor = True
+        '
+        'GroupBox60
+        '
+        Me.GroupBox60.Controls.Add(Me.CheckBox255)
+        Me.GroupBox60.Controls.Add(Me.CheckBox254)
+        Me.GroupBox60.Controls.Add(Me.CheckBox253)
+        Me.GroupBox60.Controls.Add(Me.CheckBox243)
+        Me.GroupBox60.Controls.Add(Me.CheckBox244)
+        Me.GroupBox60.Controls.Add(Me.CheckBox245)
+        Me.GroupBox60.Location = New System.Drawing.Point(290, 245)
+        Me.GroupBox60.Name = "GroupBox60"
+        Me.GroupBox60.Size = New System.Drawing.Size(258, 170)
+        Me.GroupBox60.TabIndex = 60
+        Me.GroupBox60.TabStop = False
+        Me.GroupBox60.Text = "Surface treatment"
+        '
+        'CheckBox243
+        '
+        Me.CheckBox243.AutoSize = True
+        Me.CheckBox243.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox243.Location = New System.Drawing.Point(14, 19)
+        Me.CheckBox243.Name = "CheckBox243"
+        Me.CheckBox243.Size = New System.Drawing.Size(225, 22)
+        Me.CheckBox243.TabIndex = 22
+        Me.CheckBox243.Text = "S100, Pickling and passivating"
+        Me.CheckBox243.UseVisualStyleBackColor = True
+        '
+        'CheckBox244
+        '
+        Me.CheckBox244.AutoSize = True
+        Me.CheckBox244.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox244.Location = New System.Drawing.Point(14, 42)
+        Me.CheckBox244.Name = "CheckBox244"
+        Me.CheckBox244.Size = New System.Drawing.Size(134, 22)
+        Me.CheckBox244.TabIndex = 23
+        Me.CheckBox244.Text = "S101, Paint VTK"
+        Me.CheckBox244.UseVisualStyleBackColor = True
+        '
+        'CheckBox245
+        '
+        Me.CheckBox245.AutoSize = True
+        Me.CheckBox245.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox245.Location = New System.Drawing.Point(14, 65)
+        Me.CheckBox245.Name = "CheckBox245"
+        Me.CheckBox245.Size = New System.Drawing.Size(209, 22)
+        Me.CheckBox245.TabIndex = 24
+        Me.CheckBox245.Text = "S102, Paint spec. customer"
+        Me.CheckBox245.UseVisualStyleBackColor = True
+        '
+        'GroupBox59
+        '
+        Me.GroupBox59.Controls.Add(Me.NumericUpDown6)
+        Me.GroupBox59.Controls.Add(Me.ComboBox9)
+        Me.GroupBox59.Controls.Add(Me.NumericUpDown5)
+        Me.GroupBox59.Controls.Add(Me.NumericUpDown4)
+        Me.GroupBox59.Controls.Add(Me.NumericUpDown3)
+        Me.GroupBox59.Controls.Add(Me.Label37)
+        Me.GroupBox59.Controls.Add(Me.Label45)
+        Me.GroupBox59.Controls.Add(Me.Label46)
+        Me.GroupBox59.Controls.Add(Me.Label49)
+        Me.GroupBox59.Controls.Add(Me.Label50)
+        Me.GroupBox59.Controls.Add(Me.Label51)
+        Me.GroupBox59.Controls.Add(Me.Label53)
+        Me.GroupBox59.Location = New System.Drawing.Point(883, 361)
+        Me.GroupBox59.Name = "GroupBox59"
+        Me.GroupBox59.Size = New System.Drawing.Size(321, 298)
+        Me.GroupBox59.TabIndex = 82
+        Me.GroupBox59.TabStop = False
+        Me.GroupBox59.Text = "Field for Search and replace in Quote"
+        '
+        'Label37
+        '
+        Me.Label37.AutoSize = True
+        Me.Label37.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label37.Location = New System.Drawing.Point(274, 131)
+        Me.Label37.Name = "Label37"
+        Me.Label37.Size = New System.Drawing.Size(39, 16)
+        Me.Label37.TabIndex = 76
+        Me.Label37.Text = "[rpm]"
+        '
+        'Label45
+        '
+        Me.Label45.AutoSize = True
+        Me.Label45.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label45.Location = New System.Drawing.Point(13, 131)
+        Me.Label45.Name = "Label45"
+        Me.Label45.Size = New System.Drawing.Size(70, 16)
+        Me.Label45.TabIndex = 75
+        Me.Label45.Text = "_S_speed"
+        '
+        'Label46
+        '
+        Me.Label46.AutoSize = True
+        Me.Label46.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label46.Location = New System.Drawing.Point(12, 107)
+        Me.Label46.Name = "Label46"
+        Me.Label46.Size = New System.Drawing.Size(104, 16)
+        Me.Label46.TabIndex = 73
+        Me.Label46.Text = "_S_Drive_make"
+        '
+        'Label49
+        '
+        Me.Label49.AutoSize = True
+        Me.Label49.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label49.Location = New System.Drawing.Point(12, 269)
+        Me.Label49.Name = "Label49"
+        Me.Label49.Size = New System.Drawing.Size(268, 16)
+        Me.Label49.TabIndex = 48
+        Me.Label49.Text = "Note all search items start with a underscore"
+        '
+        'Label50
+        '
+        Me.Label50.AutoSize = True
+        Me.Label50.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label50.Location = New System.Drawing.Point(12, 79)
+        Me.Label50.Name = "Label50"
+        Me.Label50.Size = New System.Drawing.Size(131, 16)
+        Me.Label50.TabIndex = 46
+        Me.Label50.Text = "_S_no_outlet_chutes"
+        '
+        'Label51
+        '
+        Me.Label51.AutoSize = True
+        Me.Label51.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label51.Location = New System.Drawing.Point(12, 51)
+        Me.Label51.Name = "Label51"
+        Me.Label51.Size = New System.Drawing.Size(123, 16)
+        Me.Label51.TabIndex = 45
+        Me.Label51.Text = "_S_no_inlet_chutes"
+        '
+        'Label53
+        '
+        Me.Label53.AutoSize = True
+        Me.Label53.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label53.Location = New System.Drawing.Point(12, 23)
+        Me.Label53.Name = "Label53"
+        Me.Label53.Size = New System.Drawing.Size(116, 16)
+        Me.Label53.TabIndex = 43
+        Me.Label53.Text = "_S_no_conveyers"
+        '
+        'GroupBox57
+        '
+        Me.GroupBox57.Controls.Add(Me.CheckBox241)
+        Me.GroupBox57.Controls.Add(Me.CheckBox240)
+        Me.GroupBox57.Controls.Add(Me.CheckBox233)
+        Me.GroupBox57.Controls.Add(Me.CheckBox234)
+        Me.GroupBox57.Controls.Add(Me.CheckBox235)
+        Me.GroupBox57.Controls.Add(Me.CheckBox236)
+        Me.GroupBox57.Controls.Add(Me.CheckBox237)
+        Me.GroupBox57.Location = New System.Drawing.Point(290, 425)
+        Me.GroupBox57.Name = "GroupBox57"
+        Me.GroupBox57.Size = New System.Drawing.Size(258, 188)
+        Me.GroupBox57.TabIndex = 60
+        Me.GroupBox57.TabStop = False
+        Me.GroupBox57.Text = "Mechanical details added"
+        '
+        'CheckBox241
+        '
+        Me.CheckBox241.AutoSize = True
+        Me.CheckBox241.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox241.Location = New System.Drawing.Point(11, 157)
+        Me.CheckBox241.Name = "CheckBox241"
+        Me.CheckBox241.Size = New System.Drawing.Size(69, 22)
+        Me.CheckBox241.TabIndex = 28
+        Me.CheckBox241.Text = "S126, "
+        Me.CheckBox241.UseVisualStyleBackColor = True
+        '
+        'CheckBox240
+        '
+        Me.CheckBox240.AutoSize = True
+        Me.CheckBox240.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox240.Location = New System.Drawing.Point(11, 134)
+        Me.CheckBox240.Name = "CheckBox240"
+        Me.CheckBox240.Size = New System.Drawing.Size(162, 22)
+        Me.CheckBox240.TabIndex = 27
+        Me.CheckBox240.Text = "S125, Heating jacket"
+        Me.CheckBox240.UseVisualStyleBackColor = True
+        '
+        'CheckBox233
+        '
+        Me.CheckBox233.AutoSize = True
+        Me.CheckBox233.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox233.Location = New System.Drawing.Point(11, 111)
+        Me.CheckBox233.Name = "CheckBox233"
+        Me.CheckBox233.Size = New System.Drawing.Size(135, 22)
+        Me.CheckBox233.TabIndex = 26
+        Me.CheckBox233.Text = "S124, Flight liner"
+        Me.CheckBox233.UseVisualStyleBackColor = True
+        '
+        'CheckBox234
+        '
+        Me.CheckBox234.AutoSize = True
+        Me.CheckBox234.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox234.Location = New System.Drawing.Point(11, 19)
+        Me.CheckBox234.Name = "CheckBox234"
+        Me.CheckBox234.Size = New System.Drawing.Size(150, 22)
+        Me.CheckBox234.TabIndex = 22
+        Me.CheckBox234.Text = "S120, Flight details"
+        Me.CheckBox234.UseVisualStyleBackColor = True
+        '
+        'CheckBox235
+        '
+        Me.CheckBox235.AutoSize = True
+        Me.CheckBox235.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox235.Location = New System.Drawing.Point(11, 42)
+        Me.CheckBox235.Name = "CheckBox235"
+        Me.CheckBox235.Size = New System.Drawing.Size(144, 22)
+        Me.CheckBox235.TabIndex = 23
+        Me.CheckBox235.Text = "S121, Pipe details"
+        Me.CheckBox235.UseVisualStyleBackColor = True
+        '
+        'CheckBox236
+        '
+        Me.CheckBox236.AutoSize = True
+        Me.CheckBox236.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox236.Location = New System.Drawing.Point(11, 65)
+        Me.CheckBox236.Name = "CheckBox236"
+        Me.CheckBox236.Size = New System.Drawing.Size(154, 22)
+        Me.CheckBox236.TabIndex = 24
+        Me.CheckBox236.Text = "S122, Chute details"
+        Me.CheckBox236.UseVisualStyleBackColor = True
+        '
+        'CheckBox237
+        '
+        Me.CheckBox237.AutoSize = True
+        Me.CheckBox237.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox237.Location = New System.Drawing.Point(11, 88)
+        Me.CheckBox237.Name = "CheckBox237"
+        Me.CheckBox237.Size = New System.Drawing.Size(147, 22)
+        Me.CheckBox237.TabIndex = 25
+        Me.CheckBox237.Text = "S123, Trough liner"
+        Me.CheckBox237.UseVisualStyleBackColor = True
+        '
+        'GroupBox56
+        '
+        Me.GroupBox56.Controls.Add(Me.CheckBox229)
+        Me.GroupBox56.Controls.Add(Me.CheckBox230)
+        Me.GroupBox56.Controls.Add(Me.CheckBox231)
+        Me.GroupBox56.Controls.Add(Me.CheckBox232)
+        Me.GroupBox56.Location = New System.Drawing.Point(574, 29)
+        Me.GroupBox56.Name = "GroupBox56"
+        Me.GroupBox56.Size = New System.Drawing.Size(258, 111)
+        Me.GroupBox56.TabIndex = 59
+        Me.GroupBox56.TabStop = False
+        Me.GroupBox56.Text = "Shaft seals"
+        '
+        'CheckBox229
+        '
+        Me.CheckBox229.AutoSize = True
+        Me.CheckBox229.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox229.Location = New System.Drawing.Point(11, 19)
+        Me.CheckBox229.Name = "CheckBox229"
+        Me.CheckBox229.Size = New System.Drawing.Size(127, 22)
+        Me.CheckBox229.TabIndex = 22
+        Me.CheckBox229.Text = "S150, PLA seal"
+        Me.CheckBox229.UseVisualStyleBackColor = True
+        '
+        'CheckBox230
+        '
+        Me.CheckBox230.AutoSize = True
+        Me.CheckBox230.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox230.Location = New System.Drawing.Point(11, 41)
+        Me.CheckBox230.Name = "CheckBox230"
+        Me.CheckBox230.Size = New System.Drawing.Size(150, 22)
+        Me.CheckBox230.TabIndex = 23
+        Me.CheckBox230.Text = "S151, Stuffing box "
+        Me.CheckBox230.UseVisualStyleBackColor = True
+        '
+        'CheckBox231
+        '
+        Me.CheckBox231.AutoSize = True
+        Me.CheckBox231.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox231.Location = New System.Drawing.Point(11, 63)
+        Me.CheckBox231.Name = "CheckBox231"
+        Me.CheckBox231.Size = New System.Drawing.Size(175, 22)
+        Me.CheckBox231.TabIndex = 24
+        Me.CheckBox231.Text = "S152, Mechanical seal"
+        Me.CheckBox231.UseVisualStyleBackColor = True
+        '
+        'CheckBox232
+        '
+        Me.CheckBox232.AutoSize = True
+        Me.CheckBox232.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox232.Location = New System.Drawing.Point(11, 85)
+        Me.CheckBox232.Name = "CheckBox232"
+        Me.CheckBox232.Size = New System.Drawing.Size(65, 22)
+        Me.CheckBox232.TabIndex = 25
+        Me.CheckBox232.Text = "S153,"
+        Me.CheckBox232.UseVisualStyleBackColor = True
+        '
+        'GroupBox55
+        '
+        Me.GroupBox55.Controls.Add(Me.NumericUpDown7)
+        Me.GroupBox55.Controls.Add(Me.Label38)
+        Me.GroupBox55.Controls.Add(Me.Label30)
+        Me.GroupBox55.Controls.Add(Me.NumericUpDown2)
+        Me.GroupBox55.Controls.Add(Me.NumericUpDown1)
+        Me.GroupBox55.Controls.Add(Me.ComboBox8)
+        Me.GroupBox55.Controls.Add(Me.ComboBox7)
+        Me.GroupBox55.Controls.Add(Me.Label28)
+        Me.GroupBox55.Controls.Add(Me.Label29)
+        Me.GroupBox55.Controls.Add(Me.Label31)
+        Me.GroupBox55.Controls.Add(Me.Label32)
+        Me.GroupBox55.Controls.Add(Me.Label2)
+        Me.GroupBox55.Controls.Add(Me.Label44)
+        Me.GroupBox55.Controls.Add(Me.Label41)
+        Me.GroupBox55.Controls.Add(Me.Label43)
+        Me.GroupBox55.Location = New System.Drawing.Point(883, 151)
+        Me.GroupBox55.Name = "GroupBox55"
+        Me.GroupBox55.Size = New System.Drawing.Size(321, 186)
+        Me.GroupBox55.TabIndex = 62
+        Me.GroupBox55.TabStop = False
+        Me.GroupBox55.Text = "Field for Search and replace in Quote"
+        '
+        'ComboBox7
+        '
+        Me.ComboBox7.FormattingEnabled = True
+        Me.ComboBox7.Location = New System.Drawing.Point(198, 47)
+        Me.ComboBox7.Name = "ComboBox7"
+        Me.ComboBox7.Size = New System.Drawing.Size(71, 21)
+        Me.ComboBox7.TabIndex = 85
+        '
+        'Label28
+        '
+        Me.Label28.AutoSize = True
+        Me.Label28.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label28.Location = New System.Drawing.Point(275, 128)
+        Me.Label28.Name = "Label28"
+        Me.Label28.Size = New System.Drawing.Size(40, 16)
+        Me.Label28.TabIndex = 82
+        Me.Label28.Text = "[deg]"
+        '
+        'Label29
+        '
+        Me.Label29.AutoSize = True
+        Me.Label29.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label29.Location = New System.Drawing.Point(12, 130)
+        Me.Label29.Name = "Label29"
+        Me.Label29.Size = New System.Drawing.Size(126, 16)
+        Me.Label29.TabIndex = 81
+        Me.Label29.Text = "_S_mounting_angle"
+        '
+        'Label31
+        '
+        Me.Label31.AutoSize = True
+        Me.Label31.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label31.Location = New System.Drawing.Point(275, 76)
+        Me.Label31.Name = "Label31"
+        Me.Label31.Size = New System.Drawing.Size(20, 16)
+        Me.Label31.TabIndex = 79
+        Me.Label31.Text = "[-]"
+        '
+        'Label32
+        '
+        Me.Label32.AutoSize = True
+        Me.Label32.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label32.Location = New System.Drawing.Point(12, 74)
+        Me.Label32.Name = "Label32"
+        Me.Label32.Size = New System.Drawing.Size(93, 16)
+        Me.Label32.TabIndex = 78
+        Me.Label32.Text = "_S_flight_pitch"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(275, 49)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(38, 16)
+        Me.Label2.TabIndex = 71
+        Me.Label2.Text = "[mm]"
+        '
+        'Label44
+        '
+        Me.Label44.AutoSize = True
+        Me.Label44.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label44.Location = New System.Drawing.Point(275, 23)
+        Me.Label44.Name = "Label44"
+        Me.Label44.Size = New System.Drawing.Size(27, 16)
+        Me.Label44.TabIndex = 70
+        Me.Label44.Text = "[m]"
+        '
+        'Label41
+        '
+        Me.Label41.AutoSize = True
+        Me.Label41.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label41.Location = New System.Drawing.Point(12, 23)
+        Me.Label41.Name = "Label41"
+        Me.Label41.Size = New System.Drawing.Size(71, 16)
+        Me.Label41.TabIndex = 44
+        Me.Label41.Text = "_S_Length"
+        '
+        'Label43
+        '
+        Me.Label43.AutoSize = True
+        Me.Label43.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label43.Location = New System.Drawing.Point(12, 49)
+        Me.Label43.Name = "Label43"
+        Me.Label43.Size = New System.Drawing.Size(84, 16)
+        Me.Label43.TabIndex = 42
+        Me.Label43.Text = "_S_diameter"
+        '
+        'GroupBox54
+        '
+        Me.GroupBox54.Controls.Add(Me.CheckBox27)
+        Me.GroupBox54.Controls.Add(Me.CheckBox125)
+        Me.GroupBox54.Controls.Add(Me.CheckBox126)
+        Me.GroupBox54.Location = New System.Drawing.Point(290, 135)
+        Me.GroupBox54.Name = "GroupBox54"
+        Me.GroupBox54.Size = New System.Drawing.Size(258, 98)
+        Me.GroupBox54.TabIndex = 61
+        Me.GroupBox54.TabStop = False
+        Me.GroupBox54.Text = "Material drive support"
+        '
+        'CheckBox27
+        '
+        Me.CheckBox27.AutoSize = True
+        Me.CheckBox27.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox27.Location = New System.Drawing.Point(11, 19)
+        Me.CheckBox27.Name = "CheckBox27"
+        Me.CheckBox27.Size = New System.Drawing.Size(150, 22)
+        Me.CheckBox27.TabIndex = 22
+        Me.CheckBox27.Text = "S070, carbon steel"
+        Me.CheckBox27.UseVisualStyleBackColor = True
+        '
+        'CheckBox125
+        '
+        Me.CheckBox125.AutoSize = True
+        Me.CheckBox125.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox125.Location = New System.Drawing.Point(11, 41)
+        Me.CheckBox125.Name = "CheckBox125"
+        Me.CheckBox125.Size = New System.Drawing.Size(161, 22)
+        Me.CheckBox125.TabIndex = 23
+        Me.CheckBox125.Text = "S071, Stainless 304 "
+        Me.CheckBox125.UseVisualStyleBackColor = True
+        '
+        'CheckBox126
+        '
+        Me.CheckBox126.AutoSize = True
+        Me.CheckBox126.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox126.Location = New System.Drawing.Point(11, 63)
+        Me.CheckBox126.Name = "CheckBox126"
+        Me.CheckBox126.Size = New System.Drawing.Size(161, 22)
+        Me.CheckBox126.TabIndex = 24
+        Me.CheckBox126.Text = "S072, Stainless 316 "
+        Me.CheckBox126.UseVisualStyleBackColor = True
+        '
+        'GroupBox53
+        '
+        Me.GroupBox53.Controls.Add(Me.CheckBox220)
+        Me.GroupBox53.Controls.Add(Me.CheckBox222)
+        Me.GroupBox53.Controls.Add(Me.CheckBox226)
+        Me.GroupBox53.Controls.Add(Me.CheckBox227)
+        Me.GroupBox53.Location = New System.Drawing.Point(8, 202)
+        Me.GroupBox53.Name = "GroupBox53"
+        Me.GroupBox53.Size = New System.Drawing.Size(258, 124)
+        Me.GroupBox53.TabIndex = 59
+        Me.GroupBox53.TabStop = False
+        Me.GroupBox53.Text = "Scope of supply"
+        '
+        'CheckBox220
+        '
+        Me.CheckBox220.AutoSize = True
+        Me.CheckBox220.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox220.Location = New System.Drawing.Point(11, 19)
+        Me.CheckBox220.Name = "CheckBox220"
+        Me.CheckBox220.Size = New System.Drawing.Size(143, 22)
+        Me.CheckBox220.TabIndex = 22
+        Me.CheckBox220.Text = "S030, Inlet chutes"
+        Me.CheckBox220.UseVisualStyleBackColor = True
+        '
+        'CheckBox222
+        '
+        Me.CheckBox222.AutoSize = True
+        Me.CheckBox222.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox222.Location = New System.Drawing.Point(11, 41)
+        Me.CheckBox222.Name = "CheckBox222"
+        Me.CheckBox222.Size = New System.Drawing.Size(156, 22)
+        Me.CheckBox222.TabIndex = 23
+        Me.CheckBox222.Text = "S031, Outlet chutes"
+        Me.CheckBox222.UseVisualStyleBackColor = True
+        '
+        'CheckBox226
+        '
+        Me.CheckBox226.AutoSize = True
+        Me.CheckBox226.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox226.Location = New System.Drawing.Point(11, 63)
+        Me.CheckBox226.Name = "CheckBox226"
+        Me.CheckBox226.Size = New System.Drawing.Size(117, 22)
+        Me.CheckBox226.TabIndex = 24
+        Me.CheckBox226.Text = "S032, Covers"
+        Me.CheckBox226.UseVisualStyleBackColor = True
+        '
+        'CheckBox227
+        '
+        Me.CheckBox227.AutoSize = True
+        Me.CheckBox227.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox227.Location = New System.Drawing.Point(11, 85)
+        Me.CheckBox227.Name = "CheckBox227"
+        Me.CheckBox227.Size = New System.Drawing.Size(69, 22)
+        Me.CheckBox227.TabIndex = 25
+        Me.CheckBox227.Text = "S033, "
+        Me.CheckBox227.UseVisualStyleBackColor = True
+        '
+        'GroupBox52
+        '
+        Me.GroupBox52.Controls.Add(Me.CheckBox224)
+        Me.GroupBox52.Location = New System.Drawing.Point(8, 609)
+        Me.GroupBox52.Name = "GroupBox52"
+        Me.GroupBox52.Size = New System.Drawing.Size(258, 61)
+        Me.GroupBox52.TabIndex = 61
+        Me.GroupBox52.TabStop = False
+        Me.GroupBox52.Text = "Intermediate bearings"
+        '
+        'CheckBox224
+        '
+        Me.CheckBox224.AutoSize = True
+        Me.CheckBox224.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox224.Location = New System.Drawing.Point(11, 19)
+        Me.CheckBox224.Name = "CheckBox224"
+        Me.CheckBox224.Size = New System.Drawing.Size(201, 22)
+        Me.CheckBox224.TabIndex = 22
+        Me.CheckBox224.Text = "S050, intermediate bearing"
+        Me.CheckBox224.UseVisualStyleBackColor = True
+        '
+        'GroupBox51
+        '
+        Me.GroupBox51.Controls.Add(Me.CheckBox154)
+        Me.GroupBox51.Controls.Add(Me.CheckBox158)
+        Me.GroupBox51.Controls.Add(Me.CheckBox185)
+        Me.GroupBox51.Location = New System.Drawing.Point(290, 24)
+        Me.GroupBox51.Name = "GroupBox51"
+        Me.GroupBox51.Size = New System.Drawing.Size(258, 98)
+        Me.GroupBox51.TabIndex = 60
+        Me.GroupBox51.TabStop = False
+        Me.GroupBox51.Text = "Material in contact with product + cover"
+        '
+        'CheckBox154
+        '
+        Me.CheckBox154.AutoSize = True
+        Me.CheckBox154.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox154.Location = New System.Drawing.Point(11, 19)
+        Me.CheckBox154.Name = "CheckBox154"
+        Me.CheckBox154.Size = New System.Drawing.Size(150, 22)
+        Me.CheckBox154.TabIndex = 22
+        Me.CheckBox154.Text = "S070, carbon steel"
+        Me.CheckBox154.UseVisualStyleBackColor = True
+        '
+        'CheckBox158
+        '
+        Me.CheckBox158.AutoSize = True
+        Me.CheckBox158.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox158.Location = New System.Drawing.Point(11, 41)
+        Me.CheckBox158.Name = "CheckBox158"
+        Me.CheckBox158.Size = New System.Drawing.Size(161, 22)
+        Me.CheckBox158.TabIndex = 23
+        Me.CheckBox158.Text = "S071, Stainless 304 "
+        Me.CheckBox158.UseVisualStyleBackColor = True
+        '
+        'CheckBox185
+        '
+        Me.CheckBox185.AutoSize = True
+        Me.CheckBox185.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox185.Location = New System.Drawing.Point(11, 63)
+        Me.CheckBox185.Name = "CheckBox185"
+        Me.CheckBox185.Size = New System.Drawing.Size(161, 22)
+        Me.CheckBox185.TabIndex = 24
+        Me.CheckBox185.Text = "S072, Stainless 316 "
+        Me.CheckBox185.UseVisualStyleBackColor = True
+        '
+        'GroupBox50
+        '
+        Me.GroupBox50.Controls.Add(Me.CheckBox252)
+        Me.GroupBox50.Controls.Add(Me.CheckBox251)
+        Me.GroupBox50.Controls.Add(Me.CheckBox228)
+        Me.GroupBox50.Controls.Add(Me.CheckBox242)
+        Me.GroupBox50.Controls.Add(Me.CheckBox28)
+        Me.GroupBox50.Controls.Add(Me.CheckBox122)
+        Me.GroupBox50.Location = New System.Drawing.Point(8, 418)
+        Me.GroupBox50.Name = "GroupBox50"
+        Me.GroupBox50.Size = New System.Drawing.Size(258, 174)
+        Me.GroupBox50.TabIndex = 59
+        Me.GroupBox50.TabStop = False
+        Me.GroupBox50.Text = "Drive"
+        '
+        'CheckBox228
+        '
+        Me.CheckBox228.AutoSize = True
+        Me.CheckBox228.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox228.Location = New System.Drawing.Point(11, 90)
+        Me.CheckBox228.Name = "CheckBox228"
+        Me.CheckBox228.Size = New System.Drawing.Size(145, 22)
+        Me.CheckBox228.TabIndex = 25
+        Me.CheckBox228.Text = "S052, ATEX Drive"
+        Me.CheckBox228.UseVisualStyleBackColor = True
+        '
+        'CheckBox242
+        '
+        Me.CheckBox242.AutoSize = True
+        Me.CheckBox242.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox242.Location = New System.Drawing.Point(11, 66)
+        Me.CheckBox242.Name = "CheckBox242"
+        Me.CheckBox242.Size = New System.Drawing.Size(242, 22)
+        Me.CheckBox242.TabIndex = 24
+        Me.CheckBox242.Text = "S051, Shaft mounted gear motor"
+        Me.CheckBox242.UseVisualStyleBackColor = True
+        '
+        'CheckBox28
+        '
+        Me.CheckBox28.AutoSize = True
+        Me.CheckBox28.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox28.Location = New System.Drawing.Point(11, 19)
+        Me.CheckBox28.Name = "CheckBox28"
+        Me.CheckBox28.Size = New System.Drawing.Size(239, 22)
+        Me.CheckBox28.TabIndex = 22
+        Me.CheckBox28.Text = "S050, Foot mounted gear motor"
+        Me.CheckBox28.UseVisualStyleBackColor = True
+        '
+        'CheckBox122
+        '
+        Me.CheckBox122.AutoSize = True
+        Me.CheckBox122.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox122.Location = New System.Drawing.Point(11, 41)
+        Me.CheckBox122.Name = "CheckBox122"
+        Me.CheckBox122.Size = New System.Drawing.Size(181, 22)
+        Me.CheckBox122.TabIndex = 23
+        Me.CheckBox122.Text = "S051, Coupling + guard"
+        Me.CheckBox122.UseVisualStyleBackColor = True
         '
         'GroupBox13
         '
+        Me.GroupBox13.Controls.Add(Me.CheckBox238)
+        Me.GroupBox13.Controls.Add(Me.CheckBox7)
         Me.GroupBox13.Controls.Add(Me.CheckBox91)
         Me.GroupBox13.Controls.Add(Me.CheckBox92)
         Me.GroupBox13.Controls.Add(Me.CheckBox93)
         Me.GroupBox13.Controls.Add(Me.CheckBox94)
         Me.GroupBox13.Location = New System.Drawing.Point(8, 18)
         Me.GroupBox13.Name = "GroupBox13"
-        Me.GroupBox13.Size = New System.Drawing.Size(325, 118)
+        Me.GroupBox13.Size = New System.Drawing.Size(258, 174)
         Me.GroupBox13.TabIndex = 58
         Me.GroupBox13.TabStop = False
-        Me.GroupBox13.Text = "Conveyor "
+        Me.GroupBox13.Text = "Conveyor Type"
+        '
+        'CheckBox7
+        '
+        Me.CheckBox7.AutoSize = True
+        Me.CheckBox7.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox7.Location = New System.Drawing.Point(11, 109)
+        Me.CheckBox7.Name = "CheckBox7"
+        Me.CheckBox7.Size = New System.Drawing.Size(119, 22)
+        Me.CheckBox7.TabIndex = 26
+        Me.CheckBox7.Text = "S005, Heating"
+        Me.CheckBox7.UseVisualStyleBackColor = True
         '
         'CheckBox91
         '
@@ -1088,9 +1997,9 @@ Partial Class Form1
         Me.CheckBox91.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox91.Location = New System.Drawing.Point(11, 19)
         Me.CheckBox91.Name = "CheckBox91"
-        Me.CheckBox91.Size = New System.Drawing.Size(195, 22)
+        Me.CheckBox91.Size = New System.Drawing.Size(127, 22)
         Me.CheckBox91.TabIndex = 22
-        Me.CheckBox91.Text = "S001, Conveyor U-trough"
+        Me.CheckBox91.Text = "S001, U-trough"
         Me.CheckBox91.UseVisualStyleBackColor = True
         '
         'CheckBox92
@@ -1099,9 +2008,9 @@ Partial Class Form1
         Me.CheckBox92.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox92.Location = New System.Drawing.Point(11, 41)
         Me.CheckBox92.Name = "CheckBox92"
-        Me.CheckBox92.Size = New System.Drawing.Size(195, 22)
+        Me.CheckBox92.Size = New System.Drawing.Size(129, 22)
         Me.CheckBox92.TabIndex = 23
-        Me.CheckBox92.Text = "S002, Conveyor U-trough"
+        Me.CheckBox92.Text = "S002, Pipe type"
         Me.CheckBox92.UseVisualStyleBackColor = True
         '
         'CheckBox93
@@ -1110,9 +2019,9 @@ Partial Class Form1
         Me.CheckBox93.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox93.Location = New System.Drawing.Point(11, 63)
         Me.CheckBox93.Name = "CheckBox93"
-        Me.CheckBox93.Size = New System.Drawing.Size(195, 22)
+        Me.CheckBox93.Size = New System.Drawing.Size(105, 22)
         Me.CheckBox93.TabIndex = 24
-        Me.CheckBox93.Text = "S003, Conveyor U-trough"
+        Me.CheckBox93.Text = "S003, Mixer"
         Me.CheckBox93.UseVisualStyleBackColor = True
         '
         'CheckBox94
@@ -1121,9 +2030,9 @@ Partial Class Form1
         Me.CheckBox94.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox94.Location = New System.Drawing.Point(11, 85)
         Me.CheckBox94.Name = "CheckBox94"
-        Me.CheckBox94.Size = New System.Drawing.Size(195, 22)
+        Me.CheckBox94.Size = New System.Drawing.Size(120, 22)
         Me.CheckBox94.TabIndex = 25
-        Me.CheckBox94.Text = "S004, Conveyor U-trough"
+        Me.CheckBox94.Text = "S004, Cooling"
         Me.CheckBox94.UseVisualStyleBackColor = True
         '
         'TabPage2
@@ -2882,6 +3791,14 @@ Partial Class Form1
         Me.TabPage1.Text = "General data"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
+        'ProgressBar1
+        '
+        Me.ProgressBar1.Location = New System.Drawing.Point(480, 560)
+        Me.ProgressBar1.Name = "ProgressBar1"
+        Me.ProgressBar1.Size = New System.Drawing.Size(235, 23)
+        Me.ProgressBar1.TabIndex = 41
+        Me.ProgressBar1.Visible = False
+        '
         'TextBox3
         '
         Me.TextBox3.Location = New System.Drawing.Point(747, 372)
@@ -4412,13 +5329,215 @@ Partial Class Form1
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         '
-        'ProgressBar1
+        'ComboBox8
         '
-        Me.ProgressBar1.Location = New System.Drawing.Point(480, 560)
-        Me.ProgressBar1.Name = "ProgressBar1"
-        Me.ProgressBar1.Size = New System.Drawing.Size(235, 23)
-        Me.ProgressBar1.TabIndex = 41
-        Me.ProgressBar1.Visible = False
+        Me.ComboBox8.FormattingEnabled = True
+        Me.ComboBox8.Location = New System.Drawing.Point(198, 74)
+        Me.ComboBox8.Name = "ComboBox8"
+        Me.ComboBox8.Size = New System.Drawing.Size(71, 21)
+        Me.ComboBox8.TabIndex = 86
+        '
+        'NumericUpDown1
+        '
+        Me.NumericUpDown1.Location = New System.Drawing.Point(198, 128)
+        Me.NumericUpDown1.Maximum = New Decimal(New Integer() {30, 0, 0, 0})
+        Me.NumericUpDown1.Name = "NumericUpDown1"
+        Me.NumericUpDown1.Size = New System.Drawing.Size(71, 20)
+        Me.NumericUpDown1.TabIndex = 87
+        Me.NumericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'CheckBox238
+        '
+        Me.CheckBox238.AutoSize = True
+        Me.CheckBox238.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox238.Location = New System.Drawing.Point(10, 133)
+        Me.CheckBox238.Name = "CheckBox238"
+        Me.CheckBox238.Size = New System.Drawing.Size(161, 22)
+        Me.CheckBox238.TabIndex = 27
+        Me.CheckBox238.Text = "S006, Vertical screw"
+        Me.CheckBox238.UseVisualStyleBackColor = True
+        '
+        'NumericUpDown2
+        '
+        Me.NumericUpDown2.Location = New System.Drawing.Point(198, 100)
+        Me.NumericUpDown2.Maximum = New Decimal(New Integer() {25, 0, 0, 0})
+        Me.NumericUpDown2.Minimum = New Decimal(New Integer() {3, 0, 0, 0})
+        Me.NumericUpDown2.Name = "NumericUpDown2"
+        Me.NumericUpDown2.Size = New System.Drawing.Size(71, 20)
+        Me.NumericUpDown2.TabIndex = 88
+        Me.NumericUpDown2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.NumericUpDown2.Value = New Decimal(New Integer() {6, 0, 0, 0})
+        '
+        'Label30
+        '
+        Me.Label30.AutoSize = True
+        Me.Label30.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label30.Location = New System.Drawing.Point(275, 103)
+        Me.Label30.Name = "Label30"
+        Me.Label30.Size = New System.Drawing.Size(38, 16)
+        Me.Label30.TabIndex = 89
+        Me.Label30.Text = "[mm]"
+        '
+        'Label38
+        '
+        Me.Label38.AutoSize = True
+        Me.Label38.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label38.Location = New System.Drawing.Point(13, 103)
+        Me.Label38.Name = "Label38"
+        Me.Label38.Size = New System.Drawing.Size(92, 16)
+        Me.Label38.TabIndex = 90
+        Me.Label38.Text = "_S_flight_thick"
+        '
+        'NumericUpDown3
+        '
+        Me.NumericUpDown3.Location = New System.Drawing.Point(198, 22)
+        Me.NumericUpDown3.Maximum = New Decimal(New Integer() {30, 0, 0, 0})
+        Me.NumericUpDown3.Name = "NumericUpDown3"
+        Me.NumericUpDown3.Size = New System.Drawing.Size(71, 20)
+        Me.NumericUpDown3.TabIndex = 91
+        Me.NumericUpDown3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.NumericUpDown3.Value = New Decimal(New Integer() {1, 0, 0, 0})
+        '
+        'NumericUpDown4
+        '
+        Me.NumericUpDown4.Location = New System.Drawing.Point(198, 47)
+        Me.NumericUpDown4.Maximum = New Decimal(New Integer() {30, 0, 0, 0})
+        Me.NumericUpDown4.Name = "NumericUpDown4"
+        Me.NumericUpDown4.Size = New System.Drawing.Size(71, 20)
+        Me.NumericUpDown4.TabIndex = 92
+        Me.NumericUpDown4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.NumericUpDown4.Value = New Decimal(New Integer() {1, 0, 0, 0})
+        '
+        'NumericUpDown5
+        '
+        Me.NumericUpDown5.Location = New System.Drawing.Point(198, 73)
+        Me.NumericUpDown5.Maximum = New Decimal(New Integer() {30, 0, 0, 0})
+        Me.NumericUpDown5.Name = "NumericUpDown5"
+        Me.NumericUpDown5.Size = New System.Drawing.Size(71, 20)
+        Me.NumericUpDown5.TabIndex = 93
+        Me.NumericUpDown5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.NumericUpDown5.Value = New Decimal(New Integer() {1, 0, 0, 0})
+        '
+        'ComboBox9
+        '
+        Me.ComboBox9.AutoCompleteCustomSource.AddRange(New String() {"T1", "T2", "T3", "T4", "T5", "T6"})
+        Me.ComboBox9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox9.FormattingEnabled = True
+        Me.ComboBox9.Location = New System.Drawing.Point(197, 100)
+        Me.ComboBox9.Name = "ComboBox9"
+        Me.ComboBox9.Size = New System.Drawing.Size(71, 23)
+        Me.ComboBox9.TabIndex = 54
+        '
+        'NumericUpDown6
+        '
+        Me.NumericUpDown6.Location = New System.Drawing.Point(197, 129)
+        Me.NumericUpDown6.Maximum = New Decimal(New Integer() {50, 0, 0, 0})
+        Me.NumericUpDown6.Minimum = New Decimal(New Integer() {10, 0, 0, 0})
+        Me.NumericUpDown6.Name = "NumericUpDown6"
+        Me.NumericUpDown6.Size = New System.Drawing.Size(71, 20)
+        Me.NumericUpDown6.TabIndex = 94
+        Me.NumericUpDown6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.NumericUpDown6.Value = New Decimal(New Integer() {35, 0, 0, 0})
+        '
+        'NumericUpDown7
+        '
+        Me.NumericUpDown7.DecimalPlaces = 1
+        Me.NumericUpDown7.Location = New System.Drawing.Point(197, 20)
+        Me.NumericUpDown7.Maximum = New Decimal(New Integer() {30, 0, 0, 0})
+        Me.NumericUpDown7.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
+        Me.NumericUpDown7.Name = "NumericUpDown7"
+        Me.NumericUpDown7.Size = New System.Drawing.Size(71, 20)
+        Me.NumericUpDown7.TabIndex = 91
+        Me.NumericUpDown7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.NumericUpDown7.Value = New Decimal(New Integer() {6, 0, 0, 0})
+        '
+        'GroupBox63
+        '
+        Me.GroupBox63.Controls.Add(Me.CheckBox239)
+        Me.GroupBox63.Controls.Add(Me.CheckBox250)
+        Me.GroupBox63.Location = New System.Drawing.Point(574, 286)
+        Me.GroupBox63.Name = "GroupBox63"
+        Me.GroupBox63.Size = New System.Drawing.Size(258, 106)
+        Me.GroupBox63.TabIndex = 62
+        Me.GroupBox63.TabStop = False
+        Me.GroupBox63.Text = "Accessories"
+        '
+        'CheckBox239
+        '
+        Me.CheckBox239.AutoSize = True
+        Me.CheckBox239.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox239.Location = New System.Drawing.Point(11, 19)
+        Me.CheckBox239.Name = "CheckBox239"
+        Me.CheckBox239.Size = New System.Drawing.Size(201, 22)
+        Me.CheckBox239.TabIndex = 22
+        Me.CheckBox239.Text = "S300, Central grease point"
+        Me.CheckBox239.UseVisualStyleBackColor = True
+        '
+        'CheckBox250
+        '
+        Me.CheckBox250.AutoSize = True
+        Me.CheckBox250.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox250.Location = New System.Drawing.Point(11, 41)
+        Me.CheckBox250.Name = "CheckBox250"
+        Me.CheckBox250.Size = New System.Drawing.Size(65, 22)
+        Me.CheckBox250.TabIndex = 23
+        Me.CheckBox250.Text = "S301,"
+        Me.CheckBox250.UseVisualStyleBackColor = True
+        '
+        'CheckBox251
+        '
+        Me.CheckBox251.AutoSize = True
+        Me.CheckBox251.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox251.Location = New System.Drawing.Point(10, 115)
+        Me.CheckBox251.Name = "CheckBox251"
+        Me.CheckBox251.Size = New System.Drawing.Size(90, 22)
+        Me.CheckBox251.TabIndex = 26
+        Me.CheckBox251.Text = "S052, IE2"
+        Me.CheckBox251.UseVisualStyleBackColor = True
+        '
+        'CheckBox252
+        '
+        Me.CheckBox252.AutoSize = True
+        Me.CheckBox252.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox252.Location = New System.Drawing.Point(10, 141)
+        Me.CheckBox252.Name = "CheckBox252"
+        Me.CheckBox252.Size = New System.Drawing.Size(90, 22)
+        Me.CheckBox252.TabIndex = 27
+        Me.CheckBox252.Text = "S052, IE3"
+        Me.CheckBox252.UseVisualStyleBackColor = True
+        '
+        'CheckBox253
+        '
+        Me.CheckBox253.AutoSize = True
+        Me.CheckBox253.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox253.Location = New System.Drawing.Point(14, 88)
+        Me.CheckBox253.Name = "CheckBox253"
+        Me.CheckBox253.Size = New System.Drawing.Size(193, 22)
+        Me.CheckBox253.TabIndex = 25
+        Me.CheckBox253.Text = "S103, Continious welding"
+        Me.CheckBox253.UseVisualStyleBackColor = True
+        '
+        'CheckBox254
+        '
+        Me.CheckBox254.AutoSize = True
+        Me.CheckBox254.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox254.Location = New System.Drawing.Point(14, 111)
+        Me.CheckBox254.Name = "CheckBox254"
+        Me.CheckBox254.Size = New System.Drawing.Size(184, 22)
+        Me.CheckBox254.TabIndex = 26
+        Me.CheckBox254.Text = "S104, Welds ground flat"
+        Me.CheckBox254.UseVisualStyleBackColor = True
+        '
+        'CheckBox255
+        '
+        Me.CheckBox255.AutoSize = True
+        Me.CheckBox255.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox255.Location = New System.Drawing.Point(14, 134)
+        Me.CheckBox255.Name = "CheckBox255"
+        Me.CheckBox255.Size = New System.Drawing.Size(222, 22)
+        Me.CheckBox255.TabIndex = 27
+        Me.CheckBox255.Text = "S105, Surface ground Ra=3.4"
+        Me.CheckBox255.UseVisualStyleBackColor = True
         '
         'Form1
         '
@@ -4449,6 +5568,32 @@ Partial Class Form1
         Me.GroupBox14.ResumeLayout(False)
         Me.GroupBox14.PerformLayout()
         Me.TabPage3.ResumeLayout(False)
+        Me.GroupBox58.ResumeLayout(False)
+        Me.GroupBox58.PerformLayout()
+        Me.GroupBox62.ResumeLayout(False)
+        Me.GroupBox62.PerformLayout()
+        Me.GroupBox61.ResumeLayout(False)
+        Me.GroupBox61.PerformLayout()
+        Me.GroupBox60.ResumeLayout(False)
+        Me.GroupBox60.PerformLayout()
+        Me.GroupBox59.ResumeLayout(False)
+        Me.GroupBox59.PerformLayout()
+        Me.GroupBox57.ResumeLayout(False)
+        Me.GroupBox57.PerformLayout()
+        Me.GroupBox56.ResumeLayout(False)
+        Me.GroupBox56.PerformLayout()
+        Me.GroupBox55.ResumeLayout(False)
+        Me.GroupBox55.PerformLayout()
+        Me.GroupBox54.ResumeLayout(False)
+        Me.GroupBox54.PerformLayout()
+        Me.GroupBox53.ResumeLayout(False)
+        Me.GroupBox53.PerformLayout()
+        Me.GroupBox52.ResumeLayout(False)
+        Me.GroupBox52.PerformLayout()
+        Me.GroupBox51.ResumeLayout(False)
+        Me.GroupBox51.PerformLayout()
+        Me.GroupBox50.ResumeLayout(False)
+        Me.GroupBox50.PerformLayout()
         Me.GroupBox13.ResumeLayout(False)
         Me.GroupBox13.PerformLayout()
         Me.TabPage2.ResumeLayout(False)
@@ -4543,6 +5688,15 @@ Partial Class Form1
         Me.GroupBox9.PerformLayout()
         Me.TabPage10.ResumeLayout(False)
         Me.TabPage10.PerformLayout()
+        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.NumericUpDown2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.NumericUpDown3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.NumericUpDown4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.NumericUpDown5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.NumericUpDown6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.NumericUpDown7, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox63.ResumeLayout(False)
+        Me.GroupBox63.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -4894,4 +6048,93 @@ Partial Class Form1
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents ProgressBar1 As ProgressBar
+    Friend WithEvents GroupBox55 As GroupBox
+    Friend WithEvents Label44 As Label
+    Friend WithEvents Label41 As Label
+    Friend WithEvents Label43 As Label
+    Friend WithEvents GroupBox54 As GroupBox
+    Friend WithEvents CheckBox27 As CheckBox
+    Friend WithEvents CheckBox125 As CheckBox
+    Friend WithEvents CheckBox126 As CheckBox
+    Friend WithEvents GroupBox53 As GroupBox
+    Friend WithEvents CheckBox220 As CheckBox
+    Friend WithEvents CheckBox222 As CheckBox
+    Friend WithEvents CheckBox226 As CheckBox
+    Friend WithEvents CheckBox227 As CheckBox
+    Friend WithEvents GroupBox52 As GroupBox
+    Friend WithEvents CheckBox224 As CheckBox
+    Friend WithEvents GroupBox51 As GroupBox
+    Friend WithEvents CheckBox154 As CheckBox
+    Friend WithEvents CheckBox158 As CheckBox
+    Friend WithEvents CheckBox185 As CheckBox
+    Friend WithEvents GroupBox50 As GroupBox
+    Friend WithEvents CheckBox28 As CheckBox
+    Friend WithEvents CheckBox122 As CheckBox
+    Friend WithEvents CheckBox7 As CheckBox
+    Friend WithEvents GroupBox57 As GroupBox
+    Friend WithEvents CheckBox233 As CheckBox
+    Friend WithEvents CheckBox234 As CheckBox
+    Friend WithEvents CheckBox235 As CheckBox
+    Friend WithEvents CheckBox236 As CheckBox
+    Friend WithEvents CheckBox237 As CheckBox
+    Friend WithEvents GroupBox56 As GroupBox
+    Friend WithEvents CheckBox229 As CheckBox
+    Friend WithEvents CheckBox230 As CheckBox
+    Friend WithEvents CheckBox231 As CheckBox
+    Friend WithEvents CheckBox232 As CheckBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents CheckBox241 As CheckBox
+    Friend WithEvents CheckBox240 As CheckBox
+    Friend WithEvents Label31 As Label
+    Friend WithEvents Label32 As Label
+    Friend WithEvents CheckBox242 As CheckBox
+    Friend WithEvents GroupBox59 As GroupBox
+    Friend WithEvents Label37 As Label
+    Friend WithEvents Label45 As Label
+    Friend WithEvents Label46 As Label
+    Friend WithEvents Label49 As Label
+    Friend WithEvents Label50 As Label
+    Friend WithEvents Label51 As Label
+    Friend WithEvents Label53 As Label
+    Friend WithEvents Label28 As Label
+    Friend WithEvents Label29 As Label
+    Friend WithEvents GroupBox60 As GroupBox
+    Friend WithEvents CheckBox243 As CheckBox
+    Friend WithEvents CheckBox244 As CheckBox
+    Friend WithEvents CheckBox245 As CheckBox
+    Friend WithEvents GroupBox58 As GroupBox
+    Friend WithEvents ComboBox4 As ComboBox
+    Friend WithEvents ComboBox5 As ComboBox
+    Friend WithEvents Label36 As Label
+    Friend WithEvents Label33 As Label
+    Friend WithEvents ComboBox6 As ComboBox
+    Friend WithEvents Label35 As Label
+    Friend WithEvents GroupBox62 As GroupBox
+    Friend WithEvents CheckBox249 As CheckBox
+    Friend WithEvents GroupBox61 As GroupBox
+    Friend WithEvents CheckBox246 As CheckBox
+    Friend WithEvents CheckBox247 As CheckBox
+    Friend WithEvents CheckBox248 As CheckBox
+    Friend WithEvents CheckBox228 As CheckBox
+    Friend WithEvents ComboBox7 As ComboBox
+    Friend WithEvents ComboBox8 As ComboBox
+    Friend WithEvents NumericUpDown1 As NumericUpDown
+    Friend WithEvents Label38 As Label
+    Friend WithEvents Label30 As Label
+    Friend WithEvents NumericUpDown2 As NumericUpDown
+    Friend WithEvents CheckBox238 As CheckBox
+    Friend WithEvents NumericUpDown3 As NumericUpDown
+    Friend WithEvents NumericUpDown4 As NumericUpDown
+    Friend WithEvents NumericUpDown5 As NumericUpDown
+    Friend WithEvents ComboBox9 As ComboBox
+    Friend WithEvents NumericUpDown6 As NumericUpDown
+    Friend WithEvents NumericUpDown7 As NumericUpDown
+    Friend WithEvents GroupBox63 As GroupBox
+    Friend WithEvents CheckBox239 As CheckBox
+    Friend WithEvents CheckBox250 As CheckBox
+    Friend WithEvents CheckBox251 As CheckBox
+    Friend WithEvents CheckBox255 As CheckBox
+    Friend WithEvents CheckBox254 As CheckBox
+    Friend WithEvents CheckBox253 As CheckBox
+    Friend WithEvents CheckBox252 As CheckBox
 End Class

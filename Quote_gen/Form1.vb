@@ -13,6 +13,15 @@ Public Class Form1
     Dim dirpath_Backup As String = "N:\Verkoop\Aanbiedingen\Quote_gen_backup\"
     Dim dirpath_Home_GP As String = "C:\Temp\"
 
+    Public Shared Flight_dia() As String =   'tbv screw diameter selectie
+      {"280", "330", "400", "500", "630", "800", "1000", "1200", "1400"}
+
+    Public flight_pitch() As String = {"variable", "1/2x Diam.", "3/4x Diam.", "1x Diam."}
+    Public atex_zone() As String = {"0", "1", "2", "20", "21", "22"}
+    Public atex_group() As String = {"IIA", "IIB", "IIC"}
+    Public atex_temp() As String = {"T1", "T2", "T3", "T4", "T5", "T6"}
+    Public drive_make() As String = {"SEW", "Nord", "Bauer", "Flender"}
+
     Public oWord As Word.Application
     ' see https://support.microsoft.com/en-us/help/316383/how-to-automate-word-from-visual-basic--net-to-create-a-new-document
 
@@ -70,6 +79,7 @@ Public Class Form1
         Dim find_s As String = ""
         Dim rep_s As String = ""
 
+        '---------- Fan----------------
         Find_rep(Label1.Text, TextBox01.Text)
         Find_rep(Label3.Text, TextBox07.Text)
         Find_rep(Label4.Text, TextBox08.Text)
@@ -90,6 +100,19 @@ Public Class Form1
         Find_rep(Label21.Text, ComboBox1.Text)
         Find_rep(Label22.Text, ComboBox2.Text)
         Find_rep(Label23.Text, ComboBox3.Text)
+
+        '---------- Conveyor----------------
+        Find_rep(Label41.Text, NumericUpDown7.Value.ToString)   'Length
+        Find_rep(Label43.Text, ComboBox7.Text)                  'Diameter flight
+        Find_rep(Label32.Text, ComboBox8.Text)                  'Fligh pitch
+        Find_rep(Label29.Text, NumericUpDown1.Value.ToString)
+
+        Find_rep(Label53.Text, NumericUpDown3.Value.ToString)
+        Find_rep(Label51.Text, NumericUpDown4.Value.ToString)
+        Find_rep(Label50.Text, NumericUpDown5.Value.ToString)
+        Find_rep(Label46.Text, ComboBox8.Text)                  'Make drive
+        Find_rep(Label45.Text, NumericUpDown6.Value.ToString)   'Speed
+        Find_rep(Label38.Text, NumericUpDown2.Value.ToString)   'Flight thick
 
         '==================== backup final product===============
         ufilename = "Quote_" & TextBox01.Text & "_" & TextBox02.Text & DateTime.Now.ToString("_yyyy_MM_dd") & ".docx"
@@ -177,10 +200,8 @@ Public Class Form1
         "Struc. steel" & vbTab & "8000" & vbCrLf &
         "Others" & vbTab & vbTab & "9000" & vbCrLf
 
-
-        ComboBox1.SelectedIndex = 2     'Zone 2
-        ComboBox2.SelectedIndex = 1     'IIB
-        ComboBox3.SelectedIndex = 2     'T3
+        Combo_init_atex()
+        Combo_init_dia()
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
@@ -420,4 +441,67 @@ Public Class Form1
         Check_group2(GroupBox46) '(Space heater)
     End Sub
 
+    Private Sub Combo_init_dia()
+        ComboBox7.Items.Clear()
+        ComboBox8.Items.Clear()
+        ComboBox9.Items.Clear()
+
+        '-------Fill combobox------------------
+        For hh = 0 To Flight_dia.Length - 1                'Fill combobox 
+            ComboBox7.Items.Add(Flight_dia(hh))
+        Next hh
+
+        '-------Fill combobox------------------
+        For hh = 0 To flight_pitch.Length - 1               'Fill combobox 
+            ComboBox8.Items.Add(flight_pitch(hh))
+        Next hh
+
+        '-------Fill combobox------------------
+        For hh = 0 To drive_make.Length - 1               'Fill combobox 
+            ComboBox9.Items.Add(drive_make(hh))
+        Next hh
+
+        ComboBox7.SelectedIndex = 2
+        ComboBox8.SelectedIndex = 1
+        ComboBox9.SelectedIndex = 0
+    End Sub
+
+    Private Sub Combo_init_atex()
+        ComboBox1.Items.Clear()
+        ComboBox2.Items.Clear()
+        ComboBox3.Items.Clear()
+        ComboBox4.Items.Clear()
+        ComboBox5.Items.Clear()
+        ComboBox6.Items.Clear()
+
+        '-------Fill combobox, zone------------------
+        For hh = 0 To atex_zone.Length - 1                'Fill combobox 
+            ComboBox1.Items.Add(atex_zone(hh))
+            ComboBox4.Items.Add(atex_zone(hh))
+        Next hh
+
+        '-------Fill combobox, temp------------------
+        For hh = 0 To atex_temp.Length - 1                'Fill combobox 
+            ComboBox3.Items.Add(atex_temp(hh))
+            ComboBox5.Items.Add(atex_temp(hh))
+        Next hh
+
+        '-------Fill combobox, group------------------
+        For hh = 0 To atex_group.Length - 1                'Fill combobox 
+            ComboBox2.Items.Add(atex_group(hh))
+            ComboBox6.Items.Add(atex_group(hh))
+        Next hh
+
+        ComboBox1.SelectedIndex = 1     'Zone
+        ComboBox3.SelectedIndex = 2     'Temp
+        ComboBox2.SelectedIndex = 1     'group
+
+        ComboBox4.SelectedIndex = 4     'Zone dust
+        ComboBox5.SelectedIndex = 2     'Temp
+        ComboBox6.SelectedIndex = 1     'group
+    End Sub
+
+    Private Sub TabPage3_Click(sender As Object, e As EventArgs) Handles TabPage3.Click
+
+    End Sub
 End Class

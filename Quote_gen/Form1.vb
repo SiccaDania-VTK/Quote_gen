@@ -475,8 +475,6 @@ Public Class Form1
         ComboBox3.Items.Clear()
         ComboBox4.Items.Clear()
         ComboBox5.Items.Clear()
-        ComboBox6.Items.Clear()
-        ComboBox10.Items.Clear()
 
         '-------Fill combobox, zone------------------
         For hh = 0 To atex_zone.Length - 1                'Fill combobox 

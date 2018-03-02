@@ -179,6 +179,8 @@ Partial Class Form1
         Me.CheckBox93 = New System.Windows.Forms.CheckBox()
         Me.CheckBox94 = New System.Windows.Forms.CheckBox()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.GroupBox65 = New System.Windows.Forms.GroupBox()
+        Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.GroupBox64 = New System.Windows.Forms.GroupBox()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.GroupBox48 = New System.Windows.Forms.GroupBox()
@@ -477,8 +479,6 @@ Partial Class Form1
         Me.Button4 = New System.Windows.Forms.Button()
         Me.TextBox04 = New System.Windows.Forms.TextBox()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
-        Me.GroupBox65 = New System.Windows.Forms.GroupBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.TabPage9.SuspendLayout()
         Me.TabPage8.SuspendLayout()
         Me.GroupBox7.SuspendLayout()
@@ -516,6 +516,7 @@ Partial Class Form1
         Me.GroupBox50.SuspendLayout()
         Me.GroupBox13.SuspendLayout()
         Me.TabPage2.SuspendLayout()
+        Me.GroupBox65.SuspendLayout()
         Me.GroupBox64.SuspendLayout()
         Me.GroupBox48.SuspendLayout()
         Me.GroupBox28.SuspendLayout()
@@ -564,7 +565,6 @@ Partial Class Form1
         Me.TabPage11.SuspendLayout()
         Me.GroupBox9.SuspendLayout()
         Me.TabPage10.SuspendLayout()
-        Me.GroupBox65.SuspendLayout()
         Me.SuspendLayout()
         '
         'TabPage9
@@ -2380,6 +2380,28 @@ Partial Class Form1
         Me.TabPage2.Text = "Fan Basics"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
+        'GroupBox65
+        '
+        Me.GroupBox65.Controls.Add(Me.TextBox5)
+        Me.GroupBox65.Location = New System.Drawing.Point(1176, 595)
+        Me.GroupBox65.Name = "GroupBox65"
+        Me.GroupBox65.Size = New System.Drawing.Size(256, 158)
+        Me.GroupBox65.TabIndex = 76
+        Me.GroupBox65.TabStop = False
+        Me.GroupBox65.Text = "_Comments2 (Search and Replace)"
+        '
+        'TextBox5
+        '
+        Me.TextBox5.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TextBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox5.Location = New System.Drawing.Point(3, 16)
+        Me.TextBox5.MaxLength = 254
+        Me.TextBox5.Multiline = True
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.Size = New System.Drawing.Size(250, 139)
+        Me.TextBox5.TabIndex = 55
+        Me.TextBox5.Text = "XXX"
+        '
         'GroupBox64
         '
         Me.GroupBox64.Controls.Add(Me.TextBox4)
@@ -2954,6 +2976,7 @@ Partial Class Form1
         '
         Me.TextBox27.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox27.Location = New System.Drawing.Point(178, 43)
+        Me.TextBox27.MaxLength = 250
         Me.TextBox27.Name = "TextBox27"
         Me.TextBox27.Size = New System.Drawing.Size(84, 22)
         Me.TextBox27.TabIndex = 61
@@ -2983,6 +3006,7 @@ Partial Class Form1
         '
         Me.TextBox26.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox26.Location = New System.Drawing.Point(178, 15)
+        Me.TextBox26.MaxLength = 250
         Me.TextBox26.Name = "TextBox26"
         Me.TextBox26.Size = New System.Drawing.Size(84, 22)
         Me.TextBox26.TabIndex = 59
@@ -3703,6 +3727,7 @@ Partial Class Form1
         '
         Me.TextBox24.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox24.Location = New System.Drawing.Point(93, 112)
+        Me.TextBox24.MaxLength = 250
         Me.TextBox24.Name = "TextBox24"
         Me.TextBox24.Size = New System.Drawing.Size(157, 22)
         Me.TextBox24.TabIndex = 55
@@ -3795,6 +3820,7 @@ Partial Class Form1
         '
         Me.TextBox25.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox25.Location = New System.Drawing.Point(95, 163)
+        Me.TextBox25.MaxLength = 250
         Me.TextBox25.Name = "TextBox25"
         Me.TextBox25.Size = New System.Drawing.Size(132, 22)
         Me.TextBox25.TabIndex = 57
@@ -4176,6 +4202,7 @@ Partial Class Form1
         '
         Me.TextBox01.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox01.Location = New System.Drawing.Point(167, 19)
+        Me.TextBox01.MaxLength = 250
         Me.TextBox01.Name = "TextBox01"
         Me.TextBox01.Size = New System.Drawing.Size(292, 26)
         Me.TextBox01.TabIndex = 12
@@ -4195,6 +4222,7 @@ Partial Class Form1
         '
         Me.TextBox07.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox07.Location = New System.Drawing.Point(167, 52)
+        Me.TextBox07.MaxLength = 250
         Me.TextBox07.Name = "TextBox07"
         Me.TextBox07.Size = New System.Drawing.Size(292, 26)
         Me.TextBox07.TabIndex = 34
@@ -4304,6 +4332,7 @@ Partial Class Form1
         'TextBox02
         '
         Me.TextBox02.Location = New System.Drawing.Point(114, 21)
+        Me.TextBox02.MaxLength = 250
         Me.TextBox02.Name = "TextBox02"
         Me.TextBox02.Size = New System.Drawing.Size(487, 20)
         Me.TextBox02.TabIndex = 14
@@ -4352,6 +4381,7 @@ Partial Class Form1
         '
         Me.TextBox23.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox23.Location = New System.Drawing.Point(114, 441)
+        Me.TextBox23.MaxLength = 250
         Me.TextBox23.Name = "TextBox23"
         Me.TextBox23.Size = New System.Drawing.Size(487, 22)
         Me.TextBox23.TabIndex = 54
@@ -4361,6 +4391,7 @@ Partial Class Form1
         '
         Me.TextBox18.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox18.Location = New System.Drawing.Point(114, 300)
+        Me.TextBox18.MaxLength = 250
         Me.TextBox18.Name = "TextBox18"
         Me.TextBox18.Size = New System.Drawing.Size(487, 22)
         Me.TextBox18.TabIndex = 49
@@ -4370,6 +4401,7 @@ Partial Class Form1
         '
         Me.TextBox22.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox22.Location = New System.Drawing.Point(114, 413)
+        Me.TextBox22.MaxLength = 250
         Me.TextBox22.Name = "TextBox22"
         Me.TextBox22.Size = New System.Drawing.Size(487, 22)
         Me.TextBox22.TabIndex = 55
@@ -4389,6 +4421,7 @@ Partial Class Form1
         '
         Me.TextBox21.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox21.Location = New System.Drawing.Point(114, 385)
+        Me.TextBox21.MaxLength = 250
         Me.TextBox21.Name = "TextBox21"
         Me.TextBox21.Size = New System.Drawing.Size(487, 22)
         Me.TextBox21.TabIndex = 56
@@ -4398,6 +4431,7 @@ Partial Class Form1
         '
         Me.TextBox17.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox17.Location = New System.Drawing.Point(114, 272)
+        Me.TextBox17.MaxLength = 250
         Me.TextBox17.Name = "TextBox17"
         Me.TextBox17.Size = New System.Drawing.Size(487, 22)
         Me.TextBox17.TabIndex = 50
@@ -4407,6 +4441,7 @@ Partial Class Form1
         '
         Me.TextBox20.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox20.Location = New System.Drawing.Point(114, 357)
+        Me.TextBox20.MaxLength = 250
         Me.TextBox20.Name = "TextBox20"
         Me.TextBox20.Size = New System.Drawing.Size(487, 22)
         Me.TextBox20.TabIndex = 57
@@ -4426,6 +4461,7 @@ Partial Class Form1
         '
         Me.TextBox16.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox16.Location = New System.Drawing.Point(114, 242)
+        Me.TextBox16.MaxLength = 250
         Me.TextBox16.Name = "TextBox16"
         Me.TextBox16.Size = New System.Drawing.Size(487, 22)
         Me.TextBox16.TabIndex = 51
@@ -4435,6 +4471,7 @@ Partial Class Form1
         '
         Me.TextBox15.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox15.Location = New System.Drawing.Point(114, 214)
+        Me.TextBox15.MaxLength = 250
         Me.TextBox15.Name = "TextBox15"
         Me.TextBox15.Size = New System.Drawing.Size(487, 22)
         Me.TextBox15.TabIndex = 52
@@ -4444,6 +4481,7 @@ Partial Class Form1
         '
         Me.TextBox19.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox19.Location = New System.Drawing.Point(114, 329)
+        Me.TextBox19.MaxLength = 250
         Me.TextBox19.Name = "TextBox19"
         Me.TextBox19.Size = New System.Drawing.Size(487, 22)
         Me.TextBox19.TabIndex = 58
@@ -4453,6 +4491,7 @@ Partial Class Form1
         '
         Me.TextBox14.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox14.Location = New System.Drawing.Point(114, 186)
+        Me.TextBox14.MaxLength = 250
         Me.TextBox14.Name = "TextBox14"
         Me.TextBox14.Size = New System.Drawing.Size(487, 22)
         Me.TextBox14.TabIndex = 53
@@ -4521,6 +4560,7 @@ Partial Class Form1
         '
         Me.TextBox13.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox13.Location = New System.Drawing.Point(114, 158)
+        Me.TextBox13.MaxLength = 250
         Me.TextBox13.Name = "TextBox13"
         Me.TextBox13.Size = New System.Drawing.Size(487, 22)
         Me.TextBox13.TabIndex = 41
@@ -4529,6 +4569,7 @@ Partial Class Form1
         '
         Me.TextBox12.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox12.Location = New System.Drawing.Point(114, 130)
+        Me.TextBox12.MaxLength = 250
         Me.TextBox12.Name = "TextBox12"
         Me.TextBox12.Size = New System.Drawing.Size(487, 22)
         Me.TextBox12.TabIndex = 40
@@ -4537,6 +4578,7 @@ Partial Class Form1
         '
         Me.TextBox11.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox11.Location = New System.Drawing.Point(114, 102)
+        Me.TextBox11.MaxLength = 250
         Me.TextBox11.Name = "TextBox11"
         Me.TextBox11.Size = New System.Drawing.Size(487, 22)
         Me.TextBox11.TabIndex = 39
@@ -4545,6 +4587,7 @@ Partial Class Form1
         '
         Me.TextBox09.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox09.Location = New System.Drawing.Point(114, 74)
+        Me.TextBox09.MaxLength = 250
         Me.TextBox09.Name = "TextBox09"
         Me.TextBox09.Size = New System.Drawing.Size(487, 22)
         Me.TextBox09.TabIndex = 37
@@ -4554,6 +4597,7 @@ Partial Class Form1
         '
         Me.TextBox08.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox08.Location = New System.Drawing.Point(114, 46)
+        Me.TextBox08.MaxLength = 250
         Me.TextBox08.Name = "TextBox08"
         Me.TextBox08.Size = New System.Drawing.Size(487, 22)
         Me.TextBox08.TabIndex = 36
@@ -5776,28 +5820,6 @@ Partial Class Form1
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         '
-        'GroupBox65
-        '
-        Me.GroupBox65.Controls.Add(Me.TextBox5)
-        Me.GroupBox65.Location = New System.Drawing.Point(1176, 595)
-        Me.GroupBox65.Name = "GroupBox65"
-        Me.GroupBox65.Size = New System.Drawing.Size(256, 158)
-        Me.GroupBox65.TabIndex = 76
-        Me.GroupBox65.TabStop = False
-        Me.GroupBox65.Text = "_Comments2 (Search and Replace)"
-        '
-        'TextBox5
-        '
-        Me.TextBox5.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TextBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox5.Location = New System.Drawing.Point(3, 16)
-        Me.TextBox5.MaxLength = 254
-        Me.TextBox5.Multiline = True
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(250, 139)
-        Me.TextBox5.TabIndex = 55
-        Me.TextBox5.Text = "XXX"
-        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -5867,6 +5889,8 @@ Partial Class Form1
         Me.GroupBox13.PerformLayout()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
+        Me.GroupBox65.ResumeLayout(False)
+        Me.GroupBox65.PerformLayout()
         Me.GroupBox64.ResumeLayout(False)
         Me.GroupBox64.PerformLayout()
         Me.GroupBox48.ResumeLayout(False)
@@ -5960,8 +5984,6 @@ Partial Class Form1
         Me.GroupBox9.PerformLayout()
         Me.TabPage10.ResumeLayout(False)
         Me.TabPage10.PerformLayout()
-        Me.GroupBox65.ResumeLayout(False)
-        Me.GroupBox65.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub

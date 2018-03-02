@@ -102,6 +102,7 @@ Public Class Form1
         Find_rep(Label23.Text, ComboBox3.Text)
 
         Find_rep("_Comments", TextBox4.Text)
+        Find_rep("_Comments2", TextBox4.Text)
 
         '---------- Conveyor----------------
         Find_rep(Label41.Text, NumericUpDown7.Value.ToString)   'Length

@@ -479,6 +479,7 @@ Partial Class Form1
         Me.Button4 = New System.Windows.Forms.Button()
         Me.TextBox04 = New System.Windows.Forms.TextBox()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.Button6 = New System.Windows.Forms.Button()
         Me.TabPage9.SuspendLayout()
         Me.TabPage8.SuspendLayout()
         Me.GroupBox7.SuspendLayout()
@@ -4152,7 +4153,7 @@ Partial Class Form1
         '
         'ProgressBar1
         '
-        Me.ProgressBar1.Location = New System.Drawing.Point(901, 585)
+        Me.ProgressBar1.Location = New System.Drawing.Point(901, 633)
         Me.ProgressBar1.Name = "ProgressBar1"
         Me.ProgressBar1.Size = New System.Drawing.Size(368, 23)
         Me.ProgressBar1.TabIndex = 41
@@ -4787,7 +4788,7 @@ Partial Class Form1
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(170, 35)
         Me.Button2.TabIndex = 31
-        Me.Button2.Text = "Save Input"
+        Me.Button2.Text = "Save Input "
         Me.Button2.UseVisualStyleBackColor = False
         '
         'Button1
@@ -4796,7 +4797,7 @@ Partial Class Form1
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(368, 42)
         Me.Button1.TabIndex = 11
-        Me.Button1.Text = "Generate document"
+        Me.Button1.Text = "Generate Word document"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'TabControl1
@@ -5778,6 +5779,7 @@ Partial Class Form1
         '
         'TabPage10
         '
+        Me.TabPage10.Controls.Add(Me.Button6)
         Me.TabPage10.Controls.Add(Me.TextBox06)
         Me.TabPage10.Controls.Add(Me.Button4)
         Me.TabPage10.Controls.Add(Me.TextBox04)
@@ -5819,6 +5821,15 @@ Partial Class Form1
         'OpenFileDialog1
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
+        '
+        'Button6
+        '
+        Me.Button6.Location = New System.Drawing.Point(415, 186)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(261, 42)
+        Me.Button6.TabIndex = 43
+        Me.Button6.Text = "Generate Summary Excel document"
+        Me.Button6.UseVisualStyleBackColor = True
         '
         'Form1
         '
@@ -6444,4 +6455,5 @@ Partial Class Form1
     Friend WithEvents CheckBox86 As CheckBox
     Friend WithEvents GroupBox65 As GroupBox
     Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents Button6 As Button
 End Class

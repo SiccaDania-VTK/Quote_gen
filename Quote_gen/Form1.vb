@@ -5,9 +5,16 @@ Imports System.Globalization
 Imports System.Threading
 Imports Word = Microsoft.Office.Interop.Word
 Imports System.Management
+'Imports Microsoft.Office.Interop.Word
+Imports Microsoft.Office.Interop
 Imports Microsoft.Office.Interop.Word
 
 Public Class Form1
+    'Keep the application object and the workbook object global, so you can  
+    'retrieve the data in Button2_Click that was set in Button6_Click.
+    Dim objApp As Excel.Application
+    Dim objBook As Excel._Workbook
+
     '----------- directory's-----------
     Dim dirpath_Block As String = "N:\Verkoop\Tekst\Quote_text_block\"
     Dim dirpath_Backup As String = "N:\Verkoop\Aanbiedingen\Quote_gen_backup\"
@@ -23,6 +30,7 @@ Public Class Form1
     Public drive_make() As String = {"SEW", "Nord", "Bauer", "Flender"}
 
     Public oWord As Word.Application
+    Private stringSplitOptons As Object
     ' see https://support.microsoft.com/en-us/help/316383/how-to-automate-word-from-visual-basic--net-to-create-a-new-document
 
     Private Sub Generate_word_doc()
@@ -380,11 +388,10 @@ Public Class Form1
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click, Button4.Enter, TabPage10.Enter
         Dim i As Integer
-        Dim k As Integer = 0
+        Dim cnt As Integer = 1
         Dim all_check As New List(Of Control)
-        Dim separators() As String = {";"}
-        Dim separators1() As String = {"BREAK"}
 
+        TextBox04.Multiline = True
         TextBox04.Clear()
 
         '-------- find all checkbox controls and save
@@ -393,7 +400,7 @@ Public Class Form1
         For i = 0 To all_check.Count - 1
             Dim grbx As System.Windows.Forms.CheckBox = CType(all_check(i), System.Windows.Forms.CheckBox)
             If grbx.Checked = True Then
-                TextBox04.Text &= grbx.Text & vbCrLf
+                TextBox04.Text &= grbx.Text & Environment.NewLine
             End If
         Next
     End Sub
@@ -506,7 +513,48 @@ Public Class Form1
         ComboBox6.SelectedIndex = 1     'group
     End Sub
 
-    Private Sub TabPage3_Click(sender As Object, e As EventArgs) Handles TabPage3.Click
+    Private Sub Button6_Click_1(sender As Object, e As EventArgs) Handles Button6.Click
+        Dim objBooks As Excel.Workbooks
+        Dim objSheets As Excel.Sheets
+        Dim objSheet As Excel._Worksheet
+        Dim range As Excel.Range
+        Dim z As Integer = 0
 
+        'Create an array.
+        Dim temp As String() = TextBox04.Text.Split(New String() {Environment.NewLine}, StringSplitOptions.None)
+
+        ' Create a new instance of Excel and start a new workbook.
+        objApp = New Excel.Application()
+        objBooks = objApp.Workbooks
+        objBook = objBooks.Add
+        objSheets = objBook.Worksheets
+        objSheet = CType(objSheets(1), Excel._Worksheet)
+
+        'Get the range where the starting cell has the address
+        'm_sStartingCell and its dimensions are m_iNumRows x m_iNumCols.
+        range = objSheet.Range("A1", Reflection.Missing.Value)
+        range = range.Resize(temp.Length + 5, 1)
+
+        Dim saRet(100, 1) As String
+        saRet(0, 0) = "VTK Quote summary"
+        saRet(1, 0) = "Project " & TextBox01.Text
+        z = 3
+        For Each Line As String In temp
+            'MessageBox.Show(Line)
+            'temp(z) = Line
+            saRet(z, 0) = Line
+            z += 1
+        Next
+        range.Value = saRet 'Set the range value to the array.
+
+        'Return control of Excel to the user.
+        objApp.Visible = True
+        objApp.UserControl = True
+
+        'Clean up a little.
+        range = Nothing
+        objSheet = Nothing
+        objSheets = Nothing
+        objBooks = Nothing
     End Sub
 End Class

@@ -29,6 +29,26 @@ Public Class Form1
     Public atex_temp() As String = {"T1", "T2", "T3", "T4", "T5", "T6"}
     Public drive_make() As String = {"SEW", "Nord", "Bauer", "Flender"}
 
+
+    Public Shared steel() As String =
+  {"16M03;                  EN10028-2 UNS;          16M03;                          1.5415;     Plate",
+   "Aluminium D54S;         DIN1745-1;              AA5083 AIMo45Mn-H116;           3.3547;     Max 70c",
+   "Corten A / B;           EN10155 UNS;            S355J2G1W;                      1.8962/63;  Plate",
+   "Duplex (Avesta-2205);   EN 10088-1 UfllW;       X2CrNiMoN22-5-3 saisna;         1.4462;     Plate",
+   "Hastelloy-C22;          DIN Nr: ASTM UNS;       NiCr21Mo14W 2277 B575 N06022;   2.4602;     Plate",
+   "HSLA S690Q;             EN10149-2 UNS;          S690Q;                          1.8974;     Plate",
+   "Inconel (Alloy) 600;    Nicrofer 7216H;         NiCr15Fe, Alloy 600 ;           2.4816;     Plate",
+   "P265GH (HII);           EN10028-2 UNS;          P265GH(HII);                    1.0425;     Plate",
+   "P355NH;                 EN10028-3;              P355NH;                         1.0565;     Plate",
+   "S235JR;                 EN10025 UNS;            S235JR;                         1.0038;     Struc-Steel",
+   "S355J2;                 EN10025-2;              S355J2;                         1.0570;     Shaft-mat",
+   "SS 304L;                EN10088-2;              X2CrNi19-11, S30403;            1.4306;     Plate",
+   "SS 316L;                EN10088-2;              X2CrNiMo17-12-2, S31603;        1.4404;     Plate",
+   "SS 316TI;               EN10088-2;              X6CrNiMoTi17-12-2, S31635;      1.4571;     Plate",
+   "SuperDuplex;            --;                     X2CrNiMoN22-5-3 saisna;         1.4501;     Plate",
+   "Titanium-ür 2;          ASTM UNS niN;           B265/348-Gr2;                   3.7035;     Plate"}
+
+
     Public oWord As Word.Application
     Private stringSplitOptons As Object
     ' see https://support.microsoft.com/en-us/help/316383/how-to-automate-word-from-visual-basic--net-to-create-a-new-document
@@ -99,15 +119,28 @@ Public Class Form1
         Find_rep(Label9.Text, TextBox13.Text)
         Find_rep(Label11.Text, TextBox14.Text)
         Find_rep(Label12.Text, TextBox15.Text)
+        Find_rep(Label13.Text, TextBox16.Text)
+        Find_rep(Label14.Text, TextBox17.Text)
+        Find_rep(Label15.Text, TextBox18.Text)
+        Find_rep(Label16.Text, TextBox19.Text)
+        Find_rep(Label17.Text, TextBox20.Text)
+        Find_rep(Label18.Text, TextBox21.Text)
+        Find_rep(Label19.Text, TextBox22.Text)
+        Find_rep(Label20.Text, TextBox23.Text)
+
+        Find_rep(Label21.Text, ComboBox1.Text)
+        Find_rep(Label22.Text, ComboBox2.Text)
+        Find_rep(Label23.Text, ComboBox3.Text)
 
         Find_rep(Label24.Text, TextBox24.Text)
         Find_rep(Label25.Text, TextBox25.Text)
         Find_rep(Label26.Text, TextBox26.Text)
         Find_rep(Label27.Text, TextBox27.Text)
 
-        Find_rep(Label21.Text, ComboBox1.Text)
-        Find_rep(Label22.Text, ComboBox2.Text)
-        Find_rep(Label23.Text, ComboBox3.Text)
+        '---------- General------------------
+        Find_rep(Label40.Text, ComboBox11.Text)
+        Find_rep(Label42.Text, ComboBox12.Text)
+        Find_rep(Label47.Text, ComboBox13.Text)
 
         Find_rep("_Comments", TextBox4.Text)
         Find_rep("_Comments2", TextBox4.Text)
@@ -182,35 +215,32 @@ Public Class Form1
         "New quotes use the local normal.dot with location" & vbCrLf &
         "C:\\users\(your user name)\appdata\roaming\microsoft\templates.." & vbCrLf
 
-        TextBox1.Text =
-        "Cyclone" & vbTab & vbTab & "1100" & vbCrLf &
-        "Filter" & vbTab & vbTab & "1500" & vbCrLf &
-        "Heater" & vbTab & vbTab & "2100" & vbCrLf &
-        "Demper" & vbTab & vbTab & "2700" & vbCrLf &
-        "Ringduct" & vbTab & vbTab & "3000" & vbCrLf &
-        "Piping" & vbTab & vbTab & "3100" & vbCrLf &
-        "Supports" & vbTab & vbTab & "3500" & vbCrLf &
-        "Valve" & vbTab & vbTab & "3600" & vbCrLf
+        ListBox1.Items.Add("Cyclone" & vbTab & vbTab & "1100")
+        ListBox1.Items.Add("Filter" & vbTab & vbTab & "1500")
+        ListBox1.Items.Add("Heater" & vbTab & vbTab & "2100")
+        ListBox1.Items.Add("Demper" & vbTab & vbTab & "2700")
+        ListBox1.Items.Add("Ringduct" & vbTab & vbTab & "3000")
+        ListBox1.Items.Add("Piping" & vbTab & vbTab & "3100")
+        ListBox1.Items.Add("Supports" & vbTab & vbTab & "3500")
+        ListBox1.Items.Add("Valve" & vbTab & vbTab & "3600")
 
-        TextBox2.Text =
-        "Fan" & vbTab & vbTab & "4000" & vbCrLf &
-        "Conveyor" & vbTab & vbTab & "4400" & vbCrLf &
-        "Dewatering screw" & vbTab & "4500" & vbCrLf &
-        "Mixer" & vbTab & vbTab & "5600" & vbCrLf &
-        "Inwerprad" & vbTab & vbTab & "6000" & vbCrLf &
-        "Disintegrator" & vbTab & "6100" & vbCrLf &
-        "Sluice" & vbTab & vbTab & "6200" & vbCrLf &
-        "Flap valve" & vbTab & "6300" & vbCrLf &
-        "Metal trap" & vbTab & vbTab & "6400" & vbCrLf &
-        "Mill" & vbTab & vbTab & "6500" & vbCrLf &
-        "Sieve" & vbTab & vbTab & "6600" & vbCrLf &
-        "Pump" & vbTab & vbTab & "7000" & vbCrLf
+        ListBox2.Items.Add("Fan" & vbTab & vbTab & "4000")
+        ListBox2.Items.Add("Conveyor" & vbTab & vbTab & "4400")
+        ListBox2.Items.Add("Dewatering screw" & vbTab & "4500")
+        ListBox2.Items.Add("Mixer" & vbTab & vbTab & "5600")
+        ListBox2.Items.Add("Inwerprad" & vbTab & "6000")
+        ListBox2.Items.Add("Disintegrator" & vbTab & "6100")
+        ListBox2.Items.Add("Sluice" & vbTab & vbTab & "6200")
+        ListBox2.Items.Add("Flap valve" & vbTab & "6300")
+        ListBox2.Items.Add("Metal trap" & vbTab & "6400")
+        ListBox2.Items.Add("Mill" & vbTab & vbTab & "6500")
+        ListBox2.Items.Add("Sieve" & vbTab & vbTab & "6600")
+        ListBox2.Items.Add("Pump" & vbTab & vbTab & "7000")
 
-        TextBox3.Text =
-        "Hopper" & vbTab & vbTab & "5900" & vbCrLf &
-        "Tank" & vbTab & vbTab & "7100" & vbCrLf &
-        "Struc. steel" & vbTab & "8000" & vbCrLf &
-        "Others" & vbTab & vbTab & "9000" & vbCrLf
+        ListBox3.Items.Add("Hopper" & vbTab & vbTab & "5900")
+        ListBox3.Items.Add("Tank" & vbTab & vbTab & "7100")
+        ListBox3.Items.Add("Struc. steel" & vbTab & "8000")
+        ListBox3.Items.Add("Others" & vbTab & vbTab & "9000")
 
         Combo_init_atex()
         Combo_init_dia()
@@ -225,9 +255,7 @@ Public Class Form1
     End Sub
     'Save control settings and case_x_conditions to file
     Private Sub Save_tofile()
-
         Dim temp_string, user As String
-
         user = Trim(Environment.UserName)         'User name on the screen
         Dim filename As String = "Quote_select_" & TextBox01.Text & "_" & TextBox07.Text & DateTime.Now.ToString("_yyyy_MM_dd_") & user & ".vtkq"
         Dim all_num, all_combo, all_check, all_text As New List(Of Control)
@@ -297,6 +325,7 @@ Public Class Form1
     'Each string represents a control type (combobox, checkbox,..)
     'Then split up the secton string into part to read into the parameters
     Private Sub Read_file()
+
         Dim control_words(), words() As String
         Dim i As Integer
         Dim k As Integer = 0
@@ -304,6 +333,7 @@ Public Class Form1
         Dim separators() As String = {";"}
         Dim separators1() As String = {"BREAK"}
 
+        ProgressBar1.Visible = True
         OpenFileDialog1.FileName = "Quote_select_*"
 
         If Directory.Exists(dirpath_Backup) Then
@@ -315,14 +345,17 @@ Public Class Form1
         OpenFileDialog1.Title = "Open a Text File"
         OpenFileDialog1.Filter = "VTKQ Files|*.vtkq|VTKQ file|*.vtkq"
         If OpenFileDialog1.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
-            Dim readText As String = File.ReadAllText(OpenFileDialog1.FileName, Encoding.ASCII)
 
+            Dim readText As String = File.ReadAllText(OpenFileDialog1.FileName, Encoding.ASCII)
             control_words = readText.Split(separators1, StringSplitOptions.None) 'Split the read file content
+
+            ProgressBar1.Value = 10
 
             '----- project data -----
             words = control_words(0).Split(separators, StringSplitOptions.None) 'Split the read file content
             TextBox01.Text = words(0)                  'Project number
             TextBox02.Text = words(1)                  'Item no
+            ProgressBar1.Value = 20
 
             '---------- terugzetten combobox controls -----------------
             FindControlRecursive(all_combo, Me, GetType(ComboBox))
@@ -337,6 +370,7 @@ Public Class Form1
                     MessageBox.Show("Warning last combobox not found in file")
                 End If
             Next
+            ProgressBar1.Value = 30
 
             '---------- terugzetten checkbox controls -----------------
             FindControlRecursive(all_check, Me, GetType(System.Windows.Forms.CheckBox))      'Find the control
@@ -351,6 +385,7 @@ Public Class Form1
                     MessageBox.Show("Warning last checkbox not found in file")
                 End If
             Next
+            ProgressBar1.Value = 50
 
             '---------- terugzetten textbox controls -----------------
             FindControlRecursive(all_text, Me, GetType(System.Windows.Forms.TextBox))      'Find the control
@@ -366,10 +401,12 @@ Public Class Form1
                 End If
             Next
         End If
+        ProgressBar1.Visible = False
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Read_file()
+        MessageBox.Show("oo")
     End Sub
 
     '----------- Find all controls on form1------
@@ -483,6 +520,9 @@ Public Class Form1
         ComboBox3.Items.Clear()
         ComboBox4.Items.Clear()
         ComboBox5.Items.Clear()
+        ComboBox11.Items.Clear()
+        ComboBox12.Items.Clear()
+        ComboBox13.Items.Clear()
 
         '-------Fill combobox, zone------------------
         For hh = 0 To atex_zone.Length - 1                'Fill combobox 
@@ -503,6 +543,17 @@ Public Class Form1
             ComboBox6.Items.Add(atex_group(hh))
         Next hh
 
+        '-------Fill combobox, materials--------------
+        Dim words() As String
+        Dim separators() As String = {";"}
+
+        For hh = 0 To steel.Length - 1            'Fill combobox 
+            words = steel(hh).Split(separators, StringSplitOptions.None)
+            ComboBox11.Items.Add(LTrim(words(0)))
+            ComboBox12.Items.Add(LTrim(words(0)))
+            ComboBox13.Items.Add(LTrim(words(0)))
+        Next hh
+
         ComboBox1.SelectedIndex = 2     'Zone
         ComboBox3.SelectedIndex = 2     'Temp
         ComboBox2.SelectedIndex = 1     'group
@@ -511,6 +562,10 @@ Public Class Form1
         ComboBox10.SelectedIndex = 5    'Zone dust
         ComboBox5.SelectedIndex = 2     'Temp
         ComboBox6.SelectedIndex = 1     'group
+
+        ComboBox11.SelectedIndex = 5     'Steel impeller (domex)
+        ComboBox12.SelectedIndex = 10    'Steel casing
+        ComboBox13.SelectedIndex = 0     'Steel shaft
     End Sub
 
     Private Sub Button6_Click_1(sender As Object, e As EventArgs) Handles Button6.Click
@@ -528,6 +583,7 @@ Public Class Form1
         objBooks = objApp.Workbooks
         objBook = objBooks.Add
         objSheets = objBook.Worksheets
+
         objSheet = CType(objSheets(1), Excel._Worksheet)
 
         'Get the range where the starting cell has the address
@@ -556,5 +612,27 @@ Public Class Form1
         objSheet = Nothing
         objSheets = Nothing
         objBooks = Nothing
+    End Sub
+    'Steel selection is changed
+    Private Sub ComboBox11_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox11.SelectedIndexChanged
+        Dim separators() As String = {";"}
+
+        Dim words() As String = steel(ComboBox11.SelectedIndex).Split(separators, StringSplitOptions.None)
+        TextBox29.Text = LTrim(words(1))
+        TextBox30.Text = LTrim(words(3))
+    End Sub
+    Private Sub ComboBox12_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox12.SelectedIndexChanged
+        Dim separators() As String = {";"}
+
+        Dim words() As String = steel(ComboBox12.SelectedIndex).Split(separators, StringSplitOptions.None)
+        TextBox31.Text = LTrim(words(1))
+        TextBox32.Text = LTrim(words(3))
+    End Sub
+    Private Sub ComboBox13_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox13.SelectedIndexChanged
+        Dim separators() As String = {";"}
+
+        Dim words() As String = steel(ComboBox13.SelectedIndex).Split(separators, StringSplitOptions.None)
+        TextBox33.Text = LTrim(words(1))
+        TextBox34.Text = LTrim(words(3))
     End Sub
 End Class

@@ -332,10 +332,25 @@ Partial Class Form1
         Me.CheckBox30 = New System.Windows.Forms.CheckBox()
         Me.CheckBox31 = New System.Windows.Forms.CheckBox()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.ListBox3 = New System.Windows.Forms.ListBox()
+        Me.ListBox2 = New System.Windows.Forms.ListBox()
+        Me.ListBox1 = New System.Windows.Forms.ListBox()
+        Me.GroupBox66 = New System.Windows.Forms.GroupBox()
+        Me.Label52 = New System.Windows.Forms.Label()
+        Me.Label48 = New System.Windows.Forms.Label()
+        Me.TextBox33 = New System.Windows.Forms.TextBox()
+        Me.TextBox34 = New System.Windows.Forms.TextBox()
+        Me.TextBox31 = New System.Windows.Forms.TextBox()
+        Me.TextBox32 = New System.Windows.Forms.TextBox()
+        Me.TextBox30 = New System.Windows.Forms.TextBox()
+        Me.TextBox29 = New System.Windows.Forms.TextBox()
+        Me.Label47 = New System.Windows.Forms.Label()
+        Me.Label42 = New System.Windows.Forms.Label()
+        Me.Label40 = New System.Windows.Forms.Label()
+        Me.ComboBox13 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox12 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox11 = New System.Windows.Forms.ComboBox()
         Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.GroupBox49 = New System.Windows.Forms.GroupBox()
         Me.TextBox01 = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -475,11 +490,11 @@ Partial Class Form1
         Me.CheckBox75 = New System.Windows.Forms.CheckBox()
         Me.CheckBox76 = New System.Windows.Forms.CheckBox()
         Me.TabPage10 = New System.Windows.Forms.TabPage()
+        Me.Button6 = New System.Windows.Forms.Button()
         Me.TextBox06 = New System.Windows.Forms.TextBox()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.TextBox04 = New System.Windows.Forms.TextBox()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
-        Me.Button6 = New System.Windows.Forms.Button()
         Me.TabPage9.SuspendLayout()
         Me.TabPage8.SuspendLayout()
         Me.GroupBox7.SuspendLayout()
@@ -550,6 +565,7 @@ Partial Class Form1
         Me.GroupBox26.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
         Me.TabPage1.SuspendLayout()
+        Me.GroupBox66.SuspendLayout()
         Me.GroupBox49.SuspendLayout()
         Me.GroupBox25.SuspendLayout()
         Me.GroupBox11.SuspendLayout()
@@ -4133,10 +4149,11 @@ Partial Class Form1
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.ListBox3)
+        Me.TabPage1.Controls.Add(Me.ListBox2)
+        Me.TabPage1.Controls.Add(Me.ListBox1)
+        Me.TabPage1.Controls.Add(Me.GroupBox66)
         Me.TabPage1.Controls.Add(Me.ProgressBar1)
-        Me.TabPage1.Controls.Add(Me.TextBox3)
-        Me.TabPage1.Controls.Add(Me.TextBox2)
-        Me.TabPage1.Controls.Add(Me.TextBox1)
         Me.TabPage1.Controls.Add(Me.GroupBox49)
         Me.TabPage1.Controls.Add(Me.GroupBox25)
         Me.TabPage1.Controls.Add(Me.GroupBox11)
@@ -4151,40 +4168,194 @@ Partial Class Form1
         Me.TabPage1.Text = "General data"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
+        'ListBox3
+        '
+        Me.ListBox3.Enabled = False
+        Me.ListBox3.FormattingEnabled = True
+        Me.ListBox3.Location = New System.Drawing.Point(862, 551)
+        Me.ListBox3.Name = "ListBox3"
+        Me.ListBox3.Size = New System.Drawing.Size(153, 69)
+        Me.ListBox3.TabIndex = 45
+        '
+        'ListBox2
+        '
+        Me.ListBox2.Enabled = False
+        Me.ListBox2.FormattingEnabled = True
+        Me.ListBox2.Location = New System.Drawing.Point(862, 358)
+        Me.ListBox2.Name = "ListBox2"
+        Me.ListBox2.Size = New System.Drawing.Size(153, 186)
+        Me.ListBox2.TabIndex = 44
+        '
+        'ListBox1
+        '
+        Me.ListBox1.Enabled = False
+        Me.ListBox1.FormattingEnabled = True
+        Me.ListBox1.Location = New System.Drawing.Point(862, 229)
+        Me.ListBox1.Name = "ListBox1"
+        Me.ListBox1.Size = New System.Drawing.Size(153, 121)
+        Me.ListBox1.TabIndex = 43
+        '
+        'GroupBox66
+        '
+        Me.GroupBox66.Controls.Add(Me.Label52)
+        Me.GroupBox66.Controls.Add(Me.Label48)
+        Me.GroupBox66.Controls.Add(Me.TextBox33)
+        Me.GroupBox66.Controls.Add(Me.TextBox34)
+        Me.GroupBox66.Controls.Add(Me.TextBox31)
+        Me.GroupBox66.Controls.Add(Me.TextBox32)
+        Me.GroupBox66.Controls.Add(Me.TextBox30)
+        Me.GroupBox66.Controls.Add(Me.TextBox29)
+        Me.GroupBox66.Controls.Add(Me.Label47)
+        Me.GroupBox66.Controls.Add(Me.Label42)
+        Me.GroupBox66.Controls.Add(Me.Label40)
+        Me.GroupBox66.Controls.Add(Me.ComboBox13)
+        Me.GroupBox66.Controls.Add(Me.ComboBox12)
+        Me.GroupBox66.Controls.Add(Me.ComboBox11)
+        Me.GroupBox66.Location = New System.Drawing.Point(646, 35)
+        Me.GroupBox66.Name = "GroupBox66"
+        Me.GroupBox66.Size = New System.Drawing.Size(705, 133)
+        Me.GroupBox66.TabIndex = 42
+        Me.GroupBox66.TabStop = False
+        Me.GroupBox66.Text = "Materials"
+        '
+        'Label52
+        '
+        Me.Label52.AutoSize = True
+        Me.Label52.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label52.Location = New System.Drawing.Point(439, 10)
+        Me.Label52.Name = "Label52"
+        Me.Label52.Size = New System.Drawing.Size(64, 16)
+        Me.Label52.TabIndex = 79
+        Me.Label52.Text = "Werkstoff"
+        '
+        'Label48
+        '
+        Me.Label48.AutoSize = True
+        Me.Label48.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label48.Location = New System.Drawing.Point(259, 9)
+        Me.Label48.Name = "Label48"
+        Me.Label48.Size = New System.Drawing.Size(63, 16)
+        Me.Label48.TabIndex = 78
+        Me.Label48.Text = "Standard"
+        '
+        'TextBox33
+        '
+        Me.TextBox33.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox33.Location = New System.Drawing.Point(243, 85)
+        Me.TextBox33.MaxLength = 250
+        Me.TextBox33.Name = "TextBox33"
+        Me.TextBox33.Size = New System.Drawing.Size(168, 21)
+        Me.TextBox33.TabIndex = 77
+        '
+        'TextBox34
+        '
+        Me.TextBox34.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox34.Location = New System.Drawing.Point(426, 83)
+        Me.TextBox34.MaxLength = 250
+        Me.TextBox34.Name = "TextBox34"
+        Me.TextBox34.Size = New System.Drawing.Size(165, 21)
+        Me.TextBox34.TabIndex = 76
+        '
+        'TextBox31
+        '
+        Me.TextBox31.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox31.Location = New System.Drawing.Point(243, 57)
+        Me.TextBox31.MaxLength = 250
+        Me.TextBox31.Name = "TextBox31"
+        Me.TextBox31.Size = New System.Drawing.Size(168, 21)
+        Me.TextBox31.TabIndex = 75
+        '
+        'TextBox32
+        '
+        Me.TextBox32.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox32.Location = New System.Drawing.Point(426, 55)
+        Me.TextBox32.MaxLength = 250
+        Me.TextBox32.Name = "TextBox32"
+        Me.TextBox32.Size = New System.Drawing.Size(165, 21)
+        Me.TextBox32.TabIndex = 74
+        '
+        'TextBox30
+        '
+        Me.TextBox30.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox30.Location = New System.Drawing.Point(426, 28)
+        Me.TextBox30.MaxLength = 250
+        Me.TextBox30.Name = "TextBox30"
+        Me.TextBox30.Size = New System.Drawing.Size(165, 21)
+        Me.TextBox30.TabIndex = 73
+        '
+        'TextBox29
+        '
+        Me.TextBox29.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox29.Location = New System.Drawing.Point(243, 30)
+        Me.TextBox29.MaxLength = 250
+        Me.TextBox29.Name = "TextBox29"
+        Me.TextBox29.Size = New System.Drawing.Size(168, 21)
+        Me.TextBox29.TabIndex = 36
+        '
+        'Label47
+        '
+        Me.Label47.AutoSize = True
+        Me.Label47.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label47.Location = New System.Drawing.Point(11, 84)
+        Me.Label47.Name = "Label47"
+        Me.Label47.Size = New System.Drawing.Size(74, 16)
+        Me.Label47.TabIndex = 72
+        Me.Label47.Text = "_Mat_Shaft"
+        '
+        'Label42
+        '
+        Me.Label42.AutoSize = True
+        Me.Label42.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label42.Location = New System.Drawing.Point(11, 59)
+        Me.Label42.Name = "Label42"
+        Me.Label42.Size = New System.Drawing.Size(86, 16)
+        Me.Label42.TabIndex = 71
+        Me.Label42.Text = "_Mat_Casing"
+        '
+        'Label40
+        '
+        Me.Label40.AutoSize = True
+        Me.Label40.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label40.Location = New System.Drawing.Point(11, 34)
+        Me.Label40.Name = "Label40"
+        Me.Label40.Size = New System.Drawing.Size(92, 16)
+        Me.Label40.TabIndex = 70
+        Me.Label40.Text = "_Mat_Impeller"
+        '
+        'ComboBox13
+        '
+        Me.ComboBox13.FormattingEnabled = True
+        Me.ComboBox13.Items.AddRange(New Object() {"0", "1", "2", "20", "21", "22"})
+        Me.ComboBox13.Location = New System.Drawing.Point(112, 85)
+        Me.ComboBox13.Name = "ComboBox13"
+        Me.ComboBox13.Size = New System.Drawing.Size(115, 21)
+        Me.ComboBox13.TabIndex = 50
+        '
+        'ComboBox12
+        '
+        Me.ComboBox12.FormattingEnabled = True
+        Me.ComboBox12.Items.AddRange(New Object() {"0", "1", "2", "20", "21", "22"})
+        Me.ComboBox12.Location = New System.Drawing.Point(112, 57)
+        Me.ComboBox12.Name = "ComboBox12"
+        Me.ComboBox12.Size = New System.Drawing.Size(115, 21)
+        Me.ComboBox12.TabIndex = 49
+        '
+        'ComboBox11
+        '
+        Me.ComboBox11.FormattingEnabled = True
+        Me.ComboBox11.Items.AddRange(New Object() {"0", "1", "2", "20", "21", "22"})
+        Me.ComboBox11.Location = New System.Drawing.Point(112, 30)
+        Me.ComboBox11.Name = "ComboBox11"
+        Me.ComboBox11.Size = New System.Drawing.Size(115, 21)
+        Me.ComboBox11.TabIndex = 48
+        '
         'ProgressBar1
         '
-        Me.ProgressBar1.Location = New System.Drawing.Point(901, 633)
+        Me.ProgressBar1.Location = New System.Drawing.Point(928, 724)
         Me.ProgressBar1.Name = "ProgressBar1"
         Me.ProgressBar1.Size = New System.Drawing.Size(368, 23)
         Me.ProgressBar1.TabIndex = 41
         Me.ProgressBar1.Visible = False
-        '
-        'TextBox3
-        '
-        Me.TextBox3.Location = New System.Drawing.Point(1116, 380)
-        Me.TextBox3.Multiline = True
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(153, 77)
-        Me.TextBox3.TabIndex = 40
-        Me.TextBox3.Text = "T numbers"
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(1116, 184)
-        Me.TextBox2.Multiline = True
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(153, 184)
-        Me.TextBox2.TabIndex = 39
-        Me.TextBox2.Text = "T numbers"
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(1116, 38)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(153, 136)
-        Me.TextBox1.TabIndex = 38
-        Me.TextBox1.Text = "T numbers"
         '
         'GroupBox49
         '
@@ -4619,7 +4790,7 @@ Partial Class Form1
         Me.GroupBox11.Controls.Add(Me.CheckBox07)
         Me.GroupBox11.Controls.Add(Me.CheckBox08)
         Me.GroupBox11.Controls.Add(Me.CheckBox09)
-        Me.GroupBox11.Location = New System.Drawing.Point(901, 35)
+        Me.GroupBox11.Location = New System.Drawing.Point(646, 214)
         Me.GroupBox11.Name = "GroupBox11"
         Me.GroupBox11.Size = New System.Drawing.Size(196, 348)
         Me.GroupBox11.TabIndex = 33
@@ -4774,7 +4945,7 @@ Partial Class Form1
         'Button3
         '
         Me.Button3.BackColor = System.Drawing.Color.LightSteelBlue
-        Me.Button3.Location = New System.Drawing.Point(901, 477)
+        Me.Button3.Location = New System.Drawing.Point(1045, 214)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(192, 35)
         Me.Button3.TabIndex = 32
@@ -4784,7 +4955,7 @@ Partial Class Form1
         'Button2
         '
         Me.Button2.BackColor = System.Drawing.Color.DodgerBlue
-        Me.Button2.Location = New System.Drawing.Point(1099, 478)
+        Me.Button2.Location = New System.Drawing.Point(1243, 213)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(170, 35)
         Me.Button2.TabIndex = 31
@@ -4793,7 +4964,7 @@ Partial Class Form1
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(901, 525)
+        Me.Button1.Location = New System.Drawing.Point(1045, 262)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(368, 42)
         Me.Button1.TabIndex = 11
@@ -5791,6 +5962,15 @@ Partial Class Form1
         Me.TabPage10.Text = "Summary"
         Me.TabPage10.UseVisualStyleBackColor = True
         '
+        'Button6
+        '
+        Me.Button6.Location = New System.Drawing.Point(415, 186)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(261, 42)
+        Me.Button6.TabIndex = 43
+        Me.Button6.Text = "Generate Summary Excel document"
+        Me.Button6.UseVisualStyleBackColor = True
+        '
         'TextBox06
         '
         Me.TextBox06.Location = New System.Drawing.Point(8, 442)
@@ -5822,15 +6002,6 @@ Partial Class Form1
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         '
-        'Button6
-        '
-        Me.Button6.Location = New System.Drawing.Point(415, 186)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(261, 42)
-        Me.Button6.TabIndex = 43
-        Me.Button6.Text = "Generate Summary Excel document"
-        Me.Button6.UseVisualStyleBackColor = True
-        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -5839,7 +6010,7 @@ Partial Class Form1
         Me.Controls.Add(Me.TabControl1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form1"
-        Me.Text = "Quotation Text Generator (20/9/2017)"
+        Me.Text = "Quotation Text Generator MK IV"
         Me.TabPage9.ResumeLayout(False)
         Me.TabPage9.PerformLayout()
         Me.TabPage8.ResumeLayout(False)
@@ -5965,7 +6136,8 @@ Partial Class Form1
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
         Me.TabPage1.ResumeLayout(False)
-        Me.TabPage1.PerformLayout()
+        Me.GroupBox66.ResumeLayout(False)
+        Me.GroupBox66.PerformLayout()
         Me.GroupBox49.ResumeLayout(False)
         Me.GroupBox49.PerformLayout()
         Me.GroupBox25.ResumeLayout(False)
@@ -6329,9 +6501,6 @@ Partial Class Form1
     Friend WithEvents CheckBox1 As CheckBox
     Friend WithEvents GroupBox48 As GroupBox
     Friend WithEvents GroupBox49 As GroupBox
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox3 As TextBox
     Friend WithEvents ProgressBar1 As ProgressBar
     Friend WithEvents GroupBox55 As GroupBox
     Friend WithEvents Label44 As Label
@@ -6456,4 +6625,22 @@ Partial Class Form1
     Friend WithEvents GroupBox65 As GroupBox
     Friend WithEvents TextBox5 As TextBox
     Friend WithEvents Button6 As Button
+    Friend WithEvents GroupBox66 As GroupBox
+    Friend WithEvents ComboBox13 As ComboBox
+    Friend WithEvents ComboBox12 As ComboBox
+    Friend WithEvents ComboBox11 As ComboBox
+    Friend WithEvents Label47 As Label
+    Friend WithEvents Label42 As Label
+    Friend WithEvents Label40 As Label
+    Friend WithEvents TextBox33 As TextBox
+    Friend WithEvents TextBox34 As TextBox
+    Friend WithEvents TextBox31 As TextBox
+    Friend WithEvents TextBox32 As TextBox
+    Friend WithEvents TextBox30 As TextBox
+    Friend WithEvents TextBox29 As TextBox
+    Friend WithEvents Label52 As Label
+    Friend WithEvents Label48 As Label
+    Friend WithEvents ListBox1 As ListBox
+    Friend WithEvents ListBox3 As ListBox
+    Friend WithEvents ListBox2 As ListBox
 End Class

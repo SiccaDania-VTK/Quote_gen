@@ -650,6 +650,7 @@ Public Class Form1
             z += 1
         Next
         range.Value = saRet 'Set the range value to the array.
+        range.ColumnWidth = 30
 
         'Return control of Excel to the user.
         objApp.Visible = True

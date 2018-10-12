@@ -574,93 +574,85 @@ Public Class Form1
         Dim objSheet As Excel._Worksheet
         Dim range As Excel.Range
         Dim z As Integer = 0
+        Dim temp As String()
 
-        'Create an array.
-        Dim temp As String() = TextBox04.Text.Split(New String() {Environment.NewLine}, StringSplitOptions.None)
+        Try
+            'Create an array.
+            temp = TextBox04.Text.Split(New String() {Environment.NewLine}, StringSplitOptions.None)
 
-        ' Create a new instance of Excel and start a new workbook.
-        objApp = New Excel.Application()
-        objBooks = objApp.Workbooks
-        objBook = objBooks.Add
-        objSheets = objBook.Worksheets
+            ' Create a new instance of Excel and start a new workbook.
+            objApp = New Excel.Application()
+            objBooks = objApp.Workbooks
+            objBook = objBooks.Add
+            objSheets = objBook.Worksheets
 
-        objSheet = CType(objSheets(1), Excel._Worksheet)
+            objSheet = CType(objSheets(1), Excel._Worksheet)
 
-        'Get the range where the starting cell has the address
-        'm_sStartingCell and its dimensions are m_iNumRows x m_iNumCols.
-        range = objSheet.Range("A1", Reflection.Missing.Value)
-        range = range.Resize(temp.Length + 20, 2)
+            'Get the range where the starting cell has the address
+            'm_sStartingCell and its dimensions are m_iNumRows x m_iNumCols.
+            range = objSheet.Range("A1", Reflection.Missing.Value)
+            range = range.Resize(temp.Length + 20, 2)
 
-        Dim saRet(100, 1) As String
-        saRet(0, 0) = "VTK Quote summary"
+            Dim saRet(100, 1) As String
+            saRet(0, 0) = "VTK Quote summary"
+            saRet(1, 0) = Label1.Text
+            saRet(1, 1) = TextBox01.Text  'Project
+            saRet(2, 0) = Label3.Text
+            saRet(2, 1) = TextBox07.Text  'Tag
+            saRet(3, 0) = Label6.Text
+            saRet(3, 1) = TextBox02.Text  '_Cust_name
+            saRet(4, 0) = Label7.Text
+            saRet(4, 1) = TextBox11.Text  '_Cust_ref
+            saRet(5, 0) = Label8.Text
+            saRet(5, 1) = TextBox12.Text  '_Cust_proj
+            saRet(6, 0) = Label9.Text
+            saRet(6, 1) = TextBox13.Text  '_Contact
+            saRet(7, 0) = Label11.Text
+            saRet(7, 1) = TextBox14.Text  '_fan_modelnr
+            saRet(8, 0) = Label12.Text
+            saRet(8, 1) = TextBox15.Text  '_Model
+            saRet(9, 0) = Label13.Text
+            saRet(9, 1) = TextBox16.Text  '_fan type
+            '----------------------
+            saRet(10, 0) = Label26.Text
+            saRet(10, 1) = TextBox26.Text  'Orientation
+            saRet(11, 0) = Label27.Text
+            saRet(11, 1) = TextBox27.Text  'Orientation
+            '---------- ATEX---------
+            saRet(12, 0) = Label21.Text
+            saRet(12, 1) = ComboBox1.SelectedItem.ToString
+            saRet(13, 0) = Label22.Text
+            saRet(13, 1) = ComboBox2.SelectedItem.ToString
+            saRet(14, 0) = Label23.Text
+            saRet(14, 1) = ComboBox3.SelectedItem.ToString
+            '---------------
+            saRet(15, 0) = Label25.Text
+            saRet(15, 1) = TextBox25.Text  'T_design
 
-        saRet(1, 0) = Label1.Text
-        saRet(1, 1) = TextBox01.Text  'Project
+            z = 16
+            For Each Line As String In temp
+                If Line.Length > 0 Then
+                    saRet(z, 0) = Line.Substring(0, 4)
+                    saRet(z, 1) = Line.Remove(0, 6)
+                End If
+                z += 1
+            Next
+            range.Value = saRet 'Set the range value to the array.
+            range.ColumnWidth = 30
 
-        saRet(2, 0) = Label3.Text
-        saRet(2, 1) = TextBox07.Text  'Tag
+        Catch ex As Exception
 
-        saRet(3, 0) = Label6.Text
-        saRet(3, 1) = TextBox02.Text  '_Cust_name
+        Finally
+            'Return control of Excel to the user.
+            objApp.Visible = True
+            objApp.UserControl = True
 
-        saRet(4, 0) = Label7.Text
-        saRet(4, 1) = TextBox11.Text  '_Cust_ref
-
-        saRet(5, 0) = Label8.Text
-        saRet(5, 1) = TextBox12.Text  '_Cust_proj
-
-        saRet(6, 0) = Label9.Text
-        saRet(6, 1) = TextBox13.Text  '_Contact
-
-        saRet(7, 0) = Label11.Text
-        saRet(7, 1) = TextBox14.Text  '_fan_modelnr
-
-        saRet(8, 0) = Label12.Text
-        saRet(8, 1) = TextBox15.Text  '_Model
-
-        saRet(9, 0) = Label13.Text
-        saRet(9, 1) = TextBox16.Text  '_fan type
-        '----------------------
-        saRet(10, 0) = Label26.Text
-        saRet(10, 1) = TextBox26.Text  'Orientation
-
-        saRet(11, 0) = Label27.Text
-        saRet(11, 1) = TextBox27.Text  'Orientation
-
-        '---------- ATEX---------
-        saRet(12, 0) = Label21.Text
-        saRet(12, 1) = ComboBox1.SelectedItem.ToString
-
-        saRet(13, 0) = Label22.Text
-        saRet(13, 1) = ComboBox2.SelectedItem.ToString
-
-        saRet(14, 0) = Label23.Text
-        saRet(14, 1) = ComboBox3.SelectedItem.ToString
-
-        '---------------
-        saRet(15, 0) = Label25.Text
-        saRet(15, 1) = TextBox25.Text  'T_design
-
-        z = 16
-        For Each Line As String In temp
-            If Line.Length > 0 Then
-                saRet(z, 0) = Line.Substring(0, 4)
-                saRet(z, 1) = Line.Remove(0, 6)
-            End If
-            z += 1
-        Next
-        range.Value = saRet 'Set the range value to the array.
-        range.ColumnWidth = 30
-
-        'Return control of Excel to the user.
-        objApp.Visible = True
-        objApp.UserControl = True
-
-        'Clean up a little.
-        range = Nothing
-        objSheet = Nothing
-        objSheets = Nothing
-        objBooks = Nothing
+            'Clean up a little.
+            range = Nothing
+            objSheet = Nothing
+            objSheets = Nothing
+            objBooks = Nothing
+        End Try
     End Sub
     'Steel selection is changed
     Private Sub ComboBox11_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox11.SelectedIndexChanged

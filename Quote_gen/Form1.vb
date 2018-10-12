@@ -589,7 +589,7 @@ Public Class Form1
         'Get the range where the starting cell has the address
         'm_sStartingCell and its dimensions are m_iNumRows x m_iNumCols.
         range = objSheet.Range("A1", Reflection.Missing.Value)
-        range = range.Resize(temp.Length + 5, 2)
+        range = range.Resize(temp.Length + 20, 2)
 
         Dim saRet(100, 1) As String
         saRet(0, 0) = "VTK Quote summary"
@@ -620,8 +620,28 @@ Public Class Form1
 
         saRet(9, 0) = Label13.Text
         saRet(9, 1) = TextBox16.Text  '_fan type
+        '----------------------
+        saRet(10, 0) = Label26.Text
+        saRet(10, 1) = TextBox26.Text  'Orientation
 
-        z = 11
+        saRet(11, 0) = Label27.Text
+        saRet(11, 1) = TextBox27.Text  'Orientation
+
+        '---------- ATEX---------
+        saRet(12, 0) = Label21.Text
+        saRet(12, 1) = ComboBox1.SelectedItem.ToString
+
+        saRet(13, 0) = Label22.Text
+        saRet(13, 1) = ComboBox2.SelectedItem.ToString
+
+        saRet(14, 0) = Label23.Text
+        saRet(14, 1) = ComboBox3.SelectedItem.ToString
+
+        '---------------
+        saRet(15, 0) = Label25.Text
+        saRet(15, 1) = TextBox25.Text  'T_design
+
+        z = 16
         For Each Line As String In temp
             If Line.Length > 0 Then
                 saRet(z, 0) = Line.Substring(0, 4)

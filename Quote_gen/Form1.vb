@@ -27,26 +27,27 @@ Public Class Form1
     Public atex_zone() As String = {"0", "1", "2", "20", "21", "22"}
     Public atex_group() As String = {"IIA", "IIB", "IIC"}
     Public atex_temp() As String = {"T1", "T2", "T3", "T4", "T5", "T6"}
+    Public Capacity_Control() As String = {"client provided VSD", "Variable Speed Drive system", "inlet louvre damper", "outlet louvre damper", "no control measures"}
     Public drive_make() As String = {"SEW", "Nord", "Bauer", "Flender"}
 
 
     Public Shared steel() As String =
-  {"16M03;                  EN10028-2 UNS;          16M03;                          1.5415;     Plate",
-   "Aluminium D54S;         DIN1745-1;              AA5083 AIMo45Mn-H116;           3.3547;     Max 70c",
-   "Corten A / B;           EN10155 UNS;            S355J2G1W;                      1.8962/63;  Plate",
-   "Duplex (Avesta-2205);   EN 10088-1 UfllW;       X2CrNiMoN22-5-3 saisna;         1.4462;     Plate",
-   "Hastelloy-C22;          DIN Nr: ASTM UNS;       NiCr21Mo14W 2277 B575 N06022;   2.4602;     Plate",
-   "HSLA S690Q;             EN10149-2 UNS;          S690Q;                          1.8974;     Plate",
-   "Inconel (Alloy) 600;    Nicrofer 7216H;         NiCr15Fe, Alloy 600 ;           2.4816;     Plate",
-   "P265GH (HII);           EN10028-2 UNS;          P265GH(HII);                    1.0425;     Plate",
-   "P355NH;                 EN10028-3;              P355NH;                         1.0565;     Plate",
-   "S235JR;                 EN10025 UNS;            S235JR;                         1.0038;     Struc-Steel",
-   "S355J2;                 EN10025-2;              S355J2;                         1.0570;     Shaft-mat",
-   "SS 304L;                EN10088-2;              X2CrNi19-11, S30403;            1.4306;     Plate",
-   "SS 316L;                EN10088-2;              X2CrNiMo17-12-2, S31603;        1.4404;     Plate",
-   "SS 316TI;               EN10088-2;              X6CrNiMoTi17-12-2, S31635;      1.4571;     Plate",
-   "SuperDuplex;            --;                     X2CrNiMoN22-5-3 saisna;         1.4501;     Plate",
-   "Titanium-ür 2;          ASTM UNS niN;           B265/348-Gr2;                   3.7035;     Plate"}
+  {"16M03;                                EN10028-2 UNS;          16M03;                          1.5415;     Plate",
+   "Aluminium D54S;                       DIN1745-1;              AA5083 AIMo45Mn-H116;           3.3547;     Max 70c",
+   "Corten A / B Carbon steel;            EN10155 UNS;            S355J2G1W;                      1.8962/63;  Plate",
+   "Duplex Stainless steel (Avesta-2205); EN 10088-1 UfllW;       X2CrNiMoN22-5-3 saisna;         1.4462;     Plate",
+   "Hastelloy-C22;                        DIN Nr: ASTM UNS;       NiCr21Mo14W 2277 B575 N06022;   2.4602;     Plate",
+   "High Strenght Low Alloy carbon steel (S690Q);    EN10149-2 UNS;          S690Q;               1.8974;     Plate",
+   "Inconel (Alloy) 600;                  Nicrofer 7216H;         NiCr15Fe, Alloy 600 ;           2.4816;     Plate",
+   "P265GH carbon steel(HII);             EN10028-2 UNS;          P265GH(HII);                    1.0425;     Plate",
+   "P355NH carbon steel;                  EN10028-3;              P355NH;                         1.0565;     Plate",
+   "S235JR carbon steel;                  EN10025 UNS;            S235JR;                         1.0038;     Struc-Steel",
+   "S355J2 carbon steel;                  EN10025-2;              S355J2;                         1.0570;     Shaft-mat",
+   "SS 304L stainless steel;              EN10088-2;              X2CrNi19-11, S30403;            1.4306;     Plate",
+   "SS 316L stainless steel;              EN10088-2;              X2CrNiMo17-12-2, S31603;        1.4404;     Plate",
+   "SS 316TI stainless steel;             EN10088-2;              X6CrNiMoTi17-12-2, S31635;      1.4571;     Plate",
+   "SuperDuplex;                          --;                     X2CrNiMoN22-5-3 saisna;         1.4501;     Plate",
+   "Titanium-ür 2;                        ASTM UNS niN;           B265/348-Gr2;                   3.7035;     Plate"}
 
 
     Public oWord As Word.Application
@@ -138,6 +139,7 @@ Public Class Form1
         Find_rep(Label27.Text, TextBox27.Text)
 
         '---------- General------------------
+        Find_rep(Label55.Text, ComboBox14.Text)     '_Capacity_Control
         Find_rep(Label40.Text, ComboBox11.Text)     '_Mat_impellar
         Find_rep(Label42.Text, ComboBox12.Text)     '_Mat_casing
         Find_rep(Label47.Text, ComboBox13.Text)     '_mat_shaft
@@ -481,7 +483,6 @@ Public Class Form1
         Check_group1(GroupBox32) '(Motor)
         Check_group2(GroupBox34) '(VSD)
         Check_group2(GroupBox40) '(Motor efficiency)
-        Check_group2(GroupBox41) '(Vibration isolation)
         Check_group2(GroupBox42) '(Vib sensor)
         Check_group2(GroupBox43) '(Bearing options temp)
         Check_group2(GroupBox44) '(Electrical)
@@ -523,6 +524,7 @@ Public Class Form1
         ComboBox11.Items.Clear()
         ComboBox12.Items.Clear()
         ComboBox13.Items.Clear()
+        ComboBox14.Items.Clear()
 
         '-------Fill combobox, zone------------------
         For hh = 0 To atex_zone.Length - 1                'Fill combobox 
@@ -541,6 +543,11 @@ Public Class Form1
         For hh = 0 To atex_group.Length - 1                'Fill combobox 
             ComboBox2.Items.Add(atex_group(hh))
             ComboBox6.Items.Add(atex_group(hh))
+        Next hh
+
+        '-------Fill combobox, fan capacity control------------------
+        For hh = 0 To Capacity_Control.Length - 1                'Fill combobox 
+            ComboBox14.Items.Add(Capacity_Control(hh))
         Next hh
 
         '-------Fill combobox, materials--------------
@@ -565,7 +572,7 @@ Public Class Form1
 
         ComboBox11.SelectedIndex = 5     'Steel impeller (domex)
         ComboBox12.SelectedIndex = 10    'Steel casing
-        ComboBox13.SelectedIndex = 0     'Steel shaft
+        ComboBox13.SelectedIndex = 11     'Steel shaft
     End Sub
 
     Private Sub Button6_Click_1(sender As Object, e As EventArgs) Handles Button6.Click
@@ -628,6 +635,9 @@ Public Class Form1
             '---------------
             saRet(15, 0) = Label25.Text
             saRet(15, 1) = TextBox25.Text  'T_design
+            '---------------
+            saRet(16, 0) = Label55.Text
+            saRet(16, 1) = ComboBox14.SelectedItem.ToString 'Fan control method
 
             z = 16
             For Each Line As String In temp
@@ -655,25 +665,29 @@ Public Class Form1
         End Try
     End Sub
     'Steel selection is changed
-    Private Sub ComboBox11_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox11.SelectedIndexChanged
+    Private Sub ComboBox11_SelectedIndexChanged(sender As Object, e As EventArgs)
         Dim separators() As String = {";"}
 
         Dim words() As String = steel(ComboBox11.SelectedIndex).Split(separators, StringSplitOptions.None)
         TextBox29.Text = LTrim(words(1))
         TextBox30.Text = LTrim(words(3))
     End Sub
-    Private Sub ComboBox12_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox12.SelectedIndexChanged
+    Private Sub ComboBox12_SelectedIndexChanged(sender As Object, e As EventArgs)
         Dim separators() As String = {";"}
 
         Dim words() As String = steel(ComboBox12.SelectedIndex).Split(separators, StringSplitOptions.None)
         TextBox31.Text = LTrim(words(1))
         TextBox32.Text = LTrim(words(3))
     End Sub
-    Private Sub ComboBox13_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox13.SelectedIndexChanged
+    Private Sub ComboBox13_SelectedIndexChanged(sender As Object, e As EventArgs)
         Dim separators() As String = {";"}
 
         Dim words() As String = steel(ComboBox13.SelectedIndex).Split(separators, StringSplitOptions.None)
         TextBox33.Text = LTrim(words(1))
         TextBox34.Text = LTrim(words(3))
+    End Sub
+
+    Private Sub TabPage2_Click(sender As Object, e As EventArgs) Handles TabPage2.Click
+
     End Sub
 End Class

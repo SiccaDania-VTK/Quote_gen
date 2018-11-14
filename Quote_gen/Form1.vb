@@ -59,7 +59,7 @@ Public Class Form1
         Dim oPara3 As Word.Paragraph
         Dim ufilename As String
         Dim pathname As String
-        Dim style1 As String
+        Dim style1, block_name As String
 
         '----------- Select Word style -----------------
         style1 = "N:\VERKOOP\Tekst\Quote_text_block\VTK_Fan_Quote.dotm"
@@ -90,17 +90,23 @@ Public Class Form1
             If ProgressBar1.Value > 99 Then ProgressBar1.Value = 1
             ProgressBar1.Value += 1
             Dim grbx As System.Windows.Forms.CheckBox = CType(all_check(i), System.Windows.Forms.CheckBox)
-            If grbx.Checked = True Then
-                oPara3 = oDoc.Content.Paragraphs.Add()
-                pathname = dirpath_Block & grbx.Text.Substring(0, 4) & ".docx"
-                If File.Exists(pathname) Then
-                    TextBox05.Text &= "OK, file found " & pathname & vbCrLf
-                    oPara3.Range.InsertFile(pathname)
-                Else
-                    TextBox05.Text &= "File not found " & pathname & vbCrLf
+            If grbx.Checked Then
+                block_name = grbx.Text
+                If block_name.Length < 4 Then block_name = "Empty"
+                block_name = grbx.Text.Substring(0, 4)
+                    oPara3 = oDoc.Content.Paragraphs.Add()
+                    pathname = dirpath_Block & ComboBox15.Text & "\" & block_name & ".docx"
+                    Button1.Text = pathname.ToString
+                    If File.Exists(pathname) Then
+                        TextBox05.Text &= "OK, file found " & pathname & vbCrLf
+                        oPara3.Range.InsertFile(pathname)
+                    Else
+                        TextBox05.Text &= "File not found " & pathname & vbCrLf
+                    End If
                 End If
-            End If
         Next
+
+        Button1.Text = "Now search and replace"
 
         '============ search and replace in WORD file================
         'Dim myStoryRange As Range '= oWord.ActiveDocument.Content
@@ -172,6 +178,7 @@ Public Class Form1
         ProgressBar1.Visible = False
         oWord.Visible = True
         oWord.ScreenUpdating = True
+        Button1.Text = "Generate Word document"
         'oWord.ActiveDocument.SaveAs(ufilename.ToString)
     End Sub
 
@@ -408,7 +415,7 @@ Public Class Form1
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Read_file()
-        MessageBox.Show("oo")
+        ' MessageBox.Show("oo")
     End Sub
 
     '----------- Find all controls on form1------
@@ -561,6 +568,12 @@ Public Class Form1
             ComboBox13.Items.Add(LTrim(words(0)))
         Next hh
 
+        ComboBox15.Items.Clear()
+        ComboBox15.Items.Add("Dutch")
+        ComboBox15.Items.Add("English")
+        ComboBox15.Items.Add("French")
+        ComboBox15.Items.Add("German")
+
         ComboBox1.SelectedIndex = 2     'Zone
         ComboBox3.SelectedIndex = 2     'Temp
         ComboBox2.SelectedIndex = 1     'group
@@ -572,7 +585,9 @@ Public Class Form1
 
         ComboBox11.SelectedIndex = 5     'Steel impeller (domex)
         ComboBox12.SelectedIndex = 10    'Steel casing
-        ComboBox13.SelectedIndex = 11     'Steel shaft
+        ComboBox13.SelectedIndex = 11    'Steel shaft
+        ComboBox14.SelectedIndex = 4     'Flow control
+        ComboBox15.SelectedIndex = 1     'Taal
     End Sub
 
     Private Sub Button6_Click_1(sender As Object, e As EventArgs) Handles Button6.Click
@@ -598,7 +613,7 @@ Public Class Form1
             'Get the range where the starting cell has the address
             'm_sStartingCell and its dimensions are m_iNumRows x m_iNumCols.
             range = objSheet.Range("A1", Reflection.Missing.Value)
-            range = range.Resize(temp.Length + 20, 2)
+            range = range.Resize(temp.Length + 30, 2)
 
             Dim saRet(100, 1) As String
             saRet(0, 0) = "VTK Quote summary"
@@ -620,6 +635,7 @@ Public Class Form1
             saRet(8, 1) = TextBox15.Text  '_Model
             saRet(9, 0) = Label13.Text
             saRet(9, 1) = TextBox16.Text  '_fan type
+
             '----------------------
             saRet(10, 0) = Label26.Text
             saRet(10, 1) = TextBox26.Text  'Orientation
@@ -632,16 +648,24 @@ Public Class Form1
             saRet(13, 1) = ComboBox2.SelectedItem.ToString
             saRet(14, 0) = Label23.Text
             saRet(14, 1) = ComboBox3.SelectedItem.ToString
+
             '---------------
             saRet(15, 0) = Label25.Text
             saRet(15, 1) = TextBox25.Text  'T_design
+
             '---------------
             saRet(16, 0) = Label55.Text
             saRet(16, 1) = ComboBox14.SelectedItem.ToString 'Fan control method
+            saRet(17, 0) = Label42.Text
+            saRet(17, 1) = ComboBox12.SelectedItem.ToString 'material casing
+            saRet(18, 0) = Label47.Text
+            saRet(18, 1) = ComboBox13.SelectedItem.ToString 'Material shaft
+            saRet(19, 0) = Label54.Text
+            saRet(19, 1) = ComboBox11.SelectedItem.ToString 'Material impeller
 
-            z = 16
+            z = 20
             For Each Line As String In temp
-                If Line.Length > 0 Then
+                If Line.Length > 4 Then
                     saRet(z, 0) = Line.Substring(0, 4)
                     saRet(z, 1) = Line.Remove(0, 6)
                 End If
@@ -651,7 +675,7 @@ Public Class Form1
             range.ColumnWidth = 30
 
         Catch ex As Exception
-
+            MessageBox.Show("Line 656, " & ex.Message)  ' Show the exception's message.
         Finally
             'Return control of Excel to the user.
             objApp.Visible = True

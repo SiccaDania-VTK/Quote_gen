@@ -185,6 +185,10 @@ Partial Class Form1
         Me.Label55 = New System.Windows.Forms.Label()
         Me.GroupBox65 = New System.Windows.Forms.GroupBox()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.GroupBox42 = New System.Windows.Forms.GroupBox()
+        Me.CheckBox11 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox183 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox213 = New System.Windows.Forms.CheckBox()
         Me.GroupBox64 = New System.Windows.Forms.GroupBox()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.GroupBox48 = New System.Windows.Forms.GroupBox()
@@ -212,10 +216,6 @@ Partial Class Form1
         Me.CheckBox123 = New System.Windows.Forms.CheckBox()
         Me.CheckBox124 = New System.Windows.Forms.CheckBox()
         Me.CheckBox216 = New System.Windows.Forms.CheckBox()
-        Me.GroupBox42 = New System.Windows.Forms.GroupBox()
-        Me.CheckBox11 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox183 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox213 = New System.Windows.Forms.CheckBox()
         Me.GroupBox40 = New System.Windows.Forms.GroupBox()
         Me.CheckBox199 = New System.Windows.Forms.CheckBox()
         Me.CheckBox196 = New System.Windows.Forms.CheckBox()
@@ -539,6 +539,7 @@ Partial Class Form1
         Me.GroupBox13.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         Me.GroupBox65.SuspendLayout()
+        Me.GroupBox42.SuspendLayout()
         Me.GroupBox64.SuspendLayout()
         Me.GroupBox48.SuspendLayout()
         Me.GroupBox45.SuspendLayout()
@@ -546,7 +547,6 @@ Partial Class Form1
         Me.GroupBox46.SuspendLayout()
         Me.GroupBox44.SuspendLayout()
         Me.GroupBox43.SuspendLayout()
-        Me.GroupBox42.SuspendLayout()
         Me.GroupBox40.SuspendLayout()
         Me.GroupBox19.SuspendLayout()
         Me.GroupBox34.SuspendLayout()
@@ -2465,6 +2465,51 @@ Partial Class Form1
         Me.TextBox5.TabIndex = 55
         Me.TextBox5.Text = "XXX"
         '
+        'GroupBox42
+        '
+        Me.GroupBox42.Controls.Add(Me.CheckBox11)
+        Me.GroupBox42.Controls.Add(Me.CheckBox183)
+        Me.GroupBox42.Controls.Add(Me.CheckBox213)
+        Me.GroupBox42.Location = New System.Drawing.Point(865, 97)
+        Me.GroupBox42.Name = "GroupBox42"
+        Me.GroupBox42.Size = New System.Drawing.Size(242, 98)
+        Me.GroupBox42.TabIndex = 71
+        Me.GroupBox42.TabStop = False
+        Me.GroupBox42.Text = "Vibration sensors options"
+        '
+        'CheckBox11
+        '
+        Me.CheckBox11.AutoSize = True
+        Me.CheckBox11.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox11.Location = New System.Drawing.Point(6, 67)
+        Me.CheckBox11.Name = "CheckBox11"
+        Me.CheckBox11.Size = New System.Drawing.Size(209, 22)
+        Me.CheckBox11.TabIndex = 63
+        Me.CheckBox11.Text = "F084, Vib sensor Cust spec"
+        Me.CheckBox11.UseVisualStyleBackColor = True
+        '
+        'CheckBox183
+        '
+        Me.CheckBox183.AutoSize = True
+        Me.CheckBox183.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox183.Location = New System.Drawing.Point(6, 44)
+        Me.CheckBox183.Name = "CheckBox183"
+        Me.CheckBox183.Size = New System.Drawing.Size(175, 22)
+        Me.CheckBox183.TabIndex = 62
+        Me.CheckBox183.Text = "F083, Vibration sensor"
+        Me.CheckBox183.UseVisualStyleBackColor = True
+        '
+        'CheckBox213
+        '
+        Me.CheckBox213.AutoSize = True
+        Me.CheckBox213.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox213.Location = New System.Drawing.Point(6, 21)
+        Me.CheckBox213.Name = "CheckBox213"
+        Me.CheckBox213.Size = New System.Drawing.Size(202, 22)
+        Me.CheckBox213.TabIndex = 61
+        Me.CheckBox213.Text = "F082, Provision vib sensor"
+        Me.CheckBox213.UseVisualStyleBackColor = True
+        '
         'GroupBox64
         '
         Me.GroupBox64.Controls.Add(Me.TextBox4)
@@ -2771,51 +2816,6 @@ Partial Class Form1
         Me.CheckBox216.TabIndex = 66
         Me.CheckBox216.Text = "F087, Temp. sensor cust. spec"
         Me.CheckBox216.UseVisualStyleBackColor = True
-        '
-        'GroupBox42
-        '
-        Me.GroupBox42.Controls.Add(Me.CheckBox11)
-        Me.GroupBox42.Controls.Add(Me.CheckBox183)
-        Me.GroupBox42.Controls.Add(Me.CheckBox213)
-        Me.GroupBox42.Location = New System.Drawing.Point(865, 97)
-        Me.GroupBox42.Name = "GroupBox42"
-        Me.GroupBox42.Size = New System.Drawing.Size(242, 98)
-        Me.GroupBox42.TabIndex = 71
-        Me.GroupBox42.TabStop = False
-        Me.GroupBox42.Text = "Vibration sensors options"
-        '
-        'CheckBox11
-        '
-        Me.CheckBox11.AutoSize = True
-        Me.CheckBox11.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox11.Location = New System.Drawing.Point(6, 67)
-        Me.CheckBox11.Name = "CheckBox11"
-        Me.CheckBox11.Size = New System.Drawing.Size(209, 22)
-        Me.CheckBox11.TabIndex = 63
-        Me.CheckBox11.Text = "F084, Vib sensor Cust spec"
-        Me.CheckBox11.UseVisualStyleBackColor = True
-        '
-        'CheckBox183
-        '
-        Me.CheckBox183.AutoSize = True
-        Me.CheckBox183.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox183.Location = New System.Drawing.Point(6, 44)
-        Me.CheckBox183.Name = "CheckBox183"
-        Me.CheckBox183.Size = New System.Drawing.Size(175, 22)
-        Me.CheckBox183.TabIndex = 62
-        Me.CheckBox183.Text = "F083, Vibration sensor"
-        Me.CheckBox183.UseVisualStyleBackColor = True
-        '
-        'CheckBox213
-        '
-        Me.CheckBox213.AutoSize = True
-        Me.CheckBox213.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox213.Location = New System.Drawing.Point(6, 21)
-        Me.CheckBox213.Name = "CheckBox213"
-        Me.CheckBox213.Size = New System.Drawing.Size(202, 22)
-        Me.CheckBox213.TabIndex = 61
-        Me.CheckBox213.Text = "F082, Provision vib sensor"
-        Me.CheckBox213.UseVisualStyleBackColor = True
         '
         'GroupBox40
         '
@@ -6156,6 +6156,8 @@ Partial Class Form1
         Me.TabPage2.PerformLayout()
         Me.GroupBox65.ResumeLayout(False)
         Me.GroupBox65.PerformLayout()
+        Me.GroupBox42.ResumeLayout(False)
+        Me.GroupBox42.PerformLayout()
         Me.GroupBox64.ResumeLayout(False)
         Me.GroupBox64.PerformLayout()
         Me.GroupBox48.ResumeLayout(False)
@@ -6170,8 +6172,6 @@ Partial Class Form1
         Me.GroupBox44.PerformLayout()
         Me.GroupBox43.ResumeLayout(False)
         Me.GroupBox43.PerformLayout()
-        Me.GroupBox42.ResumeLayout(False)
-        Me.GroupBox42.PerformLayout()
         Me.GroupBox40.ResumeLayout(False)
         Me.GroupBox40.PerformLayout()
         Me.GroupBox19.ResumeLayout(False)

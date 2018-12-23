@@ -253,6 +253,8 @@ Public Class Form1
 
         Combo_init_atex()
         Combo_init_dia()
+
+        TextBox01.Text = "Q" & Now.ToString("yy") & ".10"
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click

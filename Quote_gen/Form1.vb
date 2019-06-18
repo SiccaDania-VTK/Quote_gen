@@ -140,14 +140,20 @@ Public Class Form1
         Find_rep(Label22.Text, ComboBox2.Text)
         Find_rep(Label23.Text, ComboBox3.Text)
 
-        Find_rep(Label24.Text, TextBox24.Text)
-        Find_rep(Label25.Text, TextBox25.Text)
+        Find_rep(Label24.Text, TextBox24.Text)  '_P_Design
+        Find_rep(Label25.Text, TextBox25.Text)  '_T_Design
         Find_rep(Label26.Text, TextBox26.Text)
         Find_rep(Label27.Text, TextBox27.Text)
 
+        Find_rep(Label58.Text, TextBox35.Text)  '_S_Cust
+        Find_rep(Label59.Text, TextBox36.Text)  '_C_Cust
+        Find_rep(Label48.Text, TextBox37.Text)  '_TS_Cust
+        Find_rep(Label40.Text, TextBox38.Text)  '_VS_Cust
+        Find_rep(Label52.Text, TextBox39.Text)  '_GU_Cust
+
         '---------- General------------------
         Find_rep(Label55.Text, ComboBox14.Text)     '_Capacity_Control
-        Find_rep(Label40.Text, ComboBox11.Text)     '_Mat_impellar
+        'Find_rep(Label40.Text, ComboBox11.Text)     '_Mat_impellar
         Find_rep(Label42.Text, ComboBox12.Text)     '_Mat_casing
         Find_rep(Label47.Text, ComboBox13.Text)     '_mat_shaft
 
@@ -697,28 +703,6 @@ Public Class Form1
             objSheets = Nothing
             objBooks = Nothing
         End Try
-    End Sub
-    'Steel selection is changed
-    Private Sub ComboBox11_SelectedIndexChanged(sender As Object, e As EventArgs)
-        Dim separators() As String = {";"}
-
-        Dim words() As String = steel(ComboBox11.SelectedIndex).Split(separators, StringSplitOptions.None)
-        TextBox29.Text = LTrim(words(1))
-        TextBox30.Text = LTrim(words(3))
-    End Sub
-    Private Sub ComboBox12_SelectedIndexChanged(sender As Object, e As EventArgs)
-        Dim separators() As String = {";"}
-
-        Dim words() As String = steel(ComboBox12.SelectedIndex).Split(separators, StringSplitOptions.None)
-        TextBox31.Text = LTrim(words(1))
-        TextBox32.Text = LTrim(words(3))
-    End Sub
-    Private Sub ComboBox13_SelectedIndexChanged(sender As Object, e As EventArgs)
-        Dim separators() As String = {";"}
-
-        Dim words() As String = steel(ComboBox13.SelectedIndex).Split(separators, StringSplitOptions.None)
-        TextBox33.Text = LTrim(words(1))
-        TextBox34.Text = LTrim(words(3))
     End Sub
 
 End Class

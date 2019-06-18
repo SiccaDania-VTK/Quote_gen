@@ -158,7 +158,7 @@ Public Class Form1
         Find_rep(Label47.Text, ComboBox13.Text)     '_mat_shaft
 
         Find_rep("_Comments", TextBox4.Text)
-        Find_rep("_Comments2", TextBox4.Text)
+        Find_rep("_Comments2", TextBox5.Text)
 
         '---------- Conveyor----------------
         Find_rep(Label41.Text, NumericUpDown7.Value.ToString)   'Length
@@ -629,7 +629,7 @@ Public Class Form1
             'Get the range where the starting cell has the address
             'm_sStartingCell and its dimensions are m_iNumRows x m_iNumCols.
             range = objSheet.Range("A1", Reflection.Missing.Value)
-            range = range.Resize(temp.Length + 30, 2)
+            range = range.Resize(temp.Length + 40, 2)
 
             Dim saRet(100, 1) As String
             saRet(0, 0) = "VTK Quote summary"
@@ -679,7 +679,28 @@ Public Class Form1
             saRet(19, 0) = Label54.Text
             saRet(19, 1) = ComboBox11.SelectedItem.ToString 'Material impeller
 
-            z = 20
+            '---------------
+            saRet(20, 0) = Label57.Text
+            saRet(20, 1) = ComboBox16.SelectedItem.ToString 'Material Pedestal
+            saRet(21, 0) = Label56.Text
+            saRet(21, 1) = ComboBox16.SelectedItem.ToString 'material Hub
+            saRet(22, 0) = Label58.Text
+            saRet(22, 1) = TextBox35.Text                   'Shaft seal materials
+            saRet(23, 0) = Label59.Text
+            saRet(23, 1) = TextBox36.Text                   'Coupling
+            saRet(24, 0) = Label48.Text
+            saRet(24, 1) = TextBox37.Text                   'Temp measurement
+            saRet(25, 0) = Label40.Text
+            saRet(25, 1) = TextBox38.Text                   'Vibration sensors
+            saRet(26, 0) = Label52.Text
+            saRet(26, 1) = TextBox39.Text                   'Guards
+            '--------------- comments -----
+            saRet(27, 0) = "_Comments"
+            saRet(27, 1) = TextBox4.Text                    'Comments
+            saRet(28, 0) = "_Comments2"
+            saRet(28, 1) = TextBox5.Text                    'Comments2
+
+            z = 30
             For Each Line As String In temp
                 If Line.Length > 4 Then
                     saRet(z, 0) = Line.Substring(0, 4)

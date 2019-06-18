@@ -2485,7 +2485,7 @@ Partial Class Form1
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.Size = New System.Drawing.Size(250, 132)
         Me.TextBox5.TabIndex = 55
-        Me.TextBox5.Text = "XXX"
+        Me.TextBox5.Text = "sss"
         '
         'GroupBox42
         '
@@ -2509,7 +2509,7 @@ Partial Class Form1
         Me.TextBox38.Name = "TextBox38"
         Me.TextBox38.Size = New System.Drawing.Size(156, 22)
         Me.TextBox38.TabIndex = 69
-        Me.TextBox38.Text = "yyy"
+        Me.TextBox38.Text = "qqq"
         '
         'Label40
         '
@@ -2574,7 +2574,7 @@ Partial Class Form1
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(259, 93)
         Me.TextBox4.TabIndex = 55
-        Me.TextBox4.Text = "XXX"
+        Me.TextBox4.Text = "xxx"
         '
         'GroupBox48
         '
@@ -2838,7 +2838,7 @@ Partial Class Form1
         Me.TextBox37.Name = "TextBox37"
         Me.TextBox37.Size = New System.Drawing.Size(157, 22)
         Me.TextBox37.TabIndex = 71
-        Me.TextBox37.Text = "yyy"
+        Me.TextBox37.Text = "ppp"
         '
         'Label48
         '
@@ -3363,7 +3363,7 @@ Partial Class Form1
         Me.TextBox39.Name = "TextBox39"
         Me.TextBox39.Size = New System.Drawing.Size(156, 22)
         Me.TextBox39.TabIndex = 71
-        Me.TextBox39.Text = "yyy"
+        Me.TextBox39.Text = "rrr"
         '
         'Label52
         '

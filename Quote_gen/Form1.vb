@@ -30,10 +30,10 @@ Public Class Form1
     Public Capacity_Control() As String = {"client provided VSD", "Variable Speed Drive system", "inlet louvre damper", "outlet louvre damper", "no control measures"}
     Public drive_make() As String = {"SEW", "Nord", "Bauer", "Flender"}
 
-
     Public Shared steel() As String =
   {"16M03;                                EN10028-2 UNS;          16M03;                          1.5415;     Plate",
    "Aluminium D54S;                       DIN1745-1;              AA5083 AIMo45Mn-H116;           3.3547;     Max 70c",
+   "Carbon steel;                         --;                     S235JR;                         1.0038;  Plate",
    "Corten A / B Carbon steel;            EN10155 UNS;            S355J2G1W;                      1.8962/63;  Plate",
    "Duplex Stainless steel (Avesta-2205); EN 10088-1 UfllW;       X2CrNiMoN22-5-3 saisna;         1.4462;     Plate",
    "Hastelloy-C22;                        DIN Nr: ASTM UNS;       NiCr21Mo14W 2277 B575 N06022;   2.4602;     Plate",
@@ -43,6 +43,7 @@ Public Class Form1
    "P355NH carbon steel;                  EN10028-3;              P355NH;                         1.0565;     Plate",
    "S235JR carbon steel;                  EN10025 UNS;            S235JR;                         1.0038;     Struc-Steel",
    "S355J2 carbon steel;                  EN10025-2;              S355J2;                         1.0570;     Shaft-mat",
+   "Stainless steel;                      --;                     --;                             --;       Plate",
    "SS 304L stainless steel;              EN10088-2;              X2CrNi19-11, S30403;            1.4306;     Plate",
    "SS 316L stainless steel;              EN10088-2;              X2CrNiMo17-12-2, S31603;        1.4404;     Plate",
    "SS 316TI stainless steel;             EN10088-2;              X6CrNiMoTi17-12-2, S31635;      1.4571;     Plate",
@@ -534,6 +535,8 @@ Public Class Form1
         ComboBox12.Items.Clear()
         ComboBox13.Items.Clear()
         ComboBox14.Items.Clear()
+        ComboBox16.Items.Clear()
+        ComboBox17.Items.Clear()
 
         '-------Fill combobox, zone------------------
         For hh = 0 To atex_zone.Length - 1                'Fill combobox 
@@ -568,6 +571,8 @@ Public Class Form1
             ComboBox11.Items.Add(LTrim(words(0)))
             ComboBox12.Items.Add(LTrim(words(0)))
             ComboBox13.Items.Add(LTrim(words(0)))
+            ComboBox16.Items.Add(LTrim(words(0)))
+            ComboBox17.Items.Add(LTrim(words(0)))
         Next hh
 
         ComboBox15.Items.Clear()
@@ -585,11 +590,14 @@ Public Class Form1
         ComboBox5.SelectedIndex = 2     'Temp
         ComboBox6.SelectedIndex = 1     'group
 
-        ComboBox11.SelectedIndex = 5     'Steel impeller (domex)
-        ComboBox12.SelectedIndex = 10    'Steel casing
-        ComboBox13.SelectedIndex = 11    'Steel shaft
+        ComboBox11.SelectedIndex = 6     'Steel impeller (hsla)
+        ComboBox12.SelectedIndex = 2     'Steel casing
+        ComboBox13.SelectedIndex = 2     'Steel shaft
         ComboBox14.SelectedIndex = 4     'Flow control
         ComboBox15.SelectedIndex = 1     'Taal
+
+        ComboBox16.SelectedIndex = 2     'Pedestal (cs)
+        ComboBox17.SelectedIndex = 2     'Hub (cs)
     End Sub
 
     Private Sub Button6_Click_1(sender As Object, e As EventArgs) Handles Button6.Click

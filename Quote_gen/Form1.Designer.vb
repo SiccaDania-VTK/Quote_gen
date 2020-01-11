@@ -345,6 +345,7 @@ Partial Class Form1
         Me.GroupBox27 = New System.Windows.Forms.GroupBox()
         Me.CheckBox153 = New System.Windows.Forms.CheckBox()
         Me.GroupBox26 = New System.Windows.Forms.GroupBox()
+        Me.CheckBox279 = New System.Windows.Forms.CheckBox()
         Me.CheckBox277 = New System.Windows.Forms.CheckBox()
         Me.CheckBox263 = New System.Windows.Forms.CheckBox()
         Me.CheckBox268 = New System.Windows.Forms.CheckBox()
@@ -514,7 +515,6 @@ Partial Class Form1
         Me.Button4 = New System.Windows.Forms.Button()
         Me.TextBox04 = New System.Windows.Forms.TextBox()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
-        Me.CheckBox279 = New System.Windows.Forms.CheckBox()
         Me.TabPage9.SuspendLayout()
         Me.TabPage8.SuspendLayout()
         Me.GroupBox7.SuspendLayout()
@@ -4318,6 +4318,17 @@ Partial Class Form1
         Me.GroupBox26.TabStop = False
         Me.GroupBox26.Text = "General"
         '
+        'CheckBox279
+        '
+        Me.CheckBox279.AutoSize = True
+        Me.CheckBox279.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox279.Location = New System.Drawing.Point(13, 129)
+        Me.CheckBox279.Name = "CheckBox279"
+        Me.CheckBox279.Size = New System.Drawing.Size(214, 22)
+        Me.CheckBox279.TabIndex = 80
+        Me.CheckBox279.Text = "F261, Std API 673 deviations"
+        Me.CheckBox279.UseVisualStyleBackColor = True
+        '
         'CheckBox277
         '
         Me.CheckBox277.AutoSize = True
@@ -6254,17 +6265,6 @@ Partial Class Form1
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         '
-        'CheckBox279
-        '
-        Me.CheckBox279.AutoSize = True
-        Me.CheckBox279.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox279.Location = New System.Drawing.Point(13, 129)
-        Me.CheckBox279.Name = "CheckBox279"
-        Me.CheckBox279.Size = New System.Drawing.Size(214, 22)
-        Me.CheckBox279.TabIndex = 80
-        Me.CheckBox279.Text = "F261, Std API 673 deviations"
-        Me.CheckBox279.UseVisualStyleBackColor = True
-        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -6273,7 +6273,7 @@ Partial Class Form1
         Me.Controls.Add(Me.TabControl1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form1"
-        Me.Text = "Quotation Text Generator MK V"
+        Me.Text = "Quotation Text Generator MK VI"
         Me.TabPage9.ResumeLayout(False)
         Me.TabPage9.PerformLayout()
         Me.TabPage8.ResumeLayout(False)

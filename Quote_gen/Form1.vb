@@ -610,58 +610,71 @@ Public Class Form1
     End Sub
 
     Private Sub Button6_Click_1(sender As Object, e As EventArgs) Handles Button6.Click
-        Dim objBooks As Excel.Workbooks
-        Dim objSheets As Excel.Sheets
-        Dim objSheet As Excel._Worksheet
+        'https://social.msdn.microsoft.com/Forums/vstudio/en-US/4fe0c8c2-e952-4196-96d7-b833292a9c2e/open-an-excel-file-using-vbnet?forum=vbgeneral
+        Dim filenaam As String
+        Dim xlApp As Excel.Application = Nothing
+        Dim xlWorkBooks As Excel.Workbooks = Nothing
+        Dim xlWorkBook As Excel.Workbook = Nothing
+
+        Dim xlworkSheets As Excel.Sheets = Nothing
+        Dim xlworkSheet As Excel.Worksheet = Nothing
+        Dim sheetname As String
+
         Dim range As Excel.Range
         Dim z As Integer = 0
         Dim temp As String()
-        Dim saRet(100, 1) As String 'Summary string
+        Dim saRet(200, 1) As String 'Summary string
 
-        Try
+        filenaam = TextBox43.Text & TextBox44.Text
+        sheetname = TextBox45.Text
+        If IO.File.Exists(filenaam) Then
             '============ Get the selected options ==============
             temp = TextBox04.Text.Split(New String() {Environment.NewLine}, StringSplitOptions.None)
 
-            ' Create a new instance of Excel and start a new workbook.
-            objApp = New Excel.Application()
-            objBooks = objApp.Workbooks
-            objBook = objBooks.Add
-            objSheets = objBook.Worksheets
+            xlApp = New Excel.Application
+            xlApp.DisplayAlerts = False
+            xlApp.Visible = True
+            xlWorkBooks = xlApp.Workbooks
+            xlWorkBook = xlWorkBooks.Open(filenaam)
+            xlworkSheets = xlWorkBook.Sheets
 
-            objSheet = CType(objSheets(1), Excel._Worksheet)
+            '====== find the tab worksheet ====
+            For x As Integer = 1 To xlworkSheets.Count
+                xlworkSheet = CType(xlworkSheets(x), Excel.Worksheet)
+                If xlworkSheet.Name = sheetname Then
+                    range = xlworkSheet.Range("A1:B200")
 
-            'Get the range where the starting cell has the address
-            'm_sStartingCell and its dimensions are m_iNumRows x m_iNumCols.
-            range = objSheet.Range("A1", Reflection.Missing.Value)
-            range = range.Resize(temp.Length + 40, 2)
+                    '============ Get the Text replacements ===========
+                    Get_text_replacements(saRet)        'Generate the summary
 
-            '============ Get the Text replacements ===========
-            Get_text_replacements(saRet)        'Generate the summary
+                    z = 30                              'start value row position
+                    For Each Line As String In temp
+                        If Line.Length > 4 Then
+                            saRet(z, 0) = Line.Substring(0, 4)
+                            saRet(z, 1) = Line.Remove(0, 6)
+                        End If
+                        z += 1
+                    Next
+                    range.Value = saRet 'Set the range value to the array.
+                    range.ColumnWidth = 30
 
-            z = 30                              'start value row position
-            For Each Line As String In temp
-                If Line.Length > 4 Then
-                    saRet(z, 0) = Line.Substring(0, 4)
-                    saRet(z, 1) = Line.Remove(0, 6)
+                    'Return control of Excel to the user.
+                    xlApp.Visible = True
+                    xlApp.UserControl = True
+
+                    'Clean up a little.
+                    range = Nothing
+                    xlworkSheet = Nothing
+                    xlworkSheets = Nothing
+                    xlWorkBooks = Nothing
+                    Exit For
                 End If
-                z += 1
+                Runtime.InteropServices.Marshal.FinalReleaseComObject(xlworkSheet)
+                xlworkSheet = Nothing
             Next
-            range.Value = saRet 'Set the range value to the array.
-            range.ColumnWidth = 30
-
-        Catch ex As Exception
-            MessageBox.Show("Line 656, " & ex.Message)  ' Show the exception's message.
-        Finally
-            'Return control of Excel to the user.
-            objApp.Visible = True
-            objApp.UserControl = True
-
-            'Clean up a little.
-            range = Nothing
-            objSheet = Nothing
-            objSheets = Nothing
-            objBooks = Nothing
-        End Try
+        Else
+            MsgBox("Can not open file")
+        End If
     End Sub
     Private Sub Get_text_replacements(ByRef ppp(,) As String)
         'Generate the fan summary and store in string

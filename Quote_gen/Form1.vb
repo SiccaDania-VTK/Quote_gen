@@ -16,7 +16,7 @@ Public Class Form1
     Dim objBook As Excel._Workbook
 
     '----------- directory's-----------
-    Dim dirpath_Block As String = "N:\Verkoop\Tekst\Quote_text_block\"
+    Dim dirpath_Txt_Block As String = "N:\Verkoop\Tekst\Quote_text_block\"
     Dim dirpath_Backup As String = "N:\Verkoop\Aanbiedingen\Quote_gen_backup\"
     Dim dirpath_Home_GP As String = "C:\Temp\"
 
@@ -96,8 +96,8 @@ Public Class Form1
                 If block_name.Length < 4 Then block_name = "Empty"
                 block_name = grbx.Text.Substring(0, 4)
                     oPara3 = oDoc.Content.Paragraphs.Add()
-                    pathname = dirpath_Block & ComboBox15.Text & "\" & block_name & ".docx"
-                    Button1.Text = pathname.ToString
+                pathname = dirpath_Txt_Block & ComboBox15.Text & "\" & block_name & ".docx"
+                Button1.Text = pathname.ToString
                     If File.Exists(pathname) Then
                         TextBox05.Text &= "OK, file found " & pathname & vbCrLf
                         oPara3.Range.InsertFile(pathname)
@@ -110,8 +110,6 @@ Public Class Form1
         Button1.Text = "Now search and replace"
 
         '============ search and replace in WORD file================
-        'Dim myStoryRange As Range '= oWord.ActiveDocument.Content
-
         Dim find_s As String = ""
         Dim rep_s As String = ""
 
@@ -220,7 +218,7 @@ Public Class Form1
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         TextBox03.Text =
         "File naming convention" & vbCrLf & vbCrLf &
-        "Text block location is " & vbTab & dirpath_Block.ToString & vbCrLf &
+        "Text block location is " & vbTab & dirpath_Txt_Block.ToString & vbCrLf &
         "Quote backup location is " & vbTab & dirpath_Backup.ToString & vbCrLf &
         "  " & vbCrLf &
         "File-name ate the first 4 character of the checkbox name" & vbCrLf &
@@ -262,6 +260,7 @@ Public Class Form1
         Combo_init_dia()
 
         TextBox01.Text = "Q" & Now.ToString("yy") & ".10"
+        Timer1.Enabled = True
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
@@ -286,7 +285,7 @@ Public Class Form1
         temp_string = TextBox01.Text & ";" & TextBox02.Text & ";"
         temp_string &= vbCrLf & "BREAK" & vbCrLf & ";"
 
-        '-------- find all combobox controls and save
+        '-------- find all combobox controls ------
         FindControlRecursive(all_combo, Me, GetType(System.Windows.Forms.ComboBox))      'Find the control
         all_combo = all_combo.OrderBy(Function(x) x.Name).ToList()   'Alphabetical order
         For i = 0 To all_combo.Count - 1
@@ -296,7 +295,7 @@ Public Class Form1
         temp_string &= vbCrLf & "BREAK" & vbCrLf & ";"
 
 
-        '-------- find all checkbox controls and save -------
+        '-------- find all checkbox controls -------
         FindControlRecursive(all_check, Me, GetType(System.Windows.Forms.CheckBox))      'Find the control
         all_check = all_check.OrderBy(Function(x) x.Name).ToList()  'Alphabetical order
         For i = 0 To all_check.Count - 1
@@ -305,7 +304,7 @@ Public Class Form1
         Next
         temp_string &= vbCrLf & "BREAK" & vbCrLf & ";"
 
-        '-------- find all textbox controls and save ----------
+        '-------- find all textbox controls ----------
         FindControlRecursive(all_text, Me, GetType(System.Windows.Forms.TextBox))      'Find the control
         all_text = all_text.OrderBy(Function(x) x.Name).ToList()  'Alphabetical order
         For i = 0 To all_text.Count - 1
@@ -314,24 +313,20 @@ Public Class Form1
         Next
         temp_string &= vbCrLf & "BREAK" & vbCrLf & ";"
 
-        Try
-            Check_directories()  'Are the directories present
-            If CInt(temp_string.Length.ToString) > 5 Then      'String may be empty
-                If Directory.Exists(dirpath_Backup) Then
-                    File.WriteAllText(dirpath_Backup & filename, temp_string, Encoding.ASCII)      'used at VTK
-                Else
-                    File.WriteAllText(dirpath_Home_GP & filename, temp_string, Encoding.ASCII)     'used at home
-                End If
+        Check_directories()  'Are the directories present
+        If CInt(temp_string.Length.ToString) > 5 Then      'String may be empty
+            If Directory.Exists(dirpath_Backup) Then
+                File.WriteAllText(dirpath_Backup & filename, temp_string, Encoding.ASCII)      'used at VTK
+            Else
+                File.WriteAllText(dirpath_Home_GP & filename, temp_string, Encoding.ASCII)     'used at home
             End If
-        Catch ex As Exception
-            MessageBox.Show("Line 204, " & ex.Message)  ' Show the exception's message.
-        End Try
+        End If
     End Sub
     Private Sub Check_directories()
         '---- if path not exist then create one----------
         Try
             If (Not System.IO.Directory.Exists(dirpath_Home_GP)) Then System.IO.Directory.CreateDirectory(dirpath_Home_GP)
-            If (Not System.IO.Directory.Exists(dirpath_Block)) Then System.IO.Directory.CreateDirectory(dirpath_Block)
+            If (Not System.IO.Directory.Exists(dirpath_Txt_Block)) Then System.IO.Directory.CreateDirectory(dirpath_Txt_Block)
             If (Not System.IO.Directory.Exists(dirpath_Backup)) Then System.IO.Directory.CreateDirectory(dirpath_Backup)
         Catch ex As Exception
             MessageBox.Show("Line 214, " & ex.Message)  ' Show the exception's message.
@@ -765,4 +760,13 @@ Public Class Form1
         clipboardtext = TextBox40.Text
         My.Computer.Clipboard.SetText(clipboardtext)
     End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        If Directory.Exists(dirpath_Backup) Then
+            Label61.Visible = False
+        Else
+            Label61.Visible = True
+        End If
+    End Sub
+
 End Class

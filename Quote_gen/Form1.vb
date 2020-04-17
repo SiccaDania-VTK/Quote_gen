@@ -157,8 +157,8 @@ Public Class Form1
         Find_rep(Label42.Text, ComboBox12.Text)     '_Mat_casing
         Find_rep(Label47.Text, ComboBox13.Text)     '_mat_shaft
 
-        Find_rep("_Comments", TextBox4.Text)
-        Find_rep("_Comments2", TextBox5.Text)
+        Find_rep("_Comments", TextBox41.Text)
+        Find_rep("_Comments2", TextBox42.Text)
 
         '---------- Conveyor----------------
         Find_rep(Label41.Text, NumericUpDown7.Value.ToString)   'Length
@@ -445,6 +445,7 @@ Public Class Form1
         Dim i As Integer
         Dim cnt As Integer = 1
         Dim all_check As New List(Of Control)
+        Dim saRet(100, 1) As String 'Summary string
 
         TextBox04.Multiline = True
         TextBox04.Clear()
@@ -458,6 +459,8 @@ Public Class Form1
                 TextBox04.Text &= grbx.Text & Environment.NewLine
             End If
         Next
+
+        Get_text_replacements(saRet)        'Get the replacements
     End Sub
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click, CheckBox179.CheckStateChanged, CheckBox178.CheckStateChanged, CheckBox176.CheckStateChanged, CheckBox175.CheckStateChanged, CheckBox174.CheckStateChanged, CheckBox173.CheckStateChanged, CheckBox26.CheckStateChanged, CheckBox25.CheckStateChanged, CheckBox24.CheckStateChanged, CheckBox23.CheckStateChanged, CheckBox22.CheckStateChanged, CheckBox118.CheckStateChanged, CheckBox201.CheckedChanged, CheckBox200.CheckedChanged, CheckBox199.CheckedChanged, CheckBox198.CheckedChanged, CheckBox197.CheckedChanged, CheckBox196.CheckedChanged, CheckBox195.CheckedChanged, CheckBox194.CheckedChanged, CheckBox88.CheckStateChanged, CheckBox141.CheckStateChanged, CheckBox156.CheckedChanged, CheckBox155.CheckedChanged, CheckBox39.CheckedChanged, CheckBox38.CheckedChanged, CheckBox31.CheckedChanged, CheckBox30.CheckedChanged, CheckBox29.CheckedChanged, CheckBox162.CheckedChanged, CheckBox161.CheckedChanged, CheckBox167.CheckedChanged, CheckBox160.CheckedChanged, CheckBox213.CheckedChanged, CheckBox183.CheckedChanged, CheckBox11.CheckedChanged, CheckBox90.CheckedChanged, CheckBox33.CheckedChanged, CheckBox142.CheckedChanged, CheckBox133.CheckedChanged, CheckBox131.CheckedChanged, CheckBox216.CheckedChanged, CheckBox124.CheckedChanged, CheckBox123.CheckedChanged, CheckBox121.CheckedChanged, CheckBox6.CheckedChanged, CheckBox3.CheckedChanged, CheckBox9.CheckedChanged, CheckBox12.CheckedChanged, CheckBox8.CheckedChanged, CheckBox5.CheckedChanged, CheckBox165.CheckedChanged, CheckBox164.CheckedChanged, CheckBox18.CheckedChanged, CheckBox17.CheckedChanged, CheckBox16.CheckedChanged, CheckBox15.CheckedChanged, CheckBox1.CheckedChanged
@@ -613,9 +616,10 @@ Public Class Form1
         Dim range As Excel.Range
         Dim z As Integer = 0
         Dim temp As String()
+        Dim saRet(100, 1) As String 'Summary string
 
         Try
-            'Create an array.
+            '============ Get the selected options ==============
             temp = TextBox04.Text.Split(New String() {Environment.NewLine}, StringSplitOptions.None)
 
             ' Create a new instance of Excel and start a new workbook.
@@ -631,76 +635,10 @@ Public Class Form1
             range = objSheet.Range("A1", Reflection.Missing.Value)
             range = range.Resize(temp.Length + 40, 2)
 
-            Dim saRet(100, 1) As String
-            saRet(0, 0) = "VTK Quote summary"
-            saRet(1, 0) = Label1.Text
-            saRet(1, 1) = TextBox01.Text  'Project
-            saRet(2, 0) = Label3.Text
-            saRet(2, 1) = TextBox07.Text  'Tag
-            saRet(3, 0) = Label6.Text
-            saRet(3, 1) = TextBox02.Text  '_Cust_name
-            saRet(4, 0) = Label7.Text
-            saRet(4, 1) = TextBox11.Text  '_Cust_ref
-            saRet(5, 0) = Label8.Text
-            saRet(5, 1) = TextBox12.Text  '_Cust_proj
-            saRet(6, 0) = Label9.Text
-            saRet(6, 1) = TextBox13.Text  '_Contact
-            saRet(7, 0) = Label11.Text
-            saRet(7, 1) = TextBox14.Text  '_fan_modelnr
-            saRet(8, 0) = Label12.Text
-            saRet(8, 1) = TextBox15.Text  '_Model
-            saRet(9, 0) = Label13.Text
-            saRet(9, 1) = TextBox16.Text  '_fan type
+            '============ Get the Text replacements ===========
+            Get_text_replacements(saRet)        'Generate the summary
 
-            '----------------------
-            saRet(10, 0) = Label26.Text
-            saRet(10, 1) = TextBox26.Text  'Orientation
-            saRet(11, 0) = Label27.Text
-            saRet(11, 1) = TextBox27.Text  'Orientation
-            '---------- ATEX---------
-            saRet(12, 0) = Label21.Text
-            saRet(12, 1) = ComboBox1.SelectedItem.ToString
-            saRet(13, 0) = Label22.Text
-            saRet(13, 1) = ComboBox2.SelectedItem.ToString
-            saRet(14, 0) = Label23.Text
-            saRet(14, 1) = ComboBox3.SelectedItem.ToString
-
-            '---------------
-            saRet(15, 0) = Label25.Text
-            saRet(15, 1) = TextBox25.Text  'T_design
-
-            '---------------
-            saRet(16, 0) = Label55.Text
-            saRet(16, 1) = ComboBox14.SelectedItem.ToString 'Fan control method
-            saRet(17, 0) = Label42.Text
-            saRet(17, 1) = ComboBox12.SelectedItem.ToString 'material casing
-            saRet(18, 0) = Label47.Text
-            saRet(18, 1) = ComboBox13.SelectedItem.ToString 'Material shaft
-            saRet(19, 0) = Label54.Text
-            saRet(19, 1) = ComboBox11.SelectedItem.ToString 'Material impeller
-
-            '---------------
-            saRet(20, 0) = Label57.Text
-            saRet(20, 1) = ComboBox16.SelectedItem.ToString 'Material Pedestal
-            saRet(21, 0) = Label56.Text
-            saRet(21, 1) = ComboBox16.SelectedItem.ToString 'material Hub
-            saRet(22, 0) = Label58.Text
-            saRet(22, 1) = TextBox35.Text                   'Shaft seal materials
-            saRet(23, 0) = Label59.Text
-            saRet(23, 1) = TextBox36.Text                   'Coupling
-            saRet(24, 0) = Label48.Text
-            saRet(24, 1) = TextBox37.Text                   'Temp measurement
-            saRet(25, 0) = Label40.Text
-            saRet(25, 1) = TextBox38.Text                   'Vibration sensors
-            saRet(26, 0) = Label52.Text
-            saRet(26, 1) = TextBox39.Text                   'Guards
-            '--------------- comments -----
-            saRet(27, 0) = "_Comments"
-            saRet(27, 1) = TextBox4.Text                    'Comments
-            saRet(28, 0) = "_Comments2"
-            saRet(28, 1) = TextBox5.Text                    'Comments2
-
-            z = 30
+            z = 30                              'start value row position
             For Each Line As String In temp
                 If Line.Length > 4 Then
                     saRet(z, 0) = Line.Substring(0, 4)
@@ -725,5 +663,93 @@ Public Class Form1
             objBooks = Nothing
         End Try
     End Sub
+    Private Sub Get_text_replacements(ByRef ppp(,) As String)
+        'Generate the fan summary and store in string
 
+        ppp(0, 0) = "VTK Quote summary"
+        ppp(1, 0) = Label1.Text
+        ppp(1, 1) = TextBox01.Text  'Project
+        ppp(2, 0) = Label3.Text
+        ppp(2, 1) = TextBox07.Text  'Tag
+        ppp(3, 0) = Label6.Text
+        ppp(3, 1) = TextBox02.Text  '_Cust_name
+        ppp(4, 0) = Label7.Text
+        ppp(4, 1) = TextBox11.Text  '_Cust_ref
+        ppp(5, 0) = Label8.Text
+        ppp(5, 1) = TextBox12.Text  '_Cust_proj
+        ppp(6, 0) = Label9.Text
+        ppp(6, 1) = TextBox13.Text  '_Contact
+        ppp(7, 0) = Label11.Text
+        ppp(7, 1) = TextBox14.Text  '_fan_modelnr
+        ppp(8, 0) = Label12.Text
+        ppp(8, 1) = TextBox15.Text  '_Model
+        ppp(9, 0) = Label13.Text
+        ppp(9, 1) = TextBox16.Text  '_fan type
+
+        '----------------------
+        ppp(10, 0) = Label26.Text
+        ppp(10, 1) = TextBox26.Text  'Orientation
+        ppp(11, 0) = Label27.Text
+        ppp(11, 1) = TextBox27.Text  'Orientation
+        '---------- ATEX---------
+        ppp(12, 0) = Label21.Text
+        ppp(12, 1) = ComboBox1.SelectedItem.ToString
+        ppp(13, 0) = Label22.Text
+        ppp(13, 1) = ComboBox2.SelectedItem.ToString
+        ppp(14, 0) = Label23.Text
+        ppp(14, 1) = ComboBox3.SelectedItem.ToString
+
+        '---------------
+        ppp(15, 0) = Label25.Text
+        ppp(15, 1) = TextBox25.Text  'T_design
+
+        '---------------
+        ppp(16, 0) = Label55.Text
+        ppp(16, 1) = ComboBox14.SelectedItem.ToString 'Fan control method
+        ppp(17, 0) = Label42.Text
+        ppp(17, 1) = ComboBox12.SelectedItem.ToString 'material casing
+        ppp(18, 0) = Label47.Text
+        ppp(18, 1) = ComboBox13.SelectedItem.ToString 'Material shaft
+        ppp(19, 0) = Label54.Text
+        ppp(19, 1) = ComboBox11.SelectedItem.ToString 'Material impeller
+
+        '---------------
+        ppp(20, 0) = Label57.Text
+        ppp(20, 1) = ComboBox16.SelectedItem.ToString 'Material Pedestal
+        ppp(21, 0) = Label56.Text
+        ppp(21, 1) = ComboBox16.SelectedItem.ToString 'material Hub
+        ppp(22, 0) = Label58.Text
+        ppp(22, 1) = TextBox35.Text                   'Shaft seal materials
+        ppp(23, 0) = Label59.Text
+        ppp(23, 1) = TextBox36.Text                   'Coupling
+        ppp(24, 0) = Label48.Text
+        ppp(24, 1) = TextBox37.Text                   'Temp measurement
+        ppp(25, 0) = Label40.Text
+        ppp(25, 1) = TextBox38.Text                   'Vibration sensors
+        ppp(26, 0) = Label52.Text
+        ppp(26, 1) = TextBox39.Text                   'Guards
+        '--------------- comments -----
+        ppp(27, 0) = "_Comments"
+        ppp(27, 1) = TextBox41.Text                   'Comments
+        ppp(28, 0) = "_Comments2"
+        ppp(28, 1) = TextBox42.Text                   'Comments2
+
+        For i = 0 To 29
+            TextBox40.Text &= ppp(i, 0) & vbTab & ppp(i, 1) & vbCrLf
+        Next
+    End Sub
+
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+        Dim clipboardtext As String
+
+        clipboardtext = TextBox04.Text
+        My.Computer.Clipboard.SetText(clipboardtext)
+    End Sub
+
+    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
+        Dim clipboardtext As String
+
+        clipboardtext = TextBox40.Text
+        My.Computer.Clipboard.SetText(clipboardtext)
+    End Sub
 End Class

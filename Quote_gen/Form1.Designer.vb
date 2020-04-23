@@ -630,6 +630,7 @@ Partial Class Form1
         Me.CheckBox105 = New System.Windows.Forms.CheckBox()
         Me.CheckBox106 = New System.Windows.Forms.CheckBox()
         Me.TabPage10 = New System.Windows.Forms.TabPage()
+        Me.ComboBox18 = New System.Windows.Forms.ComboBox()
         Me.TextBox45 = New System.Windows.Forms.TextBox()
         Me.TextBox44 = New System.Windows.Forms.TextBox()
         Me.TextBox43 = New System.Windows.Forms.TextBox()
@@ -7712,6 +7713,7 @@ Partial Class Form1
         '
         'TabPage10
         '
+        Me.TabPage10.Controls.Add(Me.ComboBox18)
         Me.TabPage10.Controls.Add(Me.TextBox45)
         Me.TabPage10.Controls.Add(Me.TextBox44)
         Me.TabPage10.Controls.Add(Me.TextBox43)
@@ -7729,6 +7731,15 @@ Partial Class Form1
         Me.TabPage10.TabIndex = 9
         Me.TabPage10.Text = "Summary"
         Me.TabPage10.UseVisualStyleBackColor = True
+        '
+        'ComboBox18
+        '
+        Me.ComboBox18.BackColor = System.Drawing.Color.Yellow
+        Me.ComboBox18.FormattingEnabled = True
+        Me.ComboBox18.Location = New System.Drawing.Point(793, 256)
+        Me.ComboBox18.Name = "ComboBox18"
+        Me.ComboBox18.Size = New System.Drawing.Size(180, 21)
+        Me.ComboBox18.TabIndex = 50
         '
         'TextBox45
         '
@@ -7783,7 +7794,7 @@ Partial Class Form1
         '
         'Button6
         '
-        Me.Button6.Location = New System.Drawing.Point(793, 260)
+        Me.Button6.Location = New System.Drawing.Point(793, 208)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(261, 42)
         Me.Button6.TabIndex = 43
@@ -7800,7 +7811,7 @@ Partial Class Form1
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(793, 176)
+        Me.Button4.Location = New System.Drawing.Point(809, 47)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(80, 34)
         Me.Button4.TabIndex = 1
@@ -7833,7 +7844,7 @@ Partial Class Form1
         Me.Controls.Add(Me.TabControl1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form1"
-        Me.Text = "Quotation Text Generator MK VII"
+        Me.Text = "Quotation Text Generator MK VII a"
         Me.TabPage9.ResumeLayout(False)
         Me.TabPage9.PerformLayout
         Me.TabPage5.ResumeLayout(False)
@@ -8637,4 +8648,5 @@ Partial Class Form1
     Friend WithEvents CheckBox380 As CheckBox
     Friend WithEvents CheckBox384 As CheckBox
     Friend WithEvents CheckBox382 As CheckBox
+    Friend WithEvents ComboBox18 As ComboBox
 End Class

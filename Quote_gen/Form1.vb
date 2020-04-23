@@ -50,6 +50,11 @@ Public Class Form1
    "SuperDuplex;                          --;                     X2CrNiMoN22-5-3 saisna;         1.4501;     Plate",
    "Titanium-ür 2;                        ASTM UNS niN;           B265/348-Gr2;                   3.7035;     Plate"}
 
+    Public Shared bestemming() As String =
+  {"Costsheet fan;V:\Sales\Calculaties\Ventilatoren\Prijs calculatie\;Price calc Fans.xlsm;IQG-Scope check",
+   "EIS fans;V:\Sales\Calculaties\Ventilatoren\Prijs calculatie\;Price calc Fans.xlsm;IQG-Scope check",
+   "API 673 Fans;V:\Sales\Calculaties\Ventilatoren\Prijs calculatie\;Price calc Fans.xlsm;IQG-Scope check",
+   "API 570 Fans;V:\Sales\Calculaties\Ventilatoren\Prijs calculatie\;Price calc Fans.xlsm;IQG-Scope check"}
 
     Public oWord As Word.Application
     Private stringSplitOptons As Object
@@ -95,16 +100,16 @@ Public Class Form1
                 block_name = grbx.Text
                 If block_name.Length < 4 Then block_name = "Empty"
                 block_name = grbx.Text.Substring(0, 4)
-                    oPara3 = oDoc.Content.Paragraphs.Add()
+                oPara3 = oDoc.Content.Paragraphs.Add()
                 pathname = dirpath_Txt_Block & ComboBox15.Text & "\" & block_name & ".docx"
                 Button1.Text = pathname.ToString
-                    If File.Exists(pathname) Then
-                        TextBox05.Text &= "OK, file found " & pathname & vbCrLf
-                        oPara3.Range.InsertFile(pathname)
-                    Else
-                        TextBox05.Text &= "File not found " & pathname & vbCrLf
-                    End If
+                If File.Exists(pathname) Then
+                    TextBox05.Text &= "OK, file found " & pathname & vbCrLf
+                    oPara3.Range.InsertFile(pathname)
+                Else
+                    TextBox05.Text &= "File not found " & pathname & vbCrLf
                 End If
+            End If
         Next
 
         Button1.Text = "Now search and replace"
@@ -579,6 +584,12 @@ Public Class Form1
             ComboBox17.Items.Add(LTrim(words(0)))
         Next hh
 
+        '-------Fill combobox, bestemming--------------
+        For hh = 0 To bestemming.Length - 1            'Fill combobox 
+            words = bestemming(hh).Split(separators, StringSplitOptions.None)
+            ComboBox18.Items.Add(LTrim(words(0)))
+        Next hh
+
         ComboBox15.Items.Clear()
         ComboBox15.Items.Add("Dutch")
         ComboBox15.Items.Add("English")
@@ -602,6 +613,7 @@ Public Class Form1
 
         ComboBox16.SelectedIndex = 2     'Pedestal (cs)
         ComboBox17.SelectedIndex = 2     'Hub (cs)
+        ComboBox18.SelectedIndex = 0     'Bestemming cost sheet
     End Sub
 
     Private Sub Button6_Click_1(sender As Object, e As EventArgs) Handles Button6.Click
@@ -673,6 +685,7 @@ Public Class Form1
     End Sub
     Private Sub Get_text_replacements(ByRef ppp(,) As String)
         'Generate the fan summary and store in string
+        TextBox40.Clear()
 
         ppp(0, 0) = "VTK Quote summary"
         ppp(1, 0) = Label1.Text
@@ -681,68 +694,72 @@ Public Class Form1
         ppp(2, 1) = TextBox07.Text  'Tag
         ppp(3, 0) = Label6.Text
         ppp(3, 1) = TextBox02.Text  '_Cust_name
-        ppp(4, 0) = Label7.Text
-        ppp(4, 1) = TextBox11.Text  '_Cust_ref
-        ppp(5, 0) = Label8.Text
-        ppp(5, 1) = TextBox12.Text  '_Cust_proj
-        ppp(6, 0) = Label9.Text
-        ppp(6, 1) = TextBox13.Text  '_Contact
-        ppp(7, 0) = Label11.Text
-        ppp(7, 1) = TextBox14.Text  '_fan_modelnr
-        ppp(8, 0) = Label12.Text
-        ppp(8, 1) = TextBox15.Text  '_Model
-        ppp(9, 0) = Label13.Text
-        ppp(9, 1) = TextBox16.Text  '_fan type
+        ppp(4, 0) = Label4.Text
+        ppp(4, 1) = TextBox08.Text  '_VTK_Fan_tag
+        ppp(5, 0) = Label5.Text & "  "
+        ppp(5, 1) = TextBox09.Text   '_no_Fans
+        ppp(6, 0) = Label7.Text
+        ppp(6, 1) = TextBox11.Text  '_Cust_ref
+        ppp(7, 0) = Label8.Text
+        ppp(7, 1) = TextBox12.Text  '_Cust_proj
+        ppp(8, 0) = Label9.Text
+        ppp(8, 1) = TextBox13.Text  '_Contact
+        ppp(9, 0) = Label11.Text
+        ppp(9, 1) = TextBox14.Text  '_fan_modelnr
+        ppp(10, 0) = Label12.Text
+        ppp(10, 1) = TextBox15.Text  '_Model
+        ppp(11, 0) = Label13.Text
+        ppp(11, 1) = TextBox16.Text  '_fan type
 
         '----------------------
-        ppp(10, 0) = Label26.Text
-        ppp(10, 1) = TextBox26.Text  'Orientation
-        ppp(11, 0) = Label27.Text
-        ppp(11, 1) = TextBox27.Text  'Orientation
+        ppp(12, 0) = Label26.Text
+        ppp(12, 1) = TextBox26.Text  'Orientation
+        ppp(13, 0) = Label27.Text
+        ppp(13, 1) = TextBox27.Text  'Orientation
         '---------- ATEX---------
-        ppp(12, 0) = Label21.Text
-        ppp(12, 1) = ComboBox1.SelectedItem.ToString
-        ppp(13, 0) = Label22.Text
-        ppp(13, 1) = ComboBox2.SelectedItem.ToString
-        ppp(14, 0) = Label23.Text
-        ppp(14, 1) = ComboBox3.SelectedItem.ToString
+        ppp(14, 0) = Label21.Text
+        ppp(14, 1) = ComboBox1.SelectedItem.ToString
+        ppp(15, 0) = Label22.Text
+        ppp(15, 1) = ComboBox2.SelectedItem.ToString
+        ppp(16, 0) = Label23.Text
+        ppp(16, 1) = ComboBox3.SelectedItem.ToString
 
         '---------------
-        ppp(15, 0) = Label25.Text
-        ppp(15, 1) = TextBox25.Text  'T_design
+        ppp(17, 0) = Label25.Text
+        ppp(17, 1) = TextBox25.Text  'T_design
 
         '---------------
-        ppp(16, 0) = Label55.Text
-        ppp(16, 1) = ComboBox14.SelectedItem.ToString 'Fan control method
-        ppp(17, 0) = Label42.Text
-        ppp(17, 1) = ComboBox12.SelectedItem.ToString 'material casing
-        ppp(18, 0) = Label47.Text
-        ppp(18, 1) = ComboBox13.SelectedItem.ToString 'Material shaft
-        ppp(19, 0) = Label54.Text
-        ppp(19, 1) = ComboBox11.SelectedItem.ToString 'Material impeller
+        ppp(18, 0) = Label55.Text
+        ppp(18, 1) = ComboBox14.SelectedItem.ToString 'Fan control method
+        ppp(19, 0) = Label42.Text
+        ppp(19, 1) = ComboBox12.SelectedItem.ToString 'material casing
+        ppp(20, 0) = Label47.Text
+        ppp(20, 1) = ComboBox13.SelectedItem.ToString 'Material shaft
+        ppp(21, 0) = Label54.Text
+        ppp(21, 1) = ComboBox11.SelectedItem.ToString 'Material impeller
 
         '---------------
-        ppp(20, 0) = Label57.Text
-        ppp(20, 1) = ComboBox16.SelectedItem.ToString 'Material Pedestal
-        ppp(21, 0) = Label56.Text
-        ppp(21, 1) = ComboBox16.SelectedItem.ToString 'material Hub
-        ppp(22, 0) = Label58.Text
-        ppp(22, 1) = TextBox35.Text                   'Shaft seal materials
-        ppp(23, 0) = Label59.Text
-        ppp(23, 1) = TextBox36.Text                   'Coupling
-        ppp(24, 0) = Label48.Text
-        ppp(24, 1) = TextBox37.Text                   'Temp measurement
-        ppp(25, 0) = Label40.Text
-        ppp(25, 1) = TextBox38.Text                   'Vibration sensors
-        ppp(26, 0) = Label52.Text
-        ppp(26, 1) = TextBox39.Text                   'Guards
+        ppp(22, 0) = Label57.Text
+        ppp(22, 1) = ComboBox16.SelectedItem.ToString 'Material Pedestal
+        ppp(23, 0) = Label56.Text
+        ppp(23, 1) = ComboBox16.SelectedItem.ToString 'material Hub
+        ppp(24, 0) = Label58.Text
+        ppp(24, 1) = TextBox35.Text                   'Shaft seal materials
+        ppp(25, 0) = Label59.Text
+        ppp(25, 1) = TextBox36.Text                   'Coupling
+        ppp(26, 0) = Label48.Text
+        ppp(26, 1) = TextBox37.Text                   'Temp measurement
+        ppp(27, 0) = Label40.Text
+        ppp(27, 1) = TextBox38.Text                   'Vibration sensors
+        ppp(28, 0) = Label52.Text
+        ppp(28, 1) = TextBox39.Text                   'Guards
         '--------------- comments -----
-        ppp(27, 0) = "_Comments"
-        ppp(27, 1) = TextBox41.Text                   'Comments
-        ppp(28, 0) = "_Comments2"
-        ppp(28, 1) = TextBox42.Text                   'Comments2
+        ppp(29, 0) = "_Comments"
+        ppp(29, 1) = TextBox41.Text                   'Comments
+        ppp(30, 0) = "_Comments2"
+        ppp(30, 1) = TextBox42.Text                   'Comments2
 
-        For i = 0 To 29
+        For i = 0 To 31
             TextBox40.Text &= ppp(i, 0) & vbTab & ppp(i, 1) & vbCrLf
         Next
     End Sub
@@ -769,4 +786,10 @@ Public Class Form1
         End If
     End Sub
 
+    Private Sub ComboBox18_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox18.SelectedIndexChanged
+        Dim words() As String = bestemming(ComboBox18.SelectedIndex).Split(CType(";", Char()))
+        TextBox43.Text = words(0)
+        TextBox44.Text = words(1)
+        TextBox45.Text = words(2)
+    End Sub
 End Class

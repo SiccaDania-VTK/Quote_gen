@@ -643,6 +643,8 @@ Partial Class Form1
         Me.TextBox04 = New System.Windows.Forms.TextBox()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.GroupBox79 = New System.Windows.Forms.GroupBox()
+        Me.Label62 = New System.Windows.Forms.Label()
         Me.TabPage9.SuspendLayout
         Me.TabPage5.SuspendLayout
         Me.GroupBox74.SuspendLayout
@@ -741,6 +743,7 @@ Partial Class Form1
         Me.GroupBox69.SuspendLayout
         Me.GroupBox16.SuspendLayout
         Me.TabPage10.SuspendLayout
+        Me.GroupBox79.SuspendLayout
         Me.SuspendLayout
         '
         'TabPage9
@@ -7713,14 +7716,10 @@ Partial Class Form1
         '
         'TabPage10
         '
-        Me.TabPage10.Controls.Add(Me.ComboBox18)
-        Me.TabPage10.Controls.Add(Me.TextBox45)
-        Me.TabPage10.Controls.Add(Me.TextBox44)
-        Me.TabPage10.Controls.Add(Me.TextBox43)
+        Me.TabPage10.Controls.Add(Me.GroupBox79)
         Me.TabPage10.Controls.Add(Me.Button8)
         Me.TabPage10.Controls.Add(Me.TextBox40)
         Me.TabPage10.Controls.Add(Me.Button7)
-        Me.TabPage10.Controls.Add(Me.Button6)
         Me.TabPage10.Controls.Add(Me.TextBox06)
         Me.TabPage10.Controls.Add(Me.Button4)
         Me.TabPage10.Controls.Add(Me.TextBox04)
@@ -7736,14 +7735,14 @@ Partial Class Form1
         '
         Me.ComboBox18.BackColor = System.Drawing.Color.Yellow
         Me.ComboBox18.FormattingEnabled = True
-        Me.ComboBox18.Location = New System.Drawing.Point(793, 256)
+        Me.ComboBox18.Location = New System.Drawing.Point(86, 19)
         Me.ComboBox18.Name = "ComboBox18"
-        Me.ComboBox18.Size = New System.Drawing.Size(180, 21)
+        Me.ComboBox18.Size = New System.Drawing.Size(181, 21)
         Me.ComboBox18.TabIndex = 50
         '
         'TextBox45
         '
-        Me.TextBox45.Location = New System.Drawing.Point(793, 360)
+        Me.TextBox45.Location = New System.Drawing.Point(6, 98)
         Me.TextBox45.Name = "TextBox45"
         Me.TextBox45.Size = New System.Drawing.Size(261, 20)
         Me.TextBox45.TabIndex = 49
@@ -7751,7 +7750,7 @@ Partial Class Form1
         '
         'TextBox44
         '
-        Me.TextBox44.Location = New System.Drawing.Point(793, 334)
+        Me.TextBox44.Location = New System.Drawing.Point(6, 72)
         Me.TextBox44.Name = "TextBox44"
         Me.TextBox44.Size = New System.Drawing.Size(261, 20)
         Me.TextBox44.TabIndex = 48
@@ -7759,7 +7758,7 @@ Partial Class Form1
         '
         'TextBox43
         '
-        Me.TextBox43.Location = New System.Drawing.Point(793, 308)
+        Me.TextBox43.Location = New System.Drawing.Point(6, 46)
         Me.TextBox43.Name = "TextBox43"
         Me.TextBox43.Size = New System.Drawing.Size(261, 20)
         Me.TextBox43.TabIndex = 47
@@ -7794,7 +7793,7 @@ Partial Class Form1
         '
         'Button6
         '
-        Me.Button6.Location = New System.Drawing.Point(793, 208)
+        Me.Button6.Location = New System.Drawing.Point(6, 124)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(261, 42)
         Me.Button6.TabIndex = 43
@@ -7835,6 +7834,31 @@ Partial Class Form1
         'Timer1
         '
         Me.Timer1.Interval = 2000
+        '
+        'GroupBox79
+        '
+        Me.GroupBox79.Controls.Add(Me.Label62)
+        Me.GroupBox79.Controls.Add(Me.TextBox44)
+        Me.GroupBox79.Controls.Add(Me.ComboBox18)
+        Me.GroupBox79.Controls.Add(Me.Button6)
+        Me.GroupBox79.Controls.Add(Me.TextBox45)
+        Me.GroupBox79.Controls.Add(Me.TextBox43)
+        Me.GroupBox79.Location = New System.Drawing.Point(811, 133)
+        Me.GroupBox79.Name = "GroupBox79"
+        Me.GroupBox79.Size = New System.Drawing.Size(285, 178)
+        Me.GroupBox79.TabIndex = 51
+        Me.GroupBox79.TabStop = False
+        Me.GroupBox79.Text = "Transfer data to excel sheet"
+        '
+        'Label62
+        '
+        Me.Label62.AutoSize = True
+        Me.Label62.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label62.Location = New System.Drawing.Point(7, 20)
+        Me.Label62.Name = "Label62"
+        Me.Label62.Size = New System.Drawing.Size(60, 15)
+        Me.Label62.TabIndex = 51
+        Me.Label62.Text = "Select file"
         '
         'Form1
         '
@@ -8026,6 +8050,8 @@ Partial Class Form1
         Me.GroupBox16.PerformLayout
         Me.TabPage10.ResumeLayout(False)
         Me.TabPage10.PerformLayout
+        Me.GroupBox79.ResumeLayout(False)
+        Me.GroupBox79.PerformLayout
         Me.ResumeLayout(False)
 
     End Sub
@@ -8649,4 +8675,6 @@ Partial Class Form1
     Friend WithEvents CheckBox384 As CheckBox
     Friend WithEvents CheckBox382 As CheckBox
     Friend WithEvents ComboBox18 As ComboBox
+    Friend WithEvents GroupBox79 As GroupBox
+    Friend WithEvents Label62 As Label
 End Class

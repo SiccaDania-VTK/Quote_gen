@@ -270,13 +270,13 @@ Public Class Form1
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         If TextBox01.Text.Trim.Length > 0 And TextBox07.Text.Trim.Length > 0 Then
-            Save_tofile()
+            Save_tofile_vtkq()
         Else
             MessageBox.Show("Complete Quote number and Customer tag" & vbCrLf & "Then the file can be saved")
         End If
     End Sub
     'Save control settings and case_x_conditions to file
-    Private Sub Save_tofile()
+    Private Sub Save_tofile_vtkq()
         Dim temp_string, user As String
         user = Trim(Environment.UserName)         'User name on the screen
         Dim filename As String = "Quote_select_" & TextBox01.Text & "_" & TextBox07.Text & DateTime.Now.ToString("_yyyy_MM_dd_") & user & ".vtkq"
@@ -342,7 +342,7 @@ Public Class Form1
     'Split the file string into 5 separate strings
     'Each string represents a control type (combobox, checkbox,..)
     'Then split up the secton string into part to read into the parameters
-    Private Sub Read_file()
+    Private Sub Read_file_vtkq()
 
         Dim control_words(), words() As String
         Dim i As Integer
@@ -423,7 +423,7 @@ Public Class Form1
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        Read_file()
+        Read_file_vtkq()
         ' MessageBox.Show("oo")
     End Sub
 
@@ -634,6 +634,7 @@ Public Class Form1
 
         filenaam = TextBox43.Text & TextBox44.Text
         sheetname = TextBox45.Text
+
         If IO.File.Exists(filenaam) Then
             '============ Get the selected options ==============
             temp = TextBox04.Text.Split(New String() {Environment.NewLine}, StringSplitOptions.None)
@@ -788,8 +789,8 @@ Public Class Form1
 
     Private Sub ComboBox18_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox18.SelectedIndexChanged
         Dim words() As String = bestemming(ComboBox18.SelectedIndex).Split(CType(";", Char()))
-        TextBox43.Text = words(0)
-        TextBox44.Text = words(1)
-        TextBox45.Text = words(2)
+        TextBox43.Text = words(1)
+        TextBox44.Text = words(2)
+        TextBox45.Text = words(3)
     End Sub
 End Class

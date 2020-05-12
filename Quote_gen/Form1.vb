@@ -154,6 +154,10 @@ Public Class Form1
         Find_rep(Label40.Text, TextBox38.Text)  '_VS_Cust
         Find_rep(Label52.Text, TextBox39.Text)  '_GU_Cust
 
+        Find_rep(Label63.Text, TextBox46.Text)  '_EM_Power
+        Find_rep(Label64.Text, TextBox47.Text)  '_EM_Speed
+        Find_rep(Label65.Text, TextBox48.Text)  '_EM_SVPHF
+
         '---------- General------------------
         Find_rep(Label55.Text, ComboBox14.Text)     '_Capacity_Control
         Find_rep(Label54.Text, ComboBox11.Text)     '_Mat_impellar changed 12/5/2020
@@ -606,7 +610,7 @@ Public Class Form1
         ComboBox5.SelectedIndex = 2     'Temp
         ComboBox6.SelectedIndex = 1     'group
 
-        ComboBox11.SelectedIndex = 6     'Steel impeller (hsla)
+        ComboBox11.SelectedIndex = 2     'Carbon Steel impeller 
         ComboBox12.SelectedIndex = 2     'Steel casing
         ComboBox13.SelectedIndex = 2     'Steel shaft
         ComboBox14.SelectedIndex = 4     'Flow control
@@ -761,7 +765,14 @@ Public Class Form1
         ppp(30, 0) = "_Comments2"
         ppp(30, 1) = TextBox42.Text                   'Comments2
 
-        For i = 0 To 31
+        ppp(31, 0) = Label63.Text
+        ppp(31, 1) = TextBox46.Text                   'Electric motor _EM_speed
+        ppp(32, 0) = Label64.Text
+        ppp(32, 1) = TextBox47.Text                   'Electric motor _EM_power
+        ppp(33, 0) = Label65.Text
+        ppp(33, 1) = TextBox48.Text                   'Electric motor _EM_SVPHF
+
+        For i = 0 To ppp.Length
             TextBox40.Text &= ppp(i, 0) & vbTab & ppp(i, 1) & vbCrLf
         Next
     End Sub

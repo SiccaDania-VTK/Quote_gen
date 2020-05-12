@@ -156,9 +156,10 @@ Public Class Form1
 
         '---------- General------------------
         Find_rep(Label55.Text, ComboBox14.Text)     '_Capacity_Control
-        'Find_rep(Label40.Text, ComboBox11.Text)     '_Mat_impellar
+        Find_rep(Label54.Text, ComboBox11.Text)     '_Mat_impellar changed 12/5/2020
         Find_rep(Label42.Text, ComboBox12.Text)     '_Mat_casing
         Find_rep(Label47.Text, ComboBox13.Text)     '_mat_shaft
+        Find_rep(Label56.Text, ComboBox16.Text)     '_mat_hub  added 12/5/2020
 
         Find_rep("_Comments", TextBox41.Text)
         Find_rep("_Comments2", TextBox42.Text)

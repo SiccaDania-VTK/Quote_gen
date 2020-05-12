@@ -772,7 +772,7 @@ Public Class Form1
         ppp(33, 0) = Label65.Text
         ppp(33, 1) = TextBox48.Text                   'Electric motor _EM_SVPHF
 
-        For i = 0 To ppp.Length - 1
+        For i = 0 To ppp.GetLength(0) - 1
             TextBox40.Text &= ppp(i, 0) & vbTab & ppp(i, 1) & vbCrLf
         Next
     End Sub

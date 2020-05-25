@@ -368,6 +368,7 @@ Partial Class Form1
         Me.GroupBox27 = New System.Windows.Forms.GroupBox()
         Me.CheckBox153 = New System.Windows.Forms.CheckBox()
         Me.GroupBox26 = New System.Windows.Forms.GroupBox()
+        Me.CheckBox385 = New System.Windows.Forms.CheckBox()
         Me.CheckBox378 = New System.Windows.Forms.CheckBox()
         Me.CheckBox279 = New System.Windows.Forms.CheckBox()
         Me.CheckBox277 = New System.Windows.Forms.CheckBox()
@@ -403,7 +404,6 @@ Partial Class Form1
         Me.ListBox3 = New System.Windows.Forms.ListBox()
         Me.ListBox2 = New System.Windows.Forms.ListBox()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
-        Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
         Me.GroupBox49 = New System.Windows.Forms.GroupBox()
         Me.ComboBox15 = New System.Windows.Forms.ComboBox()
         Me.TextBox01 = New System.Windows.Forms.TextBox()
@@ -652,7 +652,8 @@ Partial Class Form1
         Me.TextBox04 = New System.Windows.Forms.TextBox()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.CheckBox385 = New System.Windows.Forms.CheckBox()
+        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
         Me.TabPage9.SuspendLayout
         Me.TabPage5.SuspendLayout
         Me.GroupBox74.SuspendLayout
@@ -5106,6 +5107,18 @@ Partial Class Form1
         Me.GroupBox26.TabStop = False
         Me.GroupBox26.Text = "General"
         '
+        'CheckBox385
+        '
+        Me.CheckBox385.AutoSize = True
+        Me.CheckBox385.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox385.Location = New System.Drawing.Point(24, 229)
+        Me.CheckBox385.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.CheckBox385.Name = "CheckBox385"
+        Me.CheckBox385.Size = New System.Drawing.Size(291, 29)
+        Me.CheckBox385.TabIndex = 82
+        Me.CheckBox385.Text = "F262, Std API 560 deviations"
+        Me.CheckBox385.UseVisualStyleBackColor = True
+        '
         'CheckBox378
         '
         Me.CheckBox378.AutoSize = True
@@ -5337,7 +5350,6 @@ Partial Class Form1
         Me.TabPage1.Controls.Add(Me.ListBox3)
         Me.TabPage1.Controls.Add(Me.ListBox2)
         Me.TabPage1.Controls.Add(Me.ListBox1)
-        Me.TabPage1.Controls.Add(Me.ProgressBar1)
         Me.TabPage1.Controls.Add(Me.GroupBox49)
         Me.TabPage1.Controls.Add(Me.GroupBox25)
         Me.TabPage1.Controls.Add(Me.GroupBox11)
@@ -5550,15 +5562,6 @@ Partial Class Form1
         Me.ListBox1.Name = "ListBox1"
         Me.ListBox1.Size = New System.Drawing.Size(228, 184)
         Me.ListBox1.TabIndex = 43
-        '
-        'ProgressBar1
-        '
-        Me.ProgressBar1.Location = New System.Drawing.Point(1392, 1114)
-        Me.ProgressBar1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.ProgressBar1.Name = "ProgressBar1"
-        Me.ProgressBar1.Size = New System.Drawing.Size(552, 35)
-        Me.ProgressBar1.TabIndex = 41
-        Me.ProgressBar1.Visible = False
         '
         'GroupBox49
         '
@@ -6101,7 +6104,7 @@ Partial Class Form1
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(288, 54)
         Me.Button3.TabIndex = 32
-        Me.Button3.Text = "Retrieve Input"
+        Me.Button3.Text = "Retrieve Input VTK5"
         Me.Button3.UseVisualStyleBackColor = False
         '
         'Button2
@@ -6112,7 +6115,7 @@ Partial Class Form1
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(316, 54)
         Me.Button2.TabIndex = 31
-        Me.Button2.Text = "Save Input "
+        Me.Button2.Text = "Save Input VTK5"
         Me.Button2.UseVisualStyleBackColor = False
         '
         'Button1
@@ -8498,6 +8501,8 @@ Partial Class Form1
         '
         'TabPage10
         '
+        Me.TabPage10.Controls.Add(Me.RadioButton2)
+        Me.TabPage10.Controls.Add(Me.RadioButton1)
         Me.TabPage10.Controls.Add(Me.GroupBox79)
         Me.TabPage10.Controls.Add(Me.Button8)
         Me.TabPage10.Controls.Add(Me.TextBox40)
@@ -8657,17 +8662,29 @@ Partial Class Form1
         '
         Me.Timer1.Interval = 2000
         '
-        'CheckBox385
+        'RadioButton1
         '
-        Me.CheckBox385.AutoSize = True
-        Me.CheckBox385.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox385.Location = New System.Drawing.Point(24, 229)
-        Me.CheckBox385.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.CheckBox385.Name = "CheckBox385"
-        Me.CheckBox385.Size = New System.Drawing.Size(291, 29)
-        Me.CheckBox385.TabIndex = 82
-        Me.CheckBox385.Text = "F262, Std API 560 deviations"
-        Me.CheckBox385.UseVisualStyleBackColor = True
+        Me.RadioButton1.AutoSize = True
+        Me.RadioButton1.Location = New System.Drawing.Point(1231, 536)
+        Me.RadioButton1.Name = "RadioButton1"
+        Me.RadioButton1.Size = New System.Drawing.Size(133, 24)
+        Me.RadioButton1.TabIndex = 52
+        Me.RadioButton1.TabStop = True
+        Me.RadioButton1.Text = "RadioButton1"
+        Me.RadioButton1.UseVisualStyleBackColor = True
+        Me.RadioButton1.Visible = False
+        '
+        'RadioButton2
+        '
+        Me.RadioButton2.AutoSize = True
+        Me.RadioButton2.Location = New System.Drawing.Point(1231, 566)
+        Me.RadioButton2.Name = "RadioButton2"
+        Me.RadioButton2.Size = New System.Drawing.Size(133, 24)
+        Me.RadioButton2.TabIndex = 53
+        Me.RadioButton2.TabStop = True
+        Me.RadioButton2.Text = "RadioButton2"
+        Me.RadioButton2.UseVisualStyleBackColor = True
+        Me.RadioButton2.Visible = False
         '
         'Form1
         '
@@ -8678,7 +8695,7 @@ Partial Class Form1
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "Form1"
-        Me.Text = "Quotation Text Generator MK VII b"
+        Me.Text = "Quotation Text Generator MK VII c"
         Me.TabPage9.ResumeLayout(False)
         Me.TabPage9.PerformLayout
         Me.TabPage5.ResumeLayout(False)
@@ -9136,7 +9153,6 @@ Partial Class Form1
     Friend WithEvents CheckBox1 As CheckBox
     Friend WithEvents GroupBox48 As GroupBox
     Friend WithEvents GroupBox49 As GroupBox
-    Friend WithEvents ProgressBar1 As ProgressBar
     Friend WithEvents GroupBox55 As GroupBox
     Friend WithEvents Label44 As Label
     Friend WithEvents Label41 As Label
@@ -9495,4 +9511,6 @@ Partial Class Form1
     Friend WithEvents TextBox47 As TextBox
     Friend WithEvents Label64 As Label
     Friend WithEvents CheckBox385 As CheckBox
+    Friend WithEvents RadioButton2 As RadioButton
+    Friend WithEvents RadioButton1 As RadioButton
 End Class

@@ -5,10 +5,11 @@ Imports System.Globalization
 Imports System.Threading
 Imports Word = Microsoft.Office.Interop.Word
 Imports System.Management
-'Imports Microsoft.Office.Interop.Word
 Imports Microsoft.Office.Interop
 Imports Microsoft.Office.Interop.Word
-
+'
+'Publish directory = \\DCF1\data2$\Engineering\VBasic\VTK_fan_select\
+'
 Public Class Form1
     'Keep the application object and the workbook object global, so you can  
     'retrieve the data in Button2_Click that was set in Button6_Click.
@@ -16,9 +17,9 @@ Public Class Form1
     Dim objBook As Excel._Workbook
 
     '----------- directory's-----------
-    Dim dirpath_Txt_Block As String = "N:\Verkoop\Tekst\Quote_text_block\"
-    Dim dirpath_Backup As String = "N:\Verkoop\Aanbiedingen\Quote_gen_backup\"
-    Dim dirpath_Home_GP As String = "C:\Temp\"
+    Public dirpath_Txt_Block As String = "N:\Verkoop\Tekst\Quote_text_block\"
+    Public dirpath_Backup As String = "N:\Verkoop\Aanbiedingen\Quote_gen_backup\"
+    Public dirpath_Home_GP As String = "C:\Temp\"
 
     Public Shared Flight_dia() As String =   'tbv screw diameter selectie
       {"280", "330", "400", "500", "630", "800", "1000", "1200", "1400"}
@@ -74,7 +75,6 @@ Public Class Form1
         oWord = CType(CreateObject("Word.Application"), Word.Application)
         oWord.Visible = False
         oWord.ScreenUpdating = False
-        ProgressBar1.Visible = True
 
         If File.Exists(style1) Then
             oDoc = oWord.Documents.Add(style1.Clone)
@@ -93,8 +93,7 @@ Public Class Form1
         all_check = all_check.OrderBy(Function(x) x.Text).ToList()  'Alphabetical order
 
         For i = 0 To all_check.Count - 1
-            If ProgressBar1.Value > 99 Then ProgressBar1.Value = 1
-            ProgressBar1.Value += 1
+
             Dim grbx As System.Windows.Forms.CheckBox = CType(all_check(i), System.Windows.Forms.CheckBox)
             If grbx.Checked Then
                 block_name = grbx.Text
@@ -190,7 +189,7 @@ Public Class Form1
         Else
             ufilename = dirpath_Home_GP & ufilename
         End If
-        ProgressBar1.Visible = False
+
         oWord.Visible = True
         oWord.ScreenUpdating = True
         Button1.Text = "Generate Word document"
@@ -275,54 +274,67 @@ Public Class Form1
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         If TextBox01.Text.Trim.Length > 0 And TextBox07.Text.Trim.Length > 0 Then
-            Save_tofile_vtkq()
+            Save_tofile_vtk5()
         Else
             MessageBox.Show("Complete Quote number and Customer tag" & vbCrLf & "Then the file can be saved")
         End If
     End Sub
     'Save control settings and case_x_conditions to file
-    Private Sub Save_tofile_vtkq()
+    Private Sub Save_tofile_vtk5()
         Dim temp_string, user As String
         user = Trim(Environment.UserName)         'User name on the screen
-        Dim filename As String = "Quote_select_" & TextBox01.Text & "_" & TextBox07.Text & DateTime.Now.ToString("_yyyy_MM_dd_") & user & ".vtkq"
-        Dim all_num, all_combo, all_check, all_text As New List(Of Control)
+        Dim filename As String = "Quote_select_" & TextBox01.Text & "_" & TextBox07.Text & DateTime.Now.ToString("_yyyy_MM_dd_") & user & ".vtk5"
         Dim i As Integer
+        Dim all_num, all_combo, all_check, all_text, all_radio As New List(Of Control)
 
-        If String.IsNullOrEmpty(TextBox02.Text) Then
-            TextBox02.Text = "name"
-        End If
+        temp_string = ""    'Start with empty string
 
-        temp_string = TextBox01.Text & ";" & TextBox02.Text & ";"
-        temp_string &= vbCrLf & "BREAK" & vbCrLf & ";"
-
-        '-------- find all combobox controls ------
-        FindControlRecursive(all_combo, Me, GetType(System.Windows.Forms.ComboBox))      'Find the control
-        all_combo = all_combo.OrderBy(Function(x) x.Name).ToList()   'Alphabetical order
-        For i = 0 To all_combo.Count - 1
-            Dim grbx As System.Windows.Forms.ComboBox = CType(all_combo(i), System.Windows.Forms.ComboBox)
-            temp_string &= grbx.SelectedItem.ToString & ";"
+        '-------- find all numeric controls -----------------
+        FindControlRecursive(all_num, Me, GetType(System.Windows.Forms.NumericUpDown))   'Find the control
+        all_num = all_num.OrderBy(Function(x) x.Name).ToList()      'Alphabetical order
+        For i = 0 To all_num.Count - 1
+            Dim numbt As NumericUpDown = CType(all_num(i), NumericUpDown)
+            temp_string &= numbt.Name & ";" & numbt.Value.ToString & ";"
         Next
         temp_string &= vbCrLf & "BREAK" & vbCrLf & ";"
 
+        '-------- find all combobox controls and save
+        FindControlRecursive(all_combo, Me, GetType(System.Windows.Forms.ComboBox))      'Find the control
+        all_combo = all_combo.OrderBy(Function(x) x.Name).ToList()      'Alphabetical order
+        For i = 0 To all_combo.Count - 1
+            Dim combt As ComboBox = CType(all_combo(i), ComboBox)
+            temp_string &= combt.Name & ";" & combt.SelectedItem.ToString & ";"
+        Next
+        temp_string &= vbCrLf & "BREAK" & vbCrLf & ";"
 
         '-------- find all checkbox controls -------
         FindControlRecursive(all_check, Me, GetType(System.Windows.Forms.CheckBox))      'Find the control
-        all_check = all_check.OrderBy(Function(x) x.Name).ToList()  'Alphabetical order
+        all_check = all_check.OrderBy(Function(x) x.Name).ToList()      'Alphabetical order
         For i = 0 To all_check.Count - 1
-            Dim grbx As System.Windows.Forms.CheckBox = CType(all_check(i), System.Windows.Forms.CheckBox)
-            temp_string &= grbx.Checked.ToString & ";"
+            Dim chbox As System.Windows.Forms.CheckBox = CType(all_check(i), System.Windows.Forms.CheckBox)
+            temp_string &= chbox.Name & ";" & chbox.Checked.ToString & ";"
+        Next
+        temp_string &= vbCrLf & "BREAK" & vbCrLf & ";"
+
+        '-------- find all radio controls and save
+        FindControlRecursive(all_radio, Me, GetType(System.Windows.Forms.RadioButton))   'Find the control
+        all_radio = all_radio.OrderBy(Function(x) x.Name).ToList()      'Alphabetical order
+        For i = 0 To all_radio.Count - 1
+            Dim radbt As RadioButton = CType(all_radio(i), RadioButton)
+            temp_string &= radbt.Name & ";" & radbt.Checked.ToString & ";"
         Next
         temp_string &= vbCrLf & "BREAK" & vbCrLf & ";"
 
         '-------- find all textbox controls ----------
         FindControlRecursive(all_text, Me, GetType(System.Windows.Forms.TextBox))      'Find the control
-        all_text = all_text.OrderBy(Function(x) x.Name).ToList()  'Alphabetical order
+        all_text = all_text.OrderBy(Function(x) x.Name).ToList()      'Alphabetical order
         For i = 0 To all_text.Count - 1
             Dim grbx As System.Windows.Forms.TextBox = CType(all_text(i), System.Windows.Forms.TextBox)
-            temp_string &= grbx.Text.ToString & ";"
+            temp_string &= grbx.Name & ";" & grbx.Text.ToString & ";"
         Next
         temp_string &= vbCrLf & "BREAK" & vbCrLf & ";"
 
+        '-------- now store to disk ---------
         Check_directories()  'Are the directories present
         If CInt(temp_string.Length.ToString) > 5 Then      'String may be empty
             If Directory.Exists(dirpath_Backup) Then
@@ -343,108 +355,9 @@ Public Class Form1
         End Try
     End Sub
 
-    'Retrieve control settings from file
-    'Split the file string into 5 separate strings
-    'Each string represents a control type (combobox, checkbox,..)
-    'Then split up the secton string into part to read into the parameters
-    Private Sub Read_file_vtkq()
-
-        Dim control_words(), words() As String
-        Dim i As Integer
-        Dim k As Integer = 0
-        Dim all_num, all_combo, all_check, all_text As New List(Of Control)
-        Dim separators() As String = {";"}
-        Dim separators1() As String = {"BREAK"}
-
-        ProgressBar1.Visible = True
-        OpenFileDialog1.FileName = "Quote_select_*"
-
-        If Directory.Exists(dirpath_Backup) Then
-            OpenFileDialog1.InitialDirectory = dirpath_Backup  'used at VTK
-        Else
-            OpenFileDialog1.InitialDirectory = dirpath_Home_GP  'used at home
-        End If
-
-        OpenFileDialog1.Title = "Open a Text File"
-        OpenFileDialog1.Filter = "VTKQ Files|*.vtkq|VTKQ file|*.vtkq"
-        If OpenFileDialog1.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
-
-            Dim readText As String = File.ReadAllText(OpenFileDialog1.FileName, Encoding.ASCII)
-            control_words = readText.Split(separators1, StringSplitOptions.None) 'Split the read file content
-
-            ProgressBar1.Value = 10
-
-            '----- project data -----
-            words = control_words(0).Split(separators, StringSplitOptions.None) 'Split the read file content
-            TextBox01.Text = words(0)                  'Project number
-            TextBox02.Text = words(1)                  'Item no
-            ProgressBar1.Value = 20
-
-            '---------- terugzetten combobox controls -----------------
-            FindControlRecursive(all_combo, Me, GetType(ComboBox))
-            all_combo = all_combo.OrderBy(Function(x) x.Name).ToList()          'Alphabetical order
-            words = control_words(1).Split(separators, StringSplitOptions.None) 'Split the read file content
-            For i = 0 To all_combo.Count - 1
-                Dim grbx As ComboBox = CType(all_combo(i), ComboBox)
-                '--- dit deel voorkomt problemen bij het uitbreiden van het aantal checkboxes--
-                If (i < words.Length - 1) Then
-                    grbx.SelectedItem = words(i + 1)
-                Else
-                    MessageBox.Show("Warning last combobox not found in file")
-                End If
-            Next
-            ProgressBar1.Value = 30
-
-            '---------- terugzetten checkbox controls -----------------
-            FindControlRecursive(all_check, Me, GetType(System.Windows.Forms.CheckBox))      'Find the control
-            all_check = all_check.OrderBy(Function(x) x.Name).ToList()                  'Alphabetical order
-            words = control_words(2).Split(separators, StringSplitOptions.None) 'Split the read file content
-            For i = 0 To all_check.Count - 1
-                Dim grbx As System.Windows.Forms.CheckBox = CType(all_check(i), System.Windows.Forms.CheckBox)
-                '--- dit deel voorkomt problemen bij het uitbreiden van het aantal checkboxes--
-                If (i < words.Length - 1) Then
-                    Boolean.TryParse(words(i + 1), grbx.Checked)
-                Else
-                    MessageBox.Show("Warning last checkbox not found in file")
-                End If
-            Next
-            ProgressBar1.Value = 50
-
-            '---------- terugzetten textbox controls -----------------
-            FindControlRecursive(all_text, Me, GetType(System.Windows.Forms.TextBox))      'Find the control
-            all_text = all_text.OrderBy(Function(x) x.Name).ToList()                  'Alphabetical order
-            words = control_words(3).Split(separators, StringSplitOptions.None) 'Split the read file content
-            For i = 0 To all_text.Count - 1
-                Dim grbx As System.Windows.Forms.TextBox = CType(all_text(i), System.Windows.Forms.TextBox)
-                '--- dit deel voorkomt problemen bij het uitbreiden van het aantal checkboxes--
-                If (i < words.Length - 1) Then
-                    grbx.Text = words(i + 1)
-                Else
-                    MessageBox.Show("Warning last textbox not found in file")
-                End If
-            Next
-        End If
-        ProgressBar1.Visible = False
-    End Sub
-
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        Read_file_vtkq()
-        ' MessageBox.Show("oo")
+        Read_file_vtk5()    'See Module 1
     End Sub
-
-    '----------- Find all controls on form1------
-    'Nota Bene, sequence of found control may be differen, List sort is required
-    Public Shared Function FindControlRecursive(ByVal list As List(Of Control), ByVal parent As Control, ByVal ctrlType As System.Type) As List(Of Control)
-        If parent Is Nothing Then Return list
-
-        If parent.GetType Is ctrlType Then
-            list.Add(parent)
-        End If
-        For Each child As Control In parent.Controls
-            FindControlRecursive(list, child, ctrlType)
-        Next
-        Return list
-    End Function
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click, Button4.Enter, TabPage10.Enter
         Dim i As Integer

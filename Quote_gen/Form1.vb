@@ -44,7 +44,7 @@ Public Class Form1
    "P355NH carbon steel;                  EN10028-3;              P355NH;                         1.0565;     Plate",
    "S235JR carbon steel;                  EN10025 UNS;            S235JR;                         1.0038;     Struc-Steel",
    "S355J2 carbon steel;                  EN10025-2;              S355J2;                         1.0570;     Shaft-mat",
-   "Stainless steel;                      --;                     --;                             --;       Plate",
+   "Stainless steel;                      --;                     --;                             --;         Plate",
    "SS 304L stainless steel;              EN10088-2;              X2CrNi19-11, S30403;            1.4306;     Plate",
    "SS 316L stainless steel;              EN10088-2;              X2CrNiMo17-12-2, S31603;        1.4404;     Plate",
    "SS 316TI stainless steel;             EN10088-2;              X6CrNiMoTi17-12-2, S31635;      1.4571;     Plate",
@@ -52,10 +52,10 @@ Public Class Form1
    "Titanium-ür 2;                        ASTM UNS niN;           B265/348-Gr2;                   3.7035;     Plate"}
 
     Public Shared bestemming() As String =
-  {"Costsheet fan;V:\Sales\Calculaties\Ventilatoren\Prijs calculatie\;Price calc Fans.xlsm;IQG-Scope check",
-   "EIS fans;V:\Sales\Calculaties\Ventilatoren\Prijs calculatie\;Price calc Fans.xlsm;IQG-Scope check",
-   "API 673 Fans;V:\Sales\Calculaties\Ventilatoren\Prijs calculatie\;Price calc Fans.xlsm;IQG-Scope check",
-   "API 570 Fans;V:\Sales\Calculaties\Ventilatoren\Prijs calculatie\;Price calc Fans.xlsm;IQG-Scope check"}
+  {"Costsheet fan;V:\Sales\Calculations\Ventilatoren\Prijs calculatie\;Price calc Fans.xlsm;IQG",
+   "EIS fans;V:\Sales\Calculations\Ventilatoren\Prijs calculatie\;EIS-Fans.xlsm;IQG",
+   "API 673 Fans;V:\Sales\Calculations\Ventilatoren\Prijs calculatie\;API-673-Fans.xlsm;IQG",
+   "API 560 Fans;V:\Sales\Calculations\Ventilatoren\Prijs calculatie\;API-560-Fans.xlsm;IQG"}
 
     Public oWord As Word.Application
     Private stringSplitOptons As Object
@@ -66,20 +66,20 @@ Public Class Form1
         Dim oPara3 As Word.Paragraph
         Dim ufilename As String
         Dim pathname As String
-        Dim style1, block_name As String
+        Dim sstyle1, block_name As String
 
         '----------- Select Word style -----------------
-        style1 = "N:\VERKOOP\Tekst\Quote_text_block\VTK_Fan_Quote.dotm"
+        sstyle1 = "N:\VERKOOP\Tekst\Quote_text_block\VTK_Fan_Quote.dotm"
 
         'Start Word and open the document template. 
         oWord = CType(CreateObject("Word.Application"), Word.Application)
         oWord.Visible = False
         oWord.ScreenUpdating = False
 
-        If File.Exists(style1) Then
-            oDoc = oWord.Documents.Add(style1.Clone)
+        If File.Exists(sstyle1) Then
+            oDoc = oWord.Documents.Add(sstyle1.Clone)
         Else
-            MessageBox.Show("Dam.. Can not find " & style1)
+            MessageBox.Show("Damm.. Can not find " & sstyle1)
             oDoc = oWord.Documents.Add
         End If
 
@@ -97,8 +97,8 @@ Public Class Form1
             Dim grbx As System.Windows.Forms.CheckBox = CType(all_check(i), System.Windows.Forms.CheckBox)
             If grbx.Checked Then
                 block_name = grbx.Text
-                If block_name.Length < 4 Then block_name = "Empty"
-                block_name = grbx.Text.Substring(0, 4)
+                If block_name.Length <4 Then block_name="Empty"
+                                         block_name= grbx.Text.Substring(0, 4)
                 oPara3 = oDoc.Content.Paragraphs.Add()
                 pathname = dirpath_Txt_Block & ComboBox15.Text & "\" & block_name & ".docx"
                 Button1.Text = pathname.ToString
@@ -122,7 +122,11 @@ Public Class Form1
         Find_rep(Label3.Text, TextBox07.Text)
         Find_rep(Label4.Text, TextBox08.Text)
         Find_rep(Label5.Text, TextBox09.Text)
-        Find_rep(Label6.Text, TextBox02.Text)    'Cust name
+        Find_rep(Label6.Text, TextBox02.Text)       'Cust name
+        Find_rep(Label66.Text, TextBox49.Text)      'Cust adres
+        Find_rep(Label67.Text, TextBox50.Text)      'Cust Location
+        Find_rep(Label68.Text, TextBox51.Text)      'Country
+        Find_rep(Label69.Text, TextBox52.Text)      'Zip
 
         Find_rep(Label7.Text, TextBox11.Text)
         Find_rep(Label8.Text, TextBox12.Text)
@@ -268,6 +272,7 @@ Public Class Form1
         Combo_init_atex()
         Combo_init_dia()
 
+        Me.Size = New Size(1663, 776)
         TextBox01.Text = "Q" & Now.ToString("yy") & ".10"
         Timer1.Enabled = True
     End Sub
@@ -550,16 +555,17 @@ Public Class Form1
         Dim temp As String()
         Dim saRet(200, 1) As String 'Summary string
 
-        filenaam = TextBox43.Text & TextBox44.Text
-        sheetname = TextBox45.Text
+        filenaam = Trim(TextBox43.Text & TextBox44.Text)
+        sheetname = Trim(TextBox45.Text)
 
         If IO.File.Exists(filenaam) Then
             '============ Get the selected options ==============
             temp = TextBox04.Text.Split(New String() {Environment.NewLine}, StringSplitOptions.None)
 
-            xlApp = New Excel.Application
-            xlApp.DisplayAlerts = False
-            xlApp.Visible = True
+            xlApp = New Excel.Application With {
+                .DisplayAlerts = False,
+                .Visible = True
+            }
             xlWorkBooks = xlApp.Workbooks
             xlWorkBook = xlWorkBooks.Open(filenaam)
             xlworkSheets = xlWorkBook.Sheets
@@ -599,7 +605,7 @@ Public Class Form1
                 xlworkSheet = Nothing
             Next
         Else
-            MsgBox("Can not open file")
+            MsgBox("Can not open file " & vbCrLf & filenaam & vbCrLf & "Some fucker changed the name again")
         End If
     End Sub
     Private Sub Get_text_replacements(ByRef ppp(,) As String)

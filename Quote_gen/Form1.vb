@@ -13,8 +13,8 @@ Imports Microsoft.Office.Interop.Word
 Public Class Form1
     'Keep the application object and the workbook object global, so you can  
     'retrieve the data in Button2_Click that was set in Button6_Click.
-    Dim objApp As Excel.Application
-    Dim objBook As Excel._Workbook
+    Public objApp As Excel.Application
+    Public objBook As Excel._Workbook
 
     '----------- directory's-----------
     Public dirpath_Txt_Block As String = "N:\Verkoop\Tekst\Quote_text_block\"
@@ -58,7 +58,7 @@ Public Class Form1
    "API 560 Fans;V:\Sales\Calculations\Ventilatoren\Prijs calculatie\;API-560-Fans.xlsm;IQG"}
 
     Public oWord As Word.Application
-    Private stringSplitOptons As Object
+    Public stringSplitOptons As Object
     ' see https://support.microsoft.com/en-us/help/316383/how-to-automate-word-from-visual-basic--net-to-create-a-new-document
 
     Private Sub Generate_word_doc()

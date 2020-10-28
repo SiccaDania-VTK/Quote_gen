@@ -1,7 +1,7 @@
 ﻿Imports System.IO
 Imports System.Text
 
-Module Module1
+Module Disk_storage
     'Retrieve control settings from file
     'Split the file string into 5 separate strings
     'Each string represents a control type (combobox, checkbox,..)
@@ -9,7 +9,6 @@ Module Module1
     Public Sub Read_file_vtk5()
 
         Dim control_words(), words() As String
-        Dim k As Integer = 0
         Dim all_num, all_combo, all_check, all_text, all_radio As New List(Of Control)
         Dim separators() As String = {";"}
         Dim separators1() As String = {"BREAK"}

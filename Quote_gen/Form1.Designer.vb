@@ -214,6 +214,7 @@ Partial Class Form1
         Me.GroupBox48 = New System.Windows.Forms.GroupBox()
         Me.CheckBox121 = New System.Windows.Forms.CheckBox()
         Me.GroupBox45 = New System.Windows.Forms.GroupBox()
+        Me.CheckBox389 = New System.Windows.Forms.CheckBox()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.CheckBox5 = New System.Windows.Forms.CheckBox()
         Me.CheckBox8 = New System.Windows.Forms.CheckBox()
@@ -309,6 +310,7 @@ Partial Class Form1
         Me.CheckBox156 = New System.Windows.Forms.CheckBox()
         Me.Label54 = New System.Windows.Forms.Label()
         Me.GroupBox18 = New System.Windows.Forms.GroupBox()
+        Me.CheckBox388 = New System.Windows.Forms.CheckBox()
         Me.CheckBox278 = New System.Windows.Forms.CheckBox()
         Me.CheckBox270 = New System.Windows.Forms.CheckBox()
         Me.CheckBox18 = New System.Windows.Forms.CheckBox()
@@ -664,8 +666,9 @@ Partial Class Form1
         Me.TextBox04 = New System.Windows.Forms.TextBox()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.CheckBox388 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox389 = New System.Windows.Forms.CheckBox()
+        Me.Label70 = New System.Windows.Forms.Label()
+        Me.Label71 = New System.Windows.Forms.Label()
+        Me.Label72 = New System.Windows.Forms.Label()
         Me.TabPage9.SuspendLayout
         Me.TabPage5.SuspendLayout
         Me.GroupBox74.SuspendLayout
@@ -2974,6 +2977,17 @@ Partial Class Form1
         Me.GroupBox45.TabStop = False
         Me.GroupBox45.Text = "Surface treatment"
         '
+        'CheckBox389
+        '
+        Me.CheckBox389.AutoSize = True
+        Me.CheckBox389.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox389.Location = New System.Drawing.Point(10, 78)
+        Me.CheckBox389.Name = "CheckBox389"
+        Me.CheckBox389.Size = New System.Drawing.Size(183, 20)
+        Me.CheckBox389.TabIndex = 52
+        Me.CheckBox389.Text = "F239, Paint customer spec"
+        Me.CheckBox389.UseVisualStyleBackColor = True
+        '
         'CheckBox1
         '
         Me.CheckBox1.AutoSize = True
@@ -4044,6 +4058,17 @@ Partial Class Form1
         Me.GroupBox18.TabIndex = 70
         Me.GroupBox18.TabStop = False
         Me.GroupBox18.Text = "Arrangement"
+        '
+        'CheckBox388
+        '
+        Me.CheckBox388.AutoSize = True
+        Me.CheckBox388.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox388.Location = New System.Drawing.Point(9, 150)
+        Me.CheckBox388.Name = "CheckBox388"
+        Me.CheckBox388.Size = New System.Drawing.Size(237, 20)
+        Me.CheckBox388.TabIndex = 28
+        Me.CheckBox388.Text = "F007, Arr. 4 (Impeller on motor shaft)"
+        Me.CheckBox388.UseVisualStyleBackColor = True
         '
         'CheckBox278
         '
@@ -7971,6 +7996,9 @@ Partial Class Form1
         '
         'GroupBox79
         '
+        Me.GroupBox79.Controls.Add(Me.Label72)
+        Me.GroupBox79.Controls.Add(Me.Label71)
+        Me.GroupBox79.Controls.Add(Me.Label70)
         Me.GroupBox79.Controls.Add(Me.Label62)
         Me.GroupBox79.Controls.Add(Me.TextBox44)
         Me.GroupBox79.Controls.Add(Me.ComboBox18)
@@ -7979,7 +8007,7 @@ Partial Class Form1
         Me.GroupBox79.Controls.Add(Me.TextBox43)
         Me.GroupBox79.Location = New System.Drawing.Point(811, 133)
         Me.GroupBox79.Name = "GroupBox79"
-        Me.GroupBox79.Size = New System.Drawing.Size(285, 178)
+        Me.GroupBox79.Size = New System.Drawing.Size(351, 178)
         Me.GroupBox79.TabIndex = 51
         Me.GroupBox79.TabStop = False
         Me.GroupBox79.Text = "Transfer data to excel sheet"
@@ -7988,7 +8016,7 @@ Partial Class Form1
         '
         Me.Label62.AutoSize = True
         Me.Label62.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label62.Location = New System.Drawing.Point(7, 20)
+        Me.Label62.Location = New System.Drawing.Point(12, 21)
         Me.Label62.Name = "Label62"
         Me.Label62.Size = New System.Drawing.Size(60, 15)
         Me.Label62.TabIndex = 51
@@ -7996,43 +8024,43 @@ Partial Class Form1
         '
         'TextBox44
         '
-        Me.TextBox44.Location = New System.Drawing.Point(6, 72)
+        Me.TextBox44.Location = New System.Drawing.Point(95, 70)
         Me.TextBox44.Name = "TextBox44"
-        Me.TextBox44.Size = New System.Drawing.Size(261, 20)
+        Me.TextBox44.Size = New System.Drawing.Size(250, 20)
         Me.TextBox44.TabIndex = 48
-        Me.TextBox44.Text = "Price calc Fans.xlsm"
+        Me.TextBox44.Text = "Price calc Fans.xlsx"
         '
         'ComboBox18
         '
         Me.ComboBox18.BackColor = System.Drawing.Color.Yellow
         Me.ComboBox18.FormattingEnabled = True
-        Me.ComboBox18.Location = New System.Drawing.Point(86, 19)
+        Me.ComboBox18.Location = New System.Drawing.Point(95, 17)
         Me.ComboBox18.Name = "ComboBox18"
-        Me.ComboBox18.Size = New System.Drawing.Size(181, 21)
+        Me.ComboBox18.Size = New System.Drawing.Size(250, 21)
         Me.ComboBox18.TabIndex = 50
         '
         'Button6
         '
         Me.Button6.Location = New System.Drawing.Point(6, 124)
         Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(261, 42)
+        Me.Button6.Size = New System.Drawing.Size(339, 42)
         Me.Button6.TabIndex = 43
         Me.Button6.Text = "Generate Summary Excel document"
         Me.Button6.UseVisualStyleBackColor = True
         '
         'TextBox45
         '
-        Me.TextBox45.Location = New System.Drawing.Point(6, 98)
+        Me.TextBox45.Location = New System.Drawing.Point(95, 96)
         Me.TextBox45.Name = "TextBox45"
-        Me.TextBox45.Size = New System.Drawing.Size(261, 20)
+        Me.TextBox45.Size = New System.Drawing.Size(250, 20)
         Me.TextBox45.TabIndex = 49
         Me.TextBox45.Text = "IQG-Scope check"
         '
         'TextBox43
         '
-        Me.TextBox43.Location = New System.Drawing.Point(6, 46)
+        Me.TextBox43.Location = New System.Drawing.Point(95, 44)
         Me.TextBox43.Name = "TextBox43"
-        Me.TextBox43.Size = New System.Drawing.Size(261, 20)
+        Me.TextBox43.Size = New System.Drawing.Size(250, 20)
         Me.TextBox43.TabIndex = 47
         Me.TextBox43.Text = "V:\Sales\Calculations\Ventilatoren\Prijs calculatie\"
         '
@@ -8098,27 +8126,35 @@ Partial Class Form1
         '
         Me.Timer1.Interval = 2000
         '
-        'CheckBox388
+        'Label70
         '
-        Me.CheckBox388.AutoSize = True
-        Me.CheckBox388.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox388.Location = New System.Drawing.Point(9, 150)
-        Me.CheckBox388.Name = "CheckBox388"
-        Me.CheckBox388.Size = New System.Drawing.Size(237, 20)
-        Me.CheckBox388.TabIndex = 28
-        Me.CheckBox388.Text = "F007, Arr. 4 (Impeller on motor shaft)"
-        Me.CheckBox388.UseVisualStyleBackColor = True
+        Me.Label70.AutoSize = True
+        Me.Label70.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label70.Location = New System.Drawing.Point(12, 46)
+        Me.Label70.Name = "Label70"
+        Me.Label70.Size = New System.Drawing.Size(55, 15)
+        Me.Label70.TabIndex = 52
+        Me.Label70.Text = "Directory"
         '
-        'CheckBox389
+        'Label71
         '
-        Me.CheckBox389.AutoSize = True
-        Me.CheckBox389.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox389.Location = New System.Drawing.Point(10, 78)
-        Me.CheckBox389.Name = "CheckBox389"
-        Me.CheckBox389.Size = New System.Drawing.Size(183, 20)
-        Me.CheckBox389.TabIndex = 52
-        Me.CheckBox389.Text = "F239, Paint customer spec"
-        Me.CheckBox389.UseVisualStyleBackColor = True
+        Me.Label71.AutoSize = True
+        Me.Label71.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label71.Location = New System.Drawing.Point(12, 71)
+        Me.Label71.Name = "Label71"
+        Me.Label71.Size = New System.Drawing.Size(27, 15)
+        Me.Label71.TabIndex = 53
+        Me.Label71.Text = "File"
+        '
+        'Label72
+        '
+        Me.Label72.AutoSize = True
+        Me.Label72.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label72.Location = New System.Drawing.Point(12, 96)
+        Me.Label72.Name = "Label72"
+        Me.Label72.Size = New System.Drawing.Size(63, 15)
+        Me.Label72.TabIndex = 54
+        Me.Label72.Text = "Tab name"
         '
         'Form1
         '
@@ -8128,7 +8164,7 @@ Partial Class Form1
         Me.Controls.Add(Me.TabControl1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form1"
-        Me.Text = "Quotation Text Generator MK VII c"
+        Me.Text = "Quotation Text Generator MK VII d"
         Me.TabPage9.ResumeLayout(False)
         Me.TabPage9.PerformLayout
         Me.TabPage5.ResumeLayout(False)
@@ -8958,4 +8994,7 @@ Partial Class Form1
     Friend WithEvents CheckBox386 As CheckBox
     Friend WithEvents CheckBox389 As CheckBox
     Friend WithEvents CheckBox388 As CheckBox
+    Friend WithEvents Label72 As Label
+    Friend WithEvents Label71 As Label
+    Friend WithEvents Label70 As Label
 End Class

@@ -52,10 +52,10 @@ Public Class Form1
    "Titanium-ür 2;                        ASTM UNS niN;           B265/348-Gr2;                   3.7035;     Plate"}
 
     Public Shared bestemming() As String =
-  {"Costsheet fan;V:\Sales\Calculations\Ventilatoren\Prijs calculatie\;Price calc Fans.xlsm;IQG",
-   "EIS fans;V:\Sales\Calculations\Ventilatoren\Prijs calculatie\;EIS-Fans.xlsm;IQG",
-   "API 673 Fans;V:\Sales\Calculations\Ventilatoren\Prijs calculatie\;API-673-Fans.xlsm;IQG",
-   "API 560 Fans;V:\Sales\Calculations\Ventilatoren\Prijs calculatie\;API-560-Fans.xlsm;IQG"}
+  {"Costsheet fan;V:\Sales\Calculations\Ventilatoren\Prijs calculatie\;Price calc Fans.xlsx;IQG",
+   "EIS fans;V:\Sales\Calculations\Ventilatoren\Prijs calculatie\;EIS-Fans.xlsx;IQG",
+   "API 673 Fans;V:\Sales\Calculations\Ventilatoren\Prijs calculatie\;API-673-Fans.xlsx;IQG",
+   "API 560 Fans;V:\Sales\Calculations\Ventilatoren\Prijs calculatie\;API-560-Fans.xlsx;IQG"}
 
     Public oWord As Word.Application
     Public stringSplitOptons As Object
@@ -164,6 +164,7 @@ Public Class Form1
         '---------- General------------------
         Find_rep(Label55.Text, ComboBox14.Text)     '_Capacity_Control
         Find_rep(Label54.Text, ComboBox11.Text)     '_Mat_impellar changed 12/5/2020
+        Find_rep(Label57.Text, ComboBox17.Text)     '_Mat_pedestal
         Find_rep(Label42.Text, ComboBox12.Text)     '_Mat_casing
         Find_rep(Label47.Text, ComboBox13.Text)     '_mat_shaft
         Find_rep(Label56.Text, ComboBox16.Text)     '_mat_hub  added 12/5/2020
@@ -203,6 +204,8 @@ Public Class Form1
     Private Sub Find_rep(find_s As String, rep_s As String)
         '============ search and replace in WORD file================
         Dim myStoryRange As Range
+
+        find_s = Trim(find_s)
 
         For Each myStoryRange In oWord.ActiveDocument.StoryRanges
             With myStoryRange.Find
@@ -579,7 +582,7 @@ Public Class Form1
                     '============ Get the Text replacements ===========
                     Get_text_replacements(saRet)        'Generate the summary
 
-                    z = 30                              'start value row position
+                    z = 40                              'start value row position
                     For Each Line As String In temp
                         If Line.Length > 4 Then
                             saRet(z, 0) = Line.Substring(0, 4)

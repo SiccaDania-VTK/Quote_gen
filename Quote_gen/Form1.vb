@@ -237,7 +237,7 @@ Public Class Form1
         "Text block location is " & vbTab & dirpath_Txt_Block.ToString & vbCrLf &
         "Quote backup location is " & vbTab & dirpath_Backup.ToString & vbCrLf &
         "  " & vbCrLf &
-        "File-name ate the first 4 character of the checkbox name" & vbCrLf &
+        "File-names are the first 4 character of the checkbox name" & vbCrLf &
         "Printing squence is determined by the file_name sorted in alphabetical order" & vbCrLf &
         " "
         TextBox06.Text =

@@ -652,6 +652,9 @@ Partial Class Form1
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.GroupBox79 = New System.Windows.Forms.GroupBox()
+        Me.Label72 = New System.Windows.Forms.Label()
+        Me.Label71 = New System.Windows.Forms.Label()
+        Me.Label70 = New System.Windows.Forms.Label()
         Me.Label62 = New System.Windows.Forms.Label()
         Me.TextBox44 = New System.Windows.Forms.TextBox()
         Me.ComboBox18 = New System.Windows.Forms.ComboBox()
@@ -666,9 +669,6 @@ Partial Class Form1
         Me.TextBox04 = New System.Windows.Forms.TextBox()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.Label70 = New System.Windows.Forms.Label()
-        Me.Label71 = New System.Windows.Forms.Label()
-        Me.Label72 = New System.Windows.Forms.Label()
         Me.TabPage9.SuspendLayout
         Me.TabPage5.SuspendLayout
         Me.GroupBox74.SuspendLayout
@@ -7965,7 +7965,7 @@ Partial Class Form1
         Me.TabPage10.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage10.Size = New System.Drawing.Size(1639, 711)
         Me.TabPage10.TabIndex = 9
-        Me.TabPage10.Text = "Summary"
+        Me.TabPage10.Text = "Summary & Export"
         Me.TabPage10.UseVisualStyleBackColor = True
         '
         'RadioButton2
@@ -8011,6 +8011,36 @@ Partial Class Form1
         Me.GroupBox79.TabIndex = 51
         Me.GroupBox79.TabStop = False
         Me.GroupBox79.Text = "Transfer data to excel sheet"
+        '
+        'Label72
+        '
+        Me.Label72.AutoSize = True
+        Me.Label72.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label72.Location = New System.Drawing.Point(12, 96)
+        Me.Label72.Name = "Label72"
+        Me.Label72.Size = New System.Drawing.Size(63, 15)
+        Me.Label72.TabIndex = 54
+        Me.Label72.Text = "Tab name"
+        '
+        'Label71
+        '
+        Me.Label71.AutoSize = True
+        Me.Label71.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label71.Location = New System.Drawing.Point(12, 71)
+        Me.Label71.Name = "Label71"
+        Me.Label71.Size = New System.Drawing.Size(27, 15)
+        Me.Label71.TabIndex = 53
+        Me.Label71.Text = "File"
+        '
+        'Label70
+        '
+        Me.Label70.AutoSize = True
+        Me.Label70.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label70.Location = New System.Drawing.Point(12, 46)
+        Me.Label70.Name = "Label70"
+        Me.Label70.Size = New System.Drawing.Size(55, 15)
+        Me.Label70.TabIndex = 52
+        Me.Label70.Text = "Directory"
         '
         'Label62
         '
@@ -8125,36 +8155,6 @@ Partial Class Form1
         'Timer1
         '
         Me.Timer1.Interval = 2000
-        '
-        'Label70
-        '
-        Me.Label70.AutoSize = True
-        Me.Label70.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label70.Location = New System.Drawing.Point(12, 46)
-        Me.Label70.Name = "Label70"
-        Me.Label70.Size = New System.Drawing.Size(55, 15)
-        Me.Label70.TabIndex = 52
-        Me.Label70.Text = "Directory"
-        '
-        'Label71
-        '
-        Me.Label71.AutoSize = True
-        Me.Label71.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label71.Location = New System.Drawing.Point(12, 71)
-        Me.Label71.Name = "Label71"
-        Me.Label71.Size = New System.Drawing.Size(27, 15)
-        Me.Label71.TabIndex = 53
-        Me.Label71.Text = "File"
-        '
-        'Label72
-        '
-        Me.Label72.AutoSize = True
-        Me.Label72.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label72.Location = New System.Drawing.Point(12, 96)
-        Me.Label72.Name = "Label72"
-        Me.Label72.Size = New System.Drawing.Size(63, 15)
-        Me.Label72.TabIndex = 54
-        Me.Label72.Text = "Tab name"
         '
         'Form1
         '

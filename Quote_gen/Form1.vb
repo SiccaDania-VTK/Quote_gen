@@ -25,9 +25,9 @@ Public Class Form1
       {"280", "330", "400", "500", "630", "800", "1000", "1200", "1400"}
 
     Public flight_pitch() As String = {"variable", "1/2x Diam.", "3/4x Diam.", "1x Diam."}
-    Public atex_zone() As String = {"0", "1", "2", "20", "21", "22"}
-    Public atex_group() As String = {"IIA", "IIB", "IIC"}
-    Public atex_temp() As String = {"T1", "T2", "T3", "T4", "T5", "T6"}
+    Public atex_zone() As String = {"0", "1", "2", "20", "21", "22", "-"}
+    Public atex_group() As String = {"IIA", "IIB", "IIC", "-"}
+    Public atex_temp() As String = {"T1", "T2", "T3", "T4", "T5", "T6", "-"}
     Public Capacity_Control() As String = {"client provided VSD", "Variable Speed Drive system", "inlet louvre damper", "outlet louvre damper", "no control measures"}
     Public drive_make() As String = {"SEW", "Nord", "Bauer", "Flender"}
 
@@ -668,7 +668,7 @@ Public Class Form1
 
         '---------------
         ppp(22, 0) = Label57.Text
-        ppp(22, 1) = ComboBox16.SelectedItem.ToString 'Material Pedestal
+        ppp(22, 1) = ComboBox17.SelectedItem.ToString 'Material Pedestal
         ppp(23, 0) = Label56.Text
         ppp(23, 1) = ComboBox16.SelectedItem.ToString 'material Hub
         ppp(24, 0) = Label58.Text
@@ -693,7 +693,8 @@ Public Class Form1
         ppp(32, 1) = TextBox47.Text                   'Electric motor _EM_power
         ppp(33, 0) = Label65.Text
         ppp(33, 1) = TextBox48.Text                   'Electric motor _EM_SVPHF
-
+        ppp(34, 0) = Label24.Text                     '_P_Design
+        ppp(34, 1) = TextBox24.Text                   'mBar(g) kg/cm2 mmWc
         For i = 0 To ppp.GetLength(0) - 1
             TextBox40.Text &= ppp(i, 0) & vbTab & ppp(i, 1) & vbCrLf
         Next

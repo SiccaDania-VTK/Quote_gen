@@ -669,6 +669,10 @@ Partial Class Form1
         Me.TextBox04 = New System.Windows.Forms.TextBox()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.TabPage6 = New System.Windows.Forms.TabPage()
+        Me.TextBox53 = New System.Windows.Forms.TextBox()
+        Me.TextBox54 = New System.Windows.Forms.TextBox()
+        Me.Button9 = New System.Windows.Forms.Button()
         Me.TabPage9.SuspendLayout
         Me.TabPage5.SuspendLayout
         Me.GroupBox74.SuspendLayout
@@ -768,6 +772,7 @@ Partial Class Form1
         Me.GroupBox16.SuspendLayout
         Me.TabPage10.SuspendLayout
         Me.GroupBox79.SuspendLayout
+        Me.TabPage6.SuspendLayout
         Me.SuspendLayout
         '
         'TabPage9
@@ -5796,6 +5801,7 @@ Partial Class Form1
         Me.TabControl1.Controls.Add(Me.TabPage14)
         Me.TabControl1.Controls.Add(Me.TabPage9)
         Me.TabControl1.Controls.Add(Me.TabPage10)
+        Me.TabControl1.Controls.Add(Me.TabPage6)
         Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TabControl1.Location = New System.Drawing.Point(0, 0)
         Me.TabControl1.Name = "TabControl1"
@@ -8156,6 +8162,44 @@ Partial Class Form1
         '
         Me.Timer1.Interval = 2000
         '
+        'TabPage6
+        '
+        Me.TabPage6.Controls.Add(Me.Button9)
+        Me.TabPage6.Controls.Add(Me.TextBox54)
+        Me.TabPage6.Controls.Add(Me.TextBox53)
+        Me.TabPage6.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage6.Name = "TabPage6"
+        Me.TabPage6.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage6.Size = New System.Drawing.Size(1639, 711)
+        Me.TabPage6.TabIndex = 15
+        Me.TabPage6.Text = "Import"
+        Me.TabPage6.UseVisualStyleBackColor = True
+        '
+        'TextBox53
+        '
+        Me.TextBox53.Location = New System.Drawing.Point(8, 6)
+        Me.TextBox53.Multiline = True
+        Me.TextBox53.Name = "TextBox53"
+        Me.TextBox53.Size = New System.Drawing.Size(365, 109)
+        Me.TextBox53.TabIndex = 3
+        '
+        'TextBox54
+        '
+        Me.TextBox54.Location = New System.Drawing.Point(8, 121)
+        Me.TextBox54.Multiline = True
+        Me.TextBox54.Name = "TextBox54"
+        Me.TextBox54.Size = New System.Drawing.Size(365, 421)
+        Me.TextBox54.TabIndex = 4
+        '
+        'Button9
+        '
+        Me.Button9.Location = New System.Drawing.Point(551, 71)
+        Me.Button9.Name = "Button9"
+        Me.Button9.Size = New System.Drawing.Size(75, 23)
+        Me.Button9.TabIndex = 5
+        Me.Button9.Text = "Button9"
+        Me.Button9.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -8348,6 +8392,8 @@ Partial Class Form1
         Me.TabPage10.PerformLayout
         Me.GroupBox79.ResumeLayout(False)
         Me.GroupBox79.PerformLayout
+        Me.TabPage6.ResumeLayout(False)
+        Me.TabPage6.PerformLayout
         Me.ResumeLayout(False)
 
     End Sub
@@ -8997,4 +9043,8 @@ Partial Class Form1
     Friend WithEvents Label72 As Label
     Friend WithEvents Label71 As Label
     Friend WithEvents Label70 As Label
+    Friend WithEvents TabPage6 As TabPage
+    Friend WithEvents Button9 As Button
+    Friend WithEvents TextBox54 As TextBox
+    Friend WithEvents TextBox53 As TextBox
 End Class

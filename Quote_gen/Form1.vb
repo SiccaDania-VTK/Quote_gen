@@ -17,9 +17,11 @@ Public Class Form1
     Public objBook As Excel._Workbook
 
     '----------- directory's-----------
+    Public dirpath_GPH As String = "N:\Engineering\VBasic\GPH_data_exchange\"
     Public dirpath_Txt_Block As String = "N:\Verkoop\Tekst\Quote_text_block\"
     Public dirpath_Backup As String = "N:\Verkoop\Aanbiedingen\Quote_gen_backup\"
     Public dirpath_Home_GP As String = "C:\Temp\"
+    Public dirpath_temp As String = "C:\Temp\"
 
     Public Shared Flight_dia() As String =   'tbv screw diameter selectie
       {"280", "330", "400", "500", "630", "800", "1000", "1200", "1400"}
@@ -232,6 +234,12 @@ Public Class Form1
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        TextBox53.Text =
+        "Data import from Fan select and Campbell" & vbCrLf &
+        "Directory N:\Engineering\VBasic\GPH_Data_exchange collects data " & vbCrLf &
+        "from sizing tools like Fan select and Campbell." & vbCrLf &
+        "  " & vbCrLf
+
         TextBox03.Text =
         "File naming convention" & vbCrLf & vbCrLf &
         "Text block location is " & vbTab & dirpath_Txt_Block.ToString & vbCrLf &
@@ -729,5 +737,21 @@ Public Class Form1
         TextBox45.Text = words(3)
     End Sub
 
+    Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
+        Import()
+    End Sub
+    Private Sub Import()
+        Dim temp_string As String
+        Dim filename As String
 
+        filename = "EXC_Fan_Q20.1153 VSD 3TRP BON15_K0002_2021_02_03_GerritP.sic1"
+
+        If Directory.Exists(dirpath_GPH) Then
+            temp_string = File.ReadAllText(dirpath_GPH & filename)     'used at VTK with intranet
+        Else
+            temp_string = File.ReadAllText(dirpath_temp & filename)     'used at home
+        End If
+
+        TextBox54.Text = temp_string
+    End Sub
 End Class

@@ -667,12 +667,14 @@ Partial Class Form1
         Me.TextBox06 = New System.Windows.Forms.TextBox()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.TextBox04 = New System.Windows.Forms.TextBox()
+        Me.TabPage6 = New System.Windows.Forms.TabPage()
+        Me.Button9 = New System.Windows.Forms.Button()
+        Me.TextBox54 = New System.Windows.Forms.TextBox()
+        Me.TextBox53 = New System.Windows.Forms.TextBox()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.TabPage6 = New System.Windows.Forms.TabPage()
-        Me.TextBox53 = New System.Windows.Forms.TextBox()
-        Me.TextBox54 = New System.Windows.Forms.TextBox()
-        Me.Button9 = New System.Windows.Forms.Button()
+        Me.GroupBox80 = New System.Windows.Forms.GroupBox()
+        Me.Button10 = New System.Windows.Forms.Button()
         Me.TabPage9.SuspendLayout
         Me.TabPage5.SuspendLayout
         Me.GroupBox74.SuspendLayout
@@ -773,6 +775,7 @@ Partial Class Form1
         Me.TabPage10.SuspendLayout
         Me.GroupBox79.SuspendLayout
         Me.TabPage6.SuspendLayout
+        Me.GroupBox80.SuspendLayout
         Me.SuspendLayout
         '
         'TabPage9
@@ -8154,17 +8157,9 @@ Partial Class Form1
         Me.TextBox04.Size = New System.Drawing.Size(365, 568)
         Me.TextBox04.TabIndex = 0
         '
-        'OpenFileDialog1
-        '
-        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
-        '
-        'Timer1
-        '
-        Me.Timer1.Interval = 2000
-        '
         'TabPage6
         '
-        Me.TabPage6.Controls.Add(Me.Button9)
+        Me.TabPage6.Controls.Add(Me.GroupBox80)
         Me.TabPage6.Controls.Add(Me.TextBox54)
         Me.TabPage6.Controls.Add(Me.TextBox53)
         Me.TabPage6.Location = New System.Drawing.Point(4, 22)
@@ -8172,16 +8167,17 @@ Partial Class Form1
         Me.TabPage6.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage6.Size = New System.Drawing.Size(1639, 711)
         Me.TabPage6.TabIndex = 15
-        Me.TabPage6.Text = "Import"
+        Me.TabPage6.Text = "EXChange"
         Me.TabPage6.UseVisualStyleBackColor = True
         '
-        'TextBox53
+        'Button9
         '
-        Me.TextBox53.Location = New System.Drawing.Point(8, 6)
-        Me.TextBox53.Multiline = True
-        Me.TextBox53.Name = "TextBox53"
-        Me.TextBox53.Size = New System.Drawing.Size(365, 109)
-        Me.TextBox53.TabIndex = 3
+        Me.Button9.Location = New System.Drawing.Point(6, 19)
+        Me.Button9.Name = "Button9"
+        Me.Button9.Size = New System.Drawing.Size(188, 27)
+        Me.Button9.TabIndex = 5
+        Me.Button9.Text = "Select file"
+        Me.Button9.UseVisualStyleBackColor = True
         '
         'TextBox54
         '
@@ -8190,15 +8186,44 @@ Partial Class Form1
         Me.TextBox54.Name = "TextBox54"
         Me.TextBox54.Size = New System.Drawing.Size(365, 421)
         Me.TextBox54.TabIndex = 4
+        Me.TextBox54.Text = "Fan data"
         '
-        'Button9
+        'TextBox53
         '
-        Me.Button9.Location = New System.Drawing.Point(551, 71)
-        Me.Button9.Name = "Button9"
-        Me.Button9.Size = New System.Drawing.Size(75, 23)
-        Me.Button9.TabIndex = 5
-        Me.Button9.Text = "Button9"
-        Me.Button9.UseVisualStyleBackColor = True
+        Me.TextBox53.Location = New System.Drawing.Point(8, 6)
+        Me.TextBox53.Multiline = True
+        Me.TextBox53.Name = "TextBox53"
+        Me.TextBox53.Size = New System.Drawing.Size(365, 109)
+        Me.TextBox53.TabIndex = 3
+        Me.TextBox53.Text = "Explanation"
+        '
+        'OpenFileDialog1
+        '
+        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
+        '
+        'Timer1
+        '
+        Me.Timer1.Interval = 2000
+        '
+        'GroupBox80
+        '
+        Me.GroupBox80.Controls.Add(Me.Button10)
+        Me.GroupBox80.Controls.Add(Me.Button9)
+        Me.GroupBox80.Location = New System.Drawing.Point(391, 15)
+        Me.GroupBox80.Name = "GroupBox80"
+        Me.GroupBox80.Size = New System.Drawing.Size(200, 100)
+        Me.GroupBox80.TabIndex = 6
+        Me.GroupBox80.TabStop = False
+        Me.GroupBox80.Text = "Data EXChange fan sizing tool"
+        '
+        'Button10
+        '
+        Me.Button10.Location = New System.Drawing.Point(6, 52)
+        Me.Button10.Name = "Button10"
+        Me.Button10.Size = New System.Drawing.Size(188, 27)
+        Me.Button10.TabIndex = 6
+        Me.Button10.Text = "Insert selected data"
+        Me.Button10.UseVisualStyleBackColor = True
         '
         'Form1
         '
@@ -8394,6 +8419,7 @@ Partial Class Form1
         Me.GroupBox79.PerformLayout
         Me.TabPage6.ResumeLayout(False)
         Me.TabPage6.PerformLayout
+        Me.GroupBox80.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -9047,4 +9073,6 @@ Partial Class Form1
     Friend WithEvents Button9 As Button
     Friend WithEvents TextBox54 As TextBox
     Friend WithEvents TextBox53 As TextBox
+    Friend WithEvents GroupBox80 As GroupBox
+    Friend WithEvents Button10 As Button
 End Class

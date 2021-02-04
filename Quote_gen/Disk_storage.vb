@@ -8,7 +8,7 @@ Module Disk_storage
     'Then split up the secton string into part to read into the parameters
     Public Sub Read_file_vtk5()
 
-        Dim control_words(), words() As String
+        Dim exchange_words(), words() As String
         Dim all_num, all_combo, all_check, all_text, all_radio As New List(Of Control)
         Dim separators() As String = {";"}
         Dim separators1() As String = {"BREAK"}
@@ -26,31 +26,31 @@ Module Disk_storage
         If Form1.OpenFileDialog1.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
 
             Dim readText As String = File.ReadAllText(Form1.OpenFileDialog1.FileName, Encoding.ASCII)
-            control_words = readText.Split(separators1, StringSplitOptions.None) 'Split the read file content
+            exchange_words = readText.Split(separators1, StringSplitOptions.None) 'Split the read file content
 
             '---------- terugzetten numeric controls (Updated version) -----------------
             FindControlRecursive(all_num, Form1, GetType(NumericUpDown))
-            words = control_words(0).Split(separators, StringSplitOptions.None)     'Split the read file content
+            words = exchange_words(0).Split(separators, StringSplitOptions.None)     'Split the read file content
             Restore_num_controls(words, all_num)
 
             '---------- terugzetten combobox controls (Updated version) -----------------
             FindControlRecursive(all_combo, Form1, GetType(ComboBox))
-            words = control_words(1).Split(separators, StringSplitOptions.None)     'Split the read file content
+            words = exchange_words(1).Split(separators, StringSplitOptions.None)     'Split the read file content
             Restore_combo_controls(words, all_combo)
 
             '---------- terugzetten checkboxes controls (Updated version) -----------------
             FindControlRecursive(all_check, Form1, GetType(CheckBox))
-            words = control_words(2).Split(separators, StringSplitOptions.None)    'Split the read file content
+            words = exchange_words(2).Split(separators, StringSplitOptions.None)    'Split the read file content
             Restore_checkbox_controls(words, all_check)
 
             '---------- terugzetten Radio button controls (Updated version) -----------------
             FindControlRecursive(all_radio, Form1, GetType(RadioButton))
-            words = control_words(3).Split(separators, StringSplitOptions.None)    'Split the read file content
+            words = exchange_words(3).Split(separators, StringSplitOptions.None)    'Split the read file content
             Restore_radiobutton_controls(words, all_radio)
 
             '---------- terugzetten Text controls (Updated version) -----------------
             FindControlRecursive(all_text, Form1, GetType(TextBox))
-            words = control_words(4).Split(separators, StringSplitOptions.None)    'Split the read file content
+            words = exchange_words(4).Split(separators, StringSplitOptions.None)    'Split the read file content
             Restore_text_controls(words, all_text)
         End If
     End Sub

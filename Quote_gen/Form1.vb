@@ -32,6 +32,7 @@ Public Class Form1
     Public atex_temp() As String = {"T1", "T2", "T3", "T4", "T5", "T6", "-"}
     Public Capacity_Control() As String = {"client provided VSD", "Variable Speed Drive system", "inlet louvre damper", "outlet louvre damper", "no control measures"}
     Public drive_make() As String = {"SEW", "Nord", "Bauer", "Flender"}
+    Dim exchange_words() As String          'Exchange data from disk
 
     Public Shared steel() As String =
   {"16M03;                                EN10028-2 UNS;          16M03;                          1.5415;     Plate",
@@ -738,20 +739,66 @@ Public Class Form1
     End Sub
 
     Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
-        Import()
+        Exchange_read_file()
     End Sub
-    Private Sub Import()
-        Dim temp_string As String
-        Dim filename As String
 
-        filename = "EXC_Fan_Q20.1153 VSD 3TRP BON15_K0002_2021_02_03_GerritP.sic1"
+    Private Sub Exchange_read_file()
+        Dim separators1() As String = {"BREAK", vbCrLf}
+
+        OpenFileDialog1.FileName = "EXC_Fan_*.sic1"
 
         If Directory.Exists(dirpath_GPH) Then
-            temp_string = File.ReadAllText(dirpath_GPH & filename)     'used at VTK with intranet
+            OpenFileDialog1.InitialDirectory = dirpath_GPH      'used at VTK
         Else
-            temp_string = File.ReadAllText(dirpath_temp & filename)     'used at home
+            OpenFileDialog1.InitialDirectory = dirpath_Home_GP  'used at home
         End If
 
-        TextBox54.Text = temp_string
+        OpenFileDialog1.Title = "Open sic1"
+        OpenFileDialog1.Filter = "EXChange Files|*.sic1"
+
+        If OpenFileDialog1.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
+            Dim readText As String = File.ReadAllText(OpenFileDialog1.FileName, Encoding.ASCII)
+            exchange_words = readText.Split(separators1, StringSplitOptions.None) 'Split the read file content
+
+            '===== Fill the text box =====
+            TextBox54.Clear()
+            For i = 0 To exchange_words.Length - 1
+                TextBox54.Text &= exchange_words(i) & vbCrLf
+            Next
+        End If
     End Sub
+
+    Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
+        Exchange_Insert_data()
+    End Sub
+
+    Private Sub Exchange_Insert_data()
+        Dim words() As String
+        Dim separators() As String = {";"}
+
+        If IsNothing(exchange_words) Then
+            MsgBox("Nothing selected")
+        Else
+            '===== insert data =====
+            For i = 0 To exchange_words.Length - 1
+                words = exchange_words(i).Split(separators, StringSplitOptions.None)     'Split the read file content
+                If words(0) = "@F004" Then TextBox07.Text = words(2)    'Tag
+                If words(0) = "@F005" Then TextBox16.Text = words(2)    'Fan type
+                'If words(0) = "@F006" Then TextBox02.Text = words(2)    'Fan Stages
+                'If words(0) = "@F007" Then TextBox02.Text = words(2)    'Arrangement
+                'If words(0) = "@F008" Then TextBox08.Text = words(2)    'Double suction
+
+                'If words(0) = "@F020" Then TextBox02.Text = words(2)    'Impeller material
+
+                'If words(0) = "@F040" Then TextBox02.Text = words(2)    'Motor speed
+                'If words(0) = "@F041" Then TextBox02.Text = words(2)    'Motor power
+                'If words(0) = "@F042" Then TextBox02.Text = words(2)    'Motor frame size
+
+                ''======= highest power case =======
+                'If words(0) = "@F060" Then TextBox02.Text = words(2)    'Max shaft power
+                'If words(0) = "@F061" Then TextBox02.Text = words(2)    'Max mass flow
+            Next
+        End If
+    End Sub
+
 End Class

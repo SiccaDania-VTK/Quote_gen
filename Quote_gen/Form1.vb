@@ -137,13 +137,13 @@ Public Class Form1
         Find_rep(Label11.Text, TextBox14.Text)
         Find_rep(Label12.Text, TextBox15.Text)
         Find_rep(Label13.Text, TextBox16.Text)
-        Find_rep(Label14.Text, TextBox17.Text)
-        Find_rep(Label15.Text, TextBox18.Text)
-        Find_rep(Label16.Text, TextBox19.Text)
-        Find_rep(Label17.Text, TextBox20.Text)
-        Find_rep(Label18.Text, TextBox21.Text)
-        Find_rep(Label19.Text, TextBox22.Text)
-        Find_rep(Label20.Text, TextBox23.Text)
+        Find_rep(Label14.Text, TextBox17.Text)  'Suction flange
+        Find_rep(Label15.Text, TextBox18.Text)  'Discharge flange
+        Find_rep(Label16.Text, TextBox19.Text)  'Spare
+        Find_rep(Label17.Text, TextBox20.Text)  'Spare
+        Find_rep(Label18.Text, TextBox21.Text)  'Motor speed
+        Find_rep(Label19.Text, TextBox22.Text)  'Motor power
+        Find_rep(Label20.Text, TextBox23.Text)  'Motor Frame
 
         Find_rep(Label21.Text, ComboBox1.Text)
         Find_rep(Label22.Text, ComboBox2.Text)
@@ -782,21 +782,27 @@ Public Class Form1
             '===== insert data =====
             For i = 0 To exchange_words.Length - 1
                 words = exchange_words(i).Split(separators, StringSplitOptions.None)     'Split the read file content
-                If words(0) = "@F004" Then TextBox07.Text = words(2)    'Tag
-                If words(0) = "@F005" Then TextBox16.Text = words(2)    'Fan type
-                'If words(0) = "@F006" Then TextBox02.Text = words(2)    'Fan Stages
-                'If words(0) = "@F007" Then TextBox02.Text = words(2)    'Arrangement
-                'If words(0) = "@F008" Then TextBox08.Text = words(2)    'Double suction
 
-                'If words(0) = "@F020" Then TextBox02.Text = words(2)    'Impeller material
+                '======== General ===========
+                If words(0) = "@F003" Then TextBox01.Text = words(2)    'Quote
 
-                'If words(0) = "@F040" Then TextBox02.Text = words(2)    'Motor speed
-                'If words(0) = "@F041" Then TextBox02.Text = words(2)    'Motor power
-                'If words(0) = "@F042" Then TextBox02.Text = words(2)    'Motor frame size
 
-                ''======= highest power case =======
-                'If words(0) = "@F060" Then TextBox02.Text = words(2)    'Max shaft power
-                'If words(0) = "@F061" Then TextBox02.Text = words(2)    'Max mass flow
+                '======== Fan general ===========
+                If words(0) = "@F020" Then TextBox16.Text = words(2)    'Fan type
+                If words(0) = "@F021" Then TextBox14.Text = words(2)    'Fan model
+
+                '======== Fan dimensions ===========
+                If words(0) = "@F053" Then TextBox19.Text = words(2)    'Vane thickness
+                If words(0) = "@F054" Then TextBox17.Text = words(2)    'Suction flange
+                If words(0) = "@F055" Then TextBox18.Text = words(2)    'Discharge flange
+
+                '======== Impeller ===========
+                If words(0) = "@F080" Then TextBox20.Text = words(2)    'Impeller material
+
+                '======== E_motor===========
+                If words(0) = "@F100" Then TextBox21.Text = words(2)    'Motor speed
+                If words(0) = "@F101" Then TextBox22.Text = words(2)    'Motor power
+                If words(0) = "@F102" Then TextBox23.Text = words(2)    'Motor frame size
             Next
         End If
     End Sub

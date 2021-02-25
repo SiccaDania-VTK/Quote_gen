@@ -807,4 +807,7 @@ Public Class Form1
         End If
     End Sub
 
+    Private Sub CheckBox392_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox392.CheckedChanged
+
+    End Sub
 End Class

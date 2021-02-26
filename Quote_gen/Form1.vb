@@ -739,10 +739,10 @@ Public Class Form1
     End Sub
 
     Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
-        Exchange_read_file()
+        Exchange_read_fan_file()
     End Sub
 
-    Private Sub Exchange_read_file()
+    Private Sub Exchange_read_fan_file()
         Dim separators1() As String = {"BREAK", vbCrLf}
 
         OpenFileDialog1.FileName = "EXC_Fan_*.sic1"
@@ -767,12 +767,41 @@ Public Class Form1
             Next
         End If
     End Sub
-
-    Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
-        Exchange_Insert_data()
+    Private Sub Button12_Click(sender As Object, e As EventArgs) Handles Button12.Click
+        Exchange_read_Flash_drier_file()
     End Sub
 
-    Private Sub Exchange_Insert_data()
+    Private Sub Exchange_read_Flash_drier_file()
+        Dim separators1() As String = {"BREAK", vbCrLf}
+
+        OpenFileDialog1.FileName = "EXC_Flash_*.sic1"
+
+        If Directory.Exists(dirpath_GPH) Then
+            OpenFileDialog1.InitialDirectory = dirpath_GPH      'used at VTK
+        Else
+            OpenFileDialog1.InitialDirectory = dirpath_Home_GP  'used at home
+        End If
+
+        OpenFileDialog1.Title = "Open sic1"
+        OpenFileDialog1.Filter = "EXChange Files|*.sic1"
+
+        If OpenFileDialog1.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
+            Dim readText As String = File.ReadAllText(OpenFileDialog1.FileName, Encoding.ASCII)
+            exchange_words = readText.Split(separators1, StringSplitOptions.None) 'Split the read file content
+
+            '===== Fill the text box =====
+            TextBox54.Clear()
+            For i = 0 To exchange_words.Length - 1
+                TextBox54.Text &= exchange_words(i) & vbCrLf
+            Next
+        End If
+    End Sub
+
+    Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
+        Exchange_Insert_Fan_data()
+    End Sub
+
+    Private Sub Exchange_Insert_Fan_data()
         Dim words() As String
         Dim separators() As String = {";"}
 
@@ -806,8 +835,47 @@ Public Class Form1
             Next
         End If
     End Sub
+    Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
+        Exchange_Insert_Flash_data()
+    End Sub
 
+    Private Sub Exchange_Insert_Flash_data()
+        Dim words() As String
+        Dim separators() As String = {";"}
+
+        If IsNothing(exchange_words) Then
+            MsgBox("Nothing selected")
+        Else
+            '===== insert data =====
+            For i = 0 To exchange_words.Length - 1
+                words = exchange_words(i).Split(separators, StringSplitOptions.None)     'Split the read file content
+
+                '======== General ===========
+                If words(0) = "@J003" Then TextBox01.Text = words(2)    'Quote
+
+
+                '======== Fan general ===========
+                If words(0) = "@JF020" Then TextBox16.Text = words(2)    'Fan type
+                If words(0) = "@J021" Then TextBox14.Text = words(2)    'Fan model
+
+                '======== Fan dimensions ===========
+                If words(0) = "@J053" Then TextBox19.Text = words(2)    'Vane thickness
+                If words(0) = "@J054" Then TextBox17.Text = words(2)    'Suction flange
+                If words(0) = "@J055" Then TextBox18.Text = words(2)    'Discharge flange
+
+                '======== Impeller ===========
+                If words(0) = "@J080" Then TextBox20.Text = words(2)    'Impeller material
+
+                '======== E_motor===========
+                If words(0) = "@J100" Then TextBox21.Text = words(2)    'Motor speed
+                If words(0) = "@J101" Then TextBox22.Text = words(2)    'Motor power
+                If words(0) = "@J102" Then TextBox23.Text = words(2)    'Motor frame size
+            Next
+        End If
+    End Sub
     Private Sub CheckBox392_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox392.CheckedChanged
 
     End Sub
+
+
 End Class

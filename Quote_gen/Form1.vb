@@ -60,6 +60,7 @@ Public Class Form1
    "API 673 Fans;V:\Sales\Calculations\Ventilatoren\Prijs calculatie\;API-673-Fans.xlsx;IQG",
    "API 560 Fans;V:\Sales\Calculations\Ventilatoren\Prijs calculatie\;API-560-Fans.xlsx;IQG"}
 
+    Public init_done As Boolean
     Public oWord As Word.Application
     Public stringSplitOptons As Object
     ' see https://support.microsoft.com/en-us/help/316383/how-to-automate-word-from-visual-basic--net-to-create-a-new-document
@@ -287,6 +288,8 @@ Public Class Form1
         Me.Size = New Size(1663, 776)
         TextBox01.Text = "Q" & Now.ToString("yy") & ".10"
         Timer1.Enabled = True
+        init_done = True
+        Present_Datagridview1()
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
@@ -768,7 +771,9 @@ Public Class Form1
         End If
     End Sub
     Private Sub Button12_Click(sender As Object, e As EventArgs) Handles Button12.Click
+        Present_Datagridview1()
         Exchange_read_Flash_drier_file()
+        Exchange_Insert_Flash_data()
     End Sub
 
     Private Sub Exchange_read_Flash_drier_file()
@@ -794,6 +799,166 @@ Public Class Form1
             For i = 0 To exchange_words.Length - 1
                 TextBox54.Text &= exchange_words(i) & vbCrLf
             Next
+        End If
+    End Sub
+
+    Private Sub Present_Datagridview1()
+
+        With DataGridView1
+            '.ColumnHeadersDefaultCellStyle.Font = New Font("Tahoma", 8.25F, FontStyle.Regular)
+            .ColumnCount = 6
+            .Rows.Clear()
+            .Rows.Add(14)
+            .RowHeadersVisible = False
+
+            For h = 2 To .ColumnCount - 1
+                .Columns(h).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+            Next
+
+            .Columns(0).Width = 120
+            For h = 1 To .ColumnCount - 1
+                .Columns(h).Width = 65
+            Next
+
+            '--------- HeaderText --------------------
+            .Columns(0).HeaderText = "Description"
+            .Columns(1).HeaderText = "Word code"
+            .Columns(2).HeaderText = "Summer  prefix=@S"
+            .Columns(3).HeaderText = "Winter  prefix=@W"
+            .Columns(4).HeaderText = "Average prefix=@A"
+            .Columns(5).HeaderText = "Units"
+
+            '.AutoResizeColumns()
+        End With
+    End Sub
+    Private Sub Exchange_Insert_Flash_data()
+        Dim words() As String
+        Dim separators() As String = {";"}
+
+        If IsNothing(exchange_words) Then
+            MsgBox("Nothing selected")
+        Else
+            With DataGridView1
+                '===== insert data =====
+                For i = 0 To exchange_words.Length - 1
+                    words = exchange_words(i).Split(separators, StringSplitOptions.None)     'Split the read file content
+
+                    '======== General data  ===========
+                    If words(0) = "@QF020" Then TextBox30.Text = Trim(words(2))       'Elevation
+                    If words(0) = "@QF021" Then TextBox29.Text = Trim(words(2))       'Product
+                    If words(0) = "@QF022" Then TextBox28.Text = Trim(words(2))       'Instal Power
+
+                    Dim r As Integer
+                    r = 0
+                    '======== Air data  ===========
+                    .Rows(0).Cells(0).Value = "Air Mass Flow"
+                    .Rows(0).Cells(1).Value = "F101"                                  'Air flow
+                    If words(0) = "@SF101" Then .Rows(0).Cells(2).Value = words(2)    '
+                    If words(0) = "@WF101" Then .Rows(0).Cells(3).Value = words(2)    '
+                    If words(0) = "@AF101" Then .Rows(0).Cells(4).Value = words(2)    '
+                    .Rows(r).Cells(5).Value = "[kg/h]"
+
+                    r = 1
+                    .Rows(r).Cells(0).Value = "Air humidity"
+                    .Rows(r).Cells(1).Value = "F102"
+                    If words(0) = "@SF102" Then .Rows(r).Cells(2).Value = words(2)    'Air humidity
+                    If words(0) = "@WF102" Then .Rows(r).Cells(3).Value = words(2)    '
+                    If words(0) = "@AF102" Then .Rows(r).Cells(4).Value = words(2)    '
+                    .Rows(1).Cells(5).Value = "[gr/kg]"
+
+                    r = 2
+                    .Rows(r).Cells(0).Value = "Air temperature"
+                    .Rows(r).Cells(1).Value = "F103"
+                    If words(0) = "@SF103" Then .Rows(r).Cells(2).Value = words(2)    'Air temperature
+                    If words(0) = "@WF103" Then .Rows(r).Cells(3).Value = words(2)    '
+                    If words(0) = "@AF103" Then .Rows(r).Cells(4).Value = words(2)    '
+                    .Rows(r).Cells(5).Value = "[c]"
+
+                    r = 3
+                    .Rows(r).Cells(0).Value = "Air Pressure"
+                    .Rows(r).Cells(1).Value = "F104"
+                    If words(0) = "@SF104" Then .Rows(r).Cells(2).Value = words(2)    'Air pressure
+                    If words(0) = "@WF104" Then .Rows(r).Cells(3).Value = words(2)    '
+                    If words(0) = "@AF104" Then .Rows(r).Cells(4).Value = words(2)    '
+                    .Rows(r).Cells(5).Value = "[mbar]"
+
+                    r = 4
+                    .Rows(r).Cells(0).Value = "Wet feed moist"
+                    .Rows(r).Cells(1).Value = "F105"
+                    If words(0) = "@SF105" Then .Rows(r).Cells(2).Value = words(2)    'Wet feed moist
+                    If words(0) = "@WF105" Then .Rows(r).Cells(3).Value = words(2)    '
+                    If words(0) = "@AF105" Then .Rows(r).Cells(4).Value = words(2)    '
+                    .Rows(r).Cells(5).Value = "[%]"
+
+
+                    '======== Temperatures ===========
+                    r = 5
+                    .Rows(r).Cells(0).Value = "T setpoint"
+                    .Rows(r).Cells(1).Value = "F106"
+                    If words(0) = "@SF106" Then .Rows(r).Cells(2).Value = words(2)    'T setpoint
+                    If words(0) = "@WF106" Then .Rows(r).Cells(3).Value = words(2)    '
+                    If words(0) = "@AF106" Then .Rows(r).Cells(4).Value = words(2)    '
+                    .Rows(r).Cells(5).Value = "[c]"
+
+                    r = 6
+                    .Rows(r).Cells(0).Value = "T Separator"
+                    .Rows(r).Cells(1).Value = "F107"
+                    If words(0) = "@SF107" Then .Rows(r).Cells(2).Value = words(2)    'T separator
+                    If words(0) = "@WF107" Then .Rows(r).Cells(3).Value = words(2)    '
+                    If words(0) = "@AF107" Then .Rows(r).Cells(4).Value = words(2)    '
+                    .Rows(r).Cells(5).Value = "[c]"
+
+                    r = 7
+                    .Rows(r).Cells(0).Value = "T cooled"
+                    .Rows(r).Cells(1).Value = "F108"
+                    If words(0) = "@SF108" Then .Rows(r).Cells(2).Value = words(2)    'T cooled meal
+                    If words(0) = "@WF108" Then .Rows(r).Cells(3).Value = words(2)    '
+                    If words(0) = "@AF108" Then .Rows(r).Cells(4).Value = words(2)    '
+                    .Rows(r).Cells(5).Value = "[c]"
+
+                    r = 8
+                    .Rows(r).Cells(0).Value = "Cooled meal RH"
+                    .Rows(r).Cells(1).Value = "F109"
+                    If words(0) = "@SF109" Then .Rows(r).Cells(2).Value = words(2)    'Cooled meal RH
+                    If words(0) = "@WF109" Then .Rows(r).Cells(3).Value = words(2)    '
+                    If words(0) = "@AF109" Then .Rows(r).Cells(4).Value = words(2)    '
+                    .Rows(r).Cells(5).Value = "[-]"
+
+                    r = 9
+                    .Rows(r).Cells(0).Value = "Evaporation"
+                    .Rows(r).Cells(1).Value = "F110"
+                    If words(0) = "@SF110" Then .Rows(r).Cells(2).Value = words(2)    'Evaporation
+                    If words(0) = "@WF110" Then .Rows(r).Cells(3).Value = words(2)    '
+                    If words(0) = "@AF110" Then .Rows(r).Cells(4).Value = words(2)    '
+                    .Rows(r).Cells(5).Value = "[kg/h]"
+
+
+                    '======== Fuel ===========
+                    r = 10
+                    .Rows(r).Cells(0).Value = "Direct_fuel"
+                    .Rows(r).Cells(1).Value = "F131"
+                    If words(0) = "@SF131" Then .Rows(r).Cells(2).Value = words(2)    'Direct_fuel type
+                    If words(0) = "@WF131" Then .Rows(r).Cells(3).Value = words(2)    '
+                    If words(0) = "@AF131" Then .Rows(r).Cells(4).Value = words(2)    '
+                    .Rows(r).Cells(5).Value = ""
+
+                    r = 11
+                    .Rows(r).Cells(0).Value = "Direct consump"
+                    .Rows(r).Cells(1).Value = "F132"
+                    If words(0) = "@SF132" Then .Rows(r).Cells(2).Value = words(2)    'Direct consump
+                    If words(0) = "@WF132" Then .Rows(r).Cells(3).Value = words(2)    '
+                    If words(0) = "@AF132" Then .Rows(r).Cells(4).Value = words(2)    '
+                    .Rows(r).Cells(5).Value = "[Nm3/h]"
+
+                    r = 12
+                    .Rows(r).Cells(0).Value = "Comb. value"
+                    .Rows(r).Cells(1).Value = "F133"
+                    If words(0) = "@SF133" Then .Rows(r).Cells(2).Value = words(2)    'Comb. value
+                    If words(0) = "@WF133" Then .Rows(r).Cells(3).Value = words(2)    '
+                    If words(0) = "@AF133" Then .Rows(r).Cells(4).Value = words(2)    '
+                    .Rows(r).Cells(5).Value = "[MJ/kg]"
+                Next
+            End With
         End If
     End Sub
 
@@ -838,44 +1003,5 @@ Public Class Form1
     Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
         Exchange_Insert_Flash_data()
     End Sub
-
-    Private Sub Exchange_Insert_Flash_data()
-        Dim words() As String
-        Dim separators() As String = {";"}
-
-        If IsNothing(exchange_words) Then
-            MsgBox("Nothing selected")
-        Else
-            '===== insert data =====
-            For i = 0 To exchange_words.Length - 1
-                words = exchange_words(i).Split(separators, StringSplitOptions.None)     'Split the read file content
-
-                '======== General ===========
-                If words(0) = "@J003" Then TextBox01.Text = words(2)    'Quote
-
-
-                '======== Fan general ===========
-                If words(0) = "@JF020" Then TextBox16.Text = words(2)    'Fan type
-                If words(0) = "@J021" Then TextBox14.Text = words(2)    'Fan model
-
-                '======== Fan dimensions ===========
-                If words(0) = "@J053" Then TextBox19.Text = words(2)    'Vane thickness
-                If words(0) = "@J054" Then TextBox17.Text = words(2)    'Suction flange
-                If words(0) = "@J055" Then TextBox18.Text = words(2)    'Discharge flange
-
-                '======== Impeller ===========
-                If words(0) = "@J080" Then TextBox20.Text = words(2)    'Impeller material
-
-                '======== E_motor===========
-                If words(0) = "@J100" Then TextBox21.Text = words(2)    'Motor speed
-                If words(0) = "@J101" Then TextBox22.Text = words(2)    'Motor power
-                If words(0) = "@J102" Then TextBox23.Text = words(2)    'Motor frame size
-            Next
-        End If
-    End Sub
-    Private Sub CheckBox392_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox392.CheckedChanged
-
-    End Sub
-
 
 End Class

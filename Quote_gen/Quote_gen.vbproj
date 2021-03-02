@@ -26,7 +26,7 @@
     <MapFileExtensions>true</MapFileExtensions>
     <InstallUrl>\\DCF1\data2%24\Engineering\VBasic\Quote_generator\</InstallUrl>
     <PublisherName>Pathuis Heavy Industries</PublisherName>
-    <ApplicationRevision>76</ApplicationRevision>
+    <ApplicationRevision>77</ApplicationRevision>
     <ApplicationVersion>1.1.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -82,7 +82,7 @@
     <SignManifests>false</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Hydrattz-Multipurpose-Alphabet-Letter-S-blue.ico</ApplicationIcon>
+    <ApplicationIcon>quote-symbol.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
@@ -214,6 +214,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Hydrattz-Multipurpose-Alphabet-Letter-S-blue.ico" />
+    <Content Include="quote-symbol.ico" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />

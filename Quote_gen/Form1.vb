@@ -26,6 +26,12 @@ Public Class Form1
     Public Shared Flight_dia() As String =   'tbv screw diameter selectie
       {"280", "330", "400", "500", "630", "800", "1000", "1200", "1400"}
 
+    Public Shared Flash_duct() As String =   'tbv Flash duct diameter
+      {"100", "150", "200", "250", "300", "400", "500", "600", "710", "800", "900", "1000", "1120", "1250", "1400"}
+
+    Public Shared Flash_duct_mat() As String =   'tbv Flash duct 
+      {"carbon steel", "ss 304", "ss 316"}
+
     Public flight_pitch() As String = {"variable", "1/2x Diam.", "3/4x Diam.", "1x Diam."}
     Public atex_zone() As String = {"0", "1", "2", "20", "21", "22", "-"}
     Public atex_group() As String = {"IIA", "IIB", "IIC", "-"}
@@ -255,6 +261,30 @@ Public Class Form1
         "New quotes use the local normal.dot with location" & vbCrLf &
         "C:\\users\(your user name)\appdata\roaming\microsoft\templates.." & vbCrLf
 
+        TextBox31.Text =
+        "Log book" & vbCrLf &
+        "13/09/2017, First published" & vbCrLf &
+        "20/09/2017, Normal.dot added" & vbCrLf &
+        "25/09/2017, Search and replace added" & vbCrLf &
+        "05/10/2017, Update search and replace" & vbCrLf &
+        "25/09/2017, Major update, input Jeroen Agrocola" & vbCrLf &
+        "07/11/2017, Tnumbers added" & vbCrLf &
+        "15/02/2018, Checkboxes added" & vbCrLf &
+        "02/03/2018, Max 250 char in search and replace" & vbCrLf &
+        "07/06/2018, Storage now \\DCF!\DATA2$" & vbCrLf &
+        "12/09/2018, Excel extension added" & vbCrLf &
+        "13/11/2018, Save routine change, input JA" & vbCrLf &
+        "14/11/2018, Languages added" & vbCrLf &
+        "23/12/2018, Quote number case sensative" & vbCrLf &
+        "16/04/2020, Flash drier added" & vbCrLf &
+        "17/04/2020, Clipboard added" & vbCrLf &
+        "12/05/2020, Hub and inpeller material replacement added" & vbCrLf &
+        "12/05/2020, Bugfix summary problem" & vbCrLf &
+        "25/05/2020, VTK5 storage implemented" & vbCrLf &
+        "28/09/2020, Code changed to VS2019 " & vbCrLf &
+        "04/02/2021, Started with data EXchange " & vbCrLf
+
+
         ListBox1.Items.Add("Cyclone" & vbTab & vbTab & "1100")
         ListBox1.Items.Add("Filter" & vbTab & vbTab & "1500")
         ListBox1.Items.Add("Heater" & vbTab & vbTab & "2100")
@@ -451,25 +481,45 @@ Public Class Form1
         ComboBox7.Items.Clear()
         ComboBox8.Items.Clear()
         ComboBox9.Items.Clear()
+        ComboBox19.Items.Clear()
+        ComboBox20.Items.Clear()
+        ComboBox21.Items.Clear()
+        ComboBox22.Items.Clear()
 
         '-------Fill combobox------------------
-        For hh = 0 To Flight_dia.Length - 1                'Fill combobox 
+        For hh = 0 To Flight_dia.Length - 1            'Fill combobox 
             ComboBox7.Items.Add(Flight_dia(hh))
         Next hh
 
         '-------Fill combobox------------------
-        For hh = 0 To flight_pitch.Length - 1               'Fill combobox 
+        For hh = 0 To flight_pitch.Length - 1          'Fill combobox 
             ComboBox8.Items.Add(flight_pitch(hh))
         Next hh
 
         '-------Fill combobox------------------
-        For hh = 0 To drive_make.Length - 1               'Fill combobox 
+        For hh = 0 To drive_make.Length - 1            'Fill combobox 
             ComboBox9.Items.Add(drive_make(hh))
+        Next hh
+
+        '-------Fill combobox------------------
+        For hh = 0 To Flash_duct.Length - 1             'Fill combobox 
+            ComboBox19.Items.Add(Flash_duct(hh))        'Flash duct
+            ComboBox21.Items.Add(Flash_duct(hh))        'Cooling duct
+        Next hh
+
+        '-------Fill combobox------------------
+        For hh = 0 To Flash_duct_mat.Length - 1             'Fill combobox 
+            ComboBox20.Items.Add(Flash_duct_mat(hh))        'Flash duct material
+            ComboBox22.Items.Add(Flash_duct_mat(hh))        'Cooling duct material
         Next hh
 
         ComboBox7.SelectedIndex = 2
         ComboBox8.SelectedIndex = 1
         ComboBox9.SelectedIndex = 0
+        ComboBox19.SelectedIndex = 5            'Flash duct
+        ComboBox20.SelectedIndex = 1            'Flash duct MATERIAL
+        ComboBox21.SelectedIndex = 2            'Cooling duct
+        ComboBox22.SelectedIndex = 1            'Cooling duct MATERIAL
     End Sub
 
     Private Sub Combo_init_atex()

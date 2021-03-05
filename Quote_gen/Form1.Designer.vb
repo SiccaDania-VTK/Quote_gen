@@ -756,6 +756,8 @@ Partial Class Form1
         Me.TextBox53 = New System.Windows.Forms.TextBox()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.TabPage7 = New System.Windows.Forms.TabPage()
+        Me.TextBox31 = New System.Windows.Forms.TextBox()
         Me.TabPage9.SuspendLayout
         Me.TabPage5.SuspendLayout
         Me.GroupBox74.SuspendLayout
@@ -871,6 +873,7 @@ Partial Class Form1
         Me.GroupBox94.SuspendLayout
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit
         Me.GroupBox80.SuspendLayout
+        Me.TabPage7.SuspendLayout
         Me.SuspendLayout
         '
         'TabPage9
@@ -5900,6 +5903,7 @@ Partial Class Form1
         Me.TabControl1.Controls.Add(Me.TabPage9)
         Me.TabControl1.Controls.Add(Me.TabPage10)
         Me.TabControl1.Controls.Add(Me.TabPage6)
+        Me.TabControl1.Controls.Add(Me.TabPage7)
         Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TabControl1.Location = New System.Drawing.Point(0, 0)
         Me.TabControl1.Name = "TabControl1"
@@ -9223,6 +9227,27 @@ Partial Class Form1
         '
         Me.Timer1.Interval = 2000
         '
+        'TabPage7
+        '
+        Me.TabPage7.Controls.Add(Me.TextBox31)
+        Me.TabPage7.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage7.Name = "TabPage7"
+        Me.TabPage7.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage7.Size = New System.Drawing.Size(1639, 711)
+        Me.TabPage7.TabIndex = 16
+        Me.TabPage7.Text = "Log"
+        Me.TabPage7.UseVisualStyleBackColor = True
+        '
+        'TextBox31
+        '
+        Me.TextBox31.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox31.Location = New System.Drawing.Point(22, 28)
+        Me.TextBox31.Multiline = True
+        Me.TextBox31.Name = "TextBox31"
+        Me.TextBox31.Size = New System.Drawing.Size(451, 418)
+        Me.TextBox31.TabIndex = 4
+        Me.TextBox31.Text = "Log"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -9443,6 +9468,8 @@ Partial Class Form1
         Me.GroupBox94.PerformLayout
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit
         Me.GroupBox80.ResumeLayout(False)
+        Me.TabPage7.ResumeLayout(False)
+        Me.TabPage7.PerformLayout
         Me.ResumeLayout(False)
 
     End Sub
@@ -10179,4 +10206,6 @@ Partial Class Form1
     Friend WithEvents TextBox30 As TextBox
     Friend WithEvents Label90 As Label
     Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents TabPage7 As TabPage
+    Friend WithEvents TextBox31 As TextBox
 End Class

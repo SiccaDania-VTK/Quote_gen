@@ -757,6 +757,43 @@ Public Class Form1
         ppp(33, 1) = TextBox48.Text                   'Electric motor _EM_SVPHF
         ppp(34, 0) = Label24.Text                     '_P_Design
         ppp(34, 1) = TextBox24.Text                   'mBar(g) kg/cm2 mmWc
+
+        '--------------- Flash drier -----
+        ppp(35, 0) = Label76.Text                     '_Bin_type
+        ppp(35, 1) = TextBox55.Text                   '
+        ppp(36, 0) = Label80.Text                     '_Feeder_type
+        ppp(36, 1) = TextBox56.Text                   '
+        ppp(37, 0) = Label79.Text                     'Back mix
+        ppp(37, 1) = TextBox57.Text                   '
+        ppp(38, 0) = Label76.Text                     'Mix bin
+        ppp(38, 1) = TextBox58.Text                   '
+
+        ppp(39, 0) = Label81.Text                     'Cyclone 1
+        ppp(39, 1) = TextBox59.Text                   '
+        ppp(40, 0) = Label84.Text                     '
+        ppp(40, 1) = TextBox60.Text                   '
+
+        ppp(41, 0) = Label82.Text                     'Drier fan
+        ppp(41, 1) = TextBox61.Text                   '
+        ppp(42, 0) = Label86.Text                     '
+        ppp(42, 1) = TextBox62.Text                   '
+
+        ppp(43, 0) = Label83.Text                     'Cooler fan
+        ppp(43, 1) = TextBox63.Text                   '
+        ppp(44, 0) = Label85.Text                     '
+        ppp(44, 1) = TextBox64.Text                   '
+
+        ppp(45, 0) = Label74.Text                     'Flash duct
+        ppp(45, 1) = ComboBox19.SelectedItem.ToString '
+        ppp(46, 0) = Label73.Text
+        ppp(46, 1) = ComboBox20.SelectedItem.ToString 'Flash duct mat
+
+        ppp(47, 0) = Label77.Text
+        ppp(47, 1) = ComboBox21.SelectedItem.ToString 'Cooler duct
+        ppp(48, 0) = Label78.Text
+        ppp(48, 1) = ComboBox22.SelectedItem.ToString '
+
+
         For i = 0 To ppp.GetLength(0) - 1
             TextBox40.Text &= ppp(i, 0) & vbTab & ppp(i, 1) & vbCrLf
         Next

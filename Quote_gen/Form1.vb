@@ -283,8 +283,8 @@ Public Class Form1
         "25/05/2020, VTK5 storage implemented" & vbCrLf &
         "28/09/2020, Code changed to VS2019" & vbCrLf &
         "04/02/2021, Started with data EXchange" & vbCrLf &
-        "15/04/2021, Encoding.Unicode instead  Encoding.ASCII" & vbCrLf
-
+        "15/04/2021, Encoding.Unicode instead  Encoding.ASCII" & vbCrLf &
+        "02/07/2021, File.ReadAllText(xxx, encoding removed)" & vbCrLf
 
 
         ListBox1.Items.Add("Cyclone" & vbTab & vbTab & "1100")
@@ -390,9 +390,9 @@ Public Class Form1
         Check_directories()  'Are the directories present
         If CInt(temp_string.Length.ToString) > 5 Then      'String may be empty
             If Directory.Exists(dirpath_Backup) Then
-                File.WriteAllText(dirpath_Backup & filename, temp_string, Encoding.Unicode)      'used at VTK
+                File.WriteAllText(dirpath_Backup & filename, temp_string, Encoding.UTF32)      'used at VTK
             Else
-                File.WriteAllText(dirpath_Home_GP & filename, temp_string, Encoding.Unicode)     'used at home
+                File.WriteAllText(dirpath_Home_GP & filename, temp_string, Encoding.UTF32)     'used at home
             End If
         End If
     End Sub
@@ -849,7 +849,7 @@ Public Class Form1
         OpenFileDialog1.Filter = "EXChange Files|*.sic1"
 
         If OpenFileDialog1.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
-            Dim readText As String = File.ReadAllText(OpenFileDialog1.FileName, Encoding.Unicode)
+            Dim readText As String = File.ReadAllText(OpenFileDialog1.FileName)
             exchange_words = readText.Split(separators1, StringSplitOptions.None) 'Split the read file content
 
             '===== Fill the text box =====
@@ -880,7 +880,7 @@ Public Class Form1
         OpenFileDialog1.Filter = "EXChange Files|*.sic1"
 
         If OpenFileDialog1.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
-            Dim readText As String = File.ReadAllText(OpenFileDialog1.FileName, Encoding.ASCII)
+            Dim readText As String = File.ReadAllText(OpenFileDialog1.FileName)
             exchange_words = readText.Split(separators1, StringSplitOptions.None) 'Split the read file content
 
             '===== Fill the text box =====

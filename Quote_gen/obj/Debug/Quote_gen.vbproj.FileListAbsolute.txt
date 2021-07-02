@@ -38,7 +38,6 @@ C:\Repos\Quote_gen\Quote_gen\bin\Debug\Quote_gen.application
 C:\Repos\Quote_gen\Quote_gen\bin\Debug\Quote_gen.exe
 C:\Repos\Quote_gen\Quote_gen\bin\Debug\Quote_gen.pdb
 C:\Repos\Quote_gen\Quote_gen\bin\Debug\Quote_gen.xml
-C:\Repos\Quote_gen\Quote_gen\obj\Debug\Quote_gen.vbprojAssemblyReference.cache
 C:\Repos\Quote_gen\Quote_gen\obj\Debug\Quote_gen.vbproj.ResolveComReference.cache
 C:\Repos\Quote_gen\Quote_gen\obj\Debug\Quote_gen.Form1.resources
 C:\Repos\Quote_gen\Quote_gen\obj\Debug\Quote_gen.Resources.resources
@@ -49,3 +48,4 @@ C:\Repos\Quote_gen\Quote_gen\obj\Debug\Quote_gen.application
 C:\Repos\Quote_gen\Quote_gen\obj\Debug\Quote_gen.exe
 C:\Repos\Quote_gen\Quote_gen\obj\Debug\Quote_gen.xml
 C:\Repos\Quote_gen\Quote_gen\obj\Debug\Quote_gen.pdb
+C:\Repos\Quote_gen\Quote_gen\obj\Debug\Quote_gen.vbproj.AssemblyReference.cache

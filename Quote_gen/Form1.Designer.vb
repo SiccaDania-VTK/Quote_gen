@@ -747,10 +747,8 @@ Partial Class Form1
         Me.TextBox29 = New System.Windows.Forms.TextBox()
         Me.TextBox30 = New System.Windows.Forms.TextBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Button11 = New System.Windows.Forms.Button()
         Me.Button12 = New System.Windows.Forms.Button()
         Me.GroupBox80 = New System.Windows.Forms.GroupBox()
-        Me.Button10 = New System.Windows.Forms.Button()
         Me.Button9 = New System.Windows.Forms.Button()
         Me.TextBox54 = New System.Windows.Forms.TextBox()
         Me.TextBox53 = New System.Windows.Forms.TextBox()
@@ -9066,14 +9064,13 @@ Partial Class Form1
         Me.GroupBox94.Controls.Add(Me.TextBox29)
         Me.GroupBox94.Controls.Add(Me.TextBox30)
         Me.GroupBox94.Controls.Add(Me.DataGridView1)
-        Me.GroupBox94.Controls.Add(Me.Button11)
         Me.GroupBox94.Controls.Add(Me.Button12)
         Me.GroupBox94.Location = New System.Drawing.Point(737, 15)
         Me.GroupBox94.Name = "GroupBox94"
         Me.GroupBox94.Size = New System.Drawing.Size(455, 559)
         Me.GroupBox94.TabIndex = 112
         Me.GroupBox94.TabStop = False
-        Me.GroupBox94.Text = "Flash Drier data exchange"
+        Me.GroupBox94.Text = "Quote; Flash Drier data exchange"
         '
         'Label90
         '
@@ -9153,43 +9150,24 @@ Partial Class Form1
         Me.DataGridView1.Size = New System.Drawing.Size(443, 386)
         Me.DataGridView1.TabIndex = 113
         '
-        'Button11
-        '
-        Me.Button11.Location = New System.Drawing.Point(211, 19)
-        Me.Button11.Name = "Button11"
-        Me.Button11.Size = New System.Drawing.Size(188, 27)
-        Me.Button11.TabIndex = 6
-        Me.Button11.Text = "Insert selected data"
-        Me.Button11.UseVisualStyleBackColor = True
-        '
         'Button12
         '
         Me.Button12.Location = New System.Drawing.Point(17, 19)
         Me.Button12.Name = "Button12"
-        Me.Button12.Size = New System.Drawing.Size(188, 27)
+        Me.Button12.Size = New System.Drawing.Size(201, 27)
         Me.Button12.TabIndex = 5
         Me.Button12.Text = "Select Flash-Drier file"
         Me.Button12.UseVisualStyleBackColor = True
         '
         'GroupBox80
         '
-        Me.GroupBox80.Controls.Add(Me.Button10)
         Me.GroupBox80.Controls.Add(Me.Button9)
         Me.GroupBox80.Location = New System.Drawing.Point(391, 15)
         Me.GroupBox80.Name = "GroupBox80"
-        Me.GroupBox80.Size = New System.Drawing.Size(200, 100)
+        Me.GroupBox80.Size = New System.Drawing.Size(200, 58)
         Me.GroupBox80.TabIndex = 6
         Me.GroupBox80.TabStop = False
         Me.GroupBox80.Text = "Data EXChange fan sizing tool"
-        '
-        'Button10
-        '
-        Me.Button10.Location = New System.Drawing.Point(6, 52)
-        Me.Button10.Name = "Button10"
-        Me.Button10.Size = New System.Drawing.Size(188, 27)
-        Me.Button10.TabIndex = 6
-        Me.Button10.Text = "Insert selected data"
-        Me.Button10.UseVisualStyleBackColor = True
         '
         'Button9
         '
@@ -9256,7 +9234,7 @@ Partial Class Form1
         Me.Controls.Add(Me.TabControl1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form1"
-        Me.Text = "Quotation Text Generator MK VII h"
+        Me.Text = "Quotation Text Generator MK VII i"
         Me.TabPage9.ResumeLayout(False)
         Me.TabPage9.PerformLayout
         Me.TabPage5.ResumeLayout(False)
@@ -10097,7 +10075,6 @@ Partial Class Form1
     Friend WithEvents TextBox54 As TextBox
     Friend WithEvents TextBox53 As TextBox
     Friend WithEvents GroupBox80 As GroupBox
-    Friend WithEvents Button10 As Button
     Friend WithEvents GroupBox84 As GroupBox
     Friend WithEvents CheckBox290 As CheckBox
     Friend WithEvents CheckBox292 As CheckBox
@@ -10169,7 +10146,6 @@ Partial Class Form1
     Friend WithEvents CheckBox390 As CheckBox
     Friend WithEvents CheckBox403 As CheckBox
     Friend WithEvents CheckBox404 As CheckBox
-    Friend WithEvents Button11 As Button
     Friend WithEvents Button12 As Button
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents GroupBox91 As GroupBox

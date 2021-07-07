@@ -38,7 +38,7 @@ Public Class Form1
     Public atex_temp() As String = {"T1", "T2", "T3", "T4", "T5", "T6", "-"}
     Public Capacity_Control() As String = {"client provided VSD", "Variable Speed Drive system", "inlet louvre damper", "outlet louvre damper", "no control measures"}
     Public drive_make() As String = {"SEW", "Nord", "Bauer", "Flender"}
-    Dim exchange_words() As String          'Exchange data from disk
+    Dim exchange_words() As String        'Exchange data from disk
 
     Public Shared steel() As String =
   {"16M03;                                EN10028-2 UNS;          16M03;                          1.5415;     Plate",
@@ -89,7 +89,7 @@ Public Class Form1
         If File.Exists(sstyle1) Then
             oDoc = oWord.Documents.Add(sstyle1.Clone)
         Else
-            MessageBox.Show("Damm.. Can not find " & sstyle1)
+            MessageBox.Show("Damm.. Can not find word style template" & sstyle1)
             oDoc = oWord.Documents.Add
         End If
 
@@ -103,7 +103,6 @@ Public Class Form1
         all_check = all_check.OrderBy(Function(x) x.Text).ToList()  'Alphabetical order
 
         For i = 0 To all_check.Count - 1
-
             Dim grbx As System.Windows.Forms.CheckBox = CType(all_check(i), System.Windows.Forms.CheckBox)
             If grbx.Checked Then
                 block_name = grbx.Text
@@ -121,7 +120,7 @@ Public Class Form1
             End If
         Next
 
-        Button1.Text = "Now search and replace"
+        Button1.Text = "Now search and replace Fan"
 
         '============ search and replace in WORD file================
         Dim find_s As String = ""
@@ -172,22 +171,22 @@ Public Class Form1
         Find_rep(Label65.Text, TextBox48.Text)  '_EM_SVPHF
 
         '---------- General------------------
+        Button1.Text = "Now search and replace General"
         Find_rep(Label55.Text, ComboBox14.Text)     '_Capacity_Control
         Find_rep(Label54.Text, ComboBox11.Text)     '_Mat_impellar changed 12/5/2020
         Find_rep(Label57.Text, ComboBox17.Text)     '_Mat_pedestal
         Find_rep(Label42.Text, ComboBox12.Text)     '_Mat_casing
         Find_rep(Label47.Text, ComboBox13.Text)     '_mat_shaft
         Find_rep(Label56.Text, ComboBox16.Text)     '_mat_hub  added 12/5/2020
-
         Find_rep("_Comments", TextBox41.Text)
         Find_rep("_Comments2", TextBox42.Text)
 
         '---------- Conveyor----------------
+        Button1.Text = "Now search and replace Conveyor"
         Find_rep(Label41.Text, NumericUpDown7.Value.ToString)   'Length
         Find_rep(Label43.Text, ComboBox7.Text)                  'Diameter flight
         Find_rep(Label32.Text, ComboBox8.Text)                  'Fligh pitch
         Find_rep(Label29.Text, NumericUpDown1.Value.ToString)
-
         Find_rep(Label53.Text, NumericUpDown3.Value.ToString)
         Find_rep(Label51.Text, NumericUpDown4.Value.ToString)
         Find_rep(Label50.Text, NumericUpDown5.Value.ToString)
@@ -195,6 +194,35 @@ Public Class Form1
         Find_rep(Label46.Text, ComboBox8.Text)                  'Make drive
         Find_rep(Label45.Text, NumericUpDown6.Value.ToString)   'Speed
         Find_rep(Label38.Text, NumericUpDown2.Value.ToString)   'Flight thick
+
+        '----------- flashdryer quotes ---------
+
+        Dim find1, find2, find3 As String
+        Find_rep("@QF020", TextBox30.Text)  'Elevation
+        Find_rep("@QF021", TextBox29.Text)  'Product
+        Find_rep("@QF022", TextBox28.Text)  'Installed power
+
+
+        With DataGridView1
+            For r = 0 To DataGridView1.Rows.Count - 2
+                Button1.Text = "Now search and replace Flash drier" & r.ToString
+
+                If Not IsNothing(.Rows(r).Cells(1).Value) And Not IsNothing(.Rows(r).Cells(2).Value) Then
+                    find1 = Trim("@S" & .Rows(r).Cells(1).Value.ToString)   'Summer conditions
+                    Find_rep(find1, Trim(.Rows(r).Cells(2).Value.ToString)) 'Summer conditions
+                End If
+
+                If Not IsNothing(.Rows(r).Cells(1).Value) And Not IsNothing(.Rows(r).Cells(3).Value) Then
+                    find2 = Trim("@W" & .Rows(r).Cells(1).Value.ToString)   'Winter conditions
+                    Find_rep(find2, Trim(.Rows(r).Cells(3).Value.ToString)) 'Winter conditions
+                End If
+
+                If Not IsNothing(.Rows(r).Cells(1).Value) And Not IsNothing(.Rows(r).Cells(4).Value) Then
+                    find3 = Trim("@A" & .Rows(r).Cells(1).Value.ToString)   'Average conditions
+                    Find_rep(find3, Trim(.Rows(r).Cells(4).Value.ToString)) 'Average conditions
+                End If
+            Next r
+        End With
 
         '==================== backup final product===============
         ufilename = "Quote_" & TextBox01.Text & "_" & TextBox02.Text & DateTime.Now.ToString("_yyyy_MM_dd") & ".docx"
@@ -216,24 +244,25 @@ Public Class Form1
         Dim myStoryRange As Range
 
         find_s = Trim(find_s)
-
-        For Each myStoryRange In oWord.ActiveDocument.StoryRanges
-            With myStoryRange.Find
-                .Text = find_s.ToString
-                .Replacement.Text = rep_s.ToString
-                .Wrap = WdFindWrap.wdFindContinue
-                .Execute(Replace:=Word.WdReplace.wdReplaceAll)
-            End With
-            Do While Not (myStoryRange.NextStoryRange Is Nothing)
-                myStoryRange = myStoryRange.NextStoryRange
+        If find_s.Length > 0 Then           'Added for speed
+            For Each myStoryRange In oWord.ActiveDocument.StoryRanges
                 With myStoryRange.Find
                     .Text = find_s.ToString
                     .Replacement.Text = rep_s.ToString
                     .Wrap = WdFindWrap.wdFindContinue
                     .Execute(Replace:=Word.WdReplace.wdReplaceAll)
                 End With
-            Loop
-        Next myStoryRange
+                Do While Not (myStoryRange.NextStoryRange Is Nothing)
+                    myStoryRange = myStoryRange.NextStoryRange
+                    With myStoryRange.Find
+                        .Text = find_s.ToString
+                        .Replacement.Text = rep_s.ToString
+                        .Wrap = WdFindWrap.wdFindContinue
+                        .Execute(Replace:=Word.WdReplace.wdReplaceAll)
+                    End With
+                Loop
+            Next myStoryRange
+        End If
     End Sub
 
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
@@ -284,8 +313,8 @@ Public Class Form1
         "28/09/2020, Code changed to VS2019" & vbCrLf &
         "04/02/2021, Started with data EXchange" & vbCrLf &
         "15/04/2021, Encoding.Unicode instead  Encoding.ASCII" & vbCrLf &
-        "02/07/2021, File.ReadAllText(xxx, encoding removed)" & vbCrLf
-
+        "02/07/2021, File.ReadAllText(xxx, encoding removed)" & vbCrLf &
+        "07/07/2021, Find & Replace flash drier DGV added" & vbCrLf
 
         ListBox1.Items.Add("Cyclone" & vbTab & vbTab & "1100")
         ListBox1.Items.Add("Filter" & vbTab & vbTab & "1500")
@@ -321,7 +350,7 @@ Public Class Form1
         TextBox01.Text = "Q" & Now.ToString("yy") & ".10"
         Timer1.Enabled = True
         init_done = True
-        Present_Datagridview1()
+        Present_Datagridview1() 'DGV titles and makeup
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
@@ -832,6 +861,7 @@ Public Class Form1
 
     Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
         Exchange_read_fan_file()
+        Exchange_Insert_Fan_data()
     End Sub
 
     Private Sub Exchange_read_fan_file()
@@ -860,9 +890,9 @@ Public Class Form1
         End If
     End Sub
     Private Sub Button12_Click(sender As Object, e As EventArgs) Handles Button12.Click
-        Present_Datagridview1()
-        Exchange_read_Flash_drier_file()
-        Exchange_Insert_Flash_data()
+        Present_Datagridview1()                     'DGV titles and makeup
+        Exchange_read_Flash_drier_file()            'Read from disk
+        Exchange_Insert_Flash_data_into_DGV()       'insert into Datagridview
     End Sub
 
     Private Sub Exchange_read_Flash_drier_file()
@@ -891,7 +921,7 @@ Public Class Form1
         End If
     End Sub
 
-    Private Sub Present_Datagridview1()
+    Private Sub Present_Datagridview1() 'DGV titles and makeup
 
         With DataGridView1
             '.ColumnHeadersDefaultCellStyle.Font = New Font("Tahoma", 8.25F, FontStyle.Regular)
@@ -920,7 +950,7 @@ Public Class Form1
             '.AutoResizeColumns()
         End With
     End Sub
-    Private Sub Exchange_Insert_Flash_data()
+    Private Sub Exchange_Insert_Flash_data_into_DGV()
         Dim words() As String
         Dim separators() As String = {";"}
 
@@ -1051,9 +1081,6 @@ Public Class Form1
         End If
     End Sub
 
-    Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
-        Exchange_Insert_Fan_data()
-    End Sub
 
     Private Sub Exchange_Insert_Fan_data()
         Dim words() As String
@@ -1068,7 +1095,6 @@ Public Class Form1
 
                 '======== General ===========
                 If words(0) = "@F003" Then TextBox01.Text = words(2)    'Quote
-
 
                 '======== Fan general ===========
                 If words(0) = "@F020" Then TextBox16.Text = words(2)    'Fan type
@@ -1089,8 +1115,6 @@ Public Class Form1
             Next
         End If
     End Sub
-    Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
-        Exchange_Insert_Flash_data()
-    End Sub
+
 
 End Class

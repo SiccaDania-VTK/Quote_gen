@@ -512,10 +512,6 @@ Public Class Form1
         ComboBox7.Items.Clear()
         ComboBox8.Items.Clear()
         ComboBox9.Items.Clear()
-        ComboBox19.Items.Clear()
-        ComboBox20.Items.Clear()
-        ComboBox21.Items.Clear()
-        ComboBox22.Items.Clear()
 
         '-------Fill combobox------------------
         For hh = 0 To Flight_dia.Length - 1            'Fill combobox 
@@ -532,25 +528,9 @@ Public Class Form1
             ComboBox9.Items.Add(drive_make(hh))
         Next hh
 
-        '-------Fill combobox------------------
-        For hh = 0 To Flash_duct.Length - 1             'Fill combobox 
-            ComboBox19.Items.Add(Flash_duct(hh))        'Flash duct
-            ComboBox21.Items.Add(Flash_duct(hh))        'Cooling duct
-        Next hh
-
-        '-------Fill combobox------------------
-        For hh = 0 To Flash_duct_mat.Length - 1             'Fill combobox 
-            ComboBox20.Items.Add(Flash_duct_mat(hh))        'Flash duct material
-            ComboBox22.Items.Add(Flash_duct_mat(hh))        'Cooling duct material
-        Next hh
-
         ComboBox7.SelectedIndex = 2
         ComboBox8.SelectedIndex = 1
         ComboBox9.SelectedIndex = 0
-        ComboBox19.SelectedIndex = 5            'Flash duct
-        ComboBox20.SelectedIndex = 1            'Flash duct MATERIAL
-        ComboBox21.SelectedIndex = 2            'Cooling duct
-        ComboBox22.SelectedIndex = 1            'Cooling duct MATERIAL
     End Sub
 
     Private Sub Combo_init_atex()
@@ -799,10 +779,10 @@ Public Class Form1
         'ppp(38, 0) = Label76.Text                     'Mix bin
         'ppp(38, 1) = TextBox58.Text                   '
 
-        ppp(39, 0) = Label81.Text                     'Cyclone 1
-        ppp(39, 1) = TextBox59.Text                   '
-        ppp(40, 0) = Label84.Text                     '
-        ppp(40, 1) = TextBox60.Text                   '
+        'ppp(39, 0) = Label81.Text                     'Cyclone 1
+        'ppp(39, 1) = TextBox59.Text                   '
+        'ppp(40, 0) = Label84.Text                     '
+        'ppp(40, 1) = TextBox60.Text                   '
 
         'ppp(41, 0) = Label82.Text                     'Drier fan
         'ppp(41, 1) = TextBox61.Text                   '
@@ -814,15 +794,7 @@ Public Class Form1
         'ppp(44, 0) = Label85.Text                     '
         'ppp(44, 1) = TextBox64.Text                   '
 
-        ppp(45, 0) = Label74.Text                     'Flash duct
-        ppp(45, 1) = ComboBox19.SelectedItem.ToString '
-        ppp(46, 0) = Label73.Text
-        ppp(46, 1) = ComboBox20.SelectedItem.ToString 'Flash duct mat
 
-        ppp(47, 0) = Label77.Text
-        ppp(47, 1) = ComboBox21.SelectedItem.ToString 'Cooler duct
-        ppp(48, 0) = Label78.Text
-        ppp(48, 1) = ComboBox22.SelectedItem.ToString '
 
 
         For i = 0 To ppp.GetLength(0) - 1
@@ -1115,6 +1087,5 @@ Public Class Form1
             Next
         End If
     End Sub
-
 
 End Class

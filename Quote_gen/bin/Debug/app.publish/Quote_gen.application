@@ -14,7 +14,7 @@
     <framework targetVersion="4.6.1" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="Quote_gen.exe.manifest" size="5349">
+    <dependentAssembly dependencyType="install" codebase="Application Files\Quote_gen_1_1_0_82\Quote_gen.exe.manifest" size="5349">
       <assemblyIdentity name="Quote_gen.exe" version="1.1.0.82" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>

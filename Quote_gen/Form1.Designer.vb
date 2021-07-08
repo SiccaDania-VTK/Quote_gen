@@ -579,10 +579,8 @@ Partial Class Form1
         Me.CheckBox51 = New System.Windows.Forms.CheckBox()
         Me.CheckBox68 = New System.Windows.Forms.CheckBox()
         Me.CheckBox69 = New System.Windows.Forms.CheckBox()
-        Me.GroupBox84 = New System.Windows.Forms.GroupBox()
         Me.CheckBox310 = New System.Windows.Forms.CheckBox()
         Me.CheckBox290 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox292 = New System.Windows.Forms.CheckBox()
         Me.CheckBox397 = New System.Windows.Forms.CheckBox()
         Me.CheckBox398 = New System.Windows.Forms.CheckBox()
         Me.GroupBox83 = New System.Windows.Forms.GroupBox()
@@ -653,6 +651,9 @@ Partial Class Form1
         Me.CheckBox284 = New System.Windows.Forms.CheckBox()
         Me.CheckBox285 = New System.Windows.Forms.CheckBox()
         Me.GroupBox7 = New System.Windows.Forms.GroupBox()
+        Me.CheckBox420 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox421 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox422 = New System.Windows.Forms.CheckBox()
         Me.CheckBox54 = New System.Windows.Forms.CheckBox()
         Me.CheckBox55 = New System.Windows.Forms.CheckBox()
         Me.CheckBox56 = New System.Windows.Forms.CheckBox()
@@ -756,6 +757,70 @@ Partial Class Form1
         Me.TextBox31 = New System.Windows.Forms.TextBox()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.GroupBox84 = New System.Windows.Forms.GroupBox()
+        Me.CheckBox427 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox429 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox430 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox432 = New System.Windows.Forms.CheckBox()
+        Me.GroupBox88 = New System.Windows.Forms.GroupBox()
+        Me.CheckBox292 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox423 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox424 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox425 = New System.Windows.Forms.CheckBox()
+        Me.GroupBox89 = New System.Windows.Forms.GroupBox()
+        Me.CheckBox426 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox428 = New System.Windows.Forms.CheckBox()
+        Me.GroupBox90 = New System.Windows.Forms.GroupBox()
+        Me.CheckBox431 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox433 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox434 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox435 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox436 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox437 = New System.Windows.Forms.CheckBox()
+        Me.GroupBox95 = New System.Windows.Forms.GroupBox()
+        Me.CheckBox438 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox439 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox440 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox441 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox442 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox443 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox444 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox445 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox446 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox447 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox448 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox449 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox450 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox451 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox452 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox453 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox454 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox455 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox456 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox457 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox458 = New System.Windows.Forms.CheckBox()
+        Me.GroupBox96 = New System.Windows.Forms.GroupBox()
+        Me.CheckBox459 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox460 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox461 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox462 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox463 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox464 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox465 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox466 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox467 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox468 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox469 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox470 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox471 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox472 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox473 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox474 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox475 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox476 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox477 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox478 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox479 = New System.Windows.Forms.CheckBox()
         Me.TabPage9.SuspendLayout
         Me.TabPage5.SuspendLayout
         Me.GroupBox74.SuspendLayout
@@ -845,7 +910,6 @@ Partial Class Form1
         Me.GroupBox87.SuspendLayout
         Me.GroupBox86.SuspendLayout
         Me.GroupBox85.SuspendLayout
-        Me.GroupBox84.SuspendLayout
         Me.GroupBox83.SuspendLayout
         Me.GroupBox82.SuspendLayout
         Me.GroupBox81.SuspendLayout
@@ -872,6 +936,12 @@ Partial Class Form1
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit
         Me.GroupBox80.SuspendLayout
         Me.TabPage7.SuspendLayout
+        Me.GroupBox84.SuspendLayout
+        Me.GroupBox88.SuspendLayout
+        Me.GroupBox89.SuspendLayout
+        Me.GroupBox90.SuspendLayout
+        Me.GroupBox95.SuspendLayout
+        Me.GroupBox96.SuspendLayout
         Me.SuspendLayout
         '
         'TabPage9
@@ -6745,6 +6815,12 @@ Partial Class Form1
         '
         'TabPage13
         '
+        Me.TabPage13.Controls.Add(Me.GroupBox96)
+        Me.TabPage13.Controls.Add(Me.GroupBox95)
+        Me.TabPage13.Controls.Add(Me.GroupBox90)
+        Me.TabPage13.Controls.Add(Me.GroupBox89)
+        Me.TabPage13.Controls.Add(Me.GroupBox88)
+        Me.TabPage13.Controls.Add(Me.GroupBox84)
         Me.TabPage13.Controls.Add(Me.GroupBox93)
         Me.TabPage13.Controls.Add(Me.GroupBox92)
         Me.TabPage13.Controls.Add(Me.PictureBox1)
@@ -6752,7 +6828,6 @@ Partial Class Form1
         Me.TabPage13.Controls.Add(Me.GroupBox87)
         Me.TabPage13.Controls.Add(Me.GroupBox86)
         Me.TabPage13.Controls.Add(Me.GroupBox85)
-        Me.TabPage13.Controls.Add(Me.GroupBox84)
         Me.TabPage13.Controls.Add(Me.GroupBox83)
         Me.TabPage13.Controls.Add(Me.GroupBox82)
         Me.TabPage13.Controls.Add(Me.GroupBox81)
@@ -6773,11 +6848,12 @@ Partial Class Form1
         '
         'GroupBox93
         '
+        Me.GroupBox93.Controls.Add(Me.CheckBox414)
         Me.GroupBox93.Controls.Add(Me.CheckBox418)
         Me.GroupBox93.Controls.Add(Me.CheckBox67)
         Me.GroupBox93.Controls.Add(Me.CheckBox415)
-        Me.GroupBox93.Controls.Add(Me.CheckBox414)
-        Me.GroupBox93.Location = New System.Drawing.Point(1020, 454)
+        Me.GroupBox93.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox93.Location = New System.Drawing.Point(1128, 449)
         Me.GroupBox93.Name = "GroupBox93"
         Me.GroupBox93.Size = New System.Drawing.Size(221, 124)
         Me.GroupBox93.TabIndex = 67
@@ -6787,10 +6863,10 @@ Partial Class Form1
         'CheckBox418
         '
         Me.CheckBox418.AutoSize = True
-        Me.CheckBox418.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox418.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox418.Location = New System.Drawing.Point(11, 17)
         Me.CheckBox418.Name = "CheckBox418"
-        Me.CheckBox418.Size = New System.Drawing.Size(170, 22)
+        Me.CheckBox418.Size = New System.Drawing.Size(155, 20)
         Me.CheckBox418.TabIndex = 60
         Me.CheckBox418.Text = "P110, VSD's by Client"
         Me.CheckBox418.UseVisualStyleBackColor = True
@@ -6798,10 +6874,10 @@ Partial Class Form1
         'CheckBox67
         '
         Me.CheckBox67.AutoSize = True
-        Me.CheckBox67.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox67.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox67.Location = New System.Drawing.Point(12, 41)
         Me.CheckBox67.Name = "CheckBox67"
-        Me.CheckBox67.Size = New System.Drawing.Size(180, 22)
+        Me.CheckBox67.Size = New System.Drawing.Size(164, 20)
         Me.CheckBox67.TabIndex = 56
         Me.CheckBox67.Text = "P111, VSD Feed screw"
         Me.CheckBox67.UseVisualStyleBackColor = True
@@ -6809,10 +6885,10 @@ Partial Class Form1
         'CheckBox415
         '
         Me.CheckBox415.AutoSize = True
-        Me.CheckBox415.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox415.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox415.Location = New System.Drawing.Point(12, 65)
         Me.CheckBox415.Name = "CheckBox415"
-        Me.CheckBox415.Size = New System.Drawing.Size(159, 22)
+        Me.CheckBox415.Size = New System.Drawing.Size(144, 20)
         Me.CheckBox415.TabIndex = 57
         Me.CheckBox415.Text = "P112, VSD Drier fan"
         Me.CheckBox415.UseVisualStyleBackColor = True
@@ -6820,10 +6896,10 @@ Partial Class Form1
         'CheckBox414
         '
         Me.CheckBox414.AutoSize = True
-        Me.CheckBox414.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox414.Location = New System.Drawing.Point(12, 89)
+        Me.CheckBox414.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox414.Location = New System.Drawing.Point(11, 91)
         Me.CheckBox414.Name = "CheckBox414"
-        Me.CheckBox414.Size = New System.Drawing.Size(111, 22)
+        Me.CheckBox414.Size = New System.Drawing.Size(100, 20)
         Me.CheckBox414.TabIndex = 59
         Me.CheckBox414.Text = "P113, VSD..."
         Me.CheckBox414.UseVisualStyleBackColor = True
@@ -6835,7 +6911,8 @@ Partial Class Form1
         Me.GroupBox92.Controls.Add(Me.CheckBox76)
         Me.GroupBox92.Controls.Add(Me.CheckBox408)
         Me.GroupBox92.Controls.Add(Me.CheckBox409)
-        Me.GroupBox92.Location = New System.Drawing.Point(265, 286)
+        Me.GroupBox92.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox92.Location = New System.Drawing.Point(1374, 178)
         Me.GroupBox92.Name = "GroupBox92"
         Me.GroupBox92.Size = New System.Drawing.Size(238, 128)
         Me.GroupBox92.TabIndex = 67
@@ -6845,10 +6922,10 @@ Partial Class Form1
         'CheckBox71
         '
         Me.CheckBox71.AutoSize = True
-        Me.CheckBox71.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox71.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox71.Location = New System.Drawing.Point(6, 15)
         Me.CheckBox71.Name = "CheckBox71"
-        Me.CheckBox71.Size = New System.Drawing.Size(167, 22)
+        Me.CheckBox71.Size = New System.Drawing.Size(150, 20)
         Me.CheckBox71.TabIndex = 50
         Me.CheckBox71.Text = "J250, Coarse air filter"
         Me.CheckBox71.UseVisualStyleBackColor = True
@@ -6856,10 +6933,10 @@ Partial Class Form1
         'CheckBox72
         '
         Me.CheckBox72.AutoSize = True
-        Me.CheckBox72.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox72.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox72.Location = New System.Drawing.Point(5, 59)
         Me.CheckBox72.Name = "CheckBox72"
-        Me.CheckBox72.Size = New System.Drawing.Size(201, 22)
+        Me.CheckBox72.Size = New System.Drawing.Size(181, 20)
         Me.CheckBox72.TabIndex = 49
         Me.CheckBox72.Text = "J270, Anti icing electric HX"
         Me.CheckBox72.UseVisualStyleBackColor = True
@@ -6867,10 +6944,10 @@ Partial Class Form1
         'CheckBox76
         '
         Me.CheckBox76.AutoSize = True
-        Me.CheckBox76.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox76.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox76.Location = New System.Drawing.Point(6, 103)
         Me.CheckBox76.Name = "CheckBox76"
-        Me.CheckBox76.Size = New System.Drawing.Size(161, 22)
+        Me.CheckBox76.Size = New System.Drawing.Size(147, 20)
         Me.CheckBox76.TabIndex = 42
         Me.CheckBox76.Text = "J290, Intake silencer"
         Me.CheckBox76.UseVisualStyleBackColor = True
@@ -6878,10 +6955,10 @@ Partial Class Form1
         'CheckBox408
         '
         Me.CheckBox408.AutoSize = True
-        Me.CheckBox408.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox408.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox408.Location = New System.Drawing.Point(6, 37)
         Me.CheckBox408.Name = "CheckBox408"
-        Me.CheckBox408.Size = New System.Drawing.Size(195, 22)
+        Me.CheckBox408.Size = New System.Drawing.Size(175, 20)
         Me.CheckBox408.TabIndex = 44
         Me.CheckBox408.Text = "J260, Anti icing steam HX"
         Me.CheckBox408.UseVisualStyleBackColor = True
@@ -6889,10 +6966,10 @@ Partial Class Form1
         'CheckBox409
         '
         Me.CheckBox409.AutoSize = True
-        Me.CheckBox409.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox409.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox409.Location = New System.Drawing.Point(6, 81)
         Me.CheckBox409.Name = "CheckBox409"
-        Me.CheckBox409.Size = New System.Drawing.Size(115, 22)
+        Me.CheckBox409.Size = New System.Drawing.Size(104, 20)
         Me.CheckBox409.TabIndex = 46
         Me.CheckBox409.Text = "J280, Air filter"
         Me.CheckBox409.UseVisualStyleBackColor = True
@@ -6900,9 +6977,9 @@ Partial Class Form1
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(1337, 516)
+        Me.PictureBox1.Location = New System.Drawing.Point(1393, 624)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(224, 162)
+        Me.PictureBox1.Size = New System.Drawing.Size(134, 73)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 110
         Me.PictureBox1.TabStop = False
@@ -6914,7 +6991,7 @@ Partial Class Form1
         Me.GroupBox91.Controls.Add(Me.CheckBox405)
         Me.GroupBox91.Controls.Add(Me.CheckBox406)
         Me.GroupBox91.Controls.Add(Me.CheckBox407)
-        Me.GroupBox91.Location = New System.Drawing.Point(266, 561)
+        Me.GroupBox91.Location = New System.Drawing.Point(1379, 452)
         Me.GroupBox91.Name = "GroupBox91"
         Me.GroupBox91.Size = New System.Drawing.Size(238, 121)
         Me.GroupBox91.TabIndex = 88
@@ -6944,10 +7021,10 @@ Partial Class Form1
         'CheckBox405
         '
         Me.CheckBox405.AutoSize = True
-        Me.CheckBox405.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox405.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox405.Location = New System.Drawing.Point(11, 19)
         Me.CheckBox405.Name = "CheckBox405"
-        Me.CheckBox405.Size = New System.Drawing.Size(89, 22)
+        Me.CheckBox405.Size = New System.Drawing.Size(81, 20)
         Me.CheckBox405.TabIndex = 26
         Me.CheckBox405.Text = "J650, Mill"
         Me.CheckBox405.UseVisualStyleBackColor = True
@@ -6955,10 +7032,10 @@ Partial Class Form1
         'CheckBox406
         '
         Me.CheckBox406.AutoSize = True
-        Me.CheckBox406.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox406.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox406.Location = New System.Drawing.Point(11, 63)
         Me.CheckBox406.Name = "CheckBox406"
-        Me.CheckBox406.Size = New System.Drawing.Size(37, 22)
+        Me.CheckBox406.Size = New System.Drawing.Size(35, 20)
         Me.CheckBox406.TabIndex = 51
         Me.CheckBox406.Text = "--"
         Me.CheckBox406.UseVisualStyleBackColor = True
@@ -6966,10 +7043,10 @@ Partial Class Form1
         'CheckBox407
         '
         Me.CheckBox407.AutoSize = True
-        Me.CheckBox407.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox407.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox407.Location = New System.Drawing.Point(11, 41)
         Me.CheckBox407.Name = "CheckBox407"
-        Me.CheckBox407.Size = New System.Drawing.Size(140, 22)
+        Me.CheckBox407.Size = New System.Drawing.Size(127, 20)
         Me.CheckBox407.TabIndex = 27
         Me.CheckBox407.Text = "J660, Mill ducting"
         Me.CheckBox407.UseVisualStyleBackColor = True
@@ -6984,7 +7061,8 @@ Partial Class Form1
         Me.GroupBox87.Controls.Add(Me.CheckBox390)
         Me.GroupBox87.Controls.Add(Me.CheckBox403)
         Me.GroupBox87.Controls.Add(Me.CheckBox404)
-        Me.GroupBox87.Location = New System.Drawing.Point(1020, 226)
+        Me.GroupBox87.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox87.Location = New System.Drawing.Point(1128, 221)
         Me.GroupBox87.Name = "GroupBox87"
         Me.GroupBox87.Size = New System.Drawing.Size(221, 222)
         Me.GroupBox87.TabIndex = 66
@@ -6994,10 +7072,10 @@ Partial Class Form1
         'CheckBox419
         '
         Me.CheckBox419.AutoSize = True
-        Me.CheckBox419.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox419.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox419.Location = New System.Drawing.Point(11, 19)
         Me.CheckBox419.Name = "CheckBox419"
-        Me.CheckBox419.Size = New System.Drawing.Size(173, 22)
+        Me.CheckBox419.Size = New System.Drawing.Size(157, 20)
         Me.CheckBox419.TabIndex = 63
         Me.CheckBox419.Text = "P100, Panel Direct fire"
         Me.CheckBox419.UseVisualStyleBackColor = True
@@ -7005,10 +7083,10 @@ Partial Class Form1
         'CheckBox417
         '
         Me.CheckBox417.AutoSize = True
-        Me.CheckBox417.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox417.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox417.Location = New System.Drawing.Point(11, 139)
         Me.CheckBox417.Name = "CheckBox417"
-        Me.CheckBox417.Size = New System.Drawing.Size(179, 22)
+        Me.CheckBox417.Size = New System.Drawing.Size(162, 20)
         Me.CheckBox417.TabIndex = 62
         Me.CheckBox417.Text = "P105, Panel Cooler fan"
         Me.CheckBox417.UseVisualStyleBackColor = True
@@ -7016,10 +7094,10 @@ Partial Class Form1
         'CheckBox416
         '
         Me.CheckBox416.AutoSize = True
-        Me.CheckBox416.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox416.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox416.Location = New System.Drawing.Point(11, 115)
         Me.CheckBox416.Name = "CheckBox416"
-        Me.CheckBox416.Size = New System.Drawing.Size(166, 22)
+        Me.CheckBox416.Size = New System.Drawing.Size(151, 20)
         Me.CheckBox416.TabIndex = 61
         Me.CheckBox416.Text = "P104, Panel Drier fan"
         Me.CheckBox416.UseVisualStyleBackColor = True
@@ -7027,10 +7105,10 @@ Partial Class Form1
         'CheckBox413
         '
         Me.CheckBox413.AutoSize = True
-        Me.CheckBox413.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox413.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox413.Location = New System.Drawing.Point(12, 189)
         Me.CheckBox413.Name = "CheckBox413"
-        Me.CheckBox413.Size = New System.Drawing.Size(184, 22)
+        Me.CheckBox413.Size = New System.Drawing.Size(167, 20)
         Me.CheckBox413.TabIndex = 60
         Me.CheckBox413.Text = "P107, Panel Mill section"
         Me.CheckBox413.UseVisualStyleBackColor = True
@@ -7038,10 +7116,10 @@ Partial Class Form1
         'CheckBox287
         '
         Me.CheckBox287.AutoSize = True
-        Me.CheckBox287.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox287.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox287.Location = New System.Drawing.Point(11, 41)
         Me.CheckBox287.Name = "CheckBox287"
-        Me.CheckBox287.Size = New System.Drawing.Size(176, 22)
+        Me.CheckBox287.Size = New System.Drawing.Size(160, 20)
         Me.CheckBox287.TabIndex = 26
         Me.CheckBox287.Text = "P101, Panels By Client"
         Me.CheckBox287.UseVisualStyleBackColor = True
@@ -7049,10 +7127,10 @@ Partial Class Form1
         'CheckBox390
         '
         Me.CheckBox390.AutoSize = True
-        Me.CheckBox390.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox390.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox390.Location = New System.Drawing.Point(12, 165)
         Me.CheckBox390.Name = "CheckBox390"
-        Me.CheckBox390.Size = New System.Drawing.Size(194, 22)
+        Me.CheckBox390.Size = New System.Drawing.Size(177, 20)
         Me.CheckBox390.TabIndex = 51
         Me.CheckBox390.Text = "P106, Panel Meal section"
         Me.CheckBox390.UseVisualStyleBackColor = True
@@ -7060,10 +7138,10 @@ Partial Class Form1
         'CheckBox403
         '
         Me.CheckBox403.AutoSize = True
-        Me.CheckBox403.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox403.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox403.Location = New System.Drawing.Point(11, 89)
         Me.CheckBox403.Name = "CheckBox403"
-        Me.CheckBox403.Size = New System.Drawing.Size(195, 22)
+        Me.CheckBox403.Size = New System.Drawing.Size(179, 20)
         Me.CheckBox403.TabIndex = 55
         Me.CheckBox403.Text = "P103, Panel Feed section"
         Me.CheckBox403.UseVisualStyleBackColor = True
@@ -7071,10 +7149,10 @@ Partial Class Form1
         'CheckBox404
         '
         Me.CheckBox404.AutoSize = True
-        Me.CheckBox404.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox404.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox404.Location = New System.Drawing.Point(11, 65)
         Me.CheckBox404.Name = "CheckBox404"
-        Me.CheckBox404.Size = New System.Drawing.Size(201, 22)
+        Me.CheckBox404.Size = New System.Drawing.Size(183, 20)
         Me.CheckBox404.TabIndex = 27
         Me.CheckBox404.Text = "P102, Panel intake section"
         Me.CheckBox404.UseVisualStyleBackColor = True
@@ -7085,7 +7163,8 @@ Partial Class Form1
         Me.GroupBox86.Controls.Add(Me.CheckBox393)
         Me.GroupBox86.Controls.Add(Me.CheckBox399)
         Me.GroupBox86.Controls.Add(Me.CheckBox400)
-        Me.GroupBox86.Location = New System.Drawing.Point(773, 433)
+        Me.GroupBox86.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox86.Location = New System.Drawing.Point(892, 433)
         Me.GroupBox86.Name = "GroupBox86"
         Me.GroupBox86.Size = New System.Drawing.Size(221, 126)
         Me.GroupBox86.TabIndex = 65
@@ -7095,10 +7174,10 @@ Partial Class Form1
         'CheckBox392
         '
         Me.CheckBox392.AutoSize = True
-        Me.CheckBox392.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox392.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox392.Location = New System.Drawing.Point(11, 19)
         Me.CheckBox392.Name = "CheckBox392"
-        Me.CheckBox392.Size = New System.Drawing.Size(194, 22)
+        Me.CheckBox392.Size = New System.Drawing.Size(174, 20)
         Me.CheckBox392.TabIndex = 26
         Me.CheckBox392.Text = "J950, Support Flash Duct"
         Me.CheckBox392.UseVisualStyleBackColor = True
@@ -7106,10 +7185,10 @@ Partial Class Form1
         'CheckBox393
         '
         Me.CheckBox393.AutoSize = True
-        Me.CheckBox393.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox393.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox393.Location = New System.Drawing.Point(11, 91)
         Me.CheckBox393.Name = "CheckBox393"
-        Me.CheckBox393.Size = New System.Drawing.Size(195, 22)
+        Me.CheckBox393.Size = New System.Drawing.Size(176, 20)
         Me.CheckBox393.TabIndex = 51
         Me.CheckBox393.Text = "J953, Support Conveyors"
         Me.CheckBox393.UseVisualStyleBackColor = True
@@ -7117,10 +7196,10 @@ Partial Class Form1
         'CheckBox399
         '
         Me.CheckBox399.AutoSize = True
-        Me.CheckBox399.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox399.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox399.Location = New System.Drawing.Point(11, 67)
         Me.CheckBox399.Name = "CheckBox399"
-        Me.CheckBox399.Size = New System.Drawing.Size(192, 22)
+        Me.CheckBox399.Size = New System.Drawing.Size(172, 20)
         Me.CheckBox399.TabIndex = 55
         Me.CheckBox399.Text = "J952, Support Cooler fan"
         Me.CheckBox399.UseVisualStyleBackColor = True
@@ -7128,10 +7207,10 @@ Partial Class Form1
         'CheckBox400
         '
         Me.CheckBox400.AutoSize = True
-        Me.CheckBox400.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox400.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox400.Location = New System.Drawing.Point(11, 43)
         Me.CheckBox400.Name = "CheckBox400"
-        Me.CheckBox400.Size = New System.Drawing.Size(179, 22)
+        Me.CheckBox400.Size = New System.Drawing.Size(161, 20)
         Me.CheckBox400.TabIndex = 27
         Me.CheckBox400.Text = "J951, Support Drier fan"
         Me.CheckBox400.UseVisualStyleBackColor = True
@@ -7147,7 +7226,7 @@ Partial Class Form1
         Me.GroupBox85.Controls.Add(Me.CheckBox51)
         Me.GroupBox85.Controls.Add(Me.CheckBox68)
         Me.GroupBox85.Controls.Add(Me.CheckBox69)
-        Me.GroupBox85.Location = New System.Drawing.Point(773, 223)
+        Me.GroupBox85.Location = New System.Drawing.Point(892, 223)
         Me.GroupBox85.Name = "GroupBox85"
         Me.GroupBox85.Size = New System.Drawing.Size(221, 198)
         Me.GroupBox85.TabIndex = 64
@@ -7197,10 +7276,10 @@ Partial Class Form1
         'CheckBox70
         '
         Me.CheckBox70.AutoSize = True
-        Me.CheckBox70.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox70.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox70.Location = New System.Drawing.Point(11, 114)
         Me.CheckBox70.Name = "CheckBox70"
-        Me.CheckBox70.Size = New System.Drawing.Size(162, 22)
+        Me.CheckBox70.Size = New System.Drawing.Size(145, 20)
         Me.CheckBox70.TabIndex = 57
         Me.CheckBox70.Text = "J970, Exhaust Stack"
         Me.CheckBox70.UseVisualStyleBackColor = True
@@ -7208,10 +7287,10 @@ Partial Class Form1
         'CheckBox59
         '
         Me.CheckBox59.AutoSize = True
-        Me.CheckBox59.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox59.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox59.Location = New System.Drawing.Point(11, 90)
         Me.CheckBox59.Name = "CheckBox59"
-        Me.CheckBox59.Size = New System.Drawing.Size(191, 22)
+        Me.CheckBox59.Size = New System.Drawing.Size(175, 20)
         Me.CheckBox59.TabIndex = 56
         Me.CheckBox59.Text = "J960, Discharge Silencer"
         Me.CheckBox59.UseVisualStyleBackColor = True
@@ -7219,10 +7298,10 @@ Partial Class Form1
         'CheckBox51
         '
         Me.CheckBox51.AutoSize = True
-        Me.CheckBox51.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox51.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox51.Location = New System.Drawing.Point(11, 19)
         Me.CheckBox51.Name = "CheckBox51"
-        Me.CheckBox51.Size = New System.Drawing.Size(96, 22)
+        Me.CheckBox51.Size = New System.Drawing.Size(87, 20)
         Me.CheckBox51.TabIndex = 26
         Me.CheckBox51.Text = "J950, Fan "
         Me.CheckBox51.UseVisualStyleBackColor = True
@@ -7230,10 +7309,10 @@ Partial Class Form1
         'CheckBox68
         '
         Me.CheckBox68.AutoSize = True
-        Me.CheckBox68.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox68.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox68.Location = New System.Drawing.Point(11, 67)
         Me.CheckBox68.Name = "CheckBox68"
-        Me.CheckBox68.Size = New System.Drawing.Size(198, 22)
+        Me.CheckBox68.Size = New System.Drawing.Size(187, 20)
         Me.CheckBox68.TabIndex = 51
         Me.CheckBox68.Text = "J952, Variable speed drive"
         Me.CheckBox68.UseVisualStyleBackColor = True
@@ -7241,81 +7320,56 @@ Partial Class Form1
         'CheckBox69
         '
         Me.CheckBox69.AutoSize = True
-        Me.CheckBox69.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox69.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox69.Location = New System.Drawing.Point(11, 43)
         Me.CheckBox69.Name = "CheckBox69"
-        Me.CheckBox69.Size = New System.Drawing.Size(139, 22)
+        Me.CheckBox69.Size = New System.Drawing.Size(129, 20)
         Me.CheckBox69.TabIndex = 55
         Me.CheckBox69.Text = "J951, V-belt drive"
         Me.CheckBox69.UseVisualStyleBackColor = True
         '
-        'GroupBox84
-        '
-        Me.GroupBox84.Controls.Add(Me.CheckBox310)
-        Me.GroupBox84.Controls.Add(Me.CheckBox290)
-        Me.GroupBox84.Controls.Add(Me.CheckBox292)
-        Me.GroupBox84.Controls.Add(Me.CheckBox397)
-        Me.GroupBox84.Controls.Add(Me.CheckBox398)
-        Me.GroupBox84.Location = New System.Drawing.Point(11, 152)
-        Me.GroupBox84.Name = "GroupBox84"
-        Me.GroupBox84.Size = New System.Drawing.Size(238, 137)
-        Me.GroupBox84.TabIndex = 66
-        Me.GroupBox84.TabStop = False
-        Me.GroupBox84.Text = "Air intake Drier section"
-        '
         'CheckBox310
         '
         Me.CheckBox310.AutoSize = True
-        Me.CheckBox310.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox310.Location = New System.Drawing.Point(9, 15)
+        Me.CheckBox310.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox310.Location = New System.Drawing.Point(10, 193)
         Me.CheckBox310.Name = "CheckBox310"
-        Me.CheckBox310.Size = New System.Drawing.Size(167, 22)
+        Me.CheckBox310.Size = New System.Drawing.Size(139, 20)
         Me.CheckBox310.TabIndex = 50
-        Me.CheckBox310.Text = "J200, Coarse air filter"
+        Me.CheckBox310.Text = "J176, Classifier Mill"
         Me.CheckBox310.UseVisualStyleBackColor = True
         '
         'CheckBox290
         '
         Me.CheckBox290.AutoSize = True
-        Me.CheckBox290.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox290.Location = New System.Drawing.Point(9, 59)
+        Me.CheckBox290.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox290.Location = New System.Drawing.Point(10, 237)
         Me.CheckBox290.Name = "CheckBox290"
-        Me.CheckBox290.Size = New System.Drawing.Size(201, 22)
+        Me.CheckBox290.Size = New System.Drawing.Size(82, 20)
         Me.CheckBox290.TabIndex = 49
-        Me.CheckBox290.Text = "J220, Anti icing electric HX"
+        Me.CheckBox290.Text = "J178, CIP"
         Me.CheckBox290.UseVisualStyleBackColor = True
-        '
-        'CheckBox292
-        '
-        Me.CheckBox292.AutoSize = True
-        Me.CheckBox292.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox292.Location = New System.Drawing.Point(9, 103)
-        Me.CheckBox292.Name = "CheckBox292"
-        Me.CheckBox292.Size = New System.Drawing.Size(161, 22)
-        Me.CheckBox292.TabIndex = 42
-        Me.CheckBox292.Text = "J240, Intake silencer"
-        Me.CheckBox292.UseVisualStyleBackColor = True
         '
         'CheckBox397
         '
         Me.CheckBox397.AutoSize = True
-        Me.CheckBox397.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox397.Location = New System.Drawing.Point(9, 37)
+        Me.CheckBox397.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox397.Location = New System.Drawing.Point(10, 215)
         Me.CheckBox397.Name = "CheckBox397"
-        Me.CheckBox397.Size = New System.Drawing.Size(195, 22)
+        Me.CheckBox397.Size = New System.Drawing.Size(141, 20)
         Me.CheckBox397.TabIndex = 44
-        Me.CheckBox397.Text = "J210, Anti icing steam HX"
+        Me.CheckBox397.Text = "J177, Universal Mill"
         Me.CheckBox397.UseVisualStyleBackColor = True
         '
         'CheckBox398
         '
         Me.CheckBox398.AutoSize = True
-        Me.CheckBox398.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox398.Location = New System.Drawing.Point(9, 81)
+        Me.CheckBox398.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox398.Location = New System.Drawing.Point(10, 259)
         Me.CheckBox398.Name = "CheckBox398"
-        Me.CheckBox398.Size = New System.Drawing.Size(115, 22)
+        Me.CheckBox398.Size = New System.Drawing.Size(161, 20)
         Me.CheckBox398.TabIndex = 46
-        Me.CheckBox398.Text = "J230, Air filter"
+        Me.CheckBox398.Text = "J179, ATEX provisions"
         Me.CheckBox398.UseVisualStyleBackColor = True
         '
         'GroupBox83
@@ -7325,9 +7379,10 @@ Partial Class Form1
         Me.GroupBox83.Controls.Add(Me.CheckBox53)
         Me.GroupBox83.Controls.Add(Me.CheckBox60)
         Me.GroupBox83.Controls.Add(Me.CheckBox61)
-        Me.GroupBox83.Location = New System.Drawing.Point(11, 295)
+        Me.GroupBox83.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox83.Location = New System.Drawing.Point(660, 547)
         Me.GroupBox83.Name = "GroupBox83"
-        Me.GroupBox83.Size = New System.Drawing.Size(238, 142)
+        Me.GroupBox83.Size = New System.Drawing.Size(220, 142)
         Me.GroupBox83.TabIndex = 65
         Me.GroupBox83.TabStop = False
         Me.GroupBox83.Text = "Heating Section"
@@ -7335,10 +7390,10 @@ Partial Class Form1
         'CheckBox391
         '
         Me.CheckBox391.AutoSize = True
-        Me.CheckBox391.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox391.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox391.Location = New System.Drawing.Point(7, 113)
         Me.CheckBox391.Name = "CheckBox391"
-        Me.CheckBox391.Size = New System.Drawing.Size(212, 22)
+        Me.CheckBox391.Size = New System.Drawing.Size(193, 20)
         Me.CheckBox391.TabIndex = 85
         Me.CheckBox391.Text = "J340, Electric heat exhanger"
         Me.CheckBox391.UseVisualStyleBackColor = True
@@ -7346,10 +7401,10 @@ Partial Class Form1
         'CheckBox52
         '
         Me.CheckBox52.AutoSize = True
-        Me.CheckBox52.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox52.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox52.Location = New System.Drawing.Point(7, 19)
         Me.CheckBox52.Name = "CheckBox52"
-        Me.CheckBox52.Size = New System.Drawing.Size(171, 22)
+        Me.CheckBox52.Size = New System.Drawing.Size(153, 20)
         Me.CheckBox52.TabIndex = 42
         Me.CheckBox52.Text = "J300, Direct fire - gas "
         Me.CheckBox52.UseVisualStyleBackColor = True
@@ -7357,10 +7412,10 @@ Partial Class Form1
         'CheckBox53
         '
         Me.CheckBox53.AutoSize = True
-        Me.CheckBox53.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox53.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox53.Location = New System.Drawing.Point(7, 90)
         Me.CheckBox53.Name = "CheckBox53"
-        Me.CheckBox53.Size = New System.Drawing.Size(193, 22)
+        Me.CheckBox53.Size = New System.Drawing.Size(175, 20)
         Me.CheckBox53.TabIndex = 48
         Me.CheckBox53.Text = "J330, Condensate cooler"
         Me.CheckBox53.UseVisualStyleBackColor = True
@@ -7368,10 +7423,10 @@ Partial Class Form1
         'CheckBox60
         '
         Me.CheckBox60.AutoSize = True
-        Me.CheckBox60.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox60.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox60.Location = New System.Drawing.Point(7, 42)
         Me.CheckBox60.Name = "CheckBox60"
-        Me.CheckBox60.Size = New System.Drawing.Size(188, 22)
+        Me.CheckBox60.Size = New System.Drawing.Size(168, 20)
         Me.CheckBox60.TabIndex = 44
         Me.CheckBox60.Text = "J310, Direct fire - light oil"
         Me.CheckBox60.UseVisualStyleBackColor = True
@@ -7379,10 +7434,10 @@ Partial Class Form1
         'CheckBox61
         '
         Me.CheckBox61.AutoSize = True
-        Me.CheckBox61.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox61.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox61.Location = New System.Drawing.Point(7, 67)
         Me.CheckBox61.Name = "CheckBox61"
-        Me.CheckBox61.Size = New System.Drawing.Size(217, 22)
+        Me.CheckBox61.Size = New System.Drawing.Size(198, 20)
         Me.CheckBox61.TabIndex = 46
         Me.CheckBox61.Text = "J320, Steam Heat exchanger"
         Me.CheckBox61.UseVisualStyleBackColor = True
@@ -7396,7 +7451,8 @@ Partial Class Form1
         Me.GroupBox82.Controls.Add(Me.CheckBox394)
         Me.GroupBox82.Controls.Add(Me.CheckBox395)
         Me.GroupBox82.Controls.Add(Me.CheckBox396)
-        Me.GroupBox82.Location = New System.Drawing.Point(265, 136)
+        Me.GroupBox82.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox82.Location = New System.Drawing.Point(1374, 21)
         Me.GroupBox82.Name = "GroupBox82"
         Me.GroupBox82.Size = New System.Drawing.Size(238, 141)
         Me.GroupBox82.TabIndex = 61
@@ -7419,7 +7475,7 @@ Partial Class Form1
         Me.ComboBox20.Items.AddRange(New Object() {"0", "1", "2", "20", "21", "22"})
         Me.ComboBox20.Location = New System.Drawing.Point(121, 112)
         Me.ComboBox20.Name = "ComboBox20"
-        Me.ComboBox20.Size = New System.Drawing.Size(103, 21)
+        Me.ComboBox20.Size = New System.Drawing.Size(103, 24)
         Me.ComboBox20.TabIndex = 82
         '
         'Label73
@@ -7438,7 +7494,7 @@ Partial Class Form1
         Me.ComboBox19.Items.AddRange(New Object() {"0", "1", "2", "20", "21", "22"})
         Me.ComboBox19.Location = New System.Drawing.Point(121, 90)
         Me.ComboBox19.Name = "ComboBox19"
-        Me.ComboBox19.Size = New System.Drawing.Size(103, 21)
+        Me.ComboBox19.Size = New System.Drawing.Size(103, 24)
         Me.ComboBox19.TabIndex = 80
         '
         'CheckBox394
@@ -7455,10 +7511,10 @@ Partial Class Form1
         'CheckBox395
         '
         Me.CheckBox395.AutoSize = True
-        Me.CheckBox395.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox395.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox395.Location = New System.Drawing.Point(11, 42)
         Me.CheckBox395.Name = "CheckBox395"
-        Me.CheckBox395.Size = New System.Drawing.Size(175, 22)
+        Me.CheckBox395.Size = New System.Drawing.Size(158, 20)
         Me.CheckBox395.TabIndex = 27
         Me.CheckBox395.Text = "J510, Explosion doors"
         Me.CheckBox395.UseVisualStyleBackColor = True
@@ -7466,10 +7522,10 @@ Partial Class Form1
         'CheckBox396
         '
         Me.CheckBox396.AutoSize = True
-        Me.CheckBox396.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox396.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox396.Location = New System.Drawing.Point(11, 65)
         Me.CheckBox396.Name = "CheckBox396"
-        Me.CheckBox396.Size = New System.Drawing.Size(175, 22)
+        Me.CheckBox396.Size = New System.Drawing.Size(161, 20)
         Me.CheckBox396.TabIndex = 28
         Me.CheckBox396.Text = "J520, Expansion piece"
         Me.CheckBox396.UseVisualStyleBackColor = True
@@ -7481,9 +7537,10 @@ Partial Class Form1
         Me.GroupBox81.Controls.Add(Me.CheckBox43)
         Me.GroupBox81.Controls.Add(Me.CheckBox46)
         Me.GroupBox81.Controls.Add(Me.CheckBox47)
-        Me.GroupBox81.Location = New System.Drawing.Point(265, 12)
+        Me.GroupBox81.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox81.Location = New System.Drawing.Point(1128, 580)
         Me.GroupBox81.Name = "GroupBox81"
-        Me.GroupBox81.Size = New System.Drawing.Size(238, 120)
+        Me.GroupBox81.Size = New System.Drawing.Size(221, 120)
         Me.GroupBox81.TabIndex = 64
         Me.GroupBox81.TabStop = False
         Me.GroupBox81.Text = "Back Mix section"
@@ -7511,10 +7568,10 @@ Partial Class Form1
         'CheckBox43
         '
         Me.CheckBox43.AutoSize = True
-        Me.CheckBox43.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox43.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox43.Location = New System.Drawing.Point(12, 66)
         Me.CheckBox43.Name = "CheckBox43"
-        Me.CheckBox43.Size = New System.Drawing.Size(212, 22)
+        Me.CheckBox43.Size = New System.Drawing.Size(189, 20)
         Me.CheckBox43.TabIndex = 30
         Me.CheckBox43.Text = "J470, Buffer bin with agitator"
         Me.CheckBox43.UseVisualStyleBackColor = True
@@ -7522,10 +7579,10 @@ Partial Class Form1
         'CheckBox46
         '
         Me.CheckBox46.AutoSize = True
-        Me.CheckBox46.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox46.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox46.Location = New System.Drawing.Point(11, 19)
         Me.CheckBox46.Name = "CheckBox46"
-        Me.CheckBox46.Size = New System.Drawing.Size(219, 22)
+        Me.CheckBox46.Size = New System.Drawing.Size(198, 20)
         Me.CheckBox46.TabIndex = 28
         Me.CheckBox46.Text = "J450, Recycle conv #1 +VSD"
         Me.CheckBox46.UseVisualStyleBackColor = True
@@ -7533,10 +7590,10 @@ Partial Class Form1
         'CheckBox47
         '
         Me.CheckBox47.AutoSize = True
-        Me.CheckBox47.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox47.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox47.Location = New System.Drawing.Point(11, 42)
         Me.CheckBox47.Name = "CheckBox47"
-        Me.CheckBox47.Size = New System.Drawing.Size(176, 22)
+        Me.CheckBox47.Size = New System.Drawing.Size(160, 20)
         Me.CheckBox47.TabIndex = 29
         Me.CheckBox47.Text = "J460, Recycle conv #2"
         Me.CheckBox47.UseVisualStyleBackColor = True
@@ -7550,7 +7607,7 @@ Partial Class Form1
         Me.GroupBox68.Controls.Add(Me.CheckBox289)
         Me.GroupBox68.Controls.Add(Me.CheckBox293)
         Me.GroupBox68.Controls.Add(Me.CheckBox294)
-        Me.GroupBox68.Location = New System.Drawing.Point(1020, 26)
+        Me.GroupBox68.Location = New System.Drawing.Point(1128, 21)
         Me.GroupBox68.Name = "GroupBox68"
         Me.GroupBox68.Size = New System.Drawing.Size(221, 190)
         Me.GroupBox68.TabIndex = 62
@@ -7560,10 +7617,10 @@ Partial Class Form1
         'CheckBox411
         '
         Me.CheckBox411.AutoSize = True
-        Me.CheckBox411.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox411.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox411.Location = New System.Drawing.Point(7, 65)
         Me.CheckBox411.Name = "CheckBox411"
-        Me.CheckBox411.Size = New System.Drawing.Size(187, 22)
+        Me.CheckBox411.Size = New System.Drawing.Size(171, 20)
         Me.CheckBox411.TabIndex = 50
         Me.CheckBox411.Text = "J800, Set Dail Temp ind."
         Me.CheckBox411.UseVisualStyleBackColor = True
@@ -7571,10 +7628,10 @@ Partial Class Form1
         'CheckBox412
         '
         Me.CheckBox412.AutoSize = True
-        Me.CheckBox412.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox412.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox412.Location = New System.Drawing.Point(7, 88)
         Me.CheckBox412.Name = "CheckBox412"
-        Me.CheckBox412.Size = New System.Drawing.Size(184, 22)
+        Me.CheckBox412.Size = New System.Drawing.Size(166, 20)
         Me.CheckBox412.TabIndex = 51
         Me.CheckBox412.Text = "J810, Set Dail Pres. ind."
         Me.CheckBox412.UseVisualStyleBackColor = True
@@ -7582,10 +7639,10 @@ Partial Class Form1
         'CheckBox295
         '
         Me.CheckBox295.AutoSize = True
-        Me.CheckBox295.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox295.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox295.Location = New System.Drawing.Point(6, 157)
         Me.CheckBox295.Name = "CheckBox295"
-        Me.CheckBox295.Size = New System.Drawing.Size(37, 22)
+        Me.CheckBox295.Size = New System.Drawing.Size(35, 20)
         Me.CheckBox295.TabIndex = 49
         Me.CheckBox295.Text = "--"
         Me.CheckBox295.UseVisualStyleBackColor = True
@@ -7593,10 +7650,10 @@ Partial Class Form1
         'CheckBox288
         '
         Me.CheckBox288.AutoSize = True
-        Me.CheckBox288.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox288.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox288.Location = New System.Drawing.Point(7, 134)
         Me.CheckBox288.Name = "CheckBox288"
-        Me.CheckBox288.Size = New System.Drawing.Size(200, 22)
+        Me.CheckBox288.Size = New System.Drawing.Size(181, 20)
         Me.CheckBox288.TabIndex = 46
         Me.CheckBox288.Text = "J830, Meal moist (Toledo)"
         Me.CheckBox288.UseVisualStyleBackColor = True
@@ -7604,10 +7661,10 @@ Partial Class Form1
         'CheckBox289
         '
         Me.CheckBox289.AutoSize = True
-        Me.CheckBox289.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox289.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox289.Location = New System.Drawing.Point(7, 19)
         Me.CheckBox289.Name = "CheckBox289"
-        Me.CheckBox289.Size = New System.Drawing.Size(171, 22)
+        Me.CheckBox289.Size = New System.Drawing.Size(153, 20)
         Me.CheckBox289.TabIndex = 28
         Me.CheckBox289.Text = "J800, Set Pt100 elem."
         Me.CheckBox289.UseVisualStyleBackColor = True
@@ -7615,10 +7672,10 @@ Partial Class Form1
         'CheckBox293
         '
         Me.CheckBox293.AutoSize = True
-        Me.CheckBox293.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox293.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox293.Location = New System.Drawing.Point(7, 42)
         Me.CheckBox293.Name = "CheckBox293"
-        Me.CheckBox293.Size = New System.Drawing.Size(189, 22)
+        Me.CheckBox293.Size = New System.Drawing.Size(169, 20)
         Me.CheckBox293.TabIndex = 29
         Me.CheckBox293.Text = "J810, Set Electric Pr-ind."
         Me.CheckBox293.UseVisualStyleBackColor = True
@@ -7626,10 +7683,10 @@ Partial Class Form1
         'CheckBox294
         '
         Me.CheckBox294.AutoSize = True
-        Me.CheckBox294.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox294.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox294.Location = New System.Drawing.Point(7, 111)
         Me.CheckBox294.Name = "CheckBox294"
-        Me.CheckBox294.Size = New System.Drawing.Size(192, 22)
+        Me.CheckBox294.Size = New System.Drawing.Size(174, 20)
         Me.CheckBox294.TabIndex = 30
         Me.CheckBox294.Text = "J820, Humidity indicators"
         Me.CheckBox294.UseVisualStyleBackColor = True
@@ -7645,7 +7702,8 @@ Partial Class Form1
         Me.GroupBox67.Controls.Add(Me.CheckBox402)
         Me.GroupBox67.Controls.Add(Me.CheckBox286)
         Me.GroupBox67.Controls.Add(Me.CheckBox291)
-        Me.GroupBox67.Location = New System.Drawing.Point(773, 21)
+        Me.GroupBox67.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox67.Location = New System.Drawing.Point(892, 21)
         Me.GroupBox67.Name = "GroupBox67"
         Me.GroupBox67.Size = New System.Drawing.Size(221, 201)
         Me.GroupBox67.TabIndex = 63
@@ -7695,10 +7753,10 @@ Partial Class Form1
         'CheckBox401
         '
         Me.CheckBox401.AutoSize = True
-        Me.CheckBox401.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox401.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox401.Location = New System.Drawing.Point(11, 116)
         Me.CheckBox401.Name = "CheckBox401"
-        Me.CheckBox401.Size = New System.Drawing.Size(162, 22)
+        Me.CheckBox401.Size = New System.Drawing.Size(145, 20)
         Me.CheckBox401.TabIndex = 59
         Me.CheckBox401.Text = "J930, Exhaust Stack"
         Me.CheckBox401.UseVisualStyleBackColor = True
@@ -7706,10 +7764,10 @@ Partial Class Form1
         'CheckBox282
         '
         Me.CheckBox282.AutoSize = True
-        Me.CheckBox282.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox282.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox282.Location = New System.Drawing.Point(11, 19)
         Me.CheckBox282.Name = "CheckBox282"
-        Me.CheckBox282.Size = New System.Drawing.Size(96, 22)
+        Me.CheckBox282.Size = New System.Drawing.Size(87, 20)
         Me.CheckBox282.TabIndex = 26
         Me.CheckBox282.Text = "J900, Fan "
         Me.CheckBox282.UseVisualStyleBackColor = True
@@ -7717,10 +7775,10 @@ Partial Class Form1
         'CheckBox402
         '
         Me.CheckBox402.AutoSize = True
-        Me.CheckBox402.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox402.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox402.Location = New System.Drawing.Point(11, 92)
         Me.CheckBox402.Name = "CheckBox402"
-        Me.CheckBox402.Size = New System.Drawing.Size(191, 22)
+        Me.CheckBox402.Size = New System.Drawing.Size(175, 20)
         Me.CheckBox402.TabIndex = 58
         Me.CheckBox402.Text = "J920, Discharge Silencer"
         Me.CheckBox402.UseVisualStyleBackColor = True
@@ -7728,10 +7786,10 @@ Partial Class Form1
         'CheckBox286
         '
         Me.CheckBox286.AutoSize = True
-        Me.CheckBox286.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox286.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox286.Location = New System.Drawing.Point(11, 68)
         Me.CheckBox286.Name = "CheckBox286"
-        Me.CheckBox286.Size = New System.Drawing.Size(198, 22)
+        Me.CheckBox286.Size = New System.Drawing.Size(187, 20)
         Me.CheckBox286.TabIndex = 51
         Me.CheckBox286.Text = "J911, Variable speed drive"
         Me.CheckBox286.UseVisualStyleBackColor = True
@@ -7739,10 +7797,10 @@ Partial Class Form1
         'CheckBox291
         '
         Me.CheckBox291.AutoSize = True
-        Me.CheckBox291.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox291.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox291.Location = New System.Drawing.Point(11, 44)
         Me.CheckBox291.Name = "CheckBox291"
-        Me.CheckBox291.Size = New System.Drawing.Size(139, 22)
+        Me.CheckBox291.Size = New System.Drawing.Size(129, 20)
         Me.CheckBox291.TabIndex = 55
         Me.CheckBox291.Text = "J910, V-belt drive"
         Me.CheckBox291.UseVisualStyleBackColor = True
@@ -7755,9 +7813,10 @@ Partial Class Form1
         Me.GroupBox66.Controls.Add(Me.ComboBox22)
         Me.GroupBox66.Controls.Add(Me.CheckBox300)
         Me.GroupBox66.Controls.Add(Me.CheckBox301)
-        Me.GroupBox66.Location = New System.Drawing.Point(266, 429)
+        Me.GroupBox66.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox66.Location = New System.Drawing.Point(1374, 312)
         Me.GroupBox66.Name = "GroupBox66"
-        Me.GroupBox66.Size = New System.Drawing.Size(238, 118)
+        Me.GroupBox66.Size = New System.Drawing.Size(238, 131)
         Me.GroupBox66.TabIndex = 62
         Me.GroupBox66.TabStop = False
         Me.GroupBox66.Text = "Meal cooling section"
@@ -7778,7 +7837,7 @@ Partial Class Form1
         Me.ComboBox21.Items.AddRange(New Object() {"0", "1", "2", "20", "21", "22"})
         Me.ComboBox21.Location = New System.Drawing.Point(122, 68)
         Me.ComboBox21.Name = "ComboBox21"
-        Me.ComboBox21.Size = New System.Drawing.Size(108, 21)
+        Me.ComboBox21.Size = New System.Drawing.Size(108, 24)
         Me.ComboBox21.TabIndex = 86
         '
         'Label78
@@ -7797,16 +7856,16 @@ Partial Class Form1
         Me.ComboBox22.Items.AddRange(New Object() {"0", "1", "2", "20", "21", "22"})
         Me.ComboBox22.Location = New System.Drawing.Point(122, 93)
         Me.ComboBox22.Name = "ComboBox22"
-        Me.ComboBox22.Size = New System.Drawing.Size(108, 21)
+        Me.ComboBox22.Size = New System.Drawing.Size(108, 24)
         Me.ComboBox22.TabIndex = 84
         '
         'CheckBox300
         '
         Me.CheckBox300.AutoSize = True
-        Me.CheckBox300.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox300.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox300.Location = New System.Drawing.Point(11, 19)
         Me.CheckBox300.Name = "CheckBox300"
-        Me.CheckBox300.Size = New System.Drawing.Size(208, 22)
+        Me.CheckBox300.Size = New System.Drawing.Size(185, 20)
         Me.CheckBox300.TabIndex = 26
         Me.CheckBox300.Text = "J600, Cyclone + rotary lock"
         Me.CheckBox300.UseVisualStyleBackColor = True
@@ -7814,10 +7873,10 @@ Partial Class Form1
         'CheckBox301
         '
         Me.CheckBox301.AutoSize = True
-        Me.CheckBox301.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox301.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox301.Location = New System.Drawing.Point(11, 41)
         Me.CheckBox301.Name = "CheckBox301"
-        Me.CheckBox301.Size = New System.Drawing.Size(150, 22)
+        Me.CheckBox301.Size = New System.Drawing.Size(135, 20)
         Me.CheckBox301.TabIndex = 27
         Me.CheckBox301.Text = "J610, Cooling duct"
         Me.CheckBox301.UseVisualStyleBackColor = True
@@ -7832,9 +7891,9 @@ Partial Class Form1
         Me.GroupBox41.Controls.Add(Me.CheckBox302)
         Me.GroupBox41.Controls.Add(Me.CheckBox303)
         Me.GroupBox41.Controls.Add(Me.CheckBox304)
-        Me.GroupBox41.Location = New System.Drawing.Point(514, 304)
+        Me.GroupBox41.Location = New System.Drawing.Point(657, 306)
         Me.GroupBox41.Name = "GroupBox41"
-        Me.GroupBox41.Size = New System.Drawing.Size(251, 220)
+        Me.GroupBox41.Size = New System.Drawing.Size(223, 220)
         Me.GroupBox41.TabIndex = 61
         Me.GroupBox41.TabStop = False
         Me.GroupBox41.Text = "Meal storage section"
@@ -7842,10 +7901,10 @@ Partial Class Form1
         'CheckBox50
         '
         Me.CheckBox50.AutoSize = True
-        Me.CheckBox50.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox50.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox50.Location = New System.Drawing.Point(7, 188)
         Me.CheckBox50.Name = "CheckBox50"
-        Me.CheckBox50.Size = New System.Drawing.Size(203, 22)
+        Me.CheckBox50.Size = New System.Drawing.Size(185, 20)
         Me.CheckBox50.TabIndex = 51
         Me.CheckBox50.Text = "J770, Bag sewing machine"
         Me.CheckBox50.UseVisualStyleBackColor = True
@@ -7853,10 +7912,10 @@ Partial Class Form1
         'CheckBox49
         '
         Me.CheckBox49.AutoSize = True
-        Me.CheckBox49.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox49.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox49.Location = New System.Drawing.Point(7, 164)
         Me.CheckBox49.Name = "CheckBox49"
-        Me.CheckBox49.Size = New System.Drawing.Size(215, 22)
+        Me.CheckBox49.Size = New System.Drawing.Size(196, 20)
         Me.CheckBox49.TabIndex = 50
         Me.CheckBox49.Text = "J760, Weighing scale 100 kg"
         Me.CheckBox49.UseVisualStyleBackColor = True
@@ -7864,10 +7923,10 @@ Partial Class Form1
         'CheckBox48
         '
         Me.CheckBox48.AutoSize = True
-        Me.CheckBox48.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox48.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox48.Location = New System.Drawing.Point(7, 138)
         Me.CheckBox48.Name = "CheckBox48"
-        Me.CheckBox48.Size = New System.Drawing.Size(210, 22)
+        Me.CheckBox48.Size = New System.Drawing.Size(187, 20)
         Me.CheckBox48.TabIndex = 49
         Me.CheckBox48.Text = "J750, Set 50 kg bags, 50 off"
         Me.CheckBox48.UseVisualStyleBackColor = True
@@ -7875,10 +7934,10 @@ Partial Class Form1
         'CheckBox296
         '
         Me.CheckBox296.AutoSize = True
-        Me.CheckBox296.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox296.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox296.Location = New System.Drawing.Point(7, 115)
         Me.CheckBox296.Name = "CheckBox296"
-        Me.CheckBox296.Size = New System.Drawing.Size(193, 22)
+        Me.CheckBox296.Size = New System.Drawing.Size(174, 20)
         Me.CheckBox296.TabIndex = 48
         Me.CheckBox296.Text = "J740, Set big bags, 10 off"
         Me.CheckBox296.UseVisualStyleBackColor = True
@@ -7886,10 +7945,10 @@ Partial Class Form1
         'CheckBox298
         '
         Me.CheckBox298.AutoSize = True
-        Me.CheckBox298.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox298.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox298.Location = New System.Drawing.Point(7, 91)
         Me.CheckBox298.Name = "CheckBox298"
-        Me.CheckBox298.Size = New System.Drawing.Size(215, 22)
+        Me.CheckBox298.Size = New System.Drawing.Size(196, 20)
         Me.CheckBox298.TabIndex = 46
         Me.CheckBox298.Text = "J730, 100 kg Weighing scale"
         Me.CheckBox298.UseVisualStyleBackColor = True
@@ -7897,10 +7956,10 @@ Partial Class Form1
         'CheckBox302
         '
         Me.CheckBox302.AutoSize = True
-        Me.CheckBox302.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox302.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox302.Location = New System.Drawing.Point(7, 19)
         Me.CheckBox302.Name = "CheckBox302"
-        Me.CheckBox302.Size = New System.Drawing.Size(191, 22)
+        Me.CheckBox302.Size = New System.Drawing.Size(175, 20)
         Me.CheckBox302.TabIndex = 28
         Me.CheckBox302.Text = "J700, Manual bagging off"
         Me.CheckBox302.UseVisualStyleBackColor = True
@@ -7908,10 +7967,10 @@ Partial Class Form1
         'CheckBox303
         '
         Me.CheckBox303.AutoSize = True
-        Me.CheckBox303.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox303.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox303.Location = New System.Drawing.Point(7, 43)
         Me.CheckBox303.Name = "CheckBox303"
-        Me.CheckBox303.Size = New System.Drawing.Size(203, 22)
+        Me.CheckBox303.Size = New System.Drawing.Size(186, 20)
         Me.CheckBox303.TabIndex = 29
         Me.CheckBox303.Text = "J710, Big bag storage rack"
         Me.CheckBox303.UseVisualStyleBackColor = True
@@ -7919,10 +7978,10 @@ Partial Class Form1
         'CheckBox304
         '
         Me.CheckBox304.AutoSize = True
-        Me.CheckBox304.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox304.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox304.Location = New System.Drawing.Point(7, 67)
         Me.CheckBox304.Name = "CheckBox304"
-        Me.CheckBox304.Size = New System.Drawing.Size(187, 22)
+        Me.CheckBox304.Size = New System.Drawing.Size(168, 20)
         Me.CheckBox304.TabIndex = 30
         Me.CheckBox304.Text = "J720, Silo storage 10m3"
         Me.CheckBox304.UseVisualStyleBackColor = True
@@ -7941,9 +8000,10 @@ Partial Class Form1
         Me.GroupBox9.Controls.Add(Me.CheckBox283)
         Me.GroupBox9.Controls.Add(Me.CheckBox284)
         Me.GroupBox9.Controls.Add(Me.CheckBox285)
-        Me.GroupBox9.Location = New System.Drawing.Point(514, 14)
+        Me.GroupBox9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox9.Location = New System.Drawing.Point(657, 14)
         Me.GroupBox9.Name = "GroupBox9"
-        Me.GroupBox9.Size = New System.Drawing.Size(251, 268)
+        Me.GroupBox9.Size = New System.Drawing.Size(223, 268)
         Me.GroupBox9.TabIndex = 60
         Me.GroupBox9.TabStop = False
         Me.GroupBox9.Text = "Meal separation"
@@ -7951,10 +8011,10 @@ Partial Class Form1
         'CheckBox410
         '
         Me.CheckBox410.AutoSize = True
-        Me.CheckBox410.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox410.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox410.Location = New System.Drawing.Point(11, 65)
         Me.CheckBox410.Name = "CheckBox410"
-        Me.CheckBox410.Size = New System.Drawing.Size(171, 22)
+        Me.CheckBox410.Size = New System.Drawing.Size(153, 20)
         Me.CheckBox410.TabIndex = 94
         Me.CheckBox410.Text = "J651, Set rotary locks"
         Me.CheckBox410.UseVisualStyleBackColor = True
@@ -7982,10 +8042,10 @@ Partial Class Form1
         'CheckBox73
         '
         Me.CheckBox73.AutoSize = True
-        Me.CheckBox73.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox73.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox73.Location = New System.Drawing.Point(11, 180)
         Me.CheckBox73.Name = "CheckBox73"
-        Me.CheckBox73.Size = New System.Drawing.Size(215, 22)
+        Me.CheckBox73.Size = New System.Drawing.Size(194, 20)
         Me.CheckBox73.TabIndex = 91
         Me.CheckBox73.Text = "J691, Transfer conveyors #2"
         Me.CheckBox73.UseVisualStyleBackColor = True
@@ -8003,10 +8063,10 @@ Partial Class Form1
         'CheckBox74
         '
         Me.CheckBox74.AutoSize = True
-        Me.CheckBox74.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox74.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox74.Location = New System.Drawing.Point(11, 157)
         Me.CheckBox74.Name = "CheckBox74"
-        Me.CheckBox74.Size = New System.Drawing.Size(215, 22)
+        Me.CheckBox74.Size = New System.Drawing.Size(194, 20)
         Me.CheckBox74.TabIndex = 49
         Me.CheckBox74.Text = "J690, Transfer conveyors #1"
         Me.CheckBox74.UseVisualStyleBackColor = True
@@ -8024,10 +8084,10 @@ Partial Class Form1
         'CheckBox75
         '
         Me.CheckBox75.AutoSize = True
-        Me.CheckBox75.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox75.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox75.Location = New System.Drawing.Point(11, 134)
         Me.CheckBox75.Name = "CheckBox75"
-        Me.CheckBox75.Size = New System.Drawing.Size(120, 22)
+        Me.CheckBox75.Size = New System.Drawing.Size(110, 20)
         Me.CheckBox75.TabIndex = 48
         Me.CheckBox75.Text = "J680, Bagfilter"
         Me.CheckBox75.UseVisualStyleBackColor = True
@@ -8035,10 +8095,10 @@ Partial Class Form1
         'CheckBox281
         '
         Me.CheckBox281.AutoSize = True
-        Me.CheckBox281.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox281.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox281.Location = New System.Drawing.Point(11, 111)
         Me.CheckBox281.Name = "CheckBox281"
-        Me.CheckBox281.Size = New System.Drawing.Size(184, 22)
+        Me.CheckBox281.Size = New System.Drawing.Size(167, 20)
         Me.CheckBox281.TabIndex = 46
         Me.CheckBox281.Text = "J670, Multicycle 2 stage"
         Me.CheckBox281.UseVisualStyleBackColor = True
@@ -8046,10 +8106,10 @@ Partial Class Form1
         'CheckBox283
         '
         Me.CheckBox283.AutoSize = True
-        Me.CheckBox283.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox283.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox283.Location = New System.Drawing.Point(11, 19)
         Me.CheckBox283.Name = "CheckBox283"
-        Me.CheckBox283.Size = New System.Drawing.Size(180, 22)
+        Me.CheckBox283.Size = New System.Drawing.Size(162, 20)
         Me.CheckBox283.TabIndex = 26
         Me.CheckBox283.Text = "J640, Cycl. batt 1 stage"
         Me.CheckBox283.UseVisualStyleBackColor = True
@@ -8057,10 +8117,10 @@ Partial Class Form1
         'CheckBox284
         '
         Me.CheckBox284.AutoSize = True
-        Me.CheckBox284.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox284.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox284.Location = New System.Drawing.Point(11, 42)
         Me.CheckBox284.Name = "CheckBox284"
-        Me.CheckBox284.Size = New System.Drawing.Size(184, 22)
+        Me.CheckBox284.Size = New System.Drawing.Size(165, 20)
         Me.CheckBox284.TabIndex = 27
         Me.CheckBox284.Text = "J650, Cycl. batt 2 stage "
         Me.CheckBox284.UseVisualStyleBackColor = True
@@ -8068,81 +8128,121 @@ Partial Class Form1
         'CheckBox285
         '
         Me.CheckBox285.AutoSize = True
-        Me.CheckBox285.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox285.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox285.Location = New System.Drawing.Point(11, 88)
         Me.CheckBox285.Name = "CheckBox285"
-        Me.CheckBox285.Size = New System.Drawing.Size(208, 22)
+        Me.CheckBox285.Size = New System.Drawing.Size(187, 20)
         Me.CheckBox285.TabIndex = 28
         Me.CheckBox285.Text = "J660, Multi Cyclone 1 stage"
         Me.CheckBox285.UseVisualStyleBackColor = True
         '
         'GroupBox7
         '
+        Me.GroupBox7.Controls.Add(Me.CheckBox310)
+        Me.GroupBox7.Controls.Add(Me.CheckBox290)
+        Me.GroupBox7.Controls.Add(Me.CheckBox420)
+        Me.GroupBox7.Controls.Add(Me.CheckBox421)
+        Me.GroupBox7.Controls.Add(Me.CheckBox422)
         Me.GroupBox7.Controls.Add(Me.CheckBox54)
+        Me.GroupBox7.Controls.Add(Me.CheckBox397)
         Me.GroupBox7.Controls.Add(Me.CheckBox55)
         Me.GroupBox7.Controls.Add(Me.CheckBox56)
+        Me.GroupBox7.Controls.Add(Me.CheckBox398)
         Me.GroupBox7.Controls.Add(Me.CheckBox57)
         Me.GroupBox7.Controls.Add(Me.CheckBox58)
         Me.GroupBox7.Location = New System.Drawing.Point(11, 14)
         Me.GroupBox7.Name = "GroupBox7"
-        Me.GroupBox7.Size = New System.Drawing.Size(238, 133)
+        Me.GroupBox7.Size = New System.Drawing.Size(185, 284)
         Me.GroupBox7.TabIndex = 59
         Me.GroupBox7.TabStop = False
-        Me.GroupBox7.Text = "Flash-Dryer Introduction"
+        Me.GroupBox7.Text = "Process Description"
+        '
+        'CheckBox420
+        '
+        Me.CheckBox420.AutoSize = True
+        Me.CheckBox420.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox420.Location = New System.Drawing.Point(10, 127)
+        Me.CheckBox420.Name = "CheckBox420"
+        Me.CheckBox420.Size = New System.Drawing.Size(151, 20)
+        Me.CheckBox420.TabIndex = 31
+        Me.CheckBox420.Text = "J075, Air filter 3 stage"
+        Me.CheckBox420.UseVisualStyleBackColor = True
+        '
+        'CheckBox421
+        '
+        Me.CheckBox421.AutoSize = True
+        Me.CheckBox421.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox421.Location = New System.Drawing.Point(10, 149)
+        Me.CheckBox421.Name = "CheckBox421"
+        Me.CheckBox421.Size = New System.Drawing.Size(108, 20)
+        Me.CheckBox421.TabIndex = 32
+        Me.CheckBox421.Text = "J100, Heating"
+        Me.CheckBox421.UseVisualStyleBackColor = True
+        '
+        'CheckBox422
+        '
+        Me.CheckBox422.AutoSize = True
+        Me.CheckBox422.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox422.Location = New System.Drawing.Point(10, 171)
+        Me.CheckBox422.Name = "CheckBox422"
+        Me.CheckBox422.Size = New System.Drawing.Size(101, 20)
+        Me.CheckBox422.TabIndex = 33
+        Me.CheckBox422.Text = "J175, Cooler"
+        Me.CheckBox422.UseVisualStyleBackColor = True
         '
         'CheckBox54
         '
         Me.CheckBox54.AutoSize = True
-        Me.CheckBox54.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox54.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox54.Location = New System.Drawing.Point(10, 17)
         Me.CheckBox54.Name = "CheckBox54"
-        Me.CheckBox54.Size = New System.Drawing.Size(103, 22)
+        Me.CheckBox54.Size = New System.Drawing.Size(120, 20)
         Me.CheckBox54.TabIndex = 26
-        Me.CheckBox54.Text = "J001, Dryer"
+        Me.CheckBox54.Text = "J020, Wet Feed"
         Me.CheckBox54.UseVisualStyleBackColor = True
         '
         'CheckBox55
         '
         Me.CheckBox55.AutoSize = True
-        Me.CheckBox55.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox55.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox55.Location = New System.Drawing.Point(10, 39)
         Me.CheckBox55.Name = "CheckBox55"
-        Me.CheckBox55.Size = New System.Drawing.Size(112, 22)
+        Me.CheckBox55.Size = New System.Drawing.Size(165, 20)
         Me.CheckBox55.TabIndex = 27
-        Me.CheckBox55.Text = "J010, Cooler"
+        Me.CheckBox55.Text = "J030, Feed w. Back mix"
         Me.CheckBox55.UseVisualStyleBackColor = True
         '
         'CheckBox56
         '
         Me.CheckBox56.AutoSize = True
-        Me.CheckBox56.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox56.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox56.Location = New System.Drawing.Point(10, 61)
         Me.CheckBox56.Name = "CheckBox56"
-        Me.CheckBox56.Size = New System.Drawing.Size(108, 22)
+        Me.CheckBox56.Size = New System.Drawing.Size(172, 20)
         Me.CheckBox56.TabIndex = 28
-        Me.CheckBox56.Text = "J020, Milling"
+        Me.CheckBox56.Text = "J050, Common air intake"
         Me.CheckBox56.UseVisualStyleBackColor = True
         '
         'CheckBox57
         '
         Me.CheckBox57.AutoSize = True
-        Me.CheckBox57.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox57.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox57.Location = New System.Drawing.Point(10, 83)
         Me.CheckBox57.Name = "CheckBox57"
-        Me.CheckBox57.Size = New System.Drawing.Size(119, 22)
+        Me.CheckBox57.Size = New System.Drawing.Size(116, 20)
         Me.CheckBox57.TabIndex = 29
-        Me.CheckBox57.Text = "J030, Storage"
+        Me.CheckBox57.Text = "J060, Air intake"
         Me.CheckBox57.UseVisualStyleBackColor = True
         '
         'CheckBox58
         '
         Me.CheckBox58.AutoSize = True
-        Me.CheckBox58.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox58.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox58.Location = New System.Drawing.Point(10, 105)
         Me.CheckBox58.Name = "CheckBox58"
-        Me.CheckBox58.Size = New System.Drawing.Size(37, 22)
+        Me.CheckBox58.Size = New System.Drawing.Size(151, 20)
         Me.CheckBox58.TabIndex = 30
-        Me.CheckBox58.Text = "--"
+        Me.CheckBox58.Text = "J070, Air filter 2 stage"
         Me.CheckBox58.UseVisualStyleBackColor = True
         '
         'GroupBox6
@@ -8154,9 +8254,10 @@ Partial Class Form1
         Me.GroupBox6.Controls.Add(Me.TextBox55)
         Me.GroupBox6.Controls.Add(Me.CheckBox44)
         Me.GroupBox6.Controls.Add(Me.CheckBox45)
-        Me.GroupBox6.Location = New System.Drawing.Point(11, 448)
+        Me.GroupBox6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox6.Location = New System.Drawing.Point(892, 565)
         Me.GroupBox6.Name = "GroupBox6"
-        Me.GroupBox6.Size = New System.Drawing.Size(238, 151)
+        Me.GroupBox6.Size = New System.Drawing.Size(221, 151)
         Me.GroupBox6.TabIndex = 58
         Me.GroupBox6.TabStop = False
         Me.GroupBox6.Text = "Wet Feed system"
@@ -8174,7 +8275,7 @@ Partial Class Form1
         'TextBox56
         '
         Me.TextBox56.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox56.Location = New System.Drawing.Point(113, 118)
+        Me.TextBox56.Location = New System.Drawing.Point(106, 118)
         Me.TextBox56.MaxLength = 250
         Me.TextBox56.Name = "TextBox56"
         Me.TextBox56.Size = New System.Drawing.Size(94, 22)
@@ -8194,10 +8295,10 @@ Partial Class Form1
         'CheckBox42
         '
         Me.CheckBox42.AutoSize = True
-        Me.CheckBox42.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox42.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox42.Location = New System.Drawing.Point(11, 44)
         Me.CheckBox42.Name = "CheckBox42"
-        Me.CheckBox42.Size = New System.Drawing.Size(144, 22)
+        Me.CheckBox42.Size = New System.Drawing.Size(131, 20)
         Me.CheckBox42.TabIndex = 31
         Me.CheckBox42.Text = "J410, Feed screw"
         Me.CheckBox42.UseVisualStyleBackColor = True
@@ -8205,7 +8306,7 @@ Partial Class Form1
         'TextBox55
         '
         Me.TextBox55.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox55.Location = New System.Drawing.Point(113, 93)
+        Me.TextBox55.Location = New System.Drawing.Point(106, 93)
         Me.TextBox55.MaxLength = 250
         Me.TextBox55.Name = "TextBox55"
         Me.TextBox55.Size = New System.Drawing.Size(94, 22)
@@ -8215,10 +8316,10 @@ Partial Class Form1
         'CheckBox44
         '
         Me.CheckBox44.AutoSize = True
-        Me.CheckBox44.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox44.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox44.Location = New System.Drawing.Point(13, 69)
         Me.CheckBox44.Name = "CheckBox44"
-        Me.CheckBox44.Size = New System.Drawing.Size(156, 22)
+        Me.CheckBox44.Size = New System.Drawing.Size(143, 20)
         Me.CheckBox44.TabIndex = 26
         Me.CheckBox44.Text = "J420, Rotary feeder"
         Me.CheckBox44.UseVisualStyleBackColor = True
@@ -8226,10 +8327,10 @@ Partial Class Form1
         'CheckBox45
         '
         Me.CheckBox45.AutoSize = True
-        Me.CheckBox45.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox45.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox45.Location = New System.Drawing.Point(13, 20)
         Me.CheckBox45.Name = "CheckBox45"
-        Me.CheckBox45.Size = New System.Drawing.Size(166, 22)
+        Me.CheckBox45.Size = New System.Drawing.Size(152, 20)
         Me.CheckBox45.TabIndex = 27
         Me.CheckBox45.Text = "J400, Round feed bin"
         Me.CheckBox45.UseVisualStyleBackColor = True
@@ -9226,6 +9327,756 @@ Partial Class Form1
         '
         Me.Timer1.Interval = 2000
         '
+        'GroupBox84
+        '
+        Me.GroupBox84.Controls.Add(Me.CheckBox427)
+        Me.GroupBox84.Controls.Add(Me.CheckBox429)
+        Me.GroupBox84.Controls.Add(Me.CheckBox430)
+        Me.GroupBox84.Controls.Add(Me.CheckBox432)
+        Me.GroupBox84.Location = New System.Drawing.Point(11, 304)
+        Me.GroupBox84.Name = "GroupBox84"
+        Me.GroupBox84.Size = New System.Drawing.Size(185, 111)
+        Me.GroupBox84.TabIndex = 60
+        Me.GroupBox84.TabStop = False
+        Me.GroupBox84.Text = "Technical data Process"
+        '
+        'CheckBox427
+        '
+        Me.CheckBox427.AutoSize = True
+        Me.CheckBox427.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox427.Location = New System.Drawing.Point(10, 19)
+        Me.CheckBox427.Name = "CheckBox427"
+        Me.CheckBox427.Size = New System.Drawing.Size(147, 20)
+        Me.CheckBox427.TabIndex = 26
+        Me.CheckBox427.Text = "J300, Dryer Process"
+        Me.CheckBox427.UseVisualStyleBackColor = True
+        '
+        'CheckBox429
+        '
+        Me.CheckBox429.AutoSize = True
+        Me.CheckBox429.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox429.Location = New System.Drawing.Point(10, 41)
+        Me.CheckBox429.Name = "CheckBox429"
+        Me.CheckBox429.Size = New System.Drawing.Size(154, 20)
+        Me.CheckBox429.TabIndex = 27
+        Me.CheckBox429.Text = "J311, Cooler Process"
+        Me.CheckBox429.UseVisualStyleBackColor = True
+        '
+        'CheckBox430
+        '
+        Me.CheckBox430.AutoSize = True
+        Me.CheckBox430.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox430.Location = New System.Drawing.Point(10, 63)
+        Me.CheckBox430.Name = "CheckBox430"
+        Me.CheckBox430.Size = New System.Drawing.Size(139, 20)
+        Me.CheckBox430.TabIndex = 28
+        Me.CheckBox430.Text = "J312, Classifier Mill"
+        Me.CheckBox430.UseVisualStyleBackColor = True
+        '
+        'CheckBox432
+        '
+        Me.CheckBox432.AutoSize = True
+        Me.CheckBox432.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox432.Location = New System.Drawing.Point(10, 85)
+        Me.CheckBox432.Name = "CheckBox432"
+        Me.CheckBox432.Size = New System.Drawing.Size(141, 20)
+        Me.CheckBox432.TabIndex = 29
+        Me.CheckBox432.Text = "J313, Universal Mill"
+        Me.CheckBox432.UseVisualStyleBackColor = True
+        '
+        'GroupBox88
+        '
+        Me.GroupBox88.Controls.Add(Me.CheckBox292)
+        Me.GroupBox88.Controls.Add(Me.CheckBox423)
+        Me.GroupBox88.Controls.Add(Me.CheckBox424)
+        Me.GroupBox88.Controls.Add(Me.CheckBox425)
+        Me.GroupBox88.Location = New System.Drawing.Point(11, 421)
+        Me.GroupBox88.Name = "GroupBox88"
+        Me.GroupBox88.Size = New System.Drawing.Size(185, 111)
+        Me.GroupBox88.TabIndex = 61
+        Me.GroupBox88.TabStop = False
+        Me.GroupBox88.Text = "Technical data ATEX"
+        '
+        'CheckBox292
+        '
+        Me.CheckBox292.AutoSize = True
+        Me.CheckBox292.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox292.Location = New System.Drawing.Point(10, 19)
+        Me.CheckBox292.Name = "CheckBox292"
+        Me.CheckBox292.Size = New System.Drawing.Size(97, 20)
+        Me.CheckBox292.TabIndex = 26
+        Me.CheckBox292.Text = "J330, Dryer "
+        Me.CheckBox292.UseVisualStyleBackColor = True
+        '
+        'CheckBox423
+        '
+        Me.CheckBox423.AutoSize = True
+        Me.CheckBox423.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox423.Location = New System.Drawing.Point(10, 41)
+        Me.CheckBox423.Name = "CheckBox423"
+        Me.CheckBox423.Size = New System.Drawing.Size(104, 20)
+        Me.CheckBox423.TabIndex = 27
+        Me.CheckBox423.Text = "J331, Cooler "
+        Me.CheckBox423.UseVisualStyleBackColor = True
+        '
+        'CheckBox424
+        '
+        Me.CheckBox424.AutoSize = True
+        Me.CheckBox424.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox424.Location = New System.Drawing.Point(10, 63)
+        Me.CheckBox424.Name = "CheckBox424"
+        Me.CheckBox424.Size = New System.Drawing.Size(139, 20)
+        Me.CheckBox424.TabIndex = 28
+        Me.CheckBox424.Text = "J332, Classifier Mill"
+        Me.CheckBox424.UseVisualStyleBackColor = True
+        '
+        'CheckBox425
+        '
+        Me.CheckBox425.AutoSize = True
+        Me.CheckBox425.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox425.Location = New System.Drawing.Point(10, 85)
+        Me.CheckBox425.Name = "CheckBox425"
+        Me.CheckBox425.Size = New System.Drawing.Size(141, 20)
+        Me.CheckBox425.TabIndex = 29
+        Me.CheckBox425.Text = "J333, Universal Mill"
+        Me.CheckBox425.UseVisualStyleBackColor = True
+        '
+        'GroupBox89
+        '
+        Me.GroupBox89.Controls.Add(Me.CheckBox426)
+        Me.GroupBox89.Controls.Add(Me.CheckBox428)
+        Me.GroupBox89.Location = New System.Drawing.Point(11, 539)
+        Me.GroupBox89.Name = "GroupBox89"
+        Me.GroupBox89.Size = New System.Drawing.Size(185, 66)
+        Me.GroupBox89.TabIndex = 62
+        Me.GroupBox89.TabStop = False
+        Me.GroupBox89.Text = "Technical data"
+        '
+        'CheckBox426
+        '
+        Me.CheckBox426.AutoSize = True
+        Me.CheckBox426.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox426.Location = New System.Drawing.Point(10, 19)
+        Me.CheckBox426.Name = "CheckBox426"
+        Me.CheckBox426.Size = New System.Drawing.Size(175, 20)
+        Me.CheckBox426.TabIndex = 26
+        Me.CheckBox426.Text = "J350, Preferred suppliers"
+        Me.CheckBox426.UseVisualStyleBackColor = True
+        '
+        'CheckBox428
+        '
+        Me.CheckBox428.AutoSize = True
+        Me.CheckBox428.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox428.Location = New System.Drawing.Point(10, 41)
+        Me.CheckBox428.Name = "CheckBox428"
+        Me.CheckBox428.Size = New System.Drawing.Size(170, 20)
+        Me.CheckBox428.TabIndex = 27
+        Me.CheckBox428.Text = "J351, EHS requirements"
+        Me.CheckBox428.UseVisualStyleBackColor = True
+        '
+        'GroupBox90
+        '
+        Me.GroupBox90.Controls.Add(Me.CheckBox436)
+        Me.GroupBox90.Controls.Add(Me.CheckBox437)
+        Me.GroupBox90.Controls.Add(Me.CheckBox431)
+        Me.GroupBox90.Controls.Add(Me.CheckBox433)
+        Me.GroupBox90.Controls.Add(Me.CheckBox434)
+        Me.GroupBox90.Controls.Add(Me.CheckBox435)
+        Me.GroupBox90.Location = New System.Drawing.Point(206, 14)
+        Me.GroupBox90.Name = "GroupBox90"
+        Me.GroupBox90.Size = New System.Drawing.Size(170, 165)
+        Me.GroupBox90.TabIndex = 62
+        Me.GroupBox90.TabStop = False
+        Me.GroupBox90.Text = "Battery limits"
+        '
+        'CheckBox431
+        '
+        Me.CheckBox431.AutoSize = True
+        Me.CheckBox431.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox431.Location = New System.Drawing.Point(10, 19)
+        Me.CheckBox431.Name = "CheckBox431"
+        Me.CheckBox431.Size = New System.Drawing.Size(97, 20)
+        Me.CheckBox431.TabIndex = 26
+        Me.CheckBox431.Text = "J400, Dryer "
+        Me.CheckBox431.UseVisualStyleBackColor = True
+        '
+        'CheckBox433
+        '
+        Me.CheckBox433.AutoSize = True
+        Me.CheckBox433.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox433.Location = New System.Drawing.Point(10, 41)
+        Me.CheckBox433.Name = "CheckBox433"
+        Me.CheckBox433.Size = New System.Drawing.Size(104, 20)
+        Me.CheckBox433.TabIndex = 27
+        Me.CheckBox433.Text = "J401, Cooler "
+        Me.CheckBox433.UseVisualStyleBackColor = True
+        '
+        'CheckBox434
+        '
+        Me.CheckBox434.AutoSize = True
+        Me.CheckBox434.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox434.Location = New System.Drawing.Point(10, 63)
+        Me.CheckBox434.Name = "CheckBox434"
+        Me.CheckBox434.Size = New System.Drawing.Size(139, 20)
+        Me.CheckBox434.TabIndex = 28
+        Me.CheckBox434.Text = "J402, Classifier Mill"
+        Me.CheckBox434.UseVisualStyleBackColor = True
+        '
+        'CheckBox435
+        '
+        Me.CheckBox435.AutoSize = True
+        Me.CheckBox435.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox435.Location = New System.Drawing.Point(10, 85)
+        Me.CheckBox435.Name = "CheckBox435"
+        Me.CheckBox435.Size = New System.Drawing.Size(141, 20)
+        Me.CheckBox435.TabIndex = 29
+        Me.CheckBox435.Text = "J403, Universal Mill"
+        Me.CheckBox435.UseVisualStyleBackColor = True
+        '
+        'CheckBox436
+        '
+        Me.CheckBox436.AutoSize = True
+        Me.CheckBox436.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox436.Location = New System.Drawing.Point(11, 108)
+        Me.CheckBox436.Name = "CheckBox436"
+        Me.CheckBox436.Size = New System.Drawing.Size(82, 20)
+        Me.CheckBox436.TabIndex = 30
+        Me.CheckBox436.Text = "J440, CIP"
+        Me.CheckBox436.UseVisualStyleBackColor = True
+        '
+        'CheckBox437
+        '
+        Me.CheckBox437.AutoSize = True
+        Me.CheckBox437.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox437.Location = New System.Drawing.Point(11, 130)
+        Me.CheckBox437.Name = "CheckBox437"
+        Me.CheckBox437.Size = New System.Drawing.Size(104, 20)
+        Me.CheckBox437.TabIndex = 31
+        Me.CheckBox437.Text = "J441, Utilities"
+        Me.CheckBox437.UseVisualStyleBackColor = True
+        '
+        'GroupBox95
+        '
+        Me.GroupBox95.Controls.Add(Me.CheckBox458)
+        Me.GroupBox95.Controls.Add(Me.CheckBox452)
+        Me.GroupBox95.Controls.Add(Me.CheckBox453)
+        Me.GroupBox95.Controls.Add(Me.CheckBox454)
+        Me.GroupBox95.Controls.Add(Me.CheckBox455)
+        Me.GroupBox95.Controls.Add(Me.CheckBox456)
+        Me.GroupBox95.Controls.Add(Me.CheckBox457)
+        Me.GroupBox95.Controls.Add(Me.CheckBox448)
+        Me.GroupBox95.Controls.Add(Me.CheckBox449)
+        Me.GroupBox95.Controls.Add(Me.CheckBox450)
+        Me.GroupBox95.Controls.Add(Me.CheckBox451)
+        Me.GroupBox95.Controls.Add(Me.CheckBox445)
+        Me.GroupBox95.Controls.Add(Me.CheckBox446)
+        Me.GroupBox95.Controls.Add(Me.CheckBox447)
+        Me.GroupBox95.Controls.Add(Me.CheckBox444)
+        Me.GroupBox95.Controls.Add(Me.CheckBox438)
+        Me.GroupBox95.Controls.Add(Me.CheckBox439)
+        Me.GroupBox95.Controls.Add(Me.CheckBox440)
+        Me.GroupBox95.Controls.Add(Me.CheckBox441)
+        Me.GroupBox95.Controls.Add(Me.CheckBox442)
+        Me.GroupBox95.Controls.Add(Me.CheckBox443)
+        Me.GroupBox95.Location = New System.Drawing.Point(206, 192)
+        Me.GroupBox95.Name = "GroupBox95"
+        Me.GroupBox95.Size = New System.Drawing.Size(170, 498)
+        Me.GroupBox95.TabIndex = 63
+        Me.GroupBox95.TabStop = False
+        Me.GroupBox95.Text = "Scope of Supply"
+        '
+        'CheckBox438
+        '
+        Me.CheckBox438.AutoSize = True
+        Me.CheckBox438.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox438.Location = New System.Drawing.Point(14, 103)
+        Me.CheckBox438.Name = "CheckBox438"
+        Me.CheckBox438.Size = New System.Drawing.Size(140, 20)
+        Me.CheckBox438.TabIndex = 30
+        Me.CheckBox438.Text = "J501, Paddle mixer"
+        Me.CheckBox438.UseVisualStyleBackColor = True
+        '
+        'CheckBox439
+        '
+        Me.CheckBox439.AutoSize = True
+        Me.CheckBox439.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox439.Location = New System.Drawing.Point(14, 124)
+        Me.CheckBox439.Name = "CheckBox439"
+        Me.CheckBox439.Size = New System.Drawing.Size(135, 20)
+        Me.CheckBox439.TabIndex = 31
+        Me.CheckBox439.Text = "J502, Slide valves"
+        Me.CheckBox439.UseVisualStyleBackColor = True
+        '
+        'CheckBox440
+        '
+        Me.CheckBox440.AutoSize = True
+        Me.CheckBox440.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox440.Location = New System.Drawing.Point(14, 19)
+        Me.CheckBox440.Name = "CheckBox440"
+        Me.CheckBox440.Size = New System.Drawing.Size(145, 20)
+        Me.CheckBox440.TabIndex = 26
+        Me.CheckBox440.Text = "J450, Wet feed syst."
+        Me.CheckBox440.UseVisualStyleBackColor = True
+        '
+        'CheckBox441
+        '
+        Me.CheckBox441.AutoSize = True
+        Me.CheckBox441.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox441.Location = New System.Drawing.Point(14, 40)
+        Me.CheckBox441.Name = "CheckBox441"
+        Me.CheckBox441.Size = New System.Drawing.Size(137, 20)
+        Me.CheckBox441.TabIndex = 27
+        Me.CheckBox441.Text = "J451, Vacuum filter"
+        Me.CheckBox441.UseVisualStyleBackColor = True
+        '
+        'CheckBox442
+        '
+        Me.CheckBox442.AutoSize = True
+        Me.CheckBox442.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox442.Location = New System.Drawing.Point(14, 61)
+        Me.CheckBox442.Name = "CheckBox442"
+        Me.CheckBox442.Size = New System.Drawing.Size(121, 20)
+        Me.CheckBox442.TabIndex = 28
+        Me.CheckBox442.Text = "J499, Reserved"
+        Me.CheckBox442.UseVisualStyleBackColor = True
+        '
+        'CheckBox443
+        '
+        Me.CheckBox443.AutoSize = True
+        Me.CheckBox443.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox443.Location = New System.Drawing.Point(14, 82)
+        Me.CheckBox443.Name = "CheckBox443"
+        Me.CheckBox443.Size = New System.Drawing.Size(131, 20)
+        Me.CheckBox443.TabIndex = 29
+        Me.CheckBox443.Text = "J500, Feed screw"
+        Me.CheckBox443.UseVisualStyleBackColor = True
+        '
+        'CheckBox444
+        '
+        Me.CheckBox444.AutoSize = True
+        Me.CheckBox444.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox444.Location = New System.Drawing.Point(14, 145)
+        Me.CheckBox444.Name = "CheckBox444"
+        Me.CheckBox444.Size = New System.Drawing.Size(135, 20)
+        Me.CheckBox444.TabIndex = 32
+        Me.CheckBox444.Text = "J502, Slide valves"
+        Me.CheckBox444.UseVisualStyleBackColor = True
+        '
+        'CheckBox445
+        '
+        Me.CheckBox445.AutoSize = True
+        Me.CheckBox445.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox445.Location = New System.Drawing.Point(14, 208)
+        Me.CheckBox445.Name = "CheckBox445"
+        Me.CheckBox445.Size = New System.Drawing.Size(135, 20)
+        Me.CheckBox445.TabIndex = 35
+        Me.CheckBox445.Text = "J512, Slide valves"
+        Me.CheckBox445.UseVisualStyleBackColor = True
+        '
+        'CheckBox446
+        '
+        Me.CheckBox446.AutoSize = True
+        Me.CheckBox446.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox446.Location = New System.Drawing.Point(14, 166)
+        Me.CheckBox446.Name = "CheckBox446"
+        Me.CheckBox446.Size = New System.Drawing.Size(140, 20)
+        Me.CheckBox446.TabIndex = 33
+        Me.CheckBox446.Text = "J510, Paddle mixer"
+        Me.CheckBox446.UseVisualStyleBackColor = True
+        '
+        'CheckBox447
+        '
+        Me.CheckBox447.AutoSize = True
+        Me.CheckBox447.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox447.Location = New System.Drawing.Point(14, 187)
+        Me.CheckBox447.Name = "CheckBox447"
+        Me.CheckBox447.Size = New System.Drawing.Size(135, 20)
+        Me.CheckBox447.TabIndex = 34
+        Me.CheckBox447.Text = "J511, Slide valves"
+        Me.CheckBox447.UseVisualStyleBackColor = True
+        '
+        'CheckBox448
+        '
+        Me.CheckBox448.AutoSize = True
+        Me.CheckBox448.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox448.Location = New System.Drawing.Point(14, 292)
+        Me.CheckBox448.Name = "CheckBox448"
+        Me.CheckBox448.Size = New System.Drawing.Size(108, 20)
+        Me.CheckBox448.TabIndex = 39
+        Me.CheckBox448.Text = "J517, Screw 1"
+        Me.CheckBox448.UseVisualStyleBackColor = True
+        '
+        'CheckBox449
+        '
+        Me.CheckBox449.AutoSize = True
+        Me.CheckBox449.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox449.Location = New System.Drawing.Point(14, 250)
+        Me.CheckBox449.Name = "CheckBox449"
+        Me.CheckBox449.Size = New System.Drawing.Size(128, 20)
+        Me.CheckBox449.TabIndex = 37
+        Me.CheckBox449.Text = "J515, Rot valve 1"
+        Me.CheckBox449.UseVisualStyleBackColor = True
+        '
+        'CheckBox450
+        '
+        Me.CheckBox450.AutoSize = True
+        Me.CheckBox450.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox450.Location = New System.Drawing.Point(14, 271)
+        Me.CheckBox450.Name = "CheckBox450"
+        Me.CheckBox450.Size = New System.Drawing.Size(128, 20)
+        Me.CheckBox450.TabIndex = 38
+        Me.CheckBox450.Text = "J516, Rot valve 2"
+        Me.CheckBox450.UseVisualStyleBackColor = True
+        '
+        'CheckBox451
+        '
+        Me.CheckBox451.AutoSize = True
+        Me.CheckBox451.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox451.Location = New System.Drawing.Point(14, 229)
+        Me.CheckBox451.Name = "CheckBox451"
+        Me.CheckBox451.Size = New System.Drawing.Size(141, 20)
+        Me.CheckBox451.TabIndex = 36
+        Me.CheckBox451.Text = "J514, Recycle syst."
+        Me.CheckBox451.UseVisualStyleBackColor = True
+        '
+        'CheckBox452
+        '
+        Me.CheckBox452.AutoSize = True
+        Me.CheckBox452.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox452.Location = New System.Drawing.Point(14, 437)
+        Me.CheckBox452.Name = "CheckBox452"
+        Me.CheckBox452.Size = New System.Drawing.Size(136, 20)
+        Me.CheckBox452.TabIndex = 45
+        Me.CheckBox452.Text = "J523, Asp filter & fan"
+        Me.CheckBox452.UseVisualStyleBackColor = True
+        '
+        'CheckBox453
+        '
+        Me.CheckBox453.AutoSize = True
+        Me.CheckBox453.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox453.Location = New System.Drawing.Point(14, 395)
+        Me.CheckBox453.Name = "CheckBox453"
+        Me.CheckBox453.Size = New System.Drawing.Size(147, 20)
+        Me.CheckBox453.TabIndex = 43
+        Me.CheckBox453.Text = "J521, Recycle buffer"
+        Me.CheckBox453.UseVisualStyleBackColor = True
+        '
+        'CheckBox454
+        '
+        Me.CheckBox454.AutoSize = True
+        Me.CheckBox454.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox454.Location = New System.Drawing.Point(14, 416)
+        Me.CheckBox454.Name = "CheckBox454"
+        Me.CheckBox454.Size = New System.Drawing.Size(149, 20)
+        Me.CheckBox454.TabIndex = 44
+        Me.CheckBox454.Text = "J522, Aspiration duct"
+        Me.CheckBox454.UseVisualStyleBackColor = True
+        '
+        'CheckBox455
+        '
+        Me.CheckBox455.AutoSize = True
+        Me.CheckBox455.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox455.Location = New System.Drawing.Point(14, 374)
+        Me.CheckBox455.Name = "CheckBox455"
+        Me.CheckBox455.Size = New System.Drawing.Size(108, 20)
+        Me.CheckBox455.TabIndex = 42
+        Me.CheckBox455.Text = "J520, Screw 4"
+        Me.CheckBox455.UseVisualStyleBackColor = True
+        '
+        'CheckBox456
+        '
+        Me.CheckBox456.AutoSize = True
+        Me.CheckBox456.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox456.Location = New System.Drawing.Point(14, 353)
+        Me.CheckBox456.Name = "CheckBox456"
+        Me.CheckBox456.Size = New System.Drawing.Size(108, 20)
+        Me.CheckBox456.TabIndex = 41
+        Me.CheckBox456.Text = "J519, Screw 3"
+        Me.CheckBox456.UseVisualStyleBackColor = True
+        '
+        'CheckBox457
+        '
+        Me.CheckBox457.AutoSize = True
+        Me.CheckBox457.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox457.Location = New System.Drawing.Point(14, 332)
+        Me.CheckBox457.Name = "CheckBox457"
+        Me.CheckBox457.Size = New System.Drawing.Size(108, 20)
+        Me.CheckBox457.TabIndex = 40
+        Me.CheckBox457.Text = "J518, Screw 2"
+        Me.CheckBox457.UseVisualStyleBackColor = True
+        '
+        'CheckBox458
+        '
+        Me.CheckBox458.AutoSize = True
+        Me.CheckBox458.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox458.Location = New System.Drawing.Point(14, 459)
+        Me.CheckBox458.Name = "CheckBox458"
+        Me.CheckBox458.Size = New System.Drawing.Size(128, 20)
+        Me.CheckBox458.TabIndex = 46
+        Me.CheckBox458.Text = "J524, Flash dryer"
+        Me.CheckBox458.UseVisualStyleBackColor = True
+        '
+        'GroupBox96
+        '
+        Me.GroupBox96.Controls.Add(Me.CheckBox459)
+        Me.GroupBox96.Controls.Add(Me.CheckBox460)
+        Me.GroupBox96.Controls.Add(Me.CheckBox461)
+        Me.GroupBox96.Controls.Add(Me.CheckBox462)
+        Me.GroupBox96.Controls.Add(Me.CheckBox463)
+        Me.GroupBox96.Controls.Add(Me.CheckBox464)
+        Me.GroupBox96.Controls.Add(Me.CheckBox465)
+        Me.GroupBox96.Controls.Add(Me.CheckBox466)
+        Me.GroupBox96.Controls.Add(Me.CheckBox467)
+        Me.GroupBox96.Controls.Add(Me.CheckBox468)
+        Me.GroupBox96.Controls.Add(Me.CheckBox469)
+        Me.GroupBox96.Controls.Add(Me.CheckBox470)
+        Me.GroupBox96.Controls.Add(Me.CheckBox471)
+        Me.GroupBox96.Controls.Add(Me.CheckBox472)
+        Me.GroupBox96.Controls.Add(Me.CheckBox473)
+        Me.GroupBox96.Controls.Add(Me.CheckBox474)
+        Me.GroupBox96.Controls.Add(Me.CheckBox475)
+        Me.GroupBox96.Controls.Add(Me.CheckBox476)
+        Me.GroupBox96.Controls.Add(Me.CheckBox477)
+        Me.GroupBox96.Controls.Add(Me.CheckBox478)
+        Me.GroupBox96.Controls.Add(Me.CheckBox479)
+        Me.GroupBox96.Location = New System.Drawing.Point(392, 16)
+        Me.GroupBox96.Name = "GroupBox96"
+        Me.GroupBox96.Size = New System.Drawing.Size(170, 584)
+        Me.GroupBox96.TabIndex = 64
+        Me.GroupBox96.TabStop = False
+        Me.GroupBox96.Text = "Scope of Supply"
+        '
+        'CheckBox459
+        '
+        Me.CheckBox459.AutoSize = True
+        Me.CheckBox459.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox459.Location = New System.Drawing.Point(14, 475)
+        Me.CheckBox459.Name = "CheckBox459"
+        Me.CheckBox459.Size = New System.Drawing.Size(128, 20)
+        Me.CheckBox459.TabIndex = 46
+        Me.CheckBox459.Text = "J524, Flash dryer"
+        Me.CheckBox459.UseVisualStyleBackColor = True
+        '
+        'CheckBox460
+        '
+        Me.CheckBox460.AutoSize = True
+        Me.CheckBox460.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox460.Location = New System.Drawing.Point(14, 453)
+        Me.CheckBox460.Name = "CheckBox460"
+        Me.CheckBox460.Size = New System.Drawing.Size(136, 20)
+        Me.CheckBox460.TabIndex = 45
+        Me.CheckBox460.Text = "J523, Asp filter & fan"
+        Me.CheckBox460.UseVisualStyleBackColor = True
+        '
+        'CheckBox461
+        '
+        Me.CheckBox461.AutoSize = True
+        Me.CheckBox461.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox461.Location = New System.Drawing.Point(14, 411)
+        Me.CheckBox461.Name = "CheckBox461"
+        Me.CheckBox461.Size = New System.Drawing.Size(147, 20)
+        Me.CheckBox461.TabIndex = 43
+        Me.CheckBox461.Text = "J521, Recycle buffer"
+        Me.CheckBox461.UseVisualStyleBackColor = True
+        '
+        'CheckBox462
+        '
+        Me.CheckBox462.AutoSize = True
+        Me.CheckBox462.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox462.Location = New System.Drawing.Point(14, 432)
+        Me.CheckBox462.Name = "CheckBox462"
+        Me.CheckBox462.Size = New System.Drawing.Size(149, 20)
+        Me.CheckBox462.TabIndex = 44
+        Me.CheckBox462.Text = "J522, Aspiration duct"
+        Me.CheckBox462.UseVisualStyleBackColor = True
+        '
+        'CheckBox463
+        '
+        Me.CheckBox463.AutoSize = True
+        Me.CheckBox463.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox463.Location = New System.Drawing.Point(14, 390)
+        Me.CheckBox463.Name = "CheckBox463"
+        Me.CheckBox463.Size = New System.Drawing.Size(108, 20)
+        Me.CheckBox463.TabIndex = 42
+        Me.CheckBox463.Text = "J520, Screw 4"
+        Me.CheckBox463.UseVisualStyleBackColor = True
+        '
+        'CheckBox464
+        '
+        Me.CheckBox464.AutoSize = True
+        Me.CheckBox464.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox464.Location = New System.Drawing.Point(14, 369)
+        Me.CheckBox464.Name = "CheckBox464"
+        Me.CheckBox464.Size = New System.Drawing.Size(108, 20)
+        Me.CheckBox464.TabIndex = 41
+        Me.CheckBox464.Text = "J519, Screw 3"
+        Me.CheckBox464.UseVisualStyleBackColor = True
+        '
+        'CheckBox465
+        '
+        Me.CheckBox465.AutoSize = True
+        Me.CheckBox465.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox465.Location = New System.Drawing.Point(14, 348)
+        Me.CheckBox465.Name = "CheckBox465"
+        Me.CheckBox465.Size = New System.Drawing.Size(108, 20)
+        Me.CheckBox465.TabIndex = 40
+        Me.CheckBox465.Text = "J518, Screw 2"
+        Me.CheckBox465.UseVisualStyleBackColor = True
+        '
+        'CheckBox466
+        '
+        Me.CheckBox466.AutoSize = True
+        Me.CheckBox466.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox466.Location = New System.Drawing.Point(14, 308)
+        Me.CheckBox466.Name = "CheckBox466"
+        Me.CheckBox466.Size = New System.Drawing.Size(108, 20)
+        Me.CheckBox466.TabIndex = 39
+        Me.CheckBox466.Text = "J517, Screw 1"
+        Me.CheckBox466.UseVisualStyleBackColor = True
+        '
+        'CheckBox467
+        '
+        Me.CheckBox467.AutoSize = True
+        Me.CheckBox467.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox467.Location = New System.Drawing.Point(14, 266)
+        Me.CheckBox467.Name = "CheckBox467"
+        Me.CheckBox467.Size = New System.Drawing.Size(128, 20)
+        Me.CheckBox467.TabIndex = 37
+        Me.CheckBox467.Text = "J515, Rot valve 1"
+        Me.CheckBox467.UseVisualStyleBackColor = True
+        '
+        'CheckBox468
+        '
+        Me.CheckBox468.AutoSize = True
+        Me.CheckBox468.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox468.Location = New System.Drawing.Point(14, 287)
+        Me.CheckBox468.Name = "CheckBox468"
+        Me.CheckBox468.Size = New System.Drawing.Size(128, 20)
+        Me.CheckBox468.TabIndex = 38
+        Me.CheckBox468.Text = "J516, Rot valve 2"
+        Me.CheckBox468.UseVisualStyleBackColor = True
+        '
+        'CheckBox469
+        '
+        Me.CheckBox469.AutoSize = True
+        Me.CheckBox469.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox469.Location = New System.Drawing.Point(14, 245)
+        Me.CheckBox469.Name = "CheckBox469"
+        Me.CheckBox469.Size = New System.Drawing.Size(141, 20)
+        Me.CheckBox469.TabIndex = 36
+        Me.CheckBox469.Text = "J514, Recycle syst."
+        Me.CheckBox469.UseVisualStyleBackColor = True
+        '
+        'CheckBox470
+        '
+        Me.CheckBox470.AutoSize = True
+        Me.CheckBox470.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox470.Location = New System.Drawing.Point(14, 224)
+        Me.CheckBox470.Name = "CheckBox470"
+        Me.CheckBox470.Size = New System.Drawing.Size(135, 20)
+        Me.CheckBox470.TabIndex = 35
+        Me.CheckBox470.Text = "J512, Slide valves"
+        Me.CheckBox470.UseVisualStyleBackColor = True
+        '
+        'CheckBox471
+        '
+        Me.CheckBox471.AutoSize = True
+        Me.CheckBox471.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox471.Location = New System.Drawing.Point(14, 182)
+        Me.CheckBox471.Name = "CheckBox471"
+        Me.CheckBox471.Size = New System.Drawing.Size(140, 20)
+        Me.CheckBox471.TabIndex = 33
+        Me.CheckBox471.Text = "J510, Paddle mixer"
+        Me.CheckBox471.UseVisualStyleBackColor = True
+        '
+        'CheckBox472
+        '
+        Me.CheckBox472.AutoSize = True
+        Me.CheckBox472.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox472.Location = New System.Drawing.Point(14, 203)
+        Me.CheckBox472.Name = "CheckBox472"
+        Me.CheckBox472.Size = New System.Drawing.Size(135, 20)
+        Me.CheckBox472.TabIndex = 34
+        Me.CheckBox472.Text = "J511, Slide valves"
+        Me.CheckBox472.UseVisualStyleBackColor = True
+        '
+        'CheckBox473
+        '
+        Me.CheckBox473.AutoSize = True
+        Me.CheckBox473.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox473.Location = New System.Drawing.Point(14, 161)
+        Me.CheckBox473.Name = "CheckBox473"
+        Me.CheckBox473.Size = New System.Drawing.Size(135, 20)
+        Me.CheckBox473.TabIndex = 32
+        Me.CheckBox473.Text = "J502, Slide valves"
+        Me.CheckBox473.UseVisualStyleBackColor = True
+        '
+        'CheckBox474
+        '
+        Me.CheckBox474.AutoSize = True
+        Me.CheckBox474.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox474.Location = New System.Drawing.Point(14, 119)
+        Me.CheckBox474.Name = "CheckBox474"
+        Me.CheckBox474.Size = New System.Drawing.Size(140, 20)
+        Me.CheckBox474.TabIndex = 30
+        Me.CheckBox474.Text = "J501, Paddle mixer"
+        Me.CheckBox474.UseVisualStyleBackColor = True
+        '
+        'CheckBox475
+        '
+        Me.CheckBox475.AutoSize = True
+        Me.CheckBox475.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox475.Location = New System.Drawing.Point(14, 140)
+        Me.CheckBox475.Name = "CheckBox475"
+        Me.CheckBox475.Size = New System.Drawing.Size(135, 20)
+        Me.CheckBox475.TabIndex = 31
+        Me.CheckBox475.Text = "J502, Slide valves"
+        Me.CheckBox475.UseVisualStyleBackColor = True
+        '
+        'CheckBox476
+        '
+        Me.CheckBox476.AutoSize = True
+        Me.CheckBox476.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox476.Location = New System.Drawing.Point(14, 19)
+        Me.CheckBox476.Name = "CheckBox476"
+        Me.CheckBox476.Size = New System.Drawing.Size(145, 20)
+        Me.CheckBox476.TabIndex = 26
+        Me.CheckBox476.Text = "J524, Wet feed syst."
+        Me.CheckBox476.UseVisualStyleBackColor = True
+        '
+        'CheckBox477
+        '
+        Me.CheckBox477.AutoSize = True
+        Me.CheckBox477.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox477.Location = New System.Drawing.Point(14, 40)
+        Me.CheckBox477.Name = "CheckBox477"
+        Me.CheckBox477.Size = New System.Drawing.Size(137, 20)
+        Me.CheckBox477.TabIndex = 27
+        Me.CheckBox477.Text = "J525, Vacuum filter"
+        Me.CheckBox477.UseVisualStyleBackColor = True
+        '
+        'CheckBox478
+        '
+        Me.CheckBox478.AutoSize = True
+        Me.CheckBox478.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox478.Location = New System.Drawing.Point(14, 77)
+        Me.CheckBox478.Name = "CheckBox478"
+        Me.CheckBox478.Size = New System.Drawing.Size(121, 20)
+        Me.CheckBox478.TabIndex = 28
+        Me.CheckBox478.Text = "J499, Reserved"
+        Me.CheckBox478.UseVisualStyleBackColor = True
+        '
+        'CheckBox479
+        '
+        Me.CheckBox479.AutoSize = True
+        Me.CheckBox479.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox479.Location = New System.Drawing.Point(14, 98)
+        Me.CheckBox479.Name = "CheckBox479"
+        Me.CheckBox479.Size = New System.Drawing.Size(131, 20)
+        Me.CheckBox479.TabIndex = 29
+        Me.CheckBox479.Text = "J500, Feed screw"
+        Me.CheckBox479.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -9399,8 +10250,6 @@ Partial Class Form1
         Me.GroupBox86.PerformLayout
         Me.GroupBox85.ResumeLayout(False)
         Me.GroupBox85.PerformLayout
-        Me.GroupBox84.ResumeLayout(False)
-        Me.GroupBox84.PerformLayout
         Me.GroupBox83.ResumeLayout(False)
         Me.GroupBox83.PerformLayout
         Me.GroupBox82.ResumeLayout(False)
@@ -9448,6 +10297,18 @@ Partial Class Form1
         Me.GroupBox80.ResumeLayout(False)
         Me.TabPage7.ResumeLayout(False)
         Me.TabPage7.PerformLayout
+        Me.GroupBox84.ResumeLayout(False)
+        Me.GroupBox84.PerformLayout
+        Me.GroupBox88.ResumeLayout(False)
+        Me.GroupBox88.PerformLayout
+        Me.GroupBox89.ResumeLayout(False)
+        Me.GroupBox89.PerformLayout
+        Me.GroupBox90.ResumeLayout(False)
+        Me.GroupBox90.PerformLayout
+        Me.GroupBox95.ResumeLayout(False)
+        Me.GroupBox95.PerformLayout
+        Me.GroupBox96.ResumeLayout(False)
+        Me.GroupBox96.PerformLayout
         Me.ResumeLayout(False)
 
     End Sub
@@ -10075,9 +10936,7 @@ Partial Class Form1
     Friend WithEvents TextBox54 As TextBox
     Friend WithEvents TextBox53 As TextBox
     Friend WithEvents GroupBox80 As GroupBox
-    Friend WithEvents GroupBox84 As GroupBox
     Friend WithEvents CheckBox290 As CheckBox
-    Friend WithEvents CheckBox292 As CheckBox
     Friend WithEvents CheckBox397 As CheckBox
     Friend WithEvents CheckBox398 As CheckBox
     Friend WithEvents GroupBox83 As GroupBox
@@ -10184,4 +11043,71 @@ Partial Class Form1
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents TabPage7 As TabPage
     Friend WithEvents TextBox31 As TextBox
+    Friend WithEvents CheckBox420 As CheckBox
+    Friend WithEvents CheckBox421 As CheckBox
+    Friend WithEvents CheckBox422 As CheckBox
+    Friend WithEvents GroupBox84 As GroupBox
+    Friend WithEvents CheckBox427 As CheckBox
+    Friend WithEvents CheckBox429 As CheckBox
+    Friend WithEvents CheckBox430 As CheckBox
+    Friend WithEvents CheckBox432 As CheckBox
+    Friend WithEvents GroupBox90 As GroupBox
+    Friend WithEvents CheckBox431 As CheckBox
+    Friend WithEvents CheckBox433 As CheckBox
+    Friend WithEvents CheckBox434 As CheckBox
+    Friend WithEvents CheckBox435 As CheckBox
+    Friend WithEvents GroupBox89 As GroupBox
+    Friend WithEvents CheckBox426 As CheckBox
+    Friend WithEvents CheckBox428 As CheckBox
+    Friend WithEvents GroupBox88 As GroupBox
+    Friend WithEvents CheckBox292 As CheckBox
+    Friend WithEvents CheckBox423 As CheckBox
+    Friend WithEvents CheckBox424 As CheckBox
+    Friend WithEvents CheckBox425 As CheckBox
+    Friend WithEvents GroupBox95 As GroupBox
+    Friend WithEvents CheckBox448 As CheckBox
+    Friend WithEvents CheckBox449 As CheckBox
+    Friend WithEvents CheckBox450 As CheckBox
+    Friend WithEvents CheckBox451 As CheckBox
+    Friend WithEvents CheckBox445 As CheckBox
+    Friend WithEvents CheckBox446 As CheckBox
+    Friend WithEvents CheckBox447 As CheckBox
+    Friend WithEvents CheckBox444 As CheckBox
+    Friend WithEvents CheckBox438 As CheckBox
+    Friend WithEvents CheckBox439 As CheckBox
+    Friend WithEvents CheckBox440 As CheckBox
+    Friend WithEvents CheckBox441 As CheckBox
+    Friend WithEvents CheckBox442 As CheckBox
+    Friend WithEvents CheckBox443 As CheckBox
+    Friend WithEvents CheckBox436 As CheckBox
+    Friend WithEvents CheckBox437 As CheckBox
+    Friend WithEvents GroupBox96 As GroupBox
+    Friend WithEvents CheckBox459 As CheckBox
+    Friend WithEvents CheckBox460 As CheckBox
+    Friend WithEvents CheckBox461 As CheckBox
+    Friend WithEvents CheckBox462 As CheckBox
+    Friend WithEvents CheckBox463 As CheckBox
+    Friend WithEvents CheckBox464 As CheckBox
+    Friend WithEvents CheckBox465 As CheckBox
+    Friend WithEvents CheckBox466 As CheckBox
+    Friend WithEvents CheckBox467 As CheckBox
+    Friend WithEvents CheckBox468 As CheckBox
+    Friend WithEvents CheckBox469 As CheckBox
+    Friend WithEvents CheckBox470 As CheckBox
+    Friend WithEvents CheckBox471 As CheckBox
+    Friend WithEvents CheckBox472 As CheckBox
+    Friend WithEvents CheckBox473 As CheckBox
+    Friend WithEvents CheckBox474 As CheckBox
+    Friend WithEvents CheckBox475 As CheckBox
+    Friend WithEvents CheckBox476 As CheckBox
+    Friend WithEvents CheckBox477 As CheckBox
+    Friend WithEvents CheckBox478 As CheckBox
+    Friend WithEvents CheckBox479 As CheckBox
+    Friend WithEvents CheckBox458 As CheckBox
+    Friend WithEvents CheckBox452 As CheckBox
+    Friend WithEvents CheckBox453 As CheckBox
+    Friend WithEvents CheckBox454 As CheckBox
+    Friend WithEvents CheckBox455 As CheckBox
+    Friend WithEvents CheckBox456 As CheckBox
+    Friend WithEvents CheckBox457 As CheckBox
 End Class

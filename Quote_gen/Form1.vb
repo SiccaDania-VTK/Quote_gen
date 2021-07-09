@@ -202,6 +202,14 @@ Public Class Form1
         Find_rep("@QF021", TextBox29.Text)  'Product
         Find_rep("@QF022", TextBox28.Text)  'Installed power
 
+        Find_rep("@QF020", TextBox30.Text)  'Elevation
+        Find_rep("@QF021", TextBox29.Text)  'Product
+        Find_rep("@QF022", TextBox28.Text)  'Installed power
+
+        Find_rep("@QF023", TextBox1.Text)   'unknown
+        Find_rep("@QF024", TextBox2.Text)   'unknown
+        Find_rep("@QF025", TextBox3.Text)   'unknown
+        Find_rep("@QF026", TextBox4.Text)   'unknown
 
         With DataGridView1
             For r = 0 To DataGridView1.Rows.Count - 2
@@ -1052,7 +1060,6 @@ Public Class Form1
             End With
         End If
     End Sub
-
 
     Private Sub Exchange_Insert_Fan_data()
         Dim words() As String

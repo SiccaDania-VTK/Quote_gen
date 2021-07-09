@@ -772,15 +772,24 @@ Partial Class Form1
         Me.Button4 = New System.Windows.Forms.Button()
         Me.TextBox04 = New System.Windows.Forms.TextBox()
         Me.TabPage6 = New System.Windows.Forms.TabPage()
+        Me.GroupBox76 = New System.Windows.Forms.GroupBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label87 = New System.Windows.Forms.Label()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.Label88 = New System.Windows.Forms.Label()
+        Me.Label73 = New System.Windows.Forms.Label()
+        Me.Label89 = New System.Windows.Forms.Label()
+        Me.Label76 = New System.Windows.Forms.Label()
+        Me.TextBox28 = New System.Windows.Forms.TextBox()
+        Me.Label74 = New System.Windows.Forms.Label()
+        Me.TextBox29 = New System.Windows.Forms.TextBox()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.TextBox30 = New System.Windows.Forms.TextBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Label75 = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.GroupBox94 = New System.Windows.Forms.GroupBox()
         Me.Label90 = New System.Windows.Forms.Label()
-        Me.Label87 = New System.Windows.Forms.Label()
-        Me.Label88 = New System.Windows.Forms.Label()
-        Me.Label89 = New System.Windows.Forms.Label()
-        Me.TextBox28 = New System.Windows.Forms.TextBox()
-        Me.TextBox29 = New System.Windows.Forms.TextBox()
-        Me.TextBox30 = New System.Windows.Forms.TextBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Button12 = New System.Windows.Forms.Button()
         Me.GroupBox80 = New System.Windows.Forms.GroupBox()
@@ -900,6 +909,7 @@ Partial Class Form1
         Me.TabPage10.SuspendLayout
         Me.GroupBox79.SuspendLayout
         Me.TabPage6.SuspendLayout
+        Me.GroupBox76.SuspendLayout
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit
         Me.GroupBox94.SuspendLayout
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit
@@ -9522,6 +9532,7 @@ Partial Class Form1
         '
         'TabPage6
         '
+        Me.TabPage6.Controls.Add(Me.GroupBox76)
         Me.TabPage6.Controls.Add(Me.PictureBox2)
         Me.TabPage6.Controls.Add(Me.GroupBox94)
         Me.TabPage6.Controls.Add(Me.GroupBox80)
@@ -9534,6 +9545,169 @@ Partial Class Form1
         Me.TabPage6.TabIndex = 15
         Me.TabPage6.Text = "EXChange"
         Me.TabPage6.UseVisualStyleBackColor = True
+        '
+        'GroupBox76
+        '
+        Me.GroupBox76.Controls.Add(Me.TextBox1)
+        Me.GroupBox76.Controls.Add(Me.Label87)
+        Me.GroupBox76.Controls.Add(Me.TextBox4)
+        Me.GroupBox76.Controls.Add(Me.Label88)
+        Me.GroupBox76.Controls.Add(Me.Label73)
+        Me.GroupBox76.Controls.Add(Me.Label89)
+        Me.GroupBox76.Controls.Add(Me.Label76)
+        Me.GroupBox76.Controls.Add(Me.TextBox28)
+        Me.GroupBox76.Controls.Add(Me.Label74)
+        Me.GroupBox76.Controls.Add(Me.TextBox29)
+        Me.GroupBox76.Controls.Add(Me.TextBox3)
+        Me.GroupBox76.Controls.Add(Me.TextBox30)
+        Me.GroupBox76.Controls.Add(Me.TextBox2)
+        Me.GroupBox76.Controls.Add(Me.Label75)
+        Me.GroupBox76.Location = New System.Drawing.Point(1079, 15)
+        Me.GroupBox76.Name = "GroupBox76"
+        Me.GroupBox76.Size = New System.Drawing.Size(314, 298)
+        Me.GroupBox76.TabIndex = 123
+        Me.GroupBox76.TabStop = False
+        Me.GroupBox76.Text = "Find & replace Flash dryer"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.Location = New System.Drawing.Point(128, 108)
+        Me.TextBox1.MaxLength = 250
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(167, 22)
+        Me.TextBox1.TabIndex = 115
+        Me.TextBox1.Text = "XXX"
+        '
+        'Label87
+        '
+        Me.Label87.AutoSize = True
+        Me.Label87.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label87.Location = New System.Drawing.Point(17, 83)
+        Me.Label87.Name = "Label87"
+        Me.Label87.Size = New System.Drawing.Size(61, 16)
+        Me.Label87.TabIndex = 119
+        Me.Label87.Text = "@QF022"
+        '
+        'TextBox4
+        '
+        Me.TextBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox4.Location = New System.Drawing.Point(128, 193)
+        Me.TextBox4.MaxLength = 250
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(167, 22)
+        Me.TextBox4.TabIndex = 121
+        Me.TextBox4.Text = "XXX"
+        '
+        'Label88
+        '
+        Me.Label88.AutoSize = True
+        Me.Label88.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label88.Location = New System.Drawing.Point(17, 55)
+        Me.Label88.Name = "Label88"
+        Me.Label88.Size = New System.Drawing.Size(61, 16)
+        Me.Label88.TabIndex = 118
+        Me.Label88.Text = "@QF021"
+        '
+        'Label73
+        '
+        Me.Label73.AutoSize = True
+        Me.Label73.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label73.Location = New System.Drawing.Point(16, 111)
+        Me.Label73.Name = "Label73"
+        Me.Label73.Size = New System.Drawing.Size(61, 16)
+        Me.Label73.TabIndex = 114
+        Me.Label73.Text = "@QF023"
+        '
+        'Label89
+        '
+        Me.Label89.AutoSize = True
+        Me.Label89.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label89.Location = New System.Drawing.Point(17, 27)
+        Me.Label89.Name = "Label89"
+        Me.Label89.Size = New System.Drawing.Size(61, 16)
+        Me.Label89.TabIndex = 117
+        Me.Label89.Text = "@QF020"
+        '
+        'Label76
+        '
+        Me.Label76.AutoSize = True
+        Me.Label76.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label76.Location = New System.Drawing.Point(16, 196)
+        Me.Label76.Name = "Label76"
+        Me.Label76.Size = New System.Drawing.Size(61, 16)
+        Me.Label76.TabIndex = 120
+        Me.Label76.Text = "@QF026"
+        '
+        'TextBox28
+        '
+        Me.TextBox28.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox28.Location = New System.Drawing.Point(128, 80)
+        Me.TextBox28.MaxLength = 250
+        Me.TextBox28.Name = "TextBox28"
+        Me.TextBox28.Size = New System.Drawing.Size(167, 22)
+        Me.TextBox28.TabIndex = 116
+        Me.TextBox28.Text = "Instal. power"
+        '
+        'Label74
+        '
+        Me.Label74.AutoSize = True
+        Me.Label74.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label74.Location = New System.Drawing.Point(16, 139)
+        Me.Label74.Name = "Label74"
+        Me.Label74.Size = New System.Drawing.Size(61, 16)
+        Me.Label74.TabIndex = 116
+        Me.Label74.Text = "@QF024"
+        '
+        'TextBox29
+        '
+        Me.TextBox29.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox29.Location = New System.Drawing.Point(128, 52)
+        Me.TextBox29.MaxLength = 250
+        Me.TextBox29.Name = "TextBox29"
+        Me.TextBox29.Size = New System.Drawing.Size(167, 22)
+        Me.TextBox29.TabIndex = 115
+        Me.TextBox29.Text = "Product"
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox3.Location = New System.Drawing.Point(128, 165)
+        Me.TextBox3.MaxLength = 250
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(167, 22)
+        Me.TextBox3.TabIndex = 119
+        Me.TextBox3.Text = "XXX"
+        '
+        'TextBox30
+        '
+        Me.TextBox30.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox30.Location = New System.Drawing.Point(128, 24)
+        Me.TextBox30.MaxLength = 250
+        Me.TextBox30.Name = "TextBox30"
+        Me.TextBox30.Size = New System.Drawing.Size(167, 22)
+        Me.TextBox30.TabIndex = 114
+        Me.TextBox30.Text = "Elevation"
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox2.Location = New System.Drawing.Point(128, 136)
+        Me.TextBox2.MaxLength = 250
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(167, 22)
+        Me.TextBox2.TabIndex = 117
+        Me.TextBox2.Text = "XXX"
+        '
+        'Label75
+        '
+        Me.Label75.AutoSize = True
+        Me.Label75.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label75.Location = New System.Drawing.Point(16, 168)
+        Me.Label75.Name = "Label75"
+        Me.Label75.Size = New System.Drawing.Size(61, 16)
+        Me.Label75.TabIndex = 118
+        Me.Label75.Text = "@QF025"
         '
         'PictureBox2
         '
@@ -9548,17 +9722,11 @@ Partial Class Form1
         'GroupBox94
         '
         Me.GroupBox94.Controls.Add(Me.Label90)
-        Me.GroupBox94.Controls.Add(Me.Label87)
-        Me.GroupBox94.Controls.Add(Me.Label88)
-        Me.GroupBox94.Controls.Add(Me.Label89)
-        Me.GroupBox94.Controls.Add(Me.TextBox28)
-        Me.GroupBox94.Controls.Add(Me.TextBox29)
-        Me.GroupBox94.Controls.Add(Me.TextBox30)
         Me.GroupBox94.Controls.Add(Me.DataGridView1)
         Me.GroupBox94.Controls.Add(Me.Button12)
-        Me.GroupBox94.Location = New System.Drawing.Point(737, 15)
+        Me.GroupBox94.Location = New System.Drawing.Point(618, 15)
         Me.GroupBox94.Name = "GroupBox94"
-        Me.GroupBox94.Size = New System.Drawing.Size(455, 559)
+        Me.GroupBox94.Size = New System.Drawing.Size(455, 499)
         Me.GroupBox94.TabIndex = 112
         Me.GroupBox94.TabStop = False
         Me.GroupBox94.Text = "Quote; Flash Drier data exchange"
@@ -9567,76 +9735,16 @@ Partial Class Form1
         '
         Me.Label90.AutoSize = True
         Me.Label90.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label90.Location = New System.Drawing.Point(6, 151)
+        Me.Label90.Location = New System.Drawing.Point(6, 86)
         Me.Label90.Name = "Label90"
         Me.Label90.Size = New System.Drawing.Size(212, 13)
         Me.Label90.TabIndex = 120
         Me.Label90.Text = "Example @SF106 = Summer Temp setpoint"
         '
-        'Label87
-        '
-        Me.Label87.AutoSize = True
-        Me.Label87.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label87.Location = New System.Drawing.Point(16, 116)
-        Me.Label87.Name = "Label87"
-        Me.Label87.Size = New System.Drawing.Size(61, 16)
-        Me.Label87.TabIndex = 119
-        Me.Label87.Text = "@QF022"
-        '
-        'Label88
-        '
-        Me.Label88.AutoSize = True
-        Me.Label88.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label88.Location = New System.Drawing.Point(16, 88)
-        Me.Label88.Name = "Label88"
-        Me.Label88.Size = New System.Drawing.Size(61, 16)
-        Me.Label88.TabIndex = 118
-        Me.Label88.Text = "@QF021"
-        '
-        'Label89
-        '
-        Me.Label89.AutoSize = True
-        Me.Label89.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label89.Location = New System.Drawing.Point(16, 60)
-        Me.Label89.Name = "Label89"
-        Me.Label89.Size = New System.Drawing.Size(61, 16)
-        Me.Label89.TabIndex = 117
-        Me.Label89.Text = "@QF020"
-        '
-        'TextBox28
-        '
-        Me.TextBox28.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox28.Location = New System.Drawing.Point(83, 113)
-        Me.TextBox28.MaxLength = 250
-        Me.TextBox28.Name = "TextBox28"
-        Me.TextBox28.Size = New System.Drawing.Size(122, 22)
-        Me.TextBox28.TabIndex = 116
-        Me.TextBox28.Text = "Instal. power"
-        '
-        'TextBox29
-        '
-        Me.TextBox29.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox29.Location = New System.Drawing.Point(83, 85)
-        Me.TextBox29.MaxLength = 250
-        Me.TextBox29.Name = "TextBox29"
-        Me.TextBox29.Size = New System.Drawing.Size(122, 22)
-        Me.TextBox29.TabIndex = 115
-        Me.TextBox29.Text = "Product"
-        '
-        'TextBox30
-        '
-        Me.TextBox30.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox30.Location = New System.Drawing.Point(83, 57)
-        Me.TextBox30.MaxLength = 250
-        Me.TextBox30.Name = "TextBox30"
-        Me.TextBox30.Size = New System.Drawing.Size(122, 22)
-        Me.TextBox30.TabIndex = 114
-        Me.TextBox30.Text = "Elevation"
-        '
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(6, 167)
+        Me.DataGridView1.Location = New System.Drawing.Point(6, 106)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(443, 386)
         Me.DataGridView1.TabIndex = 113
@@ -9928,6 +10036,8 @@ Partial Class Form1
         Me.GroupBox79.PerformLayout
         Me.TabPage6.ResumeLayout(False)
         Me.TabPage6.PerformLayout
+        Me.GroupBox76.ResumeLayout(False)
+        Me.GroupBox76.PerformLayout
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit
         Me.GroupBox94.ResumeLayout(False)
         Me.GroupBox94.PerformLayout
@@ -10706,4 +10816,13 @@ Partial Class Form1
     Friend WithEvents CheckBox419 As CheckBox
     Friend WithEvents CheckBox444 As CheckBox
     Friend WithEvents CheckBox481 As CheckBox
+    Friend WithEvents GroupBox76 As GroupBox
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents Label73 As Label
+    Friend WithEvents Label76 As Label
+    Friend WithEvents Label74 As Label
+    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents Label75 As Label
 End Class

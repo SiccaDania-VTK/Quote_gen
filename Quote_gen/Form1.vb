@@ -603,6 +603,11 @@ Public Class Form1
         ComboBox15.Items.Add("French")
         ComboBox15.Items.Add("German")
 
+        ComboBox19.Items.Clear()
+        ComboBox19.Items.Add("30")      'days validity
+        ComboBox19.Items.Add("60")      'days validity
+        ComboBox19.Items.Add("90")      'days validity
+
         ComboBox1.SelectedIndex = 2     'Zone
         ComboBox3.SelectedIndex = 2     'Temp
         ComboBox2.SelectedIndex = 1     'group
@@ -621,6 +626,7 @@ Public Class Form1
         ComboBox16.SelectedIndex = 2     'Pedestal (cs)
         ComboBox17.SelectedIndex = 2     'Hub (cs)
         ComboBox18.SelectedIndex = 0     'Bestemming cost sheet
+        ComboBox19.SelectedIndex = 0     '30 days validity
     End Sub
 
     Private Sub Button6_Click_1(sender As Object, e As EventArgs) Handles Button6.Click

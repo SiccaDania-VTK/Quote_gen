@@ -181,6 +181,10 @@ Public Class Form1
         Find_rep("_Comments", TextBox41.Text)
         Find_rep("_Comments2", TextBox42.Text)
 
+
+
+
+
         '---------- Conveyor----------------
         Button1.Text = "Now search and replace Conveyor"
         Find_rep(Label41.Text, NumericUpDown7.Value.ToString)   'Length
@@ -202,9 +206,10 @@ Public Class Form1
         Find_rep("@QF021", TextBox29.Text)  'Product
         Find_rep("@QF022", TextBox28.Text)  'Installed power
 
-        Find_rep("@QF020", TextBox30.Text)  'Elevation
-        Find_rep("@QF021", TextBox29.Text)  'Product
-        Find_rep("@QF022", TextBox28.Text)  'Installed power
+        Find_rep(Label77.Text, ComboBox20.Text)     'Ice Hx
+        Find_rep(Label78.Text, ComboBox21.Text)     'Dryer Hx
+        Find_rep(Label79.Text, ComboBox22.Text)     'Dryer separator
+        Find_rep(Label80.Text, ComboBox23.Text)     'Cooler separator
 
         Find_rep("@QF023", TextBox1.Text)   'unknown
         Find_rep("@QF024", TextBox2.Text)   'unknown
@@ -322,7 +327,8 @@ Public Class Form1
         "04/02/2021, Started with data EXchange" & vbCrLf &
         "15/04/2021, Encoding.Unicode instead  Encoding.ASCII" & vbCrLf &
         "02/07/2021, File.ReadAllText(xxx, encoding removed)" & vbCrLf &
-        "07/07/2021, Find & Replace flash drier DGV added" & vbCrLf
+        "07/07/2021, Find & Replace flash drier DGV added" & vbCrLf &
+        "11/07/2021, Flash Dryer layout renovated " & vbCrLf
 
         ListBox1.Items.Add("Cyclone" & vbTab & vbTab & "1100")
         ListBox1.Items.Add("Filter" & vbTab & vbTab & "1500")
@@ -608,6 +614,24 @@ Public Class Form1
         ComboBox19.Items.Add("60")      'days validity
         ComboBox19.Items.Add("90")      'days validity
 
+        ComboBox20.Items.Clear()
+        ComboBox20.Items.Add("Steam")
+        ComboBox20.Items.Add("Glycol")
+        ComboBox20.Items.Add("Electric")
+
+        ComboBox21.Items.Clear()
+        ComboBox21.Items.Add("Steam")
+        ComboBox21.Items.Add("Indirect")
+        ComboBox21.Items.Add("Electric")
+
+        ComboBox22.Items.Clear()        'Dryer separator
+        ComboBox22.Items.Add("Cyclone")
+        ComboBox22.Items.Add("Bagfilter")
+
+        ComboBox23.Items.Clear()        'Cooler separator
+        ComboBox23.Items.Add("Cyclone")
+        ComboBox23.Items.Add("Bagfilter")
+
         ComboBox1.SelectedIndex = 2     'Zone
         ComboBox3.SelectedIndex = 2     'Temp
         ComboBox2.SelectedIndex = 1     'group
@@ -627,6 +651,10 @@ Public Class Form1
         ComboBox17.SelectedIndex = 2     'Hub (cs)
         ComboBox18.SelectedIndex = 0     'Bestemming cost sheet
         ComboBox19.SelectedIndex = 0     '30 days validity
+        ComboBox20.SelectedIndex = 0     'Anti Ice heater
+        ComboBox21.SelectedIndex = 0     'Dryer steam heater
+        ComboBox22.SelectedIndex = 0     'Dryer separator
+        ComboBox23.SelectedIndex = 0     'Cooler separator
     End Sub
 
     Private Sub Button6_Click_1(sender As Object, e As EventArgs) Handles Button6.Click
@@ -784,14 +812,14 @@ Public Class Form1
         ppp(34, 1) = TextBox24.Text                   'mBar(g) kg/cm2 mmWc
 
         '--------------- Flash drier -----
-        'ppp(35, 0) = Label76.Text                     '_Bin_type
-        'ppp(35, 1) = TextBox55.Text                   '
-        'ppp(36, 0) = Label80.Text                     '_Feeder_type
-        'ppp(36, 1) = TextBox56.Text                   '
-        'ppp(37, 0) = Label79.Text                     'Back mix
-        'ppp(37, 1) = TextBox57.Text                   '
-        'ppp(38, 0) = Label76.Text                     'Mix bin
-        'ppp(38, 1) = TextBox58.Text                   '
+        ppp(35, 0) = Label77.Text                     '_Ice_HX
+        ppp(35, 1) = ComboBox20.SelectedItem.ToString '
+        ppp(36, 0) = Label78.Text                     '_Dryer_HX
+        ppp(36, 1) = ComboBox21.SelectedItem.ToString '
+        ppp(37, 0) = Label79.Text                     'Dryer separator
+        ppp(37, 1) = ComboBox22.SelectedItem.ToString '
+        ppp(38, 0) = Label80.Text                     'Cooler separator
+        ppp(38, 1) = ComboBox23.SelectedItem.ToString '
 
         'ppp(39, 0) = Label81.Text                     'Cyclone 1
         'ppp(39, 1) = TextBox59.Text                   '
@@ -807,9 +835,6 @@ Public Class Form1
         'ppp(43, 1) = TextBox63.Text                   '
         'ppp(44, 0) = Label85.Text                     '
         'ppp(44, 1) = TextBox64.Text                   '
-
-
-
 
         For i = 0 To ppp.GetLength(0) - 1
             TextBox40.Text &= ppp(i, 0) & vbTab & ppp(i, 1) & vbCrLf

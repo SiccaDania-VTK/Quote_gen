@@ -392,6 +392,7 @@ Partial Class Form1
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.Label61 = New System.Windows.Forms.Label()
         Me.GroupBox28 = New System.Windows.Forms.GroupBox()
+        Me.Label85 = New System.Windows.Forms.Label()
         Me.CheckBox149 = New System.Windows.Forms.CheckBox()
         Me.CheckBox116 = New System.Windows.Forms.CheckBox()
         Me.ComboBox19 = New System.Windows.Forms.ComboBox()
@@ -5168,6 +5169,7 @@ Partial Class Form1
         '
         'GroupBox28
         '
+        Me.GroupBox28.Controls.Add(Me.Label85)
         Me.GroupBox28.Controls.Add(Me.CheckBox149)
         Me.GroupBox28.Controls.Add(Me.CheckBox116)
         Me.GroupBox28.Controls.Add(Me.ComboBox19)
@@ -5185,10 +5187,20 @@ Partial Class Form1
         Me.GroupBox28.Controls.Add(Me.CheckBox09)
         Me.GroupBox28.Location = New System.Drawing.Point(902, 136)
         Me.GroupBox28.Name = "GroupBox28"
-        Me.GroupBox28.Size = New System.Drawing.Size(249, 375)
+        Me.GroupBox28.Size = New System.Drawing.Size(249, 406)
         Me.GroupBox28.TabIndex = 47
         Me.GroupBox28.TabStop = False
         Me.GroupBox28.Text = "Commercial"
+        '
+        'Label85
+        '
+        Me.Label85.AutoSize = True
+        Me.Label85.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label85.Location = New System.Drawing.Point(10, 286)
+        Me.Label85.Name = "Label85"
+        Me.Label85.Size = New System.Drawing.Size(59, 16)
+        Me.Label85.TabIndex = 78
+        Me.Label85.Text = "_Validity"
         '
         'CheckBox149
         '
@@ -5205,7 +5217,7 @@ Partial Class Form1
         '
         Me.CheckBox116.AutoSize = True
         Me.CheckBox116.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox116.Location = New System.Drawing.Point(13, 334)
+        Me.CheckBox116.Location = New System.Drawing.Point(13, 361)
         Me.CheckBox116.Name = "CheckBox116"
         Me.CheckBox116.Size = New System.Drawing.Size(148, 22)
         Me.CheckBox116.TabIndex = 80
@@ -5216,7 +5228,7 @@ Partial Class Form1
         '
         Me.ComboBox19.FormattingEnabled = True
         Me.ComboBox19.Items.AddRange(New Object() {"0", "1", "2", "20", "21", "22"})
-        Me.ComboBox19.Location = New System.Drawing.Point(132, 261)
+        Me.ComboBox19.Location = New System.Drawing.Point(79, 284)
         Me.ComboBox19.Name = "ComboBox19"
         Me.ComboBox19.Size = New System.Drawing.Size(69, 21)
         Me.ComboBox19.TabIndex = 79
@@ -5247,7 +5259,7 @@ Partial Class Form1
         '
         Me.CheckBox491.AutoSize = True
         Me.CheckBox491.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox491.Location = New System.Drawing.Point(13, 309)
+        Me.CheckBox491.Location = New System.Drawing.Point(13, 336)
         Me.CheckBox491.Name = "CheckBox491"
         Me.CheckBox491.Size = New System.Drawing.Size(185, 22)
         Me.CheckBox491.TabIndex = 28
@@ -5258,7 +5270,7 @@ Partial Class Form1
         '
         Me.CheckBox492.AutoSize = True
         Me.CheckBox492.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox492.Location = New System.Drawing.Point(13, 285)
+        Me.CheckBox492.Location = New System.Drawing.Point(13, 312)
         Me.CheckBox492.Name = "CheckBox492"
         Me.CheckBox492.Size = New System.Drawing.Size(194, 22)
         Me.CheckBox492.TabIndex = 27
@@ -10146,7 +10158,7 @@ Partial Class Form1
         Me.Controls.Add(Me.TabControl1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form1"
-        Me.Text = "Quotation Text Generator MK VII k"
+        Me.Text = "Quotation Text Generator MK VII (13/07/2021)"
         Me.TabPage9.ResumeLayout(False)
         Me.TabPage9.PerformLayout
         Me.TabPage5.ResumeLayout(False)
@@ -11162,4 +11174,5 @@ Partial Class Form1
     Friend WithEvents Label84 As Label
     Friend WithEvents CheckBox149 As CheckBox
     Friend WithEvents CheckBox116 As CheckBox
+    Friend WithEvents Label85 As Label
 End Class

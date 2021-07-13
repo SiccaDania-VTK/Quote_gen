@@ -206,7 +206,7 @@ Public Class Form1
         Find_rep("@QF021", TextBox29.Text)      'Product
         Find_rep("@QF022", TextBox28.Text)      'Installed power
 
-        Find_rep("A081", ComboBox19.Text)           'Validity 
+        Find_rep(Label85.Text, ComboBox19.Text)     'Validity 
         Find_rep(Label77.Text, ComboBox20.Text)     'Ice Hx
         Find_rep(Label78.Text, ComboBox21.Text)     'Dryer Hx
         Find_rep(Label79.Text, ComboBox22.Text)     'Dryer separator
@@ -843,29 +843,32 @@ Public Class Form1
         ppp(34, 1) = TextBox24.Text                   'mBar(g) kg/cm2 mmWc
 
         '--------------- Flash drier -----
-        ppp(35, 0) = Label77.Text                     '_Ice_HX
-        ppp(35, 1) = ComboBox20.SelectedItem.ToString '
-        ppp(36, 0) = Label78.Text                     '_Dryer_HX
-        ppp(36, 1) = ComboBox21.SelectedItem.ToString '
-        ppp(37, 0) = Label79.Text                     'Dryer separator
-        ppp(37, 1) = ComboBox22.SelectedItem.ToString '
-        ppp(38, 0) = Label80.Text                     'Cooler separator
-        ppp(38, 1) = ComboBox23.SelectedItem.ToString '
+        ppp(35, 0) = Label77.Text                       '_Ice_HX
+        ppp(35, 1) = ComboBox20.SelectedItem.ToString   '
+        ppp(36, 0) = Label78.Text                       '_Dryer_HX
+        ppp(36, 1) = ComboBox21.SelectedItem.ToString   '
 
-        'ppp(39, 0) = Label81.Text                     'Cyclone 1
-        'ppp(39, 1) = TextBox59.Text                   '
-        'ppp(40, 0) = Label84.Text                     '
-        'ppp(40, 1) = TextBox60.Text                   '
+        ppp(37, 0) = Label79.Text                       'Dryer separator
+        ppp(37, 1) = ComboBox22.SelectedItem.ToString   '
 
-        'ppp(41, 0) = Label82.Text                     'Drier fan
-        'ppp(41, 1) = TextBox61.Text                   '
-        'ppp(42, 0) = Label86.Text                     '
-        'ppp(42, 1) = TextBox62.Text                   '
+        ppp(38, 0) = Label80.Text                       'Cooler separator
+        ppp(38, 1) = ComboBox23.SelectedItem.ToString   '
 
-        'ppp(43, 0) = Label83.Text                     'Cooler fan
-        'ppp(43, 1) = TextBox63.Text                   '
-        'ppp(44, 0) = Label85.Text                     '
-        'ppp(44, 1) = TextBox64.Text                   '
+        ppp(39, 0) = Label81.Text                       'Drier Silencer
+        ppp(39, 1) = ComboBox24.SelectedItem.ToString   '
+        ppp(40, 0) = Label82.Text                       'Drier Exhaust
+        ppp(40, 1) = ComboBox25.SelectedItem.ToString   '
+
+        ppp(41, 0) = Label84.Text                       'Cooler silencer
+        ppp(41, 1) = ComboBox26.SelectedItem.ToString   '
+        ppp(42, 0) = Label83.Text                       'Cooler Exhaust
+        ppp(42, 1) = ComboBox27.SelectedItem.ToString   '
+
+        'ppp(43, 0) = Label83.Text                       '
+        'ppp(43, 1) = ComboBox27.SelectedItem.ToString   '
+
+        'ppp(44, 0) = Label85.Text                      '
+        'ppp(44, 1) = TextBox64.Text                    '
 
         For i = 0 To ppp.GetLength(0) - 1
             TextBox40.Text &= ppp(i, 0) & vbTab & ppp(i, 1) & vbCrLf
@@ -969,7 +972,7 @@ Public Class Form1
             '.ColumnHeadersDefaultCellStyle.Font = New Font("Tahoma", 8.25F, FontStyle.Regular)
             .ColumnCount = 6
             .Rows.Clear()
-            .Rows.Add(14)
+            .Rows.Add(20)
             .RowHeadersVisible = False
 
             For h = 2 To .ColumnCount - 1
@@ -1011,23 +1014,31 @@ Public Class Form1
 
                     Dim r As Integer
                     r = 0
-                    '======== Air data  ===========
-                    .Rows(0).Cells(0).Value = "Air Mass Flow"
-                    .Rows(0).Cells(1).Value = "F101"                                  'Air flow
-                    If words(0) = "@SF101" Then .Rows(0).Cells(2).Value = words(2)    '
-                    If words(0) = "@WF101" Then .Rows(0).Cells(3).Value = words(2)    '
-                    If words(0) = "@AF101" Then .Rows(0).Cells(4).Value = words(2)    '
+                    '======== Case name  ===========
+                    .Rows(r).Cells(0).Value = "Case"
+                    .Rows(r).Cells(1).Value = "F100"                                  'Case
+                    If words(0) = "@SF100" Then .Rows(r).Cells(2).Value = words(2)    '
+                    If words(0) = "@WF100" Then .Rows(r).Cells(3).Value = words(2)    '
+                    If words(0) = "@AF100" Then .Rows(r).Cells(4).Value = words(2)    '
+                    .Rows(r).Cells(5).Value = ""
+
+                    r += 1
+                    .Rows(r).Cells(0).Value = "Air Mass Flow"
+                    .Rows(r).Cells(1).Value = "F101"                                  'Air flow
+                    If words(0) = "@SF101" Then .Rows(r).Cells(2).Value = words(2)    '
+                    If words(0) = "@WF101" Then .Rows(r).Cells(3).Value = words(2)    '
+                    If words(0) = "@AF101" Then .Rows(r).Cells(4).Value = words(2)    '
                     .Rows(r).Cells(5).Value = "[kg/h]"
 
-                    r = 1
+                    r += 1
                     .Rows(r).Cells(0).Value = "Air humidity"
                     .Rows(r).Cells(1).Value = "F102"
                     If words(0) = "@SF102" Then .Rows(r).Cells(2).Value = words(2)    'Air humidity
                     If words(0) = "@WF102" Then .Rows(r).Cells(3).Value = words(2)    '
                     If words(0) = "@AF102" Then .Rows(r).Cells(4).Value = words(2)    '
-                    .Rows(1).Cells(5).Value = "[gr/kg]"
+                    .Rows(r).Cells(5).Value = "[gr/kg]"
 
-                    r = 2
+                    r += 1
                     .Rows(r).Cells(0).Value = "Air temperature"
                     .Rows(r).Cells(1).Value = "F103"
                     If words(0) = "@SF103" Then .Rows(r).Cells(2).Value = words(2)    'Air temperature
@@ -1035,7 +1046,7 @@ Public Class Form1
                     If words(0) = "@AF103" Then .Rows(r).Cells(4).Value = words(2)    '
                     .Rows(r).Cells(5).Value = "[c]"
 
-                    r = 3
+                    r += 1
                     .Rows(r).Cells(0).Value = "Air Pressure"
                     .Rows(r).Cells(1).Value = "F104"
                     If words(0) = "@SF104" Then .Rows(r).Cells(2).Value = words(2)    'Air pressure
@@ -1043,7 +1054,7 @@ Public Class Form1
                     If words(0) = "@AF104" Then .Rows(r).Cells(4).Value = words(2)    '
                     .Rows(r).Cells(5).Value = "[mbar]"
 
-                    r = 4
+                    r += 1
                     .Rows(r).Cells(0).Value = "Wet feed moist"
                     .Rows(r).Cells(1).Value = "F105"
                     If words(0) = "@SF105" Then .Rows(r).Cells(2).Value = words(2)    'Wet feed moist
@@ -1053,7 +1064,7 @@ Public Class Form1
 
 
                     '======== Temperatures ===========
-                    r = 5
+                    r += 1
                     .Rows(r).Cells(0).Value = "T setpoint"
                     .Rows(r).Cells(1).Value = "F106"
                     If words(0) = "@SF106" Then .Rows(r).Cells(2).Value = words(2)    'T setpoint
@@ -1061,7 +1072,7 @@ Public Class Form1
                     If words(0) = "@AF106" Then .Rows(r).Cells(4).Value = words(2)    '
                     .Rows(r).Cells(5).Value = "[c]"
 
-                    r = 6
+                    r += 1
                     .Rows(r).Cells(0).Value = "T Separator"
                     .Rows(r).Cells(1).Value = "F107"
                     If words(0) = "@SF107" Then .Rows(r).Cells(2).Value = words(2)    'T separator
@@ -1069,7 +1080,7 @@ Public Class Form1
                     If words(0) = "@AF107" Then .Rows(r).Cells(4).Value = words(2)    '
                     .Rows(r).Cells(5).Value = "[c]"
 
-                    r = 7
+                    r += 1
                     .Rows(r).Cells(0).Value = "T cooled"
                     .Rows(r).Cells(1).Value = "F108"
                     If words(0) = "@SF108" Then .Rows(r).Cells(2).Value = words(2)    'T cooled meal
@@ -1085,7 +1096,7 @@ Public Class Form1
                     If words(0) = "@AF109" Then .Rows(r).Cells(4).Value = words(2)    '
                     .Rows(r).Cells(5).Value = "[-]"
 
-                    r = 9
+                    r += 1
                     .Rows(r).Cells(0).Value = "Evaporation"
                     .Rows(r).Cells(1).Value = "F110"
                     If words(0) = "@SF110" Then .Rows(r).Cells(2).Value = words(2)    'Evaporation
@@ -1093,9 +1104,8 @@ Public Class Form1
                     If words(0) = "@AF110" Then .Rows(r).Cells(4).Value = words(2)    '
                     .Rows(r).Cells(5).Value = "[kg/h]"
 
-
                     '======== Fuel ===========
-                    r = 10
+                    r += 1
                     .Rows(r).Cells(0).Value = "Direct_fuel"
                     .Rows(r).Cells(1).Value = "F131"
                     If words(0) = "@SF131" Then .Rows(r).Cells(2).Value = words(2)    'Direct_fuel type
@@ -1103,7 +1113,7 @@ Public Class Form1
                     If words(0) = "@AF131" Then .Rows(r).Cells(4).Value = words(2)    '
                     .Rows(r).Cells(5).Value = ""
 
-                    r = 11
+                    r += 1
                     .Rows(r).Cells(0).Value = "Direct consump"
                     .Rows(r).Cells(1).Value = "F132"
                     If words(0) = "@SF132" Then .Rows(r).Cells(2).Value = words(2)    'Direct consump
@@ -1111,13 +1121,21 @@ Public Class Form1
                     If words(0) = "@AF132" Then .Rows(r).Cells(4).Value = words(2)    '
                     .Rows(r).Cells(5).Value = "[Nm3/h]"
 
-                    r = 12
+                    r += 1
                     .Rows(r).Cells(0).Value = "Comb. value"
                     .Rows(r).Cells(1).Value = "F133"
                     If words(0) = "@SF133" Then .Rows(r).Cells(2).Value = words(2)    'Comb. value
                     If words(0) = "@WF133" Then .Rows(r).Cells(3).Value = words(2)    '
                     If words(0) = "@AF133" Then .Rows(r).Cells(4).Value = words(2)    '
                     .Rows(r).Cells(5).Value = "[MJ/kg]"
+
+                    r += 1
+                    .Rows(r).Cells(0).Value = "Fuel density"
+                    .Rows(r).Cells(1).Value = "F134"
+                    If words(0) = "@SF134" Then .Rows(r).Cells(2).Value = words(2)    'Comb. value
+                    If words(0) = "@WF134" Then .Rows(r).Cells(3).Value = words(2)    '
+                    If words(0) = "@AF134" Then .Rows(r).Cells(4).Value = words(2)    '
+                    If words(0) = "@SF134" Then .Rows(r).Cells(5).Value = words(3)
                 Next
             End With
         End If

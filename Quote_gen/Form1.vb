@@ -202,19 +202,24 @@ Public Class Form1
         '----------- flashdryer quotes ---------
 
         Dim find1, find2, find3 As String
-        Find_rep("@QF020", TextBox30.Text)  'Elevation
-        Find_rep("@QF021", TextBox29.Text)  'Product
-        Find_rep("@QF022", TextBox28.Text)  'Installed power
+        Find_rep("@QF020", TextBox30.Text)      'Elevation
+        Find_rep("@QF021", TextBox29.Text)      'Product
+        Find_rep("@QF022", TextBox28.Text)      'Installed power
 
+        Find_rep("A081", ComboBox19.Text)           'Validity 
         Find_rep(Label77.Text, ComboBox20.Text)     'Ice Hx
         Find_rep(Label78.Text, ComboBox21.Text)     'Dryer Hx
         Find_rep(Label79.Text, ComboBox22.Text)     'Dryer separator
         Find_rep(Label80.Text, ComboBox23.Text)     'Cooler separator
+        Find_rep(Label81.Text, ComboBox24.Text)     'Dryer Silencer
+        Find_rep(Label82.Text, ComboBox25.Text)     'Dryer Exhaust
+        Find_rep(Label84.Text, ComboBox26.Text)     'Cooler Silencer
+        Find_rep(Label83.Text, ComboBox27.Text)     'Cooler Exhaust
 
-        Find_rep("@QF023", TextBox1.Text)   'unknown
-        Find_rep("@QF024", TextBox2.Text)   'unknown
-        Find_rep("@QF025", TextBox3.Text)   'unknown
-        Find_rep("@QF026", TextBox4.Text)   'unknown
+        Find_rep("@QF023", TextBox1.Text)       'unknown
+        Find_rep("@QF024", TextBox2.Text)       'unknown
+        Find_rep("@QF025", TextBox3.Text)       'unknown
+        Find_rep("@QF026", TextBox4.Text)       'unknown
 
         With DataGridView1
             For r = 0 To DataGridView1.Rows.Count - 2
@@ -615,22 +620,44 @@ Public Class Form1
         ComboBox19.Items.Add("90")      'days validity
 
         ComboBox20.Items.Clear()
-        ComboBox20.Items.Add("Steam")
-        ComboBox20.Items.Add("Glycol")
-        ComboBox20.Items.Add("Electric")
+        ComboBox20.Items.Add("a hot water ")
+        ComboBox20.Items.Add("a steam ")
+        ComboBox20.Items.Add("an electric ")
 
         ComboBox21.Items.Clear()
-        ComboBox21.Items.Add("Steam")
-        ComboBox21.Items.Add("Indirect")
-        ComboBox21.Items.Add("Electric")
+        ComboBox21.Items.Add("a hot water ")
+        ComboBox21.Items.Add("a steam ")
+        ComboBox21.Items.Add("an electric ")
+        ComboBox21.Items.Add("a gas fired ")
+        ComboBox21.Items.Add("an indirect gas fired ")
 
         ComboBox22.Items.Clear()        'Dryer separator
-        ComboBox22.Items.Add("Cyclone")
-        ComboBox22.Items.Add("Bagfilter")
+        ComboBox22.Items.Add("cyclone")
+        ComboBox22.Items.Add("bagfilter")
+        ComboBox22.Items.Add("CIP'able Bagfilter")
 
         ComboBox23.Items.Clear()        'Cooler separator
-        ComboBox23.Items.Add("Cyclone")
-        ComboBox23.Items.Add("Bagfilter")
+        ComboBox23.Items.Add("cyclone")
+        ComboBox23.Items.Add("bagfilter")
+        ComboBox23.Items.Add("CIP'able Bagfilter")
+
+        ComboBox24.Items.Clear()        'Dryer Silencer
+        ComboBox24.Items.Add("")
+        ComboBox24.Items.Add("a silencer and")
+
+        ComboBox25.Items.Clear()        'Dryer Exhaust
+        ComboBox25.Items.Add("")
+        ComboBox25.Items.Add("an exhaust stack")
+        ComboBox25.Items.Add("an exhaust duct")
+
+        ComboBox26.Items.Clear()        'Cooler Silencer
+        ComboBox26.Items.Add("")
+        ComboBox26.Items.Add("a silencer and")
+
+        ComboBox27.Items.Clear()        'Cooler Exhaust
+        ComboBox27.Items.Add("")
+        ComboBox27.Items.Add("an exhaust stack")
+        ComboBox27.Items.Add("an exhaust duct")
 
         ComboBox1.SelectedIndex = 2     'Zone
         ComboBox3.SelectedIndex = 2     'Temp
@@ -655,6 +682,10 @@ Public Class Form1
         ComboBox21.SelectedIndex = 0     'Dryer steam heater
         ComboBox22.SelectedIndex = 0     'Dryer separator
         ComboBox23.SelectedIndex = 0     'Cooler separator
+        ComboBox24.SelectedIndex = 0     'Dryer Silencer
+        ComboBox25.SelectedIndex = 2     'Dryer Exhaust
+        ComboBox26.SelectedIndex = 0     'Cooler Silencer
+        ComboBox27.SelectedIndex = 2     'Cooler Exhaust
     End Sub
 
     Private Sub Button6_Click_1(sender As Object, e As EventArgs) Handles Button6.Click
@@ -1125,5 +1156,6 @@ Public Class Form1
             Next
         End If
     End Sub
+
 
 End Class

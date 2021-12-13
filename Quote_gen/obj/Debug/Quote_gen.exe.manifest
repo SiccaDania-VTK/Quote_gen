@@ -50,7 +50,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>CpGt+aoib1AOxSLWK9kY/PioSjZONi9yCx3MpcazScw=</dsig:DigestValue>
+        <dsig:DigestValue>cdrH1GKONtsV4cnbxLwfdRB3D+oo/jinnZAidfbCgh8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -63,13 +63,13 @@
       <dsig:DigestValue>mwAWG8T1aF3wxlAOXW1kEe/VC/FpaGICtbJ/ZlZxC/g=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Quote_gen.exe.config" size="188">
+  <file name="Quote_gen.exe.config" size="183">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>c922zfRb5ORzqEo8SDjt8Mx8lDMhGTWhqKcK/oileDM=</dsig:DigestValue>
+      <dsig:DigestValue>5fljkQxgDgBFFP14ojkzfsNTjg7sxH0IKTIbkyfMSgw=</dsig:DigestValue>
     </hash>
   </file>
   <file name="quote-symbol.ico" size="109400">

@@ -333,7 +333,8 @@ Public Class Form1
         "15/04/2021, Encoding.Unicode instead  Encoding.ASCII" & vbCrLf &
         "02/07/2021, File.ReadAllText(xxx, encoding removed)" & vbCrLf &
         "07/07/2021, Find & Replace flash drier DGV added" & vbCrLf &
-        "11/07/2021, Flash Dryer layout renovated " & vbCrLf
+        "11/07/2021, Flash Dryer layout renovated " & vbCrLf &
+        "13/12/2021, Now .NET framework 4.8" & vbCrLf
 
         ListBox1.Items.Add("Cyclone" & vbTab & vbTab & "1100")
         ListBox1.Items.Add("Filter" & vbTab & vbTab & "1500")

@@ -11,7 +11,7 @@
     <deploymentProvider codebase="file://dcf1/data2$/Engineering/VBasic/Quote_generator/Quote_gen.application" />
   </deployment>
   <compatibleFrameworks xmlns="urn:schemas-microsoft-com:clickonce.v2">
-    <framework targetVersion="4.6.1" profile="Full" supportedRuntime="4.0.30319" />
+    <framework targetVersion="4.8" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
     <dependentAssembly dependencyType="install" codebase="Quote_gen.exe.manifest" size="5349">
@@ -21,7 +21,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>gSeycUrELRUUjT8AwGVwcfF+/h4+0N497lbBhTI4T6A=</dsig:DigestValue>
+        <dsig:DigestValue>tA/OcroGyqQxNRY7ZZ2VeUPQFTmJkoAgv79sBmuNC5Y=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

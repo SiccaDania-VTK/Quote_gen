@@ -48,4 +48,3 @@ C:\Repos\Quote_gen\Quote_gen\obj\Debug\Quote_gen.application
 C:\Repos\Quote_gen\Quote_gen\obj\Debug\Quote_gen.exe
 C:\Repos\Quote_gen\Quote_gen\obj\Debug\Quote_gen.xml
 C:\Repos\Quote_gen\Quote_gen\obj\Debug\Quote_gen.pdb
-C:\Repos\Quote_gen\Quote_gen\obj\Debug\Quote_gen.vbproj.AssemblyReference.cache

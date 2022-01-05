@@ -4,7 +4,7 @@
   <description asmv2:iconFile="quote-symbol.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="Quote_gen" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <assemblyIdentity name="Quote_gen" version="1.0.5.1" language="neutral" processorArchitecture="msil" />
     <commandLine file="Quote_gen.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Quote_gen.exe" size="656896">
-      <assemblyIdentity name="Quote_gen" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Quote_gen.exe" size="657920">
+      <assemblyIdentity name="Quote_gen" version="1.0.5.1" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>cdrH1GKONtsV4cnbxLwfdRB3D+oo/jinnZAidfbCgh8=</dsig:DigestValue>
+        <dsig:DigestValue>kaVrC4Glvhfk1V8+Ol/lvbVaP99CmgMl3j0M9u2C6h0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

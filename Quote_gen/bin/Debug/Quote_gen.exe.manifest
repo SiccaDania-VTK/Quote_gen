@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Quote_gen.exe" size="657920">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Quote_gen.exe" size="660480">
       <assemblyIdentity name="Quote_gen" version="1.0.5.1" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>NX3Gpy1fYs/fHPYWr4SgXPfqujC+OtyG4XotKeX73y4=</dsig:DigestValue>
+        <dsig:DigestValue>7nZyrqB0hOVr33DxLPSBvZ/MOjqawyfuU4SJw7EXAiI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

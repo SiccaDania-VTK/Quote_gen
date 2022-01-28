@@ -9,12 +9,37 @@ Imports Microsoft.Office.Interop
 Imports Microsoft.Office.Interop.Word
 '
 'Publish directory = \\DCF1\data2$\Engineering\VBasic\VTK_fan_select\
-'
+'https://social.msdn.microsoft.com/Forums/vstudio/en-US/0a51cfdb-225e-417b-8653-da8889ec42b0/arrays-within-structures-how-to-redim-properly?forum=vbgeneral
+Public Structure Fan_struct
+    Public fname As String              'Name
+    Public _Fan_modelnr As String
+    Public _Quote_Type As String
+    Public _Fan_type As String
+    Public _Suct_flange As String
+    Public _Disch_flange As String
+    Public _Vane_thick As String
+    Public _Mat_impeller As String
+    Public _Motor_speed As String
+    Public _Motor_power As String
+    Public _Motor_frame As String
+    Public Fserie() As WrkD
+    Public Sserie() As WrkD
+    Public Jserie() As WrkD
+End Structure
+Public Structure WrkD 'Fan accessories, string= "; control.text; control.checked"
+    Dim cname As String       'control.naam
+    Dim txt As String
+    Dim Stat As Boolean
+End Structure
+
 Public Class Form1
     'Keep the application object and the workbook object global, so you can  
     'retrieve the data in Button2_Click that was set in Button6_Click.
     Public objApp As Excel.Application
     Public objBook As Excel._Workbook
+
+    Public Fan() As Fan_struct        '25 fans
+
 
     '----------- directory's-----------
     Public dirpath_GPH As String = "N:\Engineering\VBasic\GPH_data_exchange\"
@@ -289,6 +314,12 @@ Public Class Form1
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ReDim Fan(40)
+        ReDim Fan(1).Fserie(40)
+        Fan(1).Fserie(10).cname = "---"
+
+        MsgBox(Fan(1).Fserie(1).cname)
+
         TextBox53.Text =
         "Data import from Fan select and Campbell" & vbCrLf &
         "Directory N:\Engineering\VBasic\GPH_Data_exchange collects data " & vbCrLf &
@@ -1177,5 +1208,20 @@ Public Class Form1
         End If
     End Sub
 
+    Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
+        Dim all_check As New List(Of Control)
 
+        FindControlRecursive(all_check, TabPage1, GetType(System.Windows.Forms.CheckBox))      'Find the controls
+        all_check = all_check.OrderBy(Function(x) x.Text).ToList()  'Alphabetical order
+
+        For i = 1 To all_check.Count - 1
+            Dim chbox As System.Windows.Forms.CheckBox = CType(all_check(i), System.Windows.Forms.CheckBox)
+            Fan(1).Fserie(i).cname = chbox.Name
+        Next
+
+        For i = 1 To Fan(1).Fserie.Length - 1
+            TextBox5.Text &= Fan(1).Fserie(i).cname & vbCrLf
+        Next
+
+    End Sub
 End Class
